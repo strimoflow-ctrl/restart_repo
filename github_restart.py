@@ -104,6 +104,14 @@ def main():
     for root_key in roots.keys():
         # Match standard database prefixes
         if root_key.startswith("cloner_") or root_key == "vip_pluse":
+            # Update check timestamp for this bot root
+            orchestrator_url = f"{db_url.rstrip('/')}/{root_key}/status/orchestrator.json"
+            import time
+            try:
+                requests.patch(orchestrator_url, json={"last_check": time.time(), "type": "github_actions"}, timeout=5)
+            except:
+                pass
+
             trigger_url = f"{db_url.rstrip('/')}/{root_key}/control/trigger_restart.json"
             try:
                 trigger_resp = requests.get(trigger_url, timeout=5)

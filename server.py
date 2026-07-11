@@ -141,6 +141,13 @@ def start_firebase_polling():
     
     while True:
         try:
+            # Update orchestrator status in Firebase
+            orchestrator_url = f"{db_url}/{DB_ROOT}/status/orchestrator.json"
+            try:
+                requests.patch(orchestrator_url, json={"last_check": time.time(), "type": "local_server"}, timeout=5)
+            except:
+                pass
+                
             resp = requests.get(trigger_url, timeout=5)
             if resp.status_code == 200 and resp.json() is True:
                 # Reset trigger first to prevent double runs

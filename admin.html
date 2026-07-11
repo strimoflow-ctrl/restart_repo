@@ -247,6 +247,12 @@
                             <span class="eta-value" id="stat-eta">Calculating...</span>
                         </div>
                     </div>
+                    
+                    <!-- Cloud Orchestrator Indicator -->
+                    <div class="status-indicator-bar" style="margin-top: 15px; padding: 10px 15px; background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.05); border-radius: 6px; display: flex; justify-content: space-between; align-items: center; font-size: 0.8rem; box-shadow: inset 0 1px 2px rgba(255,255,255,0.02);">
+                        <span style="color: var(--text-secondary); font-weight: 500;">🔄 Restart Agent:</span>
+                        <span id="orchestrator-status" style="background: rgba(239, 68, 68, 0.15); border: 1px solid rgba(239, 68, 68, 0.3); color: #f87171; font-weight: bold; padding: 3px 8px; border-radius: 4px; font-size: 0.75rem; letter-spacing: 0.5px; transition: all 0.3s ease;">OFFLINE</span>
+                    </div>
 
                     <!-- Custom Console Logger -->
                     <div class="console-log-container">

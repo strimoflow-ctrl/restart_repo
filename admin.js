@@ -367,6 +367,41 @@ function setupFirebaseListeners() {
         const totalTopics = stats.global_topics_total || 0;
         elStatDone.innerText = `${doneTopics} / ${totalTopics}`;
         
+        // Render orchestrator active agent status
+        const elOrchestratorStatus = document.getElementById("orchestrator-status");
+        if (elOrchestratorStatus) {
+            const orch = stats.orchestrator;
+            if (orch && orch.last_check) {
+                const nowSec = Date.now() / 1000;
+                const diffSec = nowSec - orch.last_check;
+                
+                if (diffSec < 900) { // Active within 15 minutes
+                    elOrchestratorStatus.style.background = "rgba(16, 185, 129, 0.15)";
+                    elOrchestratorStatus.style.border = "1px solid rgba(16, 185, 129, 0.3)";
+                    elOrchestratorStatus.style.color = "#34d399";
+                    
+                    if (orch.type === "github_actions") {
+                        const mins = Math.max(0, Math.round(diffSec / 60));
+                        elOrchestratorStatus.innerText = `🛰 CLOUD ACTIONS (Checked ${mins}m ago)`;
+                    } else {
+                        const secs = Math.max(0, Math.round(diffSec));
+                        elOrchestratorStatus.innerText = `💻 PC SERVER (Checked ${secs}s ago)`;
+                    }
+                } else { // Offline/Stale
+                    elOrchestratorStatus.style.background = "rgba(239, 68, 68, 0.15)";
+                    elOrchestratorStatus.style.border = "1px solid rgba(239, 68, 68, 0.3)";
+                    elOrchestratorStatus.style.color = "#f87171";
+                    const hours = Math.round(diffSec / 3600);
+                    elOrchestratorStatus.innerText = `❌ OFFLINE (Last check ${hours}h ago)`;
+                }
+            } else {
+                elOrchestratorStatus.style.background = "rgba(239, 68, 68, 0.15)";
+                elOrchestratorStatus.style.border = "1px solid rgba(239, 68, 68, 0.3)";
+                elOrchestratorStatus.style.color = "#f87171";
+                elOrchestratorStatus.innerText = "❌ NOT ACTIVE";
+            }
+        }
+        
         // Sync status to renderCache and trigger queue render
         renderCache.status = stats;
         triggerCachedRender();
