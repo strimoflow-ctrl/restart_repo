@@ -1,0 +1,26 @@
+name: Bot Auto-Restart Orchestrator
+
+on:
+  schedule:
+    - cron: '*/10 * * * *'  # Run check every 10 minutes
+  workflow_dispatch:        # Enable manual runs via GitHub Web UI
+
+jobs:
+  check-and-restart:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Install Dependencies
+        run: |
+          pip install requests
+
+      - name: Run Restart Check and Trigger
+        run: |
+          python github_restart.py

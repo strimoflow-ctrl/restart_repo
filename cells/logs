@@ -1,0 +1,131 @@
+Time
+#
+Log Message
+7.5s	0	0.00s - Debugger warning: It seems that frozen modules are being used, which may
+7.5s	1	0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+7.5s	2	0.00s - to python to disable frozen modules.
+7.5s	3	0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+8.2s	4	0.00s - Debugger warning: It seems that frozen modules are being used, which may
+8.2s	5	0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+8.2s	6	0.00s - to python to disable frozen modules.
+8.2s	7	0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+12.8s	8	   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 789.8/789.8 kB 18.7 MB/s eta 0:00:00
+13.0s	9	   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 789.8/789.8 kB 18.7 MB/s eta 0:00:00
+19.7s	10	     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 50.1/50.1 kB 2.3 MB/s eta 0:00:00
+19.9s	11	     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 50.1/50.1 kB 2.3 MB/s eta 0:00:00
+20.1s	12	   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 144.2/144.2 kB 8.8 MB/s eta 0:00:00
+20.2s	13	   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 96.1/96.1 kB 7.3 MB/s eta 0:00:00
+20.3s	14	   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 144.2/144.2 kB 8.8 MB/s eta 0:00:00
+20.3s	15	   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 96.1/96.1 kB 7.3 MB/s eta 0:00:00
+23.1s	16	ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
+23.1s	17	google-adk 1.25.1 requires google-cloud-bigquery-storage>=2.0.0, which is not installed.
+23.1s	18	id 1.6.1 requires urllib3<3,>=2, but you have urllib3 1.26.20 which is incompatible.
+23.1s	19	gcsfs 2025.3.0 requires fsspec==2025.3.0, but you have fsspec 2026.2.0 which is incompatible.
+23.1s	20	blobfile 3.2.0 requires urllib3>=2, but you have urllib3 1.26.20 which is incompatible.
+23.3s	21	ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
+23.3s	22	google-adk 1.25.1 requires google-cloud-bigquery-storage>=2.0.0, which is not installed.
+23.3s	23	id 1.6.1 requires urllib3<3,>=2, but you have urllib3 1.26.20 which is incompatible.
+23.3s	24	gcsfs 2025.3.0 requires fsspec==2025.3.0, but you have fsspec 2026.2.0 which is incompatible.
+23.3s	25	blobfile 3.2.0 requires urllib3>=2, but you have urllib3 1.26.20 which is incompatible.
+23.3s	26	
+23.3s	27	ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
+23.3s	28	google-adk 1.25.1 requires google-cloud-bigquery-storage>=2.0.0, which is not installed.
+23.3s	29	id 1.6.1 requires urllib3<3,>=2, but you have urllib3 1.26.20 which is incompatible.
+23.3s	30	gcsfs 2025.3.0 requires fsspec==2025.3.0, but you have fsspec 2026.2.0 which is incompatible.
+23.3s	31	blobfile 3.2.0 requires urllib3>=2, but you have urllib3 1.26.20 which is incompatible.
+24.8s	32	   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 250.1/250.1 kB 11.5 MB/s eta 0:00:00
+25.0s	33	   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 250.1/250.1 kB 11.5 MB/s eta 0:00:00
+34.8s	34	✅ Sab libraries install ho gayi!
+100.7s	35	🔥 Connecting to Firebase Realtime Database...
+100.7s	36	⏳ Waiting for configuration under root node 'vip_pluse'...
+101.2s	37	✅ Found dynamic configuration in Firebase. Overriding fallbacks...
+101.2s	38	
+101.2s	39	⚙️ CURRENT CONFIGURATION:
+101.2s	40	   Source: -1002594441030 (Type: group_topic)
+101.2s	41	   Target: -1004351362401 (Type: group_topic)
+101.2s	42	   Auto-restart: 11.5 hours
+101.2s	43	   Firebase DB: https://secret-gpt-default-rtdb.asia-southeast1.firebasedatabase.app
+102.1s	44	✅ Source topics already exist in Firebase. Skipping automatic startup scan to preserve custom queue/deletions.
+102.1s	45	✅ Helper functions ready!
+102.1s	46	   Disk free: 19.5 GB
+102.2s	47	✅ Firebase connected in Core Engine!
+102.2s	48	✅ Core Engine logic loaded.
+102.3s	49	🚀 Initializing Cloner Ultra Core Engine...
+110.7s	50	✅ Connection to Telegram API established!
+111.6s	51	💤 Idle. Awaiting Start command from Admin Dashboard...
+111.9s	52	🚀 Start command received! Running queue...
+113.4s	53	
+113.4s	54	📂 Processing Queue Item: 'CHECKLIST' (ID: 2486)
+113.7s	55	⚠️ Target Topic mapping missing for 'CHECKLIST'. Please click 'Auto-Map Targets' on the dashboard.
+115.7s	56	✨ Web Trigger: Mapping target topics...
+116.6s	57	🔍 Scanning Target Group for existing topics...
+117.6s	58	⚠️ Failed to scan target group topics: The API access for bot users is restricted. The method you tried to invoke cannot be executed as a bot (caused by GetForumTopicsRequest)
+117.9s	59	❌ Failed to create topic 'HINDI[SARVAM]': CreateForumTopicRequest.__init__() got an unexpected keyword argument 'channel'
+118.2s	60	❌ Failed to create topic 'ENG OFFLINE [SRVM]': CreateForumTopicRequest.__init__() got an unexpected keyword argument 'channel'
+118.5s	61	❌ Failed to create topic 'CHECKLIST': CreateForumTopicRequest.__init__() got an unexpected keyword argument 'channel'
+118.9s	62	❌ Failed to create topic 'MASTER PRO 1[HINDI]': CreateForumTopicRequest.__init__() got an unexpected keyword argument 'channel'
+119.2s	63	❌ Failed to create topic 'MASTER PRO 1[ENG]': CreateForumTopicRequest.__init__() got an unexpected keyword argument 'channel'
+119.5s	64	❌ Failed to create topic 'C W E LIBRARY OFFLINE': CreateForumTopicRequest.__init__() got an unexpected keyword argument 'channel'
+119.9s	65	❌ Failed to create topic 'YAKEEN HINDI PW': CreateForumTopicRequest.__init__() got an unexpected keyword argument 'channel'
+120.2s	66	❌ Failed to create topic 'YAKEEN 2.0 ENG 25': CreateForumTopicRequest.__init__() got an unexpected keyword argument 'channel'
+120.5s	67	❌ Failed to create topic 'RITU MAM 2026 BATCH': CreateForumTopicRequest.__init__() got an unexpected keyword argument 'channel'
+120.9s	68	❌ Failed to create topic 'YAKEEN 2.0 2026': CreateForumTopicRequest.__init__() got an unexpected keyword argument 'channel'
+121.2s	69	❌ Failed to create topic 'JEE XI[MS CHAUHAN SIR & CO P1]': CreateForumTopicRequest.__init__() got an unexpected keyword argument 'channel'
+121.5s	70	❌ Failed to create topic 'JEE XII[MS CHAUHAN SIR & CO A1]': CreateForumTopicRequest.__init__() got an unexpected keyword argument 'channel'
+121.9s	71	❌ Failed to create topic 'JEE DROPPER X1[C'W]': CreateForumTopicRequest.__init__() got an unexpected keyword argument 'channel'
+122.2s	72	❌ Failed to create topic 'YAKEEN 3.0 26': CreateForumTopicRequest.__init__() got an unexpected keyword argument 'channel'
+122.5s	73	❌ Failed to create topic 'YAKEEN 4.0 26': CreateForumTopicRequest.__init__() got an unexpected keyword argument 'channel'
+122.9s	74	❌ Failed to create topic 'ARJUNA 2.0 26': CreateForumTopicRequest.__init__() got an unexpected keyword argument 'channel'
+123.2s	75	❌ Failed to create topic 'MANTHAN BATCH': CreateForumTopicRequest.__init__() got an unexpected keyword argument 'channel'
+123.5s	76	❌ Failed to create topic 'YAKEEN 2.0 2026(TILL 31 OCT)': CreateForumTopicRequest.__init__() got an unexpected keyword argument 'channel'
+123.9s	77	❌ Failed to create topic 'SARVAM ONLINE ALL LEC UPDATED': CreateForumTopicRequest.__init__() got an unexpected keyword argument 'channel'
+124.2s	78	❌ Failed to create topic 'Yakeen 2.0 2026': CreateForumTopicRequest.__init__() got an unexpected keyword argument 'channel'
+124.5s	79	❌ Failed to create topic 'C🙌W NEET(ACHIEVER ONLINE)': CreateForumTopicRequest.__init__() got an unexpected keyword argument 'channel'
+124.9s	80	❌ Failed to create topic 'MISSION 100': CreateForumTopicRequest.__init__() got an unexpected keyword argument 'channel'
+125.2s	81	❌ Failed to create topic 'VAIBHAV SIR': CreateForumTopicRequest.__init__() got an unexpected keyword argument 'channel'
+125.5s	82	❌ Failed to create topic 'X1 JEE MAINS [SKM SIR CMPLT]': CreateForumTopicRequest.__init__() got an unexpected keyword argument 'channel'
+125.9s	83	❌ Failed to create topic 'X2 JEE [COMPLETE BATCH]': CreateForumTopicRequest.__init__() got an unexpected keyword argument 'channel'
+126.2s	84	❌ Failed to create topic 'सागर बलूनी रसायन विज्ञान': CreateForumTopicRequest.__init__() got an unexpected keyword argument 'channel'
+126.5s	85	❌ Failed to create topic 'C💌W ACHIEVER ONLINE 2026[FINAL]': CreateForumTopicRequest.__init__() got an unexpected keyword argument 'channel'
+126.9s	86	❌ Failed to create topic 'C💌W Pro - NCC 2026 (NEET CRASH COURSE)': CreateForumTopicRequest.__init__() got an unexpected keyword argument 'channel'
+127.2s	87	❌ Failed to create topic 'LLN[[MNV-2 BATCH]]': CreateForumTopicRequest.__init__() got an unexpected keyword argument 'channel'
+127.5s	88	❌ Failed to create topic 'LLN[[POWER+ BATCH]]': CreateForumTopicRequest.__init__() got an unexpected keyword argument 'channel'
+127.9s	89	❌ Failed to create topic 'CW Pro - JEE Droppers - (X1 Batch)': CreateForumTopicRequest.__init__() got an unexpected keyword argument 'channel'
+128.2s	90	❌ Failed to create topic 'CW Pro - JEE 12th - (E1 Batch)': CreateForumTopicRequest.__init__() got an unexpected keyword argument 'channel'
+128.9s	91	✅ Target topic mapping update finished.
+186.9s	92	✨ Web Trigger: Mapping target topics...
+187.9s	93	🔍 Scanning Target Group for existing topics...
+188.4s	94	⚠️ Failed to scan target group topics: The API access for bot users is restricted. The method you tried to invoke cannot be executed as a bot (caused by GetForumTopicsRequest)
+188.7s	95	❌ Failed to create topic 'HINDI[SARVAM]': CreateForumTopicRequest.__init__() got an unexpected keyword argument 'channel'
+189.0s	96	❌ Failed to create topic 'ENG OFFLINE [SRVM]': CreateForumTopicRequest.__init__() got an unexpected keyword argument 'channel'
+189.4s	97	❌ Failed to create topic 'CHECKLIST': CreateForumTopicRequest.__init__() got an unexpected keyword argument 'channel'
+189.7s	98	❌ Failed to create topic 'MASTER PRO 1[HINDI]': CreateForumTopicRequest.__init__() got an unexpected keyword argument 'channel'
+190.0s	99	❌ Failed to create topic 'MASTER PRO 1[ENG]': CreateForumTopicRequest.__init__() got an unexpected keyword argument 'channel'
+190.3s	100	❌ Failed to create topic 'C W E LIBRARY OFFLINE': CreateForumTopicRequest.__init__() got an unexpected keyword argument 'channel'
+190.7s	101	❌ Failed to create topic 'YAKEEN HINDI PW': CreateForumTopicRequest.__init__() got an unexpected keyword argument 'channel'
+191.0s	102	❌ Failed to create topic 'YAKEEN 2.0 ENG 25': CreateForumTopicRequest.__init__() got an unexpected keyword argument 'channel'
+191.3s	103	❌ Failed to create topic 'RITU MAM 2026 BATCH': CreateForumTopicRequest.__init__() got an unexpected keyword argument 'channel'
+191.6s	104	❌ Failed to create topic 'YAKEEN 2.0 2026': CreateForumTopicRequest.__init__() got an unexpected keyword argument 'channel'
+191.9s	105	❌ Failed to create topic 'JEE XI[MS CHAUHAN SIR & CO P1]': CreateForumTopicRequest.__init__() got an unexpected keyword argument 'channel'
+192.3s	106	❌ Failed to create topic 'JEE XII[MS CHAUHAN SIR & CO A1]': CreateForumTopicRequest.__init__() got an unexpected keyword argument 'channel'
+192.6s	107	❌ Failed to create topic 'JEE DROPPER X1[C'W]': CreateForumTopicRequest.__init__() got an unexpected keyword argument 'channel'
+192.9s	108	❌ Failed to create topic 'YAKEEN 3.0 26': CreateForumTopicRequest.__init__() got an unexpected keyword argument 'channel'
+193.2s	109	❌ Failed to create topic 'YAKEEN 4.0 26': CreateForumTopicRequest.__init__() got an unexpected keyword argument 'channel'
+193.6s	110	❌ Failed to create topic 'ARJUNA 2.0 26': CreateForumTopicRequest.__init__() got an unexpected keyword argument 'channel'
+193.9s	111	❌ Failed to create topic 'MANTHAN BATCH': CreateForumTopicRequest.__init__() got an unexpected keyword argument 'channel'
+194.2s	112	❌ Failed to create topic 'YAKEEN 2.0 2026(TILL 31 OCT)': CreateForumTopicRequest.__init__() got an unexpected keyword argument 'channel'
+194.5s	113	❌ Failed to create topic 'SARVAM ONLINE ALL LEC UPDATED': CreateForumTopicRequest.__init__() got an unexpected keyword argument 'channel'
+194.9s	114	❌ Failed to create topic 'Yakeen 2.0 2026': CreateForumTopicRequest.__init__() got an unexpected keyword argument 'channel'
+195.2s	115	❌ Failed to create topic 'C🙌W NEET(ACHIEVER ONLINE)': CreateForumTopicRequest.__init__() got an unexpected keyword argument 'channel'
+195.5s	116	❌ Failed to create topic 'MISSION 100': CreateForumTopicRequest.__init__() got an unexpected keyword argument 'channel'
+195.9s	117	❌ Failed to create topic 'VAIBHAV SIR': CreateForumTopicRequest.__init__() got an unexpected keyword argument 'channel'
+196.2s	118	❌ Failed to create topic 'X1 JEE MAINS [SKM SIR CMPLT]': CreateForumTopicRequest.__init__() got an unexpected keyword argument 'channel'
+196.5s	119	❌ Failed to create topic 'X2 JEE [COMPLETE BATCH]': CreateForumTopicRequest.__init__() got an unexpected keyword argument 'channel'
+196.9s	120	❌ Failed to create topic 'सागर बलूनी रसायन विज्ञान': CreateForumTopicRequest.__init__() got an unexpected keyword argument 'channel'
+197.2s	121	❌ Failed to create topic 'C💌W ACHIEVER ONLINE 2026[FINAL]': CreateForumTopicRequest.__init__() got an unexpected keyword argument 'channel'
+197.5s	122	❌ Failed to create topic 'C💌W Pro - NCC 2026 (NEET CRASH COURSE)': CreateForumTopicRequest.__init__() got an unexpected keyword argument 'channel'
+197.9s	123	❌ Failed to create topic 'LLN[[MNV-2 BATCH]]': CreateForumTopicRequest.__init__() got an unexpected keyword argument 'channel'
+198.2s	124	❌ Failed to create topic 'LLN[[POWER+ BATCH]]': CreateForumTopicRequest.__init__() got an unexpected keyword argument 'channel'
+198.5s	125	❌ Failed to create topic 'CW Pro - JEE Droppers - (X1 Batch)': CreateForumTopicRequest.__init__() got an unexpected keyword argument 'channel'
+198.9s	126	❌ Failed to create topic 'CW Pro - JEE 12th - (E1 Batch)': CreateForumTopicRequest.__init__() got an unexpected keyword argument 'channel'
+199.5s	127	✅ Target topic mapping update finished

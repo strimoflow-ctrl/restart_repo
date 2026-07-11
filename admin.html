@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telegram Cloner Ultra - Admin Dashboard</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="admin.css">
+    <!-- Firebase Compat SDKs -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-database-compat.js"></script>
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="app-header" style="display: flex; justify-content: space-between; align-items: center; padding: 15px 25px; background: rgba(17, 24, 39, 0.7); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(255, 255, 255, 0.05); flex-wrap: wrap; gap: 15px;">
+            <div class="logo-area" style="display: flex; align-items: center; gap: 10px;">
+                <span class="pulse-icon orange"></span>
+                <h1 style="font-size: 1.2rem; font-weight: 700; letter-spacing: 1px; color: var(--text-primary); margin: 0;">TELEGRAM CLONER <span style="color: var(--accent);">ULTRA</span></h1>
+            </div>
+            
+            <!-- Quick Instance Switcher Dropdown & Actions -->
+            <div class="instance-switcher-container" style="display: flex; align-items: center; gap: 8px; background: rgba(0, 0, 0, 0.2); border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 6px; padding: 4px 10px; flex-wrap: wrap;">
+                <label for="select-bot-instance" style="font-size: 0.72rem; color: var(--text-secondary); font-weight: 600; letter-spacing: 0.5px; margin-right: 4px;">ACTIVE BOT:</label>
+                <select id="select-bot-instance" style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 4px; padding: 3px 8px; font-size: 0.8rem; color: var(--accent); font-weight: 600; cursor: pointer; outline: none; transition: all 0.2s;">
+                    <!-- Dynamically populated -->
+                </select>
+                <button id="btn-add-bot" title="Add New Bot Instance" style="background: rgba(16, 185, 129, 0.15); border: 1px solid rgba(16, 185, 129, 0.3); color: #10b981; border-radius: 4px; padding: 3px 8px; font-size: 0.75rem; font-weight: bold; cursor: pointer; display: flex; align-items: center; justify-content: center; height: 24px; transition: all 0.2s;">+ Add</button>
+                <button id="btn-remove-bot" title="Delete Current Bot Instance" style="background: rgba(239, 68, 68, 0.15); border: 1px solid rgba(239, 68, 68, 0.3); color: #ef4444; border-radius: 4px; padding: 3px 8px; font-size: 0.75rem; font-weight: bold; cursor: pointer; display: flex; align-items: center; justify-content: center; height: 24px; transition: all 0.2s;">✕ Delete</button>
+            </div>
+            
+            <div class="status-bar" style="display: flex; align-items: center; gap: 15px;">
+                <div class="status-item" style="display: flex; align-items: center; gap: 8px;">
+                    <span class="label" style="font-size: 0.8rem; color: var(--text-secondary);">Kaggle Engine:</span>
+                    <span id="kaggle-engine-status" class="status offline">OFFLINE</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Dashboard Grid -->
+        <main class="dashboard-grid">
+            <!-- Left Panel: Setup & Credentials -->
+            <section class="grid-card credentials-panel">
+                <div class="card-header">
+                    <h2>⚙️ CONFIGURATION & LOGIN</h2>
+                </div>
+                <div class="card-content scrollable">
+                    <!-- Firebase Section -->
+                    <div class="settings-group">
+                        <h3>🔥 Firebase Realtime DB</h3>
+                        <div class="input-row">
+                            <label for="fb-url">Database URL</label>
+                            <input type="text" id="fb-url" placeholder="https://your-rtdb.firebaseio.com">
+                        </div>
+                        <div class="input-row">
+                            <label for="fb-root">DB Root Node</label>
+                            <input type="text" id="fb-root" value="cloner_v5_mapping">
+                        </div>
+
+                    </div>
+
+                    <!-- Telegram Section -->
+                    <div class="settings-group">
+                        <h3>📱 Telegram Settings</h3>
+                        <div class="input-row-half">
+                            <div>
+                                <label for="api-id">API ID</label>
+                                <input type="number" id="api-id" placeholder="123456">
+                            </div>
+                            <div>
+                                <label for="api-hash">API Hash</label>
+                                <input type="text" id="api-hash" placeholder="d07a2615...">
+                            </div>
+                        </div>
+                        <div class="input-row">
+                            <label for="bot-token">Bot Token</label>
+                            <input type="text" id="bot-token" placeholder="8219450238:AAF8...">
+                        </div>
+                        <div class="input-row">
+                            <label for="owner-id">Owner Chat ID</label>
+                            <input type="number" id="owner-id" placeholder="7755459773">
+                        </div>
+                    </div>
+
+                    <!-- Groups/Channels Config -->
+                    <div class="settings-group">
+                        <h3>🔗 Source & Target Sources</h3>
+                        <div class="input-row">
+                            <label for="source-group-id">Source Group/Channel ID</label>
+                            <input type="number" id="source-group-id" placeholder="-1002594441030">
+                        </div>
+                        <div class="input-row">
+                            <label for="source-type">Source Type</label>
+                            <select id="source-type">
+                                <option value="group_topic">Group with Topics (Forum)</option>
+                                <option value="group_no_topic">Group without Topics</option>
+                                <option value="channel">Channel</option>
+                            </select>
+                        </div>
+                        <div class="input-row">
+                            <label for="target-group-id">Target Group/Channel ID</label>
+                            <input type="number" id="target-group-id" placeholder="-1004351362401">
+                        </div>
+                        <div class="input-row">
+                            <label for="target-type">Target Type</label>
+                            <select id="target-type">
+                                <option value="group_topic">Group with Topics (Forum)</option>
+                                <option value="group_no_topic">Group without Topics</option>
+                                <option value="channel">Channel</option>
+                            </select>
+                        </div>
+
+                    </div>
+
+                    <!-- Telegram OTP Login -->
+                    <div class="settings-group otp-group">
+                        <h3>🔑 Telegram Login (OTP Session Generator)</h3>
+                        <div class="input-row" id="login-phone-wrapper">
+                            <label for="login-phone">Phone Number (with Country Code)</label>
+                            <div class="flex-row">
+                                <input type="text" id="login-phone" placeholder="+919876543210">
+                                <button id="btn-send-otp" class="btn secondary-btn">Send OTP</button>
+                            </div>
+                        </div>
+                        <div class="input-row hidden" id="login-otp-wrapper">
+                            <label for="login-otp">OTP Code</label>
+                            <div class="flex-row">
+                                <input type="text" id="login-otp" placeholder="12345">
+                                <button id="btn-verify-otp" class="btn accent-btn">Verify & Login</button>
+                            </div>
+                        </div>
+                        <div class="input-row hidden" id="login-2fa-wrapper">
+                            <label for="login-2fa">2FA Password (Two-Step Verification)</label>
+                            <input type="password" id="login-2fa" placeholder="Enter your 2FA password" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 4px; padding: 10px; color: var(--fg); width: 100%; box-sizing: border-box; margin-top: 5px;">
+                        </div>
+                        <div class="session-display hidden" id="session-display">
+                            <label>Session String Generated:</label>
+                            <textarea id="session-string" readonly rows="2"></textarea>
+                        </div>
+                    </div>
+
+                    <!-- Kaggle API Settings -->
+                    <div class="settings-group">
+                        <h3>🚀 Kaggle API Settings (Auto-Restart)</h3>
+                        <div class="input-row">
+                            <label for="kaggle-username">Kaggle Username</label>
+                            <input type="text" id="kaggle-username" placeholder="pankajmourrya">
+                        </div>
+                        <div class="input-row">
+                            <label for="kaggle-key">Kaggle Key (API Token)</label>
+                            <input type="password" id="kaggle-key" placeholder="218c26b9...">
+                        </div>
+                        <div class="input-row">
+                            <label for="kaggle-title">Notebook Title</label>
+                            <input type="text" id="kaggle-title" placeholder="Group Cloner Auto Restart">
+                        </div>
+                        <div class="input-row">
+                            <label for="kaggle-slug">Kernel Slug (URL ID)</label>
+                            <input type="text" id="kaggle-slug" value="group-cloner-auto-restart">
+                        </div>
+                        <div class="input-row">
+                            <label for="kaggle-workers">Concurrent Workers: <span id="workers-val" style="color: var(--accent); font-weight: bold;">3</span></label>
+                            <input type="range" id="kaggle-workers" min="1" max="6" value="3" style="width: 100%; accent-color: var(--primary); background: transparent; border: none; padding: 0;">
+                        </div>
+                        <div class="input-row">
+                            <label for="caption-template">Custom Caption Template</label>
+                            <textarea id="caption-template" rows="3" placeholder="{caption}\n\n━━━━━━━━━━━━━━━\n👤 **Extracted by @cryvex4**"></textarea>
+                        </div>
+                        <div class="input-row">
+                            <label for="word-replacements">Word Replacements (find|replace, one per line)</label>
+                            <textarea id="word-replacements" rows="2" placeholder="@old_channel|@new_channel"></textarea>
+                        </div>
+                        <!-- Single Save Button for Everything -->
+                        <div style="margin-top: 20px; padding-top: 15px; border-top: 1px solid rgba(255,255,255,0.05);">
+                            <button id="btn-save-all-config" class="btn primary-btn" style="width: 100%; padding: 12px; font-size: 0.9rem; font-weight: bold; background: linear-gradient(135deg, var(--primary), var(--accent)); color: white; border: none; border-radius: 6px; cursor: pointer; transition: all 0.3s; box-shadow: 0 4px 12px rgba(139, 92, 246, 0.2);">💾 Save & Apply All Configurations</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Middle Panel: Queue & Topic Manager -->
+            <section class="grid-card queue-panel">
+                <div class="card-header flex-header">
+                    <h2>📋 QUEUE & TOPIC MANAGER</h2>
+                    <div class="action-buttons" style="display: flex; gap: 6px;">
+                        <button id="btn-scan-topics" class="btn action-btn">🔍 Scan Source</button>
+                        <button id="btn-create-topics" class="btn action-btn font-small">✨ Auto-Map Targets</button>
+                        <button id="btn-save-queue" class="btn action-btn" style="background: rgba(16, 185, 129, 0.2); border: 1px solid rgba(16, 185, 129, 0.4); color: #10b981; font-weight: bold; display: none;">💾 Save Order</button>
+                    </div>
+                </div>
+                <div class="card-content scrollable drag-container" id="topics-list-container">
+                    <div class="placeholder-text">Scan source to discover topics / channels.</div>
+                </div>
+            </section>
+
+            <!-- Right Panel: Live Stats & Logs -->
+            <section class="grid-card monitor-panel">
+                <div class="card-header">
+                    <h2>🛰 LIVE CONTROLLER & MONITOR</h2>
+                </div>
+                <div class="card-content scrollable flex-column">
+                    <!-- Control buttons -->
+                    <div class="controls-row">
+                        <button id="btn-control-start" class="btn start-btn flex-1">▶ Start Cloning</button>
+                        <button id="btn-control-pause" class="btn pause-btn flex-1">⏸ Pause</button>
+                        <button id="btn-control-stop" class="btn stop-btn flex-1">⏹ Stop</button>
+                    </div>
+
+                    <!-- Speed & Dynamic Indicators -->
+                    <div class="metrics-grid">
+                        <div class="metric-box">
+                            <span class="value" id="stat-speed">0.0 <span>Mbps</span></span>
+                            <span class="label">Speed</span>
+                        </div>
+                        <div class="metric-box">
+                            <span class="value" id="stat-disk">0.0 <span>GB</span></span>
+                            <span class="label">Kaggle Disk Free</span>
+                        </div>
+                        <div class="metric-box">
+                            <span class="value" id="stat-done">0 / 0</span>
+                            <span class="label">Completed Topics</span>
+                        </div>
+                        <div class="metric-box">
+                            <span class="value" id="stat-videos">0</span>
+                            <span class="label">Cloned Files</span>
+                        </div>
+                    </div>
+
+                    <!-- Slots Container -->
+                    <div id="slots-container" style="display: flex; flex-direction: column; gap: 10px; margin-top: 5px;">
+                        <!-- Dynamic slot progress items will be rendered here -->
+                    </div>
+
+                    <!-- Dynamic ETA card -->
+                    <div class="eta-card">
+                        <div class="eta-box">
+                            <span class="eta-title">Uptime</span>
+                            <span class="eta-value" id="stat-uptime">00:00:00</span>
+                        </div>
+                        <div class="eta-box">
+                            <span class="eta-title">Auto-Restart In</span>
+                            <span class="eta-value" id="stat-restart-timer">00:00</span>
+                        </div>
+                        <div class="eta-box highlight">
+                            <span class="eta-title">Estimated Time (ETA)</span>
+                            <span class="eta-value" id="stat-eta">Calculating...</span>
+                        </div>
+                    </div>
+
+                    <!-- Custom Console Logger -->
+                    <div class="console-log-container">
+                        <div class="console-header">
+                            <span>💻 System Terminal Logs</span>
+                            <button id="btn-clear-console" class="btn-clear">Clear</button>
+                        </div>
+                        <div class="console-body" id="system-console">
+                            <div class="log-line system">[System] Welcome to Cloner Ultra Dashboard. Connect Firebase to start monitoring.</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="admin.js"></script>
+</body>
+</html>
