@@ -440,19 +440,7 @@ async def monitor_and_reporter(bot, stats):
             rm = (restart_in % 3600) // 60
             restart_str = f"{rh:02d}:{rm:02d}"
 
-            # Extract from fb_data to avoid making multiple get().val() requests!
-            source_topics = fb_data.get("source_topics", {})
-            finished_topics = fb_data.get("finished_topics", {})
-            queue = fb_data.get("queue", [])
-            
-            remaining_mb = 0.0
-            for q_id in queue:
-                if str(q_id) not in finished_topics:
-                    topic = source_topics.get(q_id, {})
-                    if isinstance(topic, dict):
-                        remaining_mb += topic.get("size_mb", 0.0)
-                    else:
-                        remaining_mb += 100.0
+            remaining_mb = stats.get('remaining_mb', 0.0)
             
             speed = speed_tracker.speed_mbps
             eta_str = "Calculating..."
@@ -511,6 +499,17 @@ async def run_queue_engine(user, bot, stats, all_tasks_ref, done_ids, finished_t
         
         stats['global_topics_total'] = len(queue)
         stats['global_topics_done'] = len(finished_topics)
+
+        # Calculate total remaining MB
+        remaining_mb = 0.0
+        for q_id in queue:
+            if str(q_id) not in finished_topics:
+                topic = source_topics.get(str(q_id), {})
+                if isinstance(topic, dict):
+                    remaining_mb += topic.get("size_mb", 0.0)
+                else:
+                    remaining_mb += 100.0
+        stats['remaining_mb'] = remaining_mb
 
         # Find next unprocessed topic ID in the queue (skipping failed ones in this run)
         next_topic_id = None
