@@ -140,19 +140,30 @@ def start_firebase_polling():
     
     while True:
         try:
-            # 1. Fetch shallow root keys to locate active bots
-            url = f"{db_url}/.json?shallow=true"
+            # 1. Fetch configured bots list from Firebase
+            url = f"{db_url}/admin_config/bots.json"
             resp = requests.get(url, timeout=10)
+            bot_list = None
             if resp.status_code == 200:
-                roots = resp.json() or {}
-                for root_key in roots.keys():
-                    if root_key.startswith(".") or root_key in ("users", "admin_config"):
-                        continue
-                        
-                    trigger_url = f"{db_url}/{root_key}/control/trigger_restart.json"
-                    try:
-                        trigger_resp = requests.get(trigger_url, timeout=5)
-                        if trigger_resp.status_code == 200 and trigger_resp.json() is not None:
+                bot_list = resp.json()
+                
+            # Fallback to default list if not configured in Firebase yet
+            if not bot_list or not isinstance(bot_list, list):
+                bot_list = [
+                    {"name": "BURNOL ZONE", "root": "BURNOL_ZONE", "url": db_url}
+                ]
+                
+            for bot in bot_list:
+                if not bot or not isinstance(bot, dict):
+                    continue
+                root_key = bot.get("root")
+                if not root_key:
+                    continue
+                    
+                trigger_url = f"{db_url}/{root_key}/control/trigger_restart.json"
+                try:
+                    trigger_resp = requests.get(trigger_url, timeout=5)
+                    if trigger_resp.status_code == 200 and trigger_resp.json() is not None:
                             # Update check timestamp for this bot root (type: cloud_server)
                             orchestrator_url = f"{db_url}/{root_key}/status/orchestrator.json"
                             try:

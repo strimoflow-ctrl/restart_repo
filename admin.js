@@ -225,6 +225,18 @@ function setupFirebaseListeners() {
         elSaveQueueBtn.style.display = "none";
     }
     
+    // Sync bot instances list from Firebase global admin config
+    database.ref("admin_config/bots").on("value", (snapshot) => {
+        const val = snapshot.val();
+        if (val && Array.isArray(val) && val.length > 0) {
+            botInstances = val;
+            localStorage.setItem("bot_instances", JSON.stringify(botInstances));
+            renderInstanceSelector();
+        } else {
+            database.ref("admin_config/bots").set(botInstances);
+        }
+    });
+
     // 1. Sync configuration inputs from Firebase (if they exist)
     database.ref(`${dbRoot}/config`).once("value", (snapshot) => {
         const val = snapshot.val();
@@ -1003,16 +1015,25 @@ if (elBtnAddBot) {
         if (!url) return;
         
         const newBot = { name, url, root };
-        botInstances.push(newBot);
-        localStorage.setItem("bot_instances", JSON.stringify(botInstances));
+        if (!botInstances.some(b => b.root === root)) {
+            botInstances.push(newBot);
+        }
         
-        renderInstanceSelector();
+        localStorage.setItem("fb_url", url);
+        localStorage.setItem("fb_root", root);
         
-        elFbUrl.value = url;
-        elFbRoot.value = root;
-        initFirebase(url, root);
-        
-        logToConsole(`Added new bot instance: ${name}`, "success");
+        if (database) {
+            database.ref("admin_config/bots").set(botInstances)
+                .then(() => {
+                    initFirebase(url, root);
+                    logToConsole(`Added new bot instance: ${name}`, "success");
+                });
+        } else {
+            localStorage.setItem("bot_instances", JSON.stringify(botInstances));
+            renderInstanceSelector();
+            initFirebase(url, root);
+            logToConsole(`Added new bot instance: ${name}`, "success");
+        }
     });
 }
 
@@ -1028,16 +1049,23 @@ if (elBtnRemoveBot) {
         const bot = botInstances[activeIndex];
         if (confirm(`Are you sure you want to remove the bot instance '${bot.name}'?`)) {
             botInstances.splice(activeIndex, 1);
-            localStorage.setItem("bot_instances", JSON.stringify(botInstances));
-            
-            renderInstanceSelector();
             
             const firstBot = botInstances[0];
-            elFbUrl.value = firstBot.url;
-            elFbRoot.value = firstBot.root;
-            initFirebase(firstBot.url, firstBot.root);
+            localStorage.setItem("fb_url", firstBot.url);
+            localStorage.setItem("fb_root", firstBot.root);
             
-            logToConsole(`Deleted bot instance: ${bot.name}`, "warn");
+            if (database) {
+                database.ref("admin_config/bots").set(botInstances)
+                    .then(() => {
+                        initFirebase(firstBot.url, firstBot.root);
+                        logToConsole(`Deleted bot instance: ${bot.name}`, "warn");
+                    });
+            } else {
+                localStorage.setItem("bot_instances", JSON.stringify(botInstances));
+                renderInstanceSelector();
+                initFirebase(firstBot.url, firstBot.root);
+                logToConsole(`Deleted bot instance: ${bot.name}`, "warn");
+            }
         }
     });
 }
