@@ -196,6 +196,7 @@ def start_firebase_polling():
                                     print(f"[!] Push auto-restart for '{root_key}' failed: {e}")
                     except Exception as e:
                         pass
+        except Exception as e:
             # Prevent console spam on connection errors
             pass
         time.sleep(5)
