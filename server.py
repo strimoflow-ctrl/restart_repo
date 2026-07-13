@@ -133,49 +133,66 @@ def push_notebook_to_kaggle(username, key, title, slug, db_root=None):
 
 
 def start_firebase_polling():
-    """Polls Firebase RTDB for auto-restart triggers using standard REST API (no pyrebase dependency)."""
+    """Polls Firebase RTDB for auto-restart triggers dynamically across all bot instances."""
     import time
     db_url = FIREBASE_CONFIG["databaseURL"].rstrip('/')
-    trigger_url = f"{db_url}/{DB_ROOT}/control/trigger_restart.json"
-    print("[*] Local server listening to Firebase RTDB for auto-restart triggers via REST...")
+    print("[*] Cloud server listening to Firebase RTDB for auto-restart triggers across all roots...")
     
     while True:
         try:
-            # Update orchestrator status in Firebase
-            orchestrator_url = f"{db_url}/{DB_ROOT}/status/orchestrator.json"
-            try:
-                requests.patch(orchestrator_url, json={"last_check": time.time(), "type": "local_server"}, timeout=5)
-            except:
-                pass
-                
-            resp = requests.get(trigger_url, timeout=5)
-            if resp.status_code == 200 and resp.json() is True:
-                # Reset trigger first to prevent double runs
-                requests.put(trigger_url, json=False, timeout=5)
-                print("[*] Firebase Poller: Auto-restart requested. Waiting 10 minutes (600s) for safe VM shutdown...")
-                time.sleep(600)
-                print("[*] Waiting complete. Pushing to Kaggle...")
-                
-                # Fetch latest credentials from database
-                config_url = f"{db_url}/{DB_ROOT}/config/kaggle.json"
-                kgl_resp = requests.get(config_url, timeout=5)
-                if kgl_resp.status_code == 200:
-                    kgl = kgl_resp.json()
-                    if kgl:
-                        username = kgl.get("username")
-                        key = kgl.get("key")
-                        title = kgl.get("title")
-                        slug = kgl.get("slug")
-                        if username and key and title and slug:
+            # 1. Fetch shallow root keys to locate active bots
+            url = f"{db_url}/.json?shallow=true"
+            resp = requests.get(url, timeout=10)
+            if resp.status_code == 200:
+                roots = resp.json() or {}
+                for root_key in roots.keys():
+                    if root_key.startswith("cloner_") or root_key == "vip_pluse":
+                        # Update check timestamp for this bot root (type: cloud_server)
+                        orchestrator_url = f"{db_url}/{root_key}/status/orchestrator.json"
+                        try:
+                            requests.patch(orchestrator_url, json={"last_check": time.time(), "type": "cloud_server"}, timeout=5)
+                        except:
+                            pass
+                            
+                        # Check trigger restart status
+                        trigger_url = f"{db_url}/{root_key}/control/trigger_restart.json"
+                        trigger_resp = requests.get(trigger_url, timeout=5)
+                        if trigger_resp.status_code == 200 and trigger_resp.json() is True:
+                            print(f"\n[!] Auto-restart requested for root node: '{root_key}'!")
+                            
+                            # Reset trigger in Firebase first to prevent double runs
+                            requests.put(trigger_url, json=False, timeout=5)
+                            print(f"[*] Reset trigger_restart to False for '{root_key}'")
+                            
+                            # Wait 10 minutes for safe shutdown as requested
+                            print(f"[*] Waiting 10 minutes (600s) for VM '{root_key}' to shut down safely...")
+                            time.sleep(600)
+                            print(f"[*] Waiting complete. Pushing updated code to Kaggle for '{root_key}'...")
+                            
+                            # Fetch Kaggle config
+                            config_url = f"{db_url}/{root_key}/config/kaggle.json"
+                            config_resp = requests.get(config_url, timeout=5)
+                            
+                            # Hardcoded fallback credentials (user's private repo defaults)
+                            username = "pankajmourrya"
+                            key = "581360a6a230292364e96a0ec8db406c"
+                            title = f"Cloner {root_key.replace('_', ' ').title()}"
+                            slug = root_key.replace("_", "-")
+                            
+                            if config_resp.status_code == 200:
+                                kgl = config_resp.json() or {}
+                                username = kgl.get("username") or username
+                                key = kgl.get("key") or key
+                                title = kgl.get("title") or title
+                                slug = kgl.get("slug") or slug
+                                
                             try:
-                                status_code, resp_text = push_notebook_to_kaggle(username, key, title, slug)
-                                print(f"[*] Push auto-restart triggered with status: {status_code}")
+                                status_code, resp_text = push_notebook_to_kaggle(username, key, title, slug, root_key)
+                                print(f"[+] Push auto-restart for '{root_key}' triggered with status: {status_code}")
                             except Exception as e:
-                                print(f"[!] Push auto-restart failed: {e}")
-                else:
-                    print("[!] Auto-restart failed: Could not read credentials from Firebase config.")
+                                print(f"[!] Push auto-restart for '{root_key}' failed: {e}")
         except Exception as e:
-            # Silent catch or standard debug to prevent console flood
+            # Prevent console spam on connection errors
             pass
         time.sleep(5)
 
@@ -357,12 +374,13 @@ class DashboardHTTPHandler(BaseHTTPRequestHandler):
 def run(port=8000):
     server_address = ('', port)
     httpd = HTTPServer(server_address, DashboardHTTPHandler)
-    print(f"[*] Cloner Ultra Local Server running on http://localhost:{port}")
+    print(f"[*] Cloner Ultra Server running on port {port}")
     try:
         httpd.serve_forever()
     except KeyboardInterrupt:
-        print("\nStopping Local Server...")
+        print("\nStopping Server...")
         httpd.server_close()
 
 if __name__ == '__main__':
-    run()
+    port = int(os.environ.get("PORT", 8000))
+    run(port=port)

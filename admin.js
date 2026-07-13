@@ -383,6 +383,9 @@ function setupFirebaseListeners() {
                     if (orch.type === "github_actions") {
                         const mins = Math.max(0, Math.round(diffSec / 60));
                         elOrchestratorStatus.innerText = `🛰 CLOUD ACTIONS (Checked ${mins}m ago)`;
+                    } else if (orch.type === "cloud_server" || orch.type === "railway") {
+                        const secs = Math.max(0, Math.round(diffSec));
+                        elOrchestratorStatus.innerText = `💻 CLOUD SERVER (Checked ${secs}s ago)`;
                     } else {
                         const secs = Math.max(0, Math.round(diffSec));
                         elOrchestratorStatus.innerText = `💻 PC SERVER (Checked ${secs}s ago)`;
