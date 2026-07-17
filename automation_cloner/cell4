@@ -628,7 +628,7 @@ async def start_automation():
                     print(f"⏳ Creating thread topic: '{chapter_name}'...")
                     try:
                         result = await user_client(CreateForumTopicRequest(
-                            channel=target_group,
+                            peer=target_group,
                             title=chapter_name
                         ))
                         
