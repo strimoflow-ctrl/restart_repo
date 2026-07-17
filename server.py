@@ -254,7 +254,8 @@ def start_firebase_polling():
             # Fallback to default list if not configured in Firebase yet
             if not bot_list or not isinstance(bot_list, list):
                 bot_list = [
-                    {"name": "BURNOL ZONE", "root": "BURNOL_ZONE", "url": db_url}
+                    {"name": "BURNOL ZONE", "root": "BURNOL_ZONE", "url": db_url},
+                    {"name": "AUTOMATION", "root": "new_automation_courses", "url": db_url}
                 ]
                 
             for bot in bot_list:
@@ -287,8 +288,12 @@ def start_firebase_polling():
                             time.sleep(600)
                             print(f"[*] Waiting complete. Pushing updated code to Kaggle for '{root_key}'...")
                             
-                            # Fetch Kaggle config
-                            config_url = f"{db_url}/{root_key}/config/kaggle.json"
+                            # Fetch Kaggle config depending on bot type
+                            if root_key == "new_automation_courses":
+                                config_url = f"{db_url}/{root_key}/config.json"
+                            else:
+                                config_url = f"{db_url}/{root_key}/config/kaggle.json"
+                                
                             config_resp = requests.get(config_url, timeout=5)
                             
                             # Hardcoded fallback credentials (user's private repo defaults)
@@ -299,10 +304,16 @@ def start_firebase_polling():
                             
                             if config_resp.status_code == 200:
                                 kgl = config_resp.json() or {}
-                                username = kgl.get("username") or username
-                                key = kgl.get("key") or key
-                                title = kgl.get("title") or title
-                                slug = kgl.get("slug") or slug
+                                if root_key == "new_automation_courses":
+                                    username = kgl.get("kaggle_username") or username
+                                    key = kgl.get("kaggle_key") or key
+                                    title = "Multi-Teacher Forum Cloner Automation"
+                                    slug = kgl.get("kaggle_slug") or slug
+                                else:
+                                    username = kgl.get("username") or username
+                                    key = kgl.get("key") or key
+                                    title = kgl.get("title") or title
+                                    slug = kgl.get("slug") or slug
                                 
                             try:
                                 if root_key == "new_automation_courses":
