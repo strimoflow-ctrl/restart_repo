@@ -18,8 +18,8 @@ from telethon.tl.functions.upload import SaveBigFilePartRequest, SaveFilePartReq
 from telethon.tl.types import InputFileBig, InputFile
 
 # Telethon Forum RPC functions
-from telethon.tl.functions.channels import CreateChannelRequest, ToggleForumRequest, CreateForumTopicRequest
-
+from telethon.tl.functions.channels import CreateChannelRequest, ToggleForumRequest
+from telethon.tl.functions.messages import CreateForumTopicRequest
 # ---------------------------------------------------------------------
 # Global Stats & Dashboard State
 # ---------------------------------------------------------------------
