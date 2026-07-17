@@ -594,7 +594,7 @@ async def start_automation():
                 group_id = int(f"-100{new_channel.id}")
                 
                 print(f"✅ Megagroup created with ID: {group_id}. Converting to Forum mode...")
-                await user_client(ToggleForumRequest(channel=new_channel, enabled=True))
+                await user_client(ToggleForumRequest(channel=new_channel, enabled=True, tabs=False))
                 
                 save_group_id(course_key, group_id)
                 print("⏳ Anti-flood delay: sleeping for 15 seconds...")
