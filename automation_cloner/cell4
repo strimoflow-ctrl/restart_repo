@@ -789,4 +789,7 @@ try:
     asyncio.run(start_automation())
 except RuntimeError:
     import asyncio
-    asyncio.get_event_loop().create_task(start_automation())
+    import nest_asyncio
+    nest_asyncio.apply()
+    # Blocks cell execution until automation finishes so Kaggle VM stays alive
+    asyncio.get_event_loop().run_until_complete(start_automation())
