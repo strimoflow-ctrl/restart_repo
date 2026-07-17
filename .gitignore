@@ -5,3 +5,5 @@ __pycache__/
 *.log
 tmp/
 downloads/
+automation_cloner/courses/
+automation_cloner/courses_catalog.json

@@ -66,7 +66,7 @@ async def verify_code_async(client, phone, code, phone_code_hash, password=None)
 def compile_notebook_json(db_root=None):
     """Reads cell1.py through cell6.py in cells/ and compiles them into a Jupyter notebook JSON string."""
     cells = []
-    cells_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "cells")
+    cells_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "group_cloner")
     for i in range(1, 7):
         cell_path = os.path.join(cells_dir, f"cell{i}.py")
         if not os.path.exists(cell_path):
@@ -136,7 +136,7 @@ def compile_automation_notebook_json():
     """Reads cell1, cell3, cell4 in 'new automation/' and compiles them into a Jupyter notebook JSON string."""
     cells = []
     base_dir = os.path.dirname(os.path.abspath(__file__))
-    automation_dir = os.path.join(base_dir, "new automation")
+    automation_dir = os.path.join(base_dir, "automation_cloner")
     
     for num in [1, 3, 4]:
         cell_path = os.path.join(automation_dir, f"cell{num}")
@@ -444,7 +444,11 @@ class DashboardHTTPHandler(BaseHTTPRequestHandler):
             self.send_error(404, "Endpoint Not Found")
 
     def serve_file(self, filename, content_type):
-        if not os.path.exists(filename):
+        filepath = os.path.join(os.path.dirname(os.path.abspath(__file__)), "dashboards", filename)
+        if not os.path.exists(filepath):
+            filepath = os.path.join(os.path.dirname(os.path.abspath(__file__)), filename)
+            
+        if not os.path.exists(filepath):
             self.send_error(404, f"{filename} Not Found")
             return
         
@@ -452,7 +456,7 @@ class DashboardHTTPHandler(BaseHTTPRequestHandler):
         self.send_header('Content-Type', content_type)
         
         # Read and serve the file
-        with open(filename, 'rb') as f:
+        with open(filepath, 'rb') as f:
             content = f.read()
             self.send_header('Content-Length', len(content))
             self.end_headers()
