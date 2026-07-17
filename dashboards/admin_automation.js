@@ -8,25 +8,42 @@ function initFirebase(dbUrl) {
     if (!dbUrl) return;
     
     // Clean URL
-    const cleanUrl = dbUrl.trim().rstrip('/');
+    const cleanUrl = dbUrl.trim().replace(/\/+$/, "");
     
     try {
-        // Prevent re-initialization error
+        if (typeof firebase === 'undefined') {
+            console.warn("Firebase SDK is not loaded yet. Retrying in 500ms...");
+            setTimeout(() => initFirebase(dbUrl), 500);
+            return;
+        }
+        
+        const config = { databaseURL: cleanUrl };
+        
         if (firebase.apps.length === 0) {
-            firebase.initializeApp({
-                databaseURL: cleanUrl
+            firebase.initializeApp(config);
+            db = firebase.database();
+            console.log("Firebase initialized successfully with URL:", cleanUrl);
+            loadCatalog();
+            loadConfig();
+            setupStatusListener();
+        } else {
+            firebase.app().delete().then(() => {
+                firebase.initializeApp(config);
+                db = firebase.database();
+                console.log("Firebase re-initialized with URL:", cleanUrl);
+                loadCatalog();
+                loadConfig();
+                setupStatusListener();
+            }).catch(e => {
+                console.error("Firebase app deletion failed:", e);
+                // Fallback direct init
+                firebase.initializeApp(config);
+                db = firebase.database();
+                loadCatalog();
+                loadConfig();
+                setupStatusListener();
             });
         }
-        db = firebase.database();
-        console.log("Firebase initialized successfully with URL:", cleanUrl);
-        
-        // Load Catalog
-        loadCatalog();
-        // Load Config
-        loadConfig();
-        // Setup Live Status Listener
-        setupStatusListener();
-        
     } catch (e) {
         console.error("Firebase init failed:", e);
         alert("Firebase Connection failed. Check Console or URL.");
@@ -334,7 +351,7 @@ document.getElementById("btn-trigger-restart").addEventListener("click", () => {
 });
 
 // 10. Auto-initialize using current Firebase details (extract from environment or input URL prompt)
-window.addEventListener("DOMContentLoaded", () => {
+window.addEventListener("load", () => {
     // Read the current default firebase URL from standard config URL if available
     const dbUrl = "https://secret-gpt-default-rtdb.asia-southeast1.firebasedatabase.app";
     document.getElementById("fb-url").value = dbUrl;
