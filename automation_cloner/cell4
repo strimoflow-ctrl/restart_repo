@@ -20,6 +20,8 @@ from telethon.tl.types import InputFileBig, InputFile
 # Telethon Forum RPC functions
 from telethon.tl.functions.channels import CreateChannelRequest, ToggleForumRequest
 from telethon.tl.functions.messages import CreateForumTopicRequest
+from telethon.errors import FloodWaitError
+
 # ---------------------------------------------------------------------
 # Global Stats & Dashboard State
 # ---------------------------------------------------------------------
@@ -584,24 +586,33 @@ async def start_automation():
         group_id = get_saved_group_id(course_key)
         if not group_id:
             print(f"⏳ Group mapping not found. Creating private megagroup: '{target_group_name}'...")
-            try:
-                create_res = await user_client(CreateChannelRequest(
-                    title=target_group_name,
-                    about=f"Decrypted lectures cloner for {course_title}. Powered by admin config.",
-                    megagroup=True
-                ))
-                new_channel = create_res.chats[0]
-                group_id = int(f"-100{new_channel.id}")
-                
-                print(f"✅ Megagroup created with ID: {group_id}. Converting to Forum mode...")
-                await user_client(ToggleForumRequest(channel=new_channel, enabled=True, tabs=False))
-                
-                save_group_id(course_key, group_id)
-                print("⏳ Anti-flood delay: sleeping for 15 seconds...")
-                await asyncio.sleep(15)
-            except Exception as e:
-                print(f"❌ Failed to create megagroup/forum: {e}")
-                continue
+            while True:
+                try:
+                    create_res = await user_client(CreateChannelRequest(
+                        title=target_group_name,
+                        about=f"Decrypted lectures cloner for {course_title}. Powered by admin config.",
+                        megagroup=True
+                    ))
+                    new_channel = create_res.chats[0]
+                    group_id = int(f"-100{new_channel.id}")
+                    
+                    print(f"✅ Megagroup created with ID: {group_id}. Converting to Forum mode...")
+                    await user_client(ToggleForumRequest(channel=new_channel, enabled=True, tabs=False))
+                    
+                    save_group_id(course_key, group_id)
+                    print("⏳ Anti-flood delay: sleeping for 15 seconds...")
+                    await asyncio.sleep(15)
+                    break # Success, exit retry loop
+                except FloodWaitError as e:
+                    print(f"⚠️ Telegram FloodWait: Sleeping for {e.seconds} seconds before retrying group creation...")
+                    await asyncio.sleep(e.seconds + 2)
+                except Exception as e:
+                    print(f"❌ Failed to create megagroup/forum: {e}")
+                    group_id = None # Signal failure
+                    break
+            
+            if not group_id:
+                continue # Skip this course if group creation permanently failed
         else:
             print(f"✅ Found existing Group mapping ID: {group_id}")
 
@@ -626,30 +637,39 @@ async def start_automation():
                 if not thread_id:
                     CURRENT_ACTION = f"Creating topic thread: {chapter_name}"
                     print(f"⏳ Creating thread topic: '{chapter_name}'...")
-                    try:
-                        result = await user_client(CreateForumTopicRequest(
-                            peer=target_group,
-                            title=chapter_name
-                        ))
-                        
-                        # Find update containing thread ID
-                        for update in result.updates:
-                            if hasattr(update, 'message'):
-                                thread_id = update.message.id
-                                break
-                                
-                        if not thread_id:
-                            thread_id = result.updates[0].id # fallback
+                    while True:
+                        try:
+                            result = await user_client(CreateForumTopicRequest(
+                                peer=target_group,
+                                title=chapter_name
+                            ))
                             
-                        save_topic_id(course_key, chapter_hash, thread_id)
-                        print(f"✅ Topic thread created. ID: {thread_id}. Sleeping 15 seconds to prevent rate limits...")
-                        await asyncio.sleep(15)
-                    except Exception as e:
-                        FAIL_COUNT += 1
-                        CURRENT_ACTION = f"Failed to create topic: {e}"
-                        print(f"⚠️ Error creating topic: {e}")
-                        await asyncio.sleep(5)
-                        continue
+                            # Find update containing thread ID
+                            for update in result.updates:
+                                if hasattr(update, 'message'):
+                                    thread_id = update.message.id
+                                    break
+                                    
+                            if not thread_id:
+                                thread_id = result.updates[0].id # fallback
+                                
+                            save_topic_id(course_key, chapter_hash, thread_id)
+                            print(f"✅ Topic thread created. ID: {thread_id}. Sleeping 15 seconds to prevent rate limits...")
+                            await asyncio.sleep(15)
+                            break # Success, exit retry loop
+                        except FloodWaitError as e:
+                            print(f"⚠️ Telegram FloodWait: Sleeping for {e.seconds} seconds before retrying topic creation...")
+                            await asyncio.sleep(e.seconds + 2)
+                        except Exception as e:
+                            FAIL_COUNT += 1
+                            CURRENT_ACTION = f"Failed to create topic: {e}"
+                            print(f"⚠️ Error creating topic: {e}")
+                            await asyncio.sleep(5)
+                            thread_id = None
+                            break
+                            
+                    if not thread_id:
+                        continue # Skip this chapter if topic creation failed
 
                 if "lectures" not in chapter:
                     continue
