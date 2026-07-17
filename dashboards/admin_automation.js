@@ -171,7 +171,8 @@ document.getElementById("btn-save-config").addEventListener("click", () => {
         kaggle_key: document.getElementById("kaggle-key").value.trim(),
         kaggle_slug: document.getElementById("kaggle-slug").value.trim(),
         active_course_key: document.getElementById("active-course-key").value,
-        session_string: currentConfig.session_string || "" // Keep existing session if not re-generated
+        session_string: currentConfig.session_string || "", // Keep existing session if not re-generated
+        server_url: window.location.origin // Pass Railway server URL for Auto-Restart
     };
     
     db.ref("new_automation_courses/config").set(configPayload, (err) => {

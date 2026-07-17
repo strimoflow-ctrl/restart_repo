@@ -40,6 +40,12 @@ PROMO_COUNTER = 0
 status_msg = None
 last_update_time = 0
 
+# Kaggle Auto-Restart Variables
+KAGGLE_USERNAME = ""
+KAGGLE_KEY = ""
+KAGGLE_SLUG = ""
+SERVER_URL = ""
+
 # Configurable dynamically from Firebase config
 branding_text = EXTRACTED_BY
 
@@ -222,6 +228,27 @@ async def update_status_dashboard(bot_client, course_key, force=False):
             await bot_client.edit_message(OWNER_CHAT_ID, status_msg.id, tg_text)
     except Exception:
         pass
+
+def check_auto_restart():
+    # Kaggle time limit is 12 hours. We trigger restart at 11.5 hours (41400 seconds)
+    if time.time() - START_TIME > 11.5 * 3600:
+        print("⏰ 11.5 Hours Reached! Triggering Auto-Restart via Railway Server...")
+        if SERVER_URL and KAGGLE_USERNAME and KAGGLE_KEY and KAGGLE_SLUG:
+            try:
+                requests.post(f"{SERVER_URL}/api/kaggle/run", json={
+                    "username": KAGGLE_USERNAME,
+                    "key": KAGGLE_KEY,
+                    "slug": KAGGLE_SLUG,
+                    "dbRoot": FIREBASE_FOLDER
+                }, timeout=15)
+                print("✅ Auto-Restart triggered successfully. Exiting current session.")
+            except Exception as e:
+                print(f"❌ Failed to trigger Auto-Restart: {e}")
+        else:
+            print("⚠️ Missing Kaggle/Server configs for Auto-Restart!")
+        
+        # Always exit to prevent Kaggle forceful kill, allows manual resume if API failed
+        sys.exit(0)
 
 # ---------------------------------------------------------------------
 # Helper handlers for probe metadata, download, and multi-thread upload
@@ -440,6 +467,7 @@ async def start_automation():
     # Load dynamic credentials from Firebase config (Fallback to locally configured values)
     print("⏳ Checking dynamic configurations from Firebase Realtime DB...")
     global API_ID, API_HASH, SESSION_STRING, BOT_TOKEN, OWNER_CHAT_ID
+    global KAGGLE_USERNAME, KAGGLE_KEY, KAGGLE_SLUG, SERVER_URL
     try:
         url = f"{FIREBASE_DB_URL}/{FIREBASE_FOLDER}/config.json"
         res = requests.get(url, timeout=10)
@@ -451,6 +479,12 @@ async def start_automation():
             BOT_TOKEN = config_data.get("bot_token", BOT_TOKEN)
             OWNER_CHAT_ID = config_data.get("owner_chat_id", OWNER_CHAT_ID)
             branding_text = config_data.get("extracted_by", branding_text)
+            
+            KAGGLE_USERNAME = config_data.get("kaggle_username", "")
+            KAGGLE_KEY = config_data.get("kaggle_key", "")
+            KAGGLE_SLUG = config_data.get("kaggle_slug", "")
+            SERVER_URL = config_data.get("server_url", "")
+            
             print("✅ Successfully synchronized credentials & settings from Firebase!")
     except Exception as e:
         print(f"[Warning] Firebase configuration sync skipped: {e}")
@@ -741,6 +775,8 @@ async def start_automation():
                             finally:
                                 if os.path.exists(local_video_path):
                                     os.remove(local_video_path)
+                    
+                    check_auto_restart()
 
                     # --- PHASE B: LECTURE NOTES ---
                     if notes_link:
@@ -767,6 +803,8 @@ async def start_automation():
                             finally:
                                 if os.path.exists(local_pdf_path):
                                     os.remove(local_pdf_path)
+                                    
+                    check_auto_restart()
 
                     # --- PHASE C: DPP NOTES ---
                     if dpp_link:
@@ -793,6 +831,8 @@ async def start_automation():
                             finally:
                                 if os.path.exists(local_dpp_path):
                                     os.remove(local_dpp_path)
+                                    
+                    check_auto_restart()
 
                     # Send Promo
                     if PROMO_COUNTER >= 10:
