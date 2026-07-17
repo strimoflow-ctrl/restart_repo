@@ -3,6 +3,6 @@ import os
 print("⏳ Installing required libraries (Telethon, Hachoir, aiohttp, requests)...")
 
 # Yahan telethon ko list mein wapas include kar diya hai safely, aur cryptg speed ke liye add kiya h
-os.system("pip install -q telethon hachoir aiohttp requests cryptg nest_asyncio")
+os.system("pip install -q telethon hachoir aiohttp requests cryptg nest_asyncio pillow")
 
 print("✅ Installation complete! Please proceed directly to Cell 4 to execute.")

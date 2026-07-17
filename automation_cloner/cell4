@@ -21,6 +21,7 @@ from telethon.tl.types import InputFileBig, InputFile
 from telethon.tl.functions.channels import CreateChannelRequest, ToggleForumRequest
 from telethon.tl.functions.messages import CreateForumTopicRequest
 from telethon.errors import FloodWaitError
+from PIL import Image
 
 # ---------------------------------------------------------------------
 # Global Stats & Dashboard State
@@ -67,7 +68,7 @@ def to_stylish_bold(text):
         if 65 <= o <= 90: # A-Z
             result.append(chr(o - 65 + 0x1D5D4))
         elif 97 <= o <= 122: # a-z
-            result.append(chr(o - 97 + 0x1D5EA))
+            result.append(chr(o - 97 + 0x1D5EE))
         elif 48 <= o <= 57: # 0-9
             result.append(chr(o - 48 + 0x1D7EC))
         else:
@@ -541,9 +542,19 @@ async def start_automation():
             try:
                 res = requests.get(thumbnail_url, timeout=15)
                 if res.status_code == 200:
-                    with open("thumbnail.jpg", "wb") as f:
+                    with open("thumbnail_raw.jpg", "wb") as f:
                         f.write(res.content)
-                    print("✅ Cover thumbnail saved.")
+                    
+                    # Convert to proper JPEG and resize to max 320x320 for Telegram video thumbnail limit
+                    img = Image.open("thumbnail_raw.jpg")
+                    if img.mode != "RGB":
+                        img = img.convert("RGB")
+                    img.thumbnail((320, 320))
+                    img.save("thumbnail.jpg", "JPEG", quality=90)
+                    if os.path.exists("thumbnail_raw.jpg"):
+                        os.remove("thumbnail_raw.jpg")
+                    
+                    print("✅ Cover thumbnail processed and saved.")
             except Exception as e:
                 print(f"⚠️ Cover thumbnail load failed: {e}")
 
@@ -583,6 +594,8 @@ async def start_automation():
         FAIL_COUNT = 0
 
         # Auto-group mapping/creation
+        target_group_name = course.get("group_name", course_title).replace(" - Cloner", "").strip()
+        
         group_id = get_saved_group_id(course_key)
         if not group_id:
             print(f"⏳ Group mapping not found. Creating private megagroup: '{target_group_name}'...")
@@ -590,7 +603,7 @@ async def start_automation():
                 try:
                     create_res = await user_client(CreateChannelRequest(
                         title=target_group_name,
-                        about=f"Decrypted lectures cloner for {course_title}. Powered by admin config.",
+                        about=f"Complete lectures for {course_title}.",
                         megagroup=True
                     ))
                     new_channel = create_res.chats[0]
