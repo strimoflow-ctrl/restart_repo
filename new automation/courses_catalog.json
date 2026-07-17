@@ -1,0 +1,72 @@
+[
+  {
+    "title": "NEET Physics Class 11 (AG Sir)",
+    "group_name": "📚 Ag Sir Class 11 Physics - Cloner",
+    "thumbnail": "https://i.ibb.co/Ds62tbM/e4bc685a4149.webp",
+    "lecture_count": 211,
+    "local_file": "ag-class11.json"
+  },
+  {
+    "title": "NEET Physics Class 12 (AG Sir)",
+    "group_name": "📚 Ag Sir Class 12 Physics - Cloner",
+    "thumbnail": "https://i.ibb.co/RGV52ZZb/d0442b88f5f3.webp",
+    "lecture_count": 300,
+    "local_file": "ag-class12.json"
+  },
+  {
+    "title": "Physical Chemistry (TNM Sir)",
+    "group_name": "📚 Tnm Sir Class 11+12 Physical Chemistry - Cloner",
+    "thumbnail": "https://i.ibb.co/VcjKmWJD/de46650b4adc.webp",
+    "lecture_count": 322,
+    "local_file": "tnm-physical.json"
+  },
+  {
+    "title": "Organic Chemistry 120+ Videos (YSY Sir)",
+    "group_name": "📚 Ysy Sir Class 11+12 Organic Chemistry - Cloner",
+    "thumbnail": "https://i.ibb.co/Fb5455Lj/45208e1dc2ee.webp",
+    "lecture_count": 207,
+    "local_file": "ysy-organic.json"
+  },
+  {
+    "title": "Complete Chemistry 11+12 By KK Pandey",
+    "group_name": "📚 Kk Pandya Sir Class 11+12 Chemistry - Cloner",
+    "thumbnail": "https://i.ibb.co/LhNZMmzk/8a8bfd839969.webp",
+    "lecture_count": 98,
+    "local_file": "kk-11+12.json"
+  },
+  {
+    "title": "Complete Inorganic Chemistry (11+12) By AS Sir",
+    "group_name": "📚 As Sir Class 11+12 Inorganic Chemistry - Cloner",
+    "thumbnail": "https://i.ibb.co/BRqY8KJ/3bea93b5d857.webp",
+    "lecture_count": 77,
+    "local_file": "as-11+12.json"
+  },
+  {
+    "title": "Complete BIology (11+12) By Pyush Gupta",
+    "group_name": "📚 Piyush Sir Class 11+12 Biology - Cloner",
+    "thumbnail": "https://i.ibb.co/fzpV6nGh/685309412dbe.webp",
+    "lecture_count": 134,
+    "local_file": "piyush-11+12.json"
+  },
+  {
+    "title": "Complete Botany 11+12 By Dr Rakesh",
+    "group_name": "📚 Rakesh Chaurasia Sir Class 11+12 Botany - Cloner",
+    "thumbnail": "https://i.ibb.co/zTdwCCnh/164a19d474cb.webp",
+    "lecture_count": 36,
+    "local_file": "drrakesh-11.12.json"
+  },
+  {
+    "title": "Complete Zoology 11+12 By Pradeep Tripathi",
+    "group_name": "📚 Prdeep Tripathi Sir Class 11+12 Zoology - Cloner",
+    "thumbnail": "https://i.ibb.co/Jjn7vqXr/cb8abcfd7d93.webp",
+    "lecture_count": 182,
+    "local_file": "pradeepzoo-11+12.json"
+  },
+  {
+    "title": "Insaf Ali Sir (11+12)",
+    "group_name": "📚 Insaf Ali Sir Class 11+12 Botany - Cloner",
+    "thumbnail": "https://i.ibb.co/sdPW1D0J/e8304ee75556.webp",
+    "lecture_count": 142,
+    "local_file": "ia-bonaty.json"
+  }
+]

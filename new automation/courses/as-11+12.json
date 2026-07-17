@@ -1,0 +1,508 @@
+{
+  "subjects": [
+    {
+      "subject": "inorganic chem",
+      "name": "inorganic chem",
+      "chapters": [
+        {
+          "name": "Periodic Table",
+          "chapter": "Periodic Table",
+          "lectures": [
+            {
+              "name": "L-01 | Periodic Table",
+              "title": "L-01 | Periodic Table",
+              "link": "http://cryvex-stream.onrender.com/dl/6a469b2af0ab8bb29b4b5dba",
+              "image": ""
+            },
+            {
+              "name": "L-02 | Electronic Configuration & Bohrs Classification",
+              "title": "L-02 | Electronic Configuration & Bohrs Classification",
+              "link": "http://cryvex-stream.onrender.com/dl/6a469b30f0ab8bb29b4b5dbc",
+              "image": ""
+            },
+            {
+              "name": "L-03 | Bohr Classification & Identification Of",
+              "title": "L-03 | Bohr Classification & Identification Of",
+              "link": "http://cryvex-stream.onrender.com/dl/6a469b30f0ab8bb29b4b5dbb",
+              "image": ""
+            },
+            {
+              "name": "L-04 | Identification Of Period, Group And Block",
+              "title": "L-04 | Identification Of Period, Group And Block",
+              "link": "http://cryvex-stream.onrender.com/dl/6a469b37f0ab8bb29b4b5dbd",
+              "image": ""
+            },
+            {
+              "name": "L-05 | Zeff And Screening Effect",
+              "title": "L-05 | Zeff And Screening Effect",
+              "link": "http://cryvex-stream.onrender.com/dl/6a469b5df0ab8bb29b4b5dbe",
+              "image": ""
+            },
+            {
+              "name": "L-06 | Periodic Table | Zeff And S E And Atomic",
+              "title": "L-06 | Periodic Table | Zeff And S E And Atomic",
+              "link": "http://cryvex-stream.onrender.com/dl/6a469b62f0ab8bb29b4b5dbf",
+              "image": ""
+            },
+            {
+              "name": "L-07 | Ionic Radius",
+              "title": "L-07 | Ionic Radius",
+              "link": "http://cryvex-stream.onrender.com/dl/6a469b62f0ab8bb29b4b5dc0",
+              "image": ""
+            },
+            {
+              "name": "L-08 | Atomic Radius",
+              "title": "L-08 | Atomic Radius",
+              "link": "http://cryvex-stream.onrender.com/dl/6a469b63f0ab8bb29b4b5dc1",
+              "image": ""
+            },
+            {
+              "name": "L-09 | Atomic Radius",
+              "title": "L-09 | Atomic Radius",
+              "link": "http://cryvex-stream.onrender.com/dl/6a469b6af0ab8bb29b4b5dc2",
+              "image": ""
+            },
+            {
+              "name": "L-10 | Metallic Radius, Enthalpy, Successive I",
+              "title": "L-10 | Metallic Radius, Enthalpy, Successive I",
+              "link": "http://cryvex-stream.onrender.com/dl/6a469b6ff0ab8bb29b4b5dc3",
+              "image": ""
+            },
+            {
+              "name": "L-11 | Ionization Energy",
+              "title": "L-11 | Ionization Energy",
+              "link": "http://cryvex-stream.onrender.com/dl/6a469b6ff0ab8bb29b4b5dc4",
+              "image": ""
+            },
+            {
+              "name": "L-12 | Ionization Energy",
+              "title": "L-12 | Ionization Energy",
+              "link": "http://cryvex-stream.onrender.com/dl/6a469b6ff0ab8bb29b4b5dc5",
+              "image": ""
+            },
+            {
+              "name": "L-13 | Ionization Energy, Electron Affinity",
+              "title": "L-13 | Ionization Energy, Electron Affinity",
+              "link": "http://cryvex-stream.onrender.com/dl/6a469b75f0ab8bb29b4b5dc6",
+              "image": ""
+            },
+            {
+              "name": "L-14 | Electron Affinity",
+              "title": "L-14 | Electron Affinity",
+              "link": "http://cryvex-stream.onrender.com/dl/6a469b75f0ab8bb29b4b5dc7",
+              "image": ""
+            },
+            {
+              "name": "L-15 | Electronegativity",
+              "title": "L-15 | Electronegativity",
+              "link": "http://cryvex-stream.onrender.com/dl/6a469ba1f0ab8bb29b4b5dc8",
+              "image": ""
+            },
+            {
+              "name": "L-16 | Electronegativity",
+              "title": "L-16 | Electronegativity",
+              "link": "http://cryvex-stream.onrender.com/dl/6a469ba6f0ab8bb29b4b5dc9",
+              "image": ""
+            }
+          ]
+        },
+        {
+          "name": "Chemical Bonding",
+          "chapter": "Chemical Bonding",
+          "lectures": [
+            {
+              "name": "L-01 | Basic Introduction",
+              "title": "L-01 | Basic Introduction",
+              "link": "http://cryvex-stream.onrender.com/dl/6a469ba6f0ab8bb29b4b5dca",
+              "image": ""
+            },
+            {
+              "name": "L-02 | Kossel-Lewis Octet Rule",
+              "title": "L-02 | Kossel-Lewis Octet Rule",
+              "link": "http://cryvex-stream.onrender.com/dl/6a469ba6f0ab8bb29b4b5dcb",
+              "image": ""
+            },
+            {
+              "name": "L-03 | Drawback Of Octet Rule",
+              "title": "L-03 | Drawback Of Octet Rule",
+              "link": "http://cryvex-stream.onrender.com/dl/6a469ba6f0ab8bb29b4b5dcc",
+              "image": ""
+            },
+            {
+              "name": "L-04 | Classification Of Bond, Covalency In Covalent",
+              "title": "L-04 | Classification Of Bond, Covalency In Covalent",
+              "link": "http://cryvex-stream.onrender.com/dl/6a469baaf0ab8bb29b4b5dcd",
+              "image": ""
+            },
+            {
+              "name": "L-05 | Covalency",
+              "title": "L-05 | Covalency",
+              "link": "http://cryvex-stream.onrender.com/dl/6a469bb2f0ab8bb29b4b5dce",
+              "image": ""
+            },
+            {
+              "name": "L-06 | VBT",
+              "title": "L-06 | VBT",
+              "link": "http://cryvex-stream.onrender.com/dl/6a469bb2f0ab8bb29b4b5dcf",
+              "image": ""
+            },
+            {
+              "name": "L-07 | VBT",
+              "title": "L-07 | VBT",
+              "link": "http://cryvex-stream.onrender.com/dl/6a469bb2f0ab8bb29b4b5dd0",
+              "image": ""
+            },
+            {
+              "name": "L-08 | VBT",
+              "title": "L-08 | VBT",
+              "link": "http://cryvex-stream.onrender.com/dl/6a469bb2f0ab8bb29b4b5dd1",
+              "image": ""
+            },
+            {
+              "name": "L-09 | Hybridization",
+              "title": "L-09 | Hybridization",
+              "link": "http://cryvex-stream.onrender.com/dl/6a469bdcf0ab8bb29b4b5dd2",
+              "image": ""
+            },
+            {
+              "name": "L-10 | Hybridization",
+              "title": "L-10 | Hybridization",
+              "link": "http://cryvex-stream.onrender.com/dl/6a469be2f0ab8bb29b4b5dd3",
+              "image": ""
+            },
+            {
+              "name": "L-11 | Hybridization",
+              "title": "L-11 | Hybridization",
+              "link": "http://cryvex-stream.onrender.com/dl/6a469be2f0ab8bb29b4b5dd4",
+              "image": ""
+            },
+            {
+              "name": "L-12 | VSEPR",
+              "title": "L-12 | VSEPR",
+              "link": "http://cryvex-stream.onrender.com/dl/6a469be2f0ab8bb29b4b5dd5",
+              "image": ""
+            },
+            {
+              "name": "L-13 | Formal Charge, Bond Angle",
+              "title": "L-13 | Formal Charge, Bond Angle",
+              "link": "http://cryvex-stream.onrender.com/dl/6a469be2f0ab8bb29b4b5dd6",
+              "image": ""
+            },
+            {
+              "name": "L-14 | Bond Angle, Drago's Rule",
+              "title": "L-14 | Bond Angle, Drago's Rule",
+              "link": "http://cryvex-stream.onrender.com/dl/6a469be6f0ab8bb29b4b5dd7",
+              "image": ""
+            },
+            {
+              "name": "L-15 | Dipole Moment",
+              "title": "L-15 | Dipole Moment",
+              "link": "http://cryvex-stream.onrender.com/dl/6a469be6f0ab8bb29b4b5dd8",
+              "image": ""
+            },
+            {
+              "name": "L-16 | MOT",
+              "title": "L-16 | MOT",
+              "link": "http://cryvex-stream.onrender.com/dl/6a469bebf0ab8bb29b4b5dd9",
+              "image": ""
+            },
+            {
+              "name": "L-17 | MOT",
+              "title": "L-17 | MOT",
+              "link": "http://cryvex-stream.onrender.com/dl/6a469bebf0ab8bb29b4b5dda",
+              "image": ""
+            },
+            {
+              "name": "L-18 | MOT",
+              "title": "L-18 | MOT",
+              "link": "http://cryvex-stream.onrender.com/dl/6a469bebf0ab8bb29b4b5ddb",
+              "image": ""
+            },
+            {
+              "name": "L-19 | Hydrogen Bonding",
+              "title": "L-19 | Hydrogen Bonding",
+              "link": "http://cryvex-stream.onrender.com/dl/6a469c1df0ab8bb29b4b5ddc",
+              "image": ""
+            },
+            {
+              "name": "L-20 | VWF",
+              "title": "L-20 | VWF",
+              "link": "http://cryvex-stream.onrender.com/dl/6a469c1df0ab8bb29b4b5ddd",
+              "image": ""
+            },
+            {
+              "name": "L-21 | Ionic Bond",
+              "title": "L-21 | Ionic Bond",
+              "link": "http://cryvex-stream.onrender.com/dl/6a469c1df0ab8bb29b4b5dde",
+              "image": ""
+            },
+            {
+              "name": "L-22 | Born Haber Cycle, Lattice Energy, Hydration",
+              "title": "L-22 | Born Haber Cycle, Lattice Energy, Hydration",
+              "link": "http://cryvex-stream.onrender.com/dl/6a469c1df0ab8bb29b4b5ddf",
+              "image": ""
+            },
+            {
+              "name": "L-23 | Thermal Stability",
+              "title": "L-23 | Thermal Stability",
+              "link": "http://cryvex-stream.onrender.com/dl/6a469c22f0ab8bb29b4b5de0",
+              "image": ""
+            }
+          ]
+        },
+        {
+          "name": "Co-ordination Compound",
+          "chapter": "Co-ordination Compound",
+          "lectures": [
+            {
+              "name": "L-01 | Introduction, Salt, FAS, Alum",
+              "title": "L-01 | Introduction, Salt, FAS, Alum",
+              "link": "http://cryvex-stream.onrender.com/dl/6a469c22f0ab8bb29b4b5de1",
+              "image": ""
+            },
+            {
+              "name": "L-02 | Classification Of Ligands",
+              "title": "L-02 | Classification Of Ligands",
+              "link": "http://cryvex-stream.onrender.com/dl/6a469c28f0ab8bb29b4b5de2",
+              "image": ""
+            },
+            {
+              "name": "L-03 | Classification Of Ligands, Synergic",
+              "title": "L-03 | Classification Of Ligands, Synergic",
+              "link": "http://cryvex-stream.onrender.com/dl/6a469c2df0ab8bb29b4b5de3",
+              "image": ""
+            },
+            {
+              "name": "L-04 | Calculation of C.N.",
+              "title": "L-04 | Calculation of C.N.",
+              "link": "http://cryvex-stream.onrender.com/dl/6a469c2df0ab8bb29b4b5de5",
+              "image": ""
+            },
+            {
+              "name": "L-05 | IUPAC Nomenclature",
+              "title": "L-05 | IUPAC Nomenclature",
+              "link": "http://cryvex-stream.onrender.com/dl/6a469c2df0ab8bb29b4b5de4",
+              "image": ""
+            },
+            {
+              "name": "L-06 | Co-ordination Compound",
+              "title": "L-06 | Co-ordination Compound",
+              "link": "http://cryvex-stream.onrender.com/dl/6a469c2df0ab8bb29b4b5de6",
+              "image": ""
+            },
+            {
+              "name": "L-07 | Co-ordination Compound",
+              "title": "L-07 | Co-ordination Compound",
+              "link": "http://cryvex-stream.onrender.com/dl/6a469c59f0ab8bb29b4b5de8",
+              "image": ""
+            },
+            {
+              "name": "L-08 | Co-ordination Compound",
+              "title": "L-08 | Co-ordination Compound",
+              "link": "http://cryvex-stream.onrender.com/dl/6a469c59f0ab8bb29b4b5de7",
+              "image": ""
+            },
+            {
+              "name": "L-09 | Co-ordination Compound",
+              "title": "L-09 | Co-ordination Compound",
+              "link": "http://cryvex-stream.onrender.com/dl/6a469c59f0ab8bb29b4b5de9",
+              "image": ""
+            },
+            {
+              "name": "L-10 | Co-ordination Compound",
+              "title": "L-10 | Co-ordination Compound",
+              "link": "http://cryvex-stream.onrender.com/dl/6a469c59f0ab8bb29b4b5dea",
+              "image": ""
+            },
+            {
+              "name": "L-11 | Co-ordination Compound",
+              "title": "L-11 | Co-ordination Compound",
+              "link": "http://cryvex-stream.onrender.com/dl/6a469c5ef0ab8bb29b4b5deb",
+              "image": ""
+            },
+            {
+              "name": "L-12 | Co-ordination Compound",
+              "title": "L-12 | Co-ordination Compound",
+              "link": "http://cryvex-stream.onrender.com/dl/6a469c5ff0ab8bb29b4b5dec",
+              "image": ""
+            },
+            {
+              "name": "L-13 | Co-ordination Compound",
+              "title": "L-13 | Co-ordination Compound",
+              "link": "http://cryvex-stream.onrender.com/dl/6a469c64f0ab8bb29b4b5ded",
+              "image": ""
+            },
+            {
+              "name": "L-14 | Co-ordination Compound",
+              "title": "L-14 | Co-ordination Compound",
+              "link": "http://cryvex-stream.onrender.com/dl/6a469c64f0ab8bb29b4b5dee",
+              "image": ""
+            },
+            {
+              "name": "L-15 | Co-ordination Compound",
+              "title": "L-15 | Co-ordination Compound",
+              "link": "http://cryvex-stream.onrender.com/dl/6a469c69f0ab8bb29b4b5def",
+              "image": ""
+            }
+          ]
+        },
+        {
+          "name": "d & f Block",
+          "chapter": "d & f Block",
+          "lectures": [
+            {
+              "name": "L-01 | d & f Block",
+              "title": "L-01 | d & f Block",
+              "link": "http://cryvex-stream.onrender.com/dl/6a469c90f0ab8bb29b4b5df0",
+              "image": ""
+            },
+            {
+              "name": "L-02 | d & f Block",
+              "title": "L-02 | d & f Block",
+              "link": "http://cryvex-stream.onrender.com/dl/6a469c90f0ab8bb29b4b5df1",
+              "image": ""
+            },
+            {
+              "name": "L-03 | d & f Block",
+              "title": "L-03 | d & f Block",
+              "link": "http://cryvex-stream.onrender.com/dl/6a469c95f0ab8bb29b4b5df3",
+              "image": ""
+            },
+            {
+              "name": "L-04 | d & f Block",
+              "title": "L-04 | d & f Block",
+              "link": "http://cryvex-stream.onrender.com/dl/6a469c95f0ab8bb29b4b5df2",
+              "image": ""
+            },
+            {
+              "name": "L-05 | d & f Block",
+              "title": "L-05 | d & f Block",
+              "link": "http://cryvex-stream.onrender.com/dl/6a469c95f0ab8bb29b4b5df4",
+              "image": ""
+            },
+            {
+              "name": "L-06 | d & f Block",
+              "title": "L-06 | d & f Block",
+              "link": "http://cryvex-stream.onrender.com/dl/6a469c9af0ab8bb29b4b5df5",
+              "image": ""
+            },
+            {
+              "name": "L-07 | d & f Block",
+              "title": "L-07 | d & f Block",
+              "link": "http://cryvex-stream.onrender.com/dl/6a469c9af0ab8bb29b4b5df6",
+              "image": ""
+            },
+            {
+              "name": "L-08 | d & f Block",
+              "title": "L-08 | d & f Block",
+              "link": "http://cryvex-stream.onrender.com/dl/6a469c9ff0ab8bb29b4b5df7",
+              "image": ""
+            },
+            {
+              "name": "L-09 | Application",
+              "title": "L-09 | Application",
+              "link": "http://cryvex-stream.onrender.com/dl/6a469c9ff0ab8bb29b4b5df8",
+              "image": ""
+            }
+          ]
+        },
+        {
+          "name": "Salt Analysis",
+          "chapter": "Salt Analysis",
+          "lectures": [
+            {
+              "name": "L-01 | Salt Analysis",
+              "title": "L-01 | Salt Analysis",
+              "link": "http://cryvex-stream.onrender.com/dl/6a469ca4f0ab8bb29b4b5df9",
+              "image": ""
+            },
+            {
+              "name": "L-02 | Test of Anion (S-2)",
+              "title": "L-02 | Test of Anion (S-2)",
+              "link": "http://cryvex-stream.onrender.com/dl/6a469ca4f0ab8bb29b4b5dfa",
+              "image": ""
+            },
+            {
+              "name": "L-03 | Test Of Anion (S-2) Class - A",
+              "title": "L-03 | Test Of Anion (S-2) Class - A",
+              "link": "http://cryvex-stream.onrender.com/dl/6a469cd1f0ab8bb29b4b5dfb",
+              "image": ""
+            },
+            {
+              "name": "L-04 | Test of Cations",
+              "title": "L-04 | Test of Cations",
+              "link": "http://cryvex-stream.onrender.com/dl/6a469cd2f0ab8bb29b4b5dfc",
+              "image": ""
+            },
+            {
+              "name": "L-05 | Test of Group - 1 Cation",
+              "title": "L-05 | Test of Group - 1 Cation",
+              "link": "http://cryvex-stream.onrender.com/dl/6a469cd8f0ab8bb29b4b5dfd",
+              "image": ""
+            },
+            {
+              "name": "L-06 | Test of Group - 3 & 4 Cation",
+              "title": "L-06 | Test of Group - 3 & 4 Cation",
+              "link": "http://cryvex-stream.onrender.com/dl/6a469cd9f0ab8bb29b4b5dfe",
+              "image": ""
+            }
+          ]
+        },
+        {
+          "name": "p-Block",
+          "chapter": "p-Block",
+          "lectures": [
+            {
+              "name": "L-01 | Inert Pair Effect & Back Bonding",
+              "title": "L-01 | Inert Pair Effect & Back Bonding",
+              "link": "http://cryvex-stream.onrender.com/dl/6a469cdef0ab8bb29b4b5dff",
+              "image": ""
+            },
+            {
+              "name": "L-02 | Banana Bonding",
+              "title": "L-02 | Banana Bonding",
+              "link": "http://cryvex-stream.onrender.com/dl/6a469cdef0ab8bb29b4b5e00",
+              "image": ""
+            },
+            {
+              "name": "L-03 | Oxyacids",
+              "title": "L-03 | Oxyacids",
+              "link": "http://cryvex-stream.onrender.com/dl/6a469cdef0ab8bb29b4b5e01",
+              "image": ""
+            },
+            {
+              "name": "L-04 | Oxyacids & Hydrolysis",
+              "title": "L-04 | Oxyacids & Hydrolysis",
+              "link": "http://cryvex-stream.onrender.com/dl/6a469cdef0ab8bb29b4b5e02",
+              "image": ""
+            },
+            {
+              "name": "L-05 | Hydrolysis & B - Family",
+              "title": "L-05 | Hydrolysis & B - Family",
+              "link": "http://cryvex-stream.onrender.com/dl/6a469ce3f0ab8bb29b4b5e03",
+              "image": ""
+            },
+            {
+              "name": "L-06 | N - Family",
+              "title": "L-06 | N - Family",
+              "link": "http://cryvex-stream.onrender.com/dl/6a469ce3f0ab8bb29b4b5e04",
+              "image": ""
+            },
+            {
+              "name": "L-07 | O - Family & Halogen",
+              "title": "L-07 | O - Family & Halogen",
+              "link": "http://cryvex-stream.onrender.com/dl/6a469d12f0ab8bb29b4b5e05",
+              "image": ""
+            },
+            {
+              "name": "L-08 | Inert Gases",
+              "title": "L-08 | Inert Gases",
+              "link": "http://cryvex-stream.onrender.com/dl/6a469d12f0ab8bb29b4b5e06",
+              "image": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

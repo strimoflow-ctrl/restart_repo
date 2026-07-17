@@ -1,0 +1,792 @@
+# Cell 4: Multi-Teacher Stateful Forum Mirroring Cloner (Queue Controller)
+
+import json
+import time
+import os
+import sys
+import shutil
+import math
+import hashlib
+import asyncio
+import requests
+import aiohttp
+import subprocess
+from telethon import TelegramClient
+from telethon.sessions import StringSession, MemorySession
+from telethon.tl.types import DocumentAttributeVideo
+from telethon.tl.functions.upload import SaveBigFilePartRequest, SaveFilePartRequest
+from telethon.tl.types import InputFileBig, InputFile
+
+# Telethon Forum RPC functions
+from telethon.tl.functions.channels import CreateChannelRequest, ToggleForumRequest, CreateForumTopicRequest
+
+# ---------------------------------------------------------------------
+# Global Stats & Dashboard State
+# ---------------------------------------------------------------------
+START_TIME = time.time()
+TOTAL_FILES = 0
+DONE_COUNT = 0
+FAIL_COUNT = 0
+CURRENT_ACTION = "Idle"
+CURRENT_FILE_NAME = ""
+CURRENT_FILE_SIZE = "0 MB"
+CURRENT_SPEED = "0 Mbps"
+PROGRESS_PCT = 0.0
+PROMO_COUNTER = 0
+
+status_msg = None
+last_update_time = 0
+
+# Configurable dynamically from Firebase config
+branding_text = EXTRACTED_BY
+
+def sanitize_filename(name):
+    return "".join(c for c in name if c.isalnum() or c in " ._-()[]").strip()
+
+def get_md5_hash(text):
+    clean_str = "".join(c for c in text if 0 <= ord(c) <= 0x10FFFF and not (0xD800 <= ord(c) <= 0xDFFF))
+    return hashlib.md5(clean_str.encode('utf-8', 'ignore')).hexdigest()
+
+def get_disk_space_gb():
+    total, used, free = shutil.disk_usage("/")
+    return free / (1024 ** 3)
+
+def format_time(seconds):
+    h = int(seconds // 3600)
+    m = int((seconds % 3600) // 60)
+    s = int(seconds % 60)
+    return f"{h:02d}:{m:02d}:{s:02d}"
+
+# Unicode stylizer helper converting standard letters/numbers to bold math sans-serif
+def to_stylish_bold(text):
+    result = []
+    for c in text:
+        o = ord(c)
+        if 65 <= o <= 90: # A-Z
+            result.append(chr(o - 65 + 0x1D5D4))
+        elif 97 <= o <= 122: # a-z
+            result.append(chr(o - 97 + 0x1D5EA))
+        elif 48 <= o <= 57: # 0-9
+            result.append(chr(o - 48 + 0x1D7EC))
+        else:
+            result.append(c)
+    return "".join(result)
+
+# ---------------------------------------------------------------------
+# Firebase DB REST helpers (Zero-Dependency)
+# ---------------------------------------------------------------------
+def check_if_done(course_key, item_id):
+    try:
+        url = f"{FIREBASE_DB_URL}/{FIREBASE_FOLDER}/done_ids/{course_key}/{item_id}.json"
+        res = requests.get(url, timeout=10)
+        return res.json() is True
+    except Exception:
+        return False
+
+def mark_as_done(course_key, item_id):
+    try:
+        url = f"{FIREBASE_DB_URL}/{FIREBASE_FOLDER}/done_ids/{course_key}/{item_id}.json"
+        requests.put(url, json=True, timeout=10)
+    except Exception as e:
+        print(f"[Warning] Firebase write failed: {e}")
+
+def get_course_status(course_key):
+    try:
+        url = f"{FIREBASE_DB_URL}/{FIREBASE_FOLDER}/group_mappings/{course_key}/status.json"
+        res = requests.get(url, timeout=10)
+        return res.json()
+    except Exception:
+        return None
+
+def set_course_status(course_key, status):
+    try:
+        url = f"{FIREBASE_DB_URL}/{FIREBASE_FOLDER}/group_mappings/{course_key}/status.json"
+        requests.put(url, json=status, timeout=10)
+    except Exception as e:
+        print(f"[Warning] Firebase set status failed: {e}")
+
+def get_saved_group_id(course_key):
+    try:
+        url = f"{FIREBASE_DB_URL}/{FIREBASE_FOLDER}/group_mappings/{course_key}/group_id.json"
+        res = requests.get(url, timeout=10)
+        return res.json()
+    except Exception:
+        return None
+
+def save_group_id(course_key, group_id):
+    try:
+        url = f"{FIREBASE_DB_URL}/{FIREBASE_FOLDER}/group_mappings/{course_key}/group_id.json"
+        requests.put(url, json=group_id, timeout=10)
+    except Exception as e:
+        print(f"[Warning] Firebase save group failed: {e}")
+
+def get_saved_topic_id(course_key, chapter_hash):
+    try:
+        url = f"{FIREBASE_DB_URL}/{FIREBASE_FOLDER}/group_mappings/{course_key}/topics/{chapter_hash}.json"
+        res = requests.get(url, timeout=10)
+        data = res.json()
+        return int(data) if data is not None else None
+    except Exception:
+        return None
+
+def save_topic_id(course_key, chapter_hash, thread_id):
+    try:
+        url = f"{FIREBASE_DB_URL}/{FIREBASE_FOLDER}/group_mappings/{course_key}/topics/{chapter_hash}.json"
+        requests.put(url, json=thread_id, timeout=10)
+    except Exception as e:
+        print(f"[Warning] Firebase save topic failed: {e}")
+
+# ---------------------------------------------------------------------
+# Live Console and TG DM Status Dashboard
+# ---------------------------------------------------------------------
+async def update_status_dashboard(bot_client, course_key, force=False):
+    global last_update_time, status_msg
+    now = time.time()
+    if not force and (now - last_update_time < 5):
+        return
+        
+    last_update_time = now
+    elapsed_time = format_time(time.time() - START_TIME)
+    free_disk = get_disk_space_gb()
+    
+    bar_length = 15
+    filled_blocks = int(round((PROGRESS_PCT / 100.0) * bar_length))
+    bar = "■" * filled_blocks + "□" * (bar_length - filled_blocks)
+    
+    # Draw local terminal
+    sys.stdout.write("\033[H\033[J")
+    console_dashboard = f"""
+============================================================
+🚀 KAGGLE STATEFUL AUTO-FORUM CLONER (SESSION DRIVEN)
+============================================================
+📁 Current Key: {course_key}
+📊 Progress: {DONE_COUNT} / {TOTAL_FILES} processed items
+------------------------------------------------------------
+📦 Current File: {CURRENT_FILE_NAME or "N/A"}
+⚡ Size: {CURRENT_FILE_SIZE}
+🔥 Action: {CURRENT_ACTION}
+📈 Progress: [{bar}] {PROGRESS_PCT:.1f}%
+🌐 Speed: {CURRENT_SPEED}
+------------------------------------------------------------
+✅ Done: {DONE_COUNT} | ❌ Fail: {FAIL_COUNT}
+💾 Disk Free: {free_disk:.1f} GB
+⏱️ Uptime: {elapsed_time}
+============================================================
+"""
+    sys.stdout.write(console_dashboard)
+    sys.stdout.flush()
+
+    # Write stats to Firebase for live Web Dashboard monitoring
+    try:
+        url = f"{FIREBASE_DB_URL}/{FIREBASE_FOLDER}/status.json"
+        requests.put(url, json={
+            "action": CURRENT_ACTION,
+            "file_name": CURRENT_FILE_NAME,
+            "file_size": CURRENT_FILE_SIZE,
+            "speed": CURRENT_SPEED,
+            "progress": PROGRESS_PCT,
+            "done_count": DONE_COUNT,
+            "total_files": TOTAL_FILES,
+            "fail_count": FAIL_COUNT,
+            "disk_free": f"{free_disk:.1f} GB",
+            "uptime": elapsed_time,
+            "active_key": course_key
+        }, timeout=5)
+    except Exception:
+        pass
+
+    # Edit status message inside the Owner's Telegram DM
+    tg_text = (
+        f"🚀 **KAGGLE STATEFUL FORUM CLONER**\n\n"
+        f"📁 **Course Key**: `{course_key}`\n"
+        f"📊 **Progress**: `{DONE_COUNT} / {TOTAL_FILES}` processed items\n"
+        f"-----------------------------------------\n"
+        f"📦 **File**: `{CURRENT_FILE_NAME or 'N/A'}`\n"
+        f"⚡ **Size**: `{CURRENT_FILE_SIZE}`\n"
+        f"🔥 **Action**: `{CURRENT_ACTION}`\n"
+        f"📈 **Progress**: `[{bar}] {PROGRESS_PCT:.1f}%`\n"
+        f"🌐 **Speed**: `{CURRENT_SPEED}`\n"
+        f"-----------------------------------------\n"
+        f"✅ **Done**: `{DONE_COUNT}` | ❌ **Fail**: `{FAIL_COUNT}`\n"
+        f"💾 **Disk Free**: `{free_disk:.1f} GB`\n"
+        f"⏱️ **Uptime**: `{elapsed_time}`"
+    )
+
+    try:
+        if status_msg is None:
+            status_msg = await bot_client.send_message(OWNER_CHAT_ID, tg_text)
+        else:
+            await bot_client.edit_message(OWNER_CHAT_ID, status_msg.id, tg_text)
+    except Exception:
+        pass
+
+# ---------------------------------------------------------------------
+# Helper handlers for probe metadata, download, and multi-thread upload
+# ---------------------------------------------------------------------
+def get_video_metadata(file_path):
+    try:
+        cmd = [
+            'ffprobe', '-v', 'error', '-show_entries', 
+            'format=duration:stream=width,height', '-of', 'json', file_path
+        ]
+        result = subprocess.run(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True, timeout=15)
+        data = json.loads(result.stdout)
+        duration = float(data['format']['duration'])
+        width = int(data['streams'][0]['width'])
+        height = int(data['streams'][0]['height'])
+        return int(duration), width, height
+    except Exception:
+        return 0, 1280, 720
+
+def compress_video(input_path, output_path, duration, bot_client, course_key):
+    global CURRENT_ACTION
+    CURRENT_ACTION = "Compressing video (>2GB)..."
+    print(f"🎬 Starting fast compression for {input_path} (Duration: {duration}s)...")
+    
+    # Target size is 1.85 GB to be safe under 1.9 GB
+    target_size_bytes = 1.85 * 1024 * 1024 * 1024
+    
+    # Calculate target bitrate in bits per second
+    total_bitrate = (target_size_bytes * 8) / duration
+    video_bitrate = int(total_bitrate - 128 * 1024)
+    
+    if video_bitrate < 150 * 1024:
+        video_bitrate = 150 * 1024
+        
+    print(f"Target Video Bitrate: {video_bitrate / 1024:.1f} kbps")
+    
+    # Check if GPU is available (Kaggle T4 or P100 nvenc)
+    has_gpu = False
+    try:
+        subprocess.run(["nvidia-smi"], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, check=True)
+        has_gpu = True
+    except Exception:
+        pass
+        
+    if has_gpu:
+        print("⚡ GPU detected! Using NVENC hardware acceleration...")
+        cmd = [
+            'ffmpeg', '-y', '-i', input_path,
+            '-b:v', str(video_bitrate),
+            '-c:v', 'h264_nvenc', '-preset', 'fast',
+            '-c:a', 'aac', '-b:a', '128k',
+            output_path
+        ]
+    else:
+        print("💻 Running on CPU. Using ultrafast x264 software compression...")
+        cmd = [
+            'ffmpeg', '-y', '-i', input_path,
+            '-b:v', str(video_bitrate),
+            '-c:v', 'libx264', '-preset', 'ultrafast',
+            '-c:a', 'aac', '-b:a', '128k',
+            output_path
+        ]
+        
+    process = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True)
+    
+    # Read output loop to keep dashboard active
+    while True:
+        line = process.stdout.readline()
+        if not line:
+            break
+            
+    process.wait()
+    if process.returncode != 0:
+        raise Exception(f"FFmpeg compression failed with return code {process.returncode}")
+        
+    print(f"✅ Compression complete! Output size: {os.path.getsize(output_path) / (1024*1024):.1f} MB")
+
+async def download_file(url, destination_path, bot_client, course_key):
+    global CURRENT_ACTION, CURRENT_FILE_SIZE, CURRENT_SPEED, PROGRESS_PCT
+    CURRENT_ACTION = "Downloading link..."
+    start_dl_time = time.time()
+    
+    async with aiohttp.ClientSession() as session:
+        async with session.get(url) as response:
+            if response.status != 200:
+                raise Exception(f"Download returned HTTP {response.status}")
+                
+            total_size = int(response.headers.get('content-length', 0))
+            CURRENT_FILE_SIZE = f"{total_size / (1024*1024):.1f} MB" if total_size > 0 else "Unknown"
+            
+            downloaded = 0
+            with open(destination_path, 'wb') as f:
+                async for chunk in response.content.iter_chunked(512 * 1024):
+                    if chunk:
+                        f.write(chunk)
+                        downloaded += len(chunk)
+                        
+                        if total_size > 0:
+                            PROGRESS_PCT = (downloaded / total_size) * 100.0
+                            
+                        elapsed = time.time() - start_dl_time
+                        if elapsed > 0:
+                            speed_mbps = ((downloaded * 8) / (1024 * 1024)) / elapsed
+                            CURRENT_SPEED = f"{speed_mbps:.1f} Mbps"
+                        
+                        await update_status_dashboard(bot_client, course_key)
+
+async def fast_upload(client, file_path, progress_callback=None, workers=8):
+    file_size = os.path.getsize(file_path)
+    file_name = os.path.basename(file_path)
+    part_size = 512 * 1024
+    part_count = math.ceil(file_size / part_size)
+    is_big = file_size > 10 * 1024 * 1024
+    file_id = int.from_bytes(os.urandom(8), "big", signed=True)
+    uploaded_bytes = 0
+    queue = asyncio.Queue()
+    
+    for i in range(part_count):
+        queue.put_nowait(i)
+        
+    async def upload_worker():
+        nonlocal uploaded_bytes
+        with open(file_path, "rb") as f:
+            while True:
+                try:
+                    part_idx = queue.get_nowait()
+                except asyncio.QueueEmpty:
+                    break
+                
+                f.seek(part_idx * part_size)
+                chunk = f.read(part_size)
+                
+                for attempt in range(3):
+                    try:
+                        if is_big:
+                            await client(SaveBigFilePartRequest(
+                                file_id=file_id,
+                                file_part=part_idx,
+                                file_total_parts=part_count,
+                                bytes=chunk
+                            ))
+                        else:
+                            await client(SaveFilePartRequest(
+                                file_id=file_id,
+                                file_part=part_idx,
+                                bytes=chunk
+                            ))
+                        break
+                    except Exception as e:
+                        if attempt == 2:
+                            raise e
+                        await asyncio.sleep(1)
+                
+                uploaded_bytes += len(chunk)
+                if progress_callback:
+                    progress_callback(uploaded_bytes, file_size)
+                queue.task_done()
+                
+    tasks = [asyncio.create_task(upload_worker()) for _ in range(workers)]
+    await asyncio.gather(*tasks)
+    
+    if is_big:
+        return InputFileBig(id=file_id, parts=part_count, name=file_name)
+    else:
+        return InputFile(id=file_id, parts=part_count, name=file_name, md5_checksum="")
+
+async def upload_file_with_progress(user_client, bot_client, target_group, file_path, thread_id, caption, course_key, is_video=False):
+    global CURRENT_ACTION, CURRENT_SPEED, PROGRESS_PCT
+    CURRENT_ACTION = "Uploading with user session..."
+    start_ul_time = time.time()
+    
+    def telethon_callback(sent, total):
+        global PROGRESS_PCT, CURRENT_SPEED
+        PROGRESS_PCT = (sent / total) * 100.0
+        elapsed = time.time() - start_ul_time
+        if elapsed > 0:
+            speed_mbps = ((sent * 8) / (1024 * 1024)) / elapsed
+            CURRENT_SPEED = f"{speed_mbps:.1f} Mbps"
+            
+        loop = asyncio.get_event_loop()
+        if loop.is_running():
+            asyncio.ensure_future(update_status_dashboard(bot_client, course_key))
+
+    attributes = []
+    thumbnail_path = "thumbnail.jpg" if os.path.exists("thumbnail.jpg") else None
+    
+    if is_video:
+        duration, w, h = get_video_metadata(file_path)
+        attributes.append(DocumentAttributeVideo(
+            duration=duration,
+            w=w,
+            h=h,
+            supports_streaming=True
+        ))
+
+    uploaded_file = await fast_upload(user_client, file_path, progress_callback=telethon_callback, workers=8)
+    CURRENT_ACTION = "Finalizing Telegram send..."
+    
+    await user_client.send_file(
+        target_group,
+        uploaded_file,
+        reply_to=thread_id,
+        caption=caption,
+        attributes=attributes,
+        thumb=thumbnail_path,
+        supports_streaming=True,
+        force_document=False
+    )
+
+# ---------------------------------------------------------------------
+# Controller Pipeline
+# ---------------------------------------------------------------------
+async def start_automation():
+    global TOTAL_FILES, DONE_COUNT, FAIL_COUNT, CURRENT_FILE_NAME, CURRENT_FILE_SIZE, CURRENT_ACTION, PROGRESS_PCT, CURRENT_SPEED, status_msg, PROMO_COUNTER, branding_text
+    
+    # Load dynamic credentials from Firebase config (Fallback to locally configured values)
+    print("⏳ Checking dynamic configurations from Firebase Realtime DB...")
+    global API_ID, API_HASH, SESSION_STRING, BOT_TOKEN, OWNER_CHAT_ID
+    try:
+        url = f"{FIREBASE_DB_URL}/{FIREBASE_FOLDER}/config.json"
+        res = requests.get(url, timeout=10)
+        config_data = res.json()
+        if config_data:
+            API_ID = config_data.get("api_id", API_ID)
+            API_HASH = config_data.get("api_hash", API_HASH)
+            SESSION_STRING = config_data.get("session_string", SESSION_STRING)
+            BOT_TOKEN = config_data.get("bot_token", BOT_TOKEN)
+            OWNER_CHAT_ID = config_data.get("owner_chat_id", OWNER_CHAT_ID)
+            branding_text = config_data.get("extracted_by", branding_text)
+            print("✅ Successfully synchronized credentials & settings from Firebase!")
+    except Exception as e:
+        print(f"[Warning] Firebase configuration sync skipped: {e}")
+
+    # Fetch catalog from Firebase
+    print("⏳ Fetching active course catalog...")
+    catalog = []
+    try:
+        url = f"{FIREBASE_DB_URL}/{FIREBASE_FOLDER}/catalog.json"
+        res = requests.get(url, timeout=15)
+        catalog = res.json()
+    except Exception as e:
+        print(f"⚠️ Firebase catalog load failed: {e}")
+
+    # Local fallback
+    if not catalog:
+        try:
+            with open("courses_catalog.json", "r", encoding="utf-8") as f:
+                catalog = json.load(f)
+        except Exception as e:
+            print(f"❌ Failed to load local backup catalog: {e}")
+            return
+
+    # Filter catalog based on ACTIVE_COURSE_KEY selection
+    target_courses = []
+    if ACTIVE_COURSE_KEY == "all":
+        target_courses = catalog
+    else:
+        for item in catalog:
+            if item.get("local_file", "").replace(".json", "").replace(".", "_") == ACTIVE_COURSE_KEY.replace(".", "_"):
+                target_courses = [item]
+                break
+
+    if not target_courses:
+        print(f"❌ No active courses found matching key: '{ACTIVE_COURSE_KEY}'!")
+        return
+
+    print(f"✅ Found {len(target_courses)} target courses to process.")
+
+    # Initialize Telethon Clients
+    clean_session = SESSION_STRING.strip().strip('"').strip("'").replace("\ufeff", "").replace(" ", "")
+    clean_session = "".join(c for c in clean_session if c.isalnum() or c in "-_=")
+    
+    try:
+        user_client = TelegramClient(StringSession(clean_session), API_ID, API_HASH)
+    except Exception as e:
+        print(f"❌ Session string decoding error: {e}")
+        return
+
+    bot_client = TelegramClient(MemorySession(), API_ID, API_HASH)
+
+    print("🚀 Starting User Session and Bot status client...")
+    try:
+        await user_client.start()
+    except Exception as e:
+        print(f"❌ User session login failed: {e}")
+        return
+
+    await bot_client.start(bot_token=BOT_TOKEN)
+    print("✅ Authorized successfully!")
+
+    # Loop through target courses in catalog
+    for course in target_courses:
+        course_title = course.get("title")
+        target_group_name = course.get("group_name")
+        thumbnail_url = course.get("thumbnail")
+        local_filename = course.get("local_file")
+        course_key = local_filename.replace(".json", "").replace(".", "_")
+
+        # Skip if course status is completed in Firebase
+        status = get_course_status(course_key)
+        if status == "completed":
+            print(f"ℹ️ Skipping '{course_title}' (Already cloned fully).")
+            continue
+
+        print(f"\n=============================================================")
+        print(f"📂 Processing Course: '{course_title}'")
+        print(f"=============================================================")
+
+        # Mark course status as processing
+        set_course_status(course_key, "processing")
+
+        # Retrieve course cover thumbnail once
+        if os.path.exists("thumbnail.jpg"):
+            os.remove("thumbnail.jpg")
+            
+        if thumbnail_url:
+            print(f"⏳ Downloading thumbnail: {thumbnail_url}")
+            try:
+                res = requests.get(thumbnail_url, timeout=15)
+                if res.status_code == 200:
+                    with open("thumbnail.jpg", "wb") as f:
+                        f.write(res.content)
+                    print("✅ Cover thumbnail saved.")
+            except Exception as e:
+                print(f"⚠️ Cover thumbnail load failed: {e}")
+
+        # Fetch lectures list
+        lectures_data = None
+        try:
+            url = f"{FIREBASE_DB_URL}/{FIREBASE_FOLDER}/courses/{course_key}.json"
+            res = requests.get(url, timeout=15)
+            lectures_data = res.json()
+        except Exception as e:
+            print(f"⚠️ Firebase lectures lookup error: {e}")
+
+        if not lectures_data:
+            print(f"⚠️ Firebase lectures lookup failed. Reading local file 'courses/{local_filename}'...")
+            try:
+                with open(os.path.join("courses", local_filename), "r", encoding="utf-8") as f:
+                    lectures_data = json.load(f)
+            except Exception as e:
+                print(f"❌ Failed to load local file 'courses/{local_filename}': {e}")
+                continue
+
+        if not lectures_data or "subjects" not in lectures_data:
+            print(f"❌ Invalid format in course '{course_title}' details! Skipping...")
+            continue
+
+        # Count total files inside this course
+        TOTAL_FILES = 0
+        for sub in lectures_data["subjects"]:
+            if "chapters" in sub:
+                for chap in sub["chapters"]:
+                    if "lectures" in chap:
+                        for lec in chap["lectures"]:
+                            if lec.get("link") or lec.get("notes") or lec.get("dpp"):
+                                TOTAL_FILES += sum(1 for type_key in ["link", "notes", "dpp"] if lec.get(type_key))
+
+        DONE_COUNT = 0
+        FAIL_COUNT = 0
+
+        # Auto-group mapping/creation
+        group_id = get_saved_group_id(course_key)
+        if not group_id:
+            print(f"⏳ Group mapping not found. Creating private megagroup: '{target_group_name}'...")
+            try:
+                create_res = await user_client(CreateChannelRequest(
+                    title=target_group_name,
+                    about=f"Decrypted lectures cloner for {course_title}. Powered by admin config.",
+                    megagroup=True
+                ))
+                new_channel = create_res.chats[0]
+                group_id = int(f"-100{new_channel.id}")
+                
+                print(f"✅ Megagroup created with ID: {group_id}. Converting to Forum mode...")
+                await user_client(ToggleForumRequest(channel=new_channel, enabled=True))
+                
+                save_group_id(course_key, group_id)
+                print("⏳ Anti-flood delay: sleeping for 15 seconds...")
+                await asyncio.sleep(15)
+            except Exception as e:
+                print(f"❌ Failed to create megagroup/forum: {e}")
+                continue
+        else:
+            print(f"✅ Found existing Group mapping ID: {group_id}")
+
+        # Resolve target group entity
+        try:
+            target_group = await user_client.get_entity(group_id)
+        except Exception as e:
+            print(f"❌ Failed to resolve target group ID '{group_id}': {e}")
+            continue
+
+        # Process chapters and lectures
+        for sub in lectures_data["subjects"]:
+            if "chapters" not in sub:
+                continue
+                
+            for chapter in sub["chapters"]:
+                chapter_name = chapter["chapter"]
+                chapter_hash = get_md5_hash(chapter_name)
+                
+                # Check or create topic thread ID
+                thread_id = get_saved_topic_id(course_key, chapter_hash)
+                if not thread_id:
+                    CURRENT_ACTION = f"Creating topic thread: {chapter_name}"
+                    print(f"⏳ Creating thread topic: '{chapter_name}'...")
+                    try:
+                        result = await user_client(CreateForumTopicRequest(
+                            channel=target_group,
+                            title=chapter_name
+                        ))
+                        
+                        # Find update containing thread ID
+                        for update in result.updates:
+                            if hasattr(update, 'message'):
+                                thread_id = update.message.id
+                                break
+                                
+                        if not thread_id:
+                            thread_id = result.updates[0].id # fallback
+                            
+                        save_topic_id(course_key, chapter_hash, thread_id)
+                        print(f"✅ Topic thread created. ID: {thread_id}. Sleeping 15 seconds to prevent rate limits...")
+                        await asyncio.sleep(15)
+                    except Exception as e:
+                        FAIL_COUNT += 1
+                        CURRENT_ACTION = f"Failed to create topic: {e}"
+                        print(f"⚠️ Error creating topic: {e}")
+                        await asyncio.sleep(5)
+                        continue
+
+                if "lectures" not in chapter:
+                    continue
+                    
+                # Process lectures inside topic thread
+                for lecture in chapter["lectures"]:
+                    lec_name = lecture["name"]
+                    safe_lec_name = sanitize_filename(lec_name)
+                    video_link = lecture.get("link", "")
+                    notes_link = lecture.get("notes", "")
+                    dpp_link = lecture.get("dpp", "")
+                    
+                    # Highlight lecture name using stylish math fonts
+                    stylish_lec_name = to_stylish_bold(lec_name)
+                    stylish_chapter_name = to_stylish_bold(chapter_name)
+
+                    # --- PHASE A: VIDEO LECTURE ---
+                    if video_link:
+                        lec_hash = get_md5_hash(chapter_name + lec_name + "video" + video_link)
+                        if check_if_done(course_key, lec_hash):
+                            DONE_COUNT += 1
+                        else:
+                            CURRENT_FILE_NAME = f"{safe_lec_name}.mp4"
+                            local_video_path = f"{safe_lec_name}.mp4"
+                            try:
+                                await download_file(video_link, local_video_path, bot_client, course_key)
+                                
+                                # Check file size for Telegram 2GB upload limit
+                                if os.path.exists(local_video_path):
+                                    file_size = os.path.getsize(local_video_path)
+                                    if file_size > 2 * 1024 * 1024 * 1024:
+                                        print(f"⚠️ Video exceeds 2GB ({file_size / (1024*1024*1024):.2f} GB). Starting fast compression...")
+                                        duration, _, _ = get_video_metadata(local_video_path)
+                                        compressed_path = f"compressed_{local_video_path}"
+                                        try:
+                                            compress_video(local_video_path, compressed_path, duration or 3600, bot_client, course_key)
+                                            os.remove(local_video_path)
+                                            os.rename(compressed_path, local_video_path)
+                                        except Exception as comp_err:
+                                            if os.path.exists(compressed_path):
+                                                os.remove(compressed_path)
+                                            raise Exception(f"Video compression failed: {comp_err}")
+
+                                caption = f"🎬 **𝗩𝗶𝗱𝗲𝗼 𝗟𝗲𝗰𝘁𝘂𝗿𝗲:** {stylish_lec_name}\n📁 **𝗖𝗵𝗮𝗽𝘁𝗲𝗿:** {stylish_chapter_name}\n\n⚡ **𝗘𝘅𝘁𝗿𝗮𝗰𝘁𝗲𝗱 𝗯𝘆 {branding_text}**"
+                                await upload_file_with_progress(
+                                    user_client, bot_client, target_group, local_video_path, thread_id, caption, course_key, is_video=True
+                                )
+                                mark_as_done(course_key, lec_hash)
+                                DONE_COUNT += 1
+                                PROMO_COUNTER += 1
+                            except Exception as e:
+                                FAIL_COUNT += 1
+                                CURRENT_ACTION = f"Video process failed: {e}"
+                                await update_status_dashboard(bot_client, course_key, force=True)
+                                await asyncio.sleep(5)
+                            finally:
+                                if os.path.exists(local_video_path):
+                                    os.remove(local_video_path)
+
+                    # --- PHASE B: LECTURE NOTES ---
+                    if notes_link:
+                        notes_hash = get_md5_hash(chapter_name + lec_name + "notes" + notes_link)
+                        if check_if_done(course_key, notes_hash):
+                            DONE_COUNT += 1
+                        else:
+                            CURRENT_FILE_NAME = f"{safe_lec_name} - Notes.pdf"
+                            local_pdf_path = f"{safe_lec_name} - Notes.pdf"
+                            try:
+                                await download_file(notes_link, local_pdf_path, bot_client, course_key)
+                                caption = f"📚 **𝗟𝗲𝗰𝘁𝘂𝗿𝗲 𝗡𝗼𝘁𝗲𝘀:** {stylish_lec_name}\n📁 **𝗖𝗵𝗮𝗽𝘁𝗲𝗿:** {stylish_chapter_name}\n\n⚡ **𝗘𝘅𝘁𝗿𝗮𝗰𝘁𝗲𝗱 𝗯𝘆 {branding_text}**"
+                                await upload_file_with_progress(
+                                    user_client, bot_client, target_group, local_pdf_path, thread_id, caption, course_key, is_video=False
+                                )
+                                mark_as_done(course_key, notes_hash)
+                                DONE_COUNT += 1
+                                PROMO_COUNTER += 1
+                            except Exception as e:
+                                FAIL_COUNT += 1
+                                CURRENT_ACTION = f"Notes process failed: {e}"
+                                await update_status_dashboard(bot_client, course_key, force=True)
+                                await asyncio.sleep(5)
+                            finally:
+                                if os.path.exists(local_pdf_path):
+                                    os.remove(local_pdf_path)
+
+                    # --- PHASE C: DPP NOTES ---
+                    if dpp_link:
+                        dpp_hash = get_md5_hash(chapter_name + lec_name + "dpp" + dpp_link)
+                        if check_if_done(course_key, dpp_hash):
+                            DONE_COUNT += 1
+                        else:
+                            CURRENT_FILE_NAME = f"{safe_lec_name} - DPP.pdf"
+                            local_dpp_path = f"{safe_lec_name} - DPP.pdf"
+                            try:
+                                await download_file(dpp_link, local_dpp_path, bot_client, course_key)
+                                caption = f"📝 **𝗗𝗣𝗣:** {stylish_lec_name}\n📁 **𝗖𝗵𝗮𝗽𝘁𝗲𝗿:** {stylish_chapter_name}\n\n⚡ **𝗘𝘅𝘁𝗿𝗮𝗰𝘁𝗲𝗱 𝗯𝘆 {branding_text}**"
+                                await upload_file_with_progress(
+                                    user_client, bot_client, target_group, local_dpp_path, thread_id, caption, course_key, is_video=False
+                                )
+                                mark_as_done(course_key, dpp_hash)
+                                DONE_COUNT += 1
+                                PROMO_COUNTER += 1
+                            except Exception as e:
+                                FAIL_COUNT += 1
+                                CURRENT_ACTION = f"DPP process failed: {e}"
+                                await update_status_dashboard(bot_client, course_key, force=True)
+                                await asyncio.sleep(5)
+                            finally:
+                                if os.path.exists(local_dpp_path):
+                                    os.remove(local_dpp_path)
+
+                    # Send Promo
+                    if PROMO_COUNTER >= 10:
+                        promo_msg = "╔══════════════╗\n🎓 𝑨𝒍𝒍 𝑳𝒆𝒄𝒕𝒖𝒓𝒆𝒔 𝑨𝒗𝒂𝒊𝒍𝒂𝒃𝒍𝒆 🎓\n╚══════════════╝\n\n📌 𝑱𝒐𝒊𝒏 𝑨𝒍𝒍 𝑪𝒉𝒂𝒏𝒏𝒆𝒍𝒔 & 𝑮𝒓𝒐usr\n\n➊ https://t.me/nainoacademy\n\n➋ https://t.me/nainoneet\n\n➌ https://t.me/+PxRco8uPq95kYjNl\n\n✨ 𝑱𝒐𝒊𝒏 𝑵𝒐𝒘 & 𝑮𝒆𝒕 𝑨𝒄𝒄𝒆𝒔𝒔 𝒕𝒐 𝑨𝒍𝒍 𝑳𝒆𝒄𝒕𝒖𝒓𝒆𝒔 ✨"
+                        try:
+                            await user_client.send_message(target_group, promo_msg, reply_to=thread_id)
+                        except Exception:
+                            pass
+                        PROMO_COUNTER = 0
+
+        # Mark course status as completed
+        set_course_status(course_key, "completed")
+        print(f"✅ Course '{course_title}' mirroring finished!")
+
+    CURRENT_ACTION = "Mirror Process Completed Successfully! 🎉"
+    CURRENT_FILE_NAME = "All catalog courses sent!"
+    CURRENT_FILE_SIZE = "0 MB"
+    CURRENT_SPEED = "0 Mbps"
+    PROGRESS_PCT = 100.0
+    await update_status_dashboard(bot_client, "all", force=True)
+    await user_client.disconnect()
+    await bot_client.disconnect()
+
+# Launch mirroring loop (safe for both Jupyter and standalone python execution)
+try:
+    import asyncio
+    asyncio.run(start_automation())
+except RuntimeError:
+    import asyncio
+    asyncio.get_event_loop().create_task(start_automation())

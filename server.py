@@ -132,6 +132,73 @@ def push_notebook_to_kaggle(username, key, title, slug, db_root=None):
     return resp.status_code, resp.text
 
 
+def compile_automation_notebook_json():
+    """Reads cell1, cell3, cell4 in 'new automation/' and compiles them into a Jupyter notebook JSON string."""
+    cells = []
+    base_dir = os.path.dirname(os.path.abspath(__file__))
+    automation_dir = os.path.join(base_dir, "new automation")
+    
+    for num in [1, 3, 4]:
+        cell_path = os.path.join(automation_dir, f"cell{num}")
+        if not os.path.exists(cell_path):
+            continue
+            
+        with open(cell_path, 'r', encoding='utf-8') as f:
+            content = f.read()
+            
+        lines = content.splitlines(keepends=True)
+        cells.append({
+            "cell_type": "code",
+            "execution_count": None,
+            "metadata": {},
+            "outputs": [],
+            "source": lines
+        })
+        
+    notebook = {
+        "cells": cells,
+        "metadata": {
+            "kernelspec": {
+                "display_name": "Python 3",
+                "language": "python",
+                "name": "python3"
+            }
+        },
+        "nbformat": 4,
+        "nbformat_minor": 2
+    }
+    return json.dumps(notebook)
+
+
+def push_automation_notebook_to_kaggle(username, key, title, slug):
+    """Compiles the local new automation cells and pushes to Kaggle REST API."""
+    notebook_code = compile_automation_notebook_json()
+    credentials = base64.b64encode(f"{username}:{key}".encode()).decode()
+    headers = {
+        "Authorization": f"Basic {credentials}",
+        "Content-Type": "application/json"
+    }
+    payload = {
+        "id": None,
+        "slug": f"{username}/{slug}",
+        "title": title,
+        "text": notebook_code,
+        "language": "python",
+        "kernelType": "notebook",
+        "isPrivate": True,
+        "enableGpu": False,
+        "enableInternet": True,
+        "datasetSources": [],
+        "competitionSources": [],
+        "kernelSources": []
+    }
+    url = "https://www.kaggle.com/api/v1/kernels/push"
+    resp = requests.post(url, headers=headers, json=payload, timeout=30)
+    print(f"[*] Kaggle Automation Push Status: {resp.status_code}")
+    print(f"[*] Kaggle Automation Push Response: {resp.text}")
+    return resp.status_code, resp.text
+
+
 def start_firebase_polling():
     """Polls Firebase RTDB for auto-restart triggers across bot list stored in admin_config/bots."""
     import time
@@ -201,7 +268,10 @@ def start_firebase_polling():
                                 slug = kgl.get("slug") or slug
                                 
                             try:
-                                status_code, resp_text = push_notebook_to_kaggle(username, key, title, slug, root_key)
+                                if root_key == "new_automation_courses":
+                                    status_code, resp_text = push_automation_notebook_to_kaggle(username, key, title, slug)
+                                else:
+                                    status_code, resp_text = push_notebook_to_kaggle(username, key, title, slug, root_key)
                                 print(f"[+] Push auto-restart for '{root_key}' triggered with status: {status_code}")
                             except Exception as e:
                                 print(f"[!] Push auto-restart for '{root_key}' failed: {e}")
@@ -233,10 +303,14 @@ class DashboardHTTPHandler(BaseHTTPRequestHandler):
         # Serve Dashboard Files
         if self.path == '/' or self.path == '/index.html':
             self.serve_file('admin.html', 'text/html')
+        elif self.path == '/admin_automation' or self.path == '/admin_automation.html':
+            self.serve_file('admin_automation.html', 'text/html')
         elif self.path == '/admin.css':
             self.serve_file('admin.css', 'text/css')
         elif self.path == '/admin.js':
             self.serve_file('admin.js', 'application/javascript')
+        elif self.path == '/admin_automation.js':
+            self.serve_file('admin_automation.js', 'application/javascript')
         elif self.path == '/api/health':
             self.send_json_response({'status': 'ok'})
         else:
@@ -331,7 +405,10 @@ class DashboardHTTPHandler(BaseHTTPRequestHandler):
                 return
 
             try:
-                status_code, resp_text = push_notebook_to_kaggle(username, key, title, slug, db_root)
+                if db_root == "new_automation_courses":
+                    status_code, resp_text = push_automation_notebook_to_kaggle(username, key, title, slug)
+                else:
+                    status_code, resp_text = push_notebook_to_kaggle(username, key, title, slug, db_root)
                 if status_code in (200, 201):
                     self.send_json_response({'success': True})
                 else:
@@ -352,7 +429,10 @@ class DashboardHTTPHandler(BaseHTTPRequestHandler):
                 return
 
             try:
-                status_code, resp_text = push_notebook_to_kaggle(username, key, title, slug, db_root)
+                if db_root == "new_automation_courses":
+                    status_code, resp_text = push_automation_notebook_to_kaggle(username, key, title, slug)
+                else:
+                    status_code, resp_text = push_notebook_to_kaggle(username, key, title, slug, db_root)
                 if status_code in (200, 201):
                     self.send_json_response({'success': True})
                 else:

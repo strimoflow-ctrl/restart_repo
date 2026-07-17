@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-Teacher Cloner - Automation Dashboard</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="admin.css">
+    <!-- Firebase Compat SDKs -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-database-compat.js"></script>
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="app-header" style="display: flex; justify-content: space-between; align-items: center; padding: 15px 25px; background: rgba(17, 24, 39, 0.7); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(255, 255, 255, 0.05); flex-wrap: wrap; gap: 15px;">
+            <div class="logo-area" style="display: flex; align-items: center; gap: 10px;">
+                <span class="pulse-icon orange"></span>
+                <h1 style="font-size: 1.2rem; font-weight: 700; letter-spacing: 1px; color: var(--text-primary); margin: 0;">MULTI-TEACHER <span style="color: var(--accent);">AUTOMATION</span></h1>
+            </div>
+            
+            <div class="status-bar" style="display: flex; align-items: center; gap: 15px;">
+                <div class="status-item" style="display: flex; align-items: center; gap: 8px;">
+                    <span class="label" style="font-size: 0.8rem; color: var(--text-secondary);">Kaggle Engine:</span>
+                    <span id="kaggle-engine-status" class="status offline">OFFLINE</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Dashboard Grid -->
+        <main class="dashboard-grid" style="display: grid; grid-template-columns: 1fr 1.2fr; gap: 20px; flex-grow: 1; min-height: 0;">
+            <!-- Left Panel: Setup & Credentials -->
+            <section class="grid-card credentials-panel" style="display: flex; flex-direction: column; background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius); padding: 20px; min-height: 0;">
+                <div class="card-header" style="margin-bottom: 15px;">
+                    <h2 style="font-size: 1rem; font-weight: 600; text-transform: uppercase; color: var(--text-primary);">⚙️ CONFIGURATION & LOGIN</h2>
+                </div>
+                <div class="card-content scrollable" style="flex-grow: 1; overflow-y: auto; padding-right: 5px;">
+                    <!-- Firebase Section -->
+                    <div class="settings-group" style="margin-bottom: 20px; border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding-bottom: 15px;">
+                        <h3 style="font-size: 0.85rem; text-transform: uppercase; color: var(--accent); margin-bottom: 12px; font-weight: 600;">🔥 Firebase Config</h3>
+                        <div class="input-row" style="margin-bottom: 10px; display: flex; flex-direction: column; gap: 5px;">
+                            <label style="font-size: 0.75rem; color: var(--text-secondary);">Database URL</label>
+                            <input type="text" id="fb-url" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 6px; padding: 8px 12px; color: #fff; outline: none; font-size: 0.85rem;" placeholder="https://your-rtdb.firebaseio.com">
+                        </div>
+                    </div>
+
+                    <!-- Telegram Section -->
+                    <div class="settings-group" style="margin-bottom: 20px; border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding-bottom: 15px;">
+                        <h3 style="font-size: 0.85rem; text-transform: uppercase; color: var(--accent); margin-bottom: 12px; font-weight: 600;">📱 Telegram API Credentials</h3>
+                        <div class="input-row-half" style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 10px;">
+                            <div style="display: flex; flex-direction: column; gap: 5px;">
+                                <label style="font-size: 0.75rem; color: var(--text-secondary);">API ID</label>
+                                <input type="number" id="api-id" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 6px; padding: 8px 12px; color: #fff; outline: none; font-size: 0.85rem;" placeholder="123456">
+                            </div>
+                            <div style="display: flex; flex-direction: column; gap: 5px;">
+                                <label style="font-size: 0.75rem; color: var(--text-secondary);">API Hash</label>
+                                <input type="text" id="api-hash" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 6px; padding: 8px 12px; color: #fff; outline: none; font-size: 0.85rem;" placeholder="d07a2615...">
+                            </div>
+                        </div>
+                        <div class="input-row" style="margin-bottom: 10px; display: flex; flex-direction: column; gap: 5px;">
+                            <label style="font-size: 0.75rem; color: var(--text-secondary);">Bot Token (for live dashboard updates)</label>
+                            <input type="text" id="bot-token" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 6px; padding: 8px 12px; color: #fff; outline: none; font-size: 0.85rem;" placeholder="8219450238:AAF8...">
+                        </div>
+                        <div class="input-row-half" style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 10px;">
+                            <div style="display: flex; flex-direction: column; gap: 5px;">
+                                <label style="font-size: 0.75rem; color: var(--text-secondary);">Owner Chat ID</label>
+                                <input type="number" id="owner-id" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 6px; padding: 8px 12px; color: #fff; outline: none; font-size: 0.85rem;" placeholder="7755459773">
+                            </div>
+                            <div style="display: flex; flex-direction: column; gap: 5px;">
+                                <label style="font-size: 0.75rem; color: var(--text-secondary);">Extracted By (Branding)</label>
+                                <input type="text" id="extracted-by" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 6px; padding: 8px 12px; color: #fff; outline: none; font-size: 0.85rem;" value="@cryvex4">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Kaggle Section -->
+                    <div class="settings-group" style="margin-bottom: 20px; border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding-bottom: 15px;">
+                        <h3 style="font-size: 0.85rem; text-transform: uppercase; color: var(--accent); margin-bottom: 12px; font-weight: 600;">💻 Kaggle API (New Account Credentials)</h3>
+                        <div class="input-row-half" style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 10px;">
+                            <div style="display: flex; flex-direction: column; gap: 5px;">
+                                <label style="font-size: 0.75rem; color: var(--text-secondary);">Kaggle Username</label>
+                                <input type="text" id="kaggle-username" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 6px; padding: 8px 12px; color: #fff; outline: none; font-size: 0.85rem;" placeholder="pankajmourrya">
+                            </div>
+                            <div style="display: flex; flex-direction: column; gap: 5px;">
+                                <label style="font-size: 0.75rem; color: var(--text-secondary);">Kaggle API Key</label>
+                                <input type="password" id="kaggle-key" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 6px; padding: 8px 12px; color: #fff; outline: none; font-size: 0.85rem;" placeholder="581360a6a230...">
+                            </div>
+                        </div>
+                        <div class="input-row" style="margin-bottom: 10px; display: flex; flex-direction: column; gap: 5px;">
+                            <label style="font-size: 0.75rem; color: var(--text-secondary);">Kaggle Kernel Slug (URL path)</label>
+                            <input type="text" id="kaggle-slug" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 6px; padding: 8px 12px; color: #fff; outline: none; font-size: 0.85rem;" value="new-automation-cloner">
+                        </div>
+                    </div>
+
+                    <!-- Target Course Section -->
+                    <div class="settings-group" style="margin-bottom: 20px;">
+                        <h3 style="font-size: 0.85rem; text-transform: uppercase; color: var(--accent); margin-bottom: 12px; font-weight: 600;">📚 Target Course Option</h3>
+                        <div class="input-row" style="margin-bottom: 10px; display: flex; flex-direction: column; gap: 5px;">
+                            <label style="font-size: 0.75rem; color: var(--text-secondary);">Select Course to Clone</label>
+                            <select id="active-course-key" style="background: rgba(17, 24, 39, 0.9); border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; padding: 8px 12px; color: #fff; outline: none; font-size: 0.85rem; cursor: pointer;">
+                                <option value="all">🚀 ALL COURSES (Sequential Queue Mode)</option>
+                                <!-- Dynamically populated -->
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Action Button -->
+                <div class="control-actions" style="margin-top: 15px; display: flex; gap: 10px; flex-shrink: 0;">
+                    <button id="btn-save-config" style="flex-grow: 1; padding: 10px; font-size: 0.85rem; font-weight: 600; background: var(--primary); border: none; border-radius: 6px; color: #fff; cursor: pointer; transition: all 0.2s;">💾 SAVE CONFIGURATION</button>
+                </div>
+            </section>
+
+            <!-- Right Panel: Session String Login & Live Status Monitoring -->
+            <section class="right-column-container" style="display: grid; grid-template-rows: 1.1fr 1.3fr; gap: 20px; min-height: 0;">
+                <!-- Telethon Session OTP Login -->
+                <div class="grid-card login-panel" style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius); padding: 20px; display: flex; flex-direction: column; min-height: 0;">
+                    <div class="card-header" style="margin-bottom: 15px;">
+                        <h2 style="font-size: 1rem; font-weight: 600; text-transform: uppercase; color: var(--text-primary);">📲 TELEGRAM SESSION AUTHENTICATION</h2>
+                    </div>
+                    <div class="card-content" style="flex-grow: 1; display: flex; flex-direction: column; justify-content: center; gap: 12px;">
+                        <div class="input-row" style="display: flex; flex-direction: column; gap: 5px;">
+                            <label style="font-size: 0.75rem; color: var(--text-secondary);">Phone Number (with Country Code)</label>
+                            <input type="text" id="phone-number" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 6px; padding: 8px 12px; color: #fff; outline: none; font-size: 0.85rem;" placeholder="+919988776655">
+                        </div>
+                        <div class="input-row-half" style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+                            <div style="display: flex; flex-direction: column; gap: 5px;">
+                                <label style="font-size: 0.75rem; color: var(--text-secondary);">OTP Verification Code</label>
+                                <input type="text" id="otp-code" disabled style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.05); border-radius: 6px; padding: 8px 12px; color: #fff; outline: none; font-size: 0.85rem;" placeholder="12345">
+                            </div>
+                            <div style="display: flex; flex-direction: column; gap: 5px;">
+                                <label style="font-size: 0.75rem; color: var(--text-secondary);">2FA Password (if enabled)</label>
+                                <input type="password" id="twofa-password" disabled style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.05); border-radius: 6px; padding: 8px 12px; color: #fff; outline: none; font-size: 0.85rem;" placeholder="Password">
+                            </div>
+                        </div>
+                        <div class="action-buttons" style="display: flex; gap: 10px; margin-top: 5px;">
+                            <button id="btn-send-otp" style="flex-grow: 1; padding: 10px; font-size: 0.85rem; font-weight: 600; background: rgba(6,182,212,0.15); border: 1px solid rgba(6,182,212,0.3); color: var(--accent); border-radius: 6px; cursor: pointer; transition: all 0.2s;">📩 SEND OTP CODE</button>
+                            <button id="btn-verify-otp" disabled style="flex-grow: 1; padding: 10px; font-size: 0.85rem; font-weight: 600; background: rgba(16,185,129,0.15); border: 1px solid rgba(16,185,129,0.3); color: var(--success); border-radius: 6px; cursor: pointer; transition: all 0.2s;">🔐 LOGIN & GENERATE</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Live Status & Log Output -->
+                <div class="grid-card status-panel" style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius); padding: 20px; display: flex; flex-direction: column; min-height: 0;">
+                    <div class="card-header" style="margin-bottom: 10px; display: flex; justify-content: space-between; align-items: center;">
+                        <h2 style="font-size: 1rem; font-weight: 600; text-transform: uppercase; color: var(--text-primary);">📈 LIVE CLONER STATUS</h2>
+                        <span id="active-clone-indicator" style="font-size: 0.72rem; font-weight: 700; color: var(--text-secondary); background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08); border-radius: 4px; padding: 2px 6px;">IDLE</span>
+                    </div>
+                    <div class="card-content" style="flex-grow: 1; display: grid; grid-template-columns: 1fr 1fr; gap: 15px; align-items: center;">
+                        <!-- Stats Grid -->
+                        <div class="stats-grid" style="display: grid; grid-template-rows: repeat(5, 1fr); gap: 6px; font-size: 0.8rem;">
+                            <div style="display: flex; justify-content: space-between; border-bottom: 1px solid rgba(255,255,255,0.03); padding-bottom: 2px;">
+                                <span style="color: var(--text-secondary);">Current Action:</span>
+                                <span id="stat-action" style="font-weight: 600; color: var(--accent);">Idle</span>
+                            </div>
+                            <div style="display: flex; justify-content: space-between; border-bottom: 1px solid rgba(255,255,255,0.03); padding-bottom: 2px;">
+                                <span style="color: var(--text-secondary);">Cloning Key:</span>
+                                <span id="stat-key" style="font-weight: 600; color: #fff;">N/A</span>
+                            </div>
+                            <div style="display: flex; justify-content: space-between; border-bottom: 1px solid rgba(255,255,255,0.03); padding-bottom: 2px;">
+                                <span style="color: var(--text-secondary);">Progress:</span>
+                                <span id="stat-progress" style="font-weight: 600; color: #fff;">0 / 0</span>
+                            </div>
+                            <div style="display: flex; justify-content: space-between; border-bottom: 1px solid rgba(255,255,255,0.03); padding-bottom: 2px;">
+                                <span style="color: var(--text-secondary);">Upload Speed:</span>
+                                <span id="stat-speed" style="font-weight: 600; color: var(--success);">0 Mbps</span>
+                            </div>
+                            <div style="display: flex; justify-content: space-between; padding-bottom: 2px;">
+                                <span style="color: var(--text-secondary);">Disk Space:</span>
+                                <span id="stat-disk" style="font-weight: 600; color: #fff;">0 GB</span>
+                            </div>
+                        </div>
+
+                        <!-- Progress Circle Graphic or Stats Box -->
+                        <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px;">
+                            <div style="font-size: 1.8rem; font-weight: 800; color: var(--accent); text-shadow: var(--glow-accent); font-family: var(--font-mono);" id="stat-percent">0.0%</div>
+                            <div style="font-size: 0.72rem; color: var(--text-secondary);">CURRENT UPLOAD PROGRESS</div>
+                        </div>
+                    </div>
+
+                    <!-- Trigger Run Actions -->
+                    <div style="margin-top: 10px; display: flex; gap: 10px; flex-shrink: 0;">
+                        <button id="btn-trigger-cloner" style="flex-grow: 1; padding: 10px; font-size: 0.85rem; font-weight: 700; background: var(--success); border: none; border-radius: 6px; color: #fff; cursor: pointer; transition: all 0.2s;">🚀 LAUNCH MIRROR BOT</button>
+                        <button id="btn-trigger-restart" style="padding: 10px; font-size: 0.85rem; font-weight: 700; background: rgba(245,158,11,0.15); border: 1px solid rgba(245,158,11,0.3); color: var(--warn); border-radius: 6px; cursor: pointer; transition: all 0.2s;">🔄 FORCE RESTART</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Inject JS logic directly to keep it self-contained and modular -->
+    <script src="admin_automation.js"></script>
+</body>
+</html>

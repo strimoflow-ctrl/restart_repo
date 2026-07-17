@@ -1,0 +1,913 @@
+{
+  "subjects": [
+    {
+      "name": "Course Lectures",
+      "icon": "📚",
+      "chapters": [
+        {
+          "chapter": "🌿 ECOLOGY (DREAM 2024)",
+          "lectures": [
+            {
+              "name": "1. ECOLOGY - 1",
+              "link": "https://uamedia.uacdn.net/lesson-raw/UIPDGCDS8LT62F04Z8GN/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/UIPDGCDS8LT62F04Z8GN/ECOLOGY__1_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "2. ECOLOGY - 2",
+              "link": "https://uamedia.uacdn.net/lesson-raw/FFCGOI6MUH9AN4RCRD4E/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/FFCGOI6MUH9AN4RCRD4E/ECOLOGY__2_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "3. ECOLOGY - 3",
+              "link": "https://uamedia.uacdn.net/lesson-raw/YPP7C1MXO4CYOZ7F26V9/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/YPP7C1MXO4CYOZ7F26V9/ECOLOGY__3_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "4. ECOLOGY - 4",
+              "link": "https://uamedia.uacdn.net/lesson-raw/YO1KF86SZ69GB557F8PN/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/YO1KF86SZ69GB557F8PN/ECOLOGY__4_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "5. ECOLOGY - 5",
+              "link": "https://uamedia.uacdn.net/lesson-raw/U7C7I2LG5Z12GJ12MKP1/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/U7C7I2LG5Z12GJ12MKP1/ECOLOGY__5_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "6. ECOLOGY - 6",
+              "link": "https://uamedia.uacdn.net/lesson-raw/D7UE44PSI5YWIHT55T72/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/D7UE44PSI5YWIHT55T72/ECOLOGY__6_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "7. ECOLOGY - 7",
+              "link": "https://uamedia.uacdn.net/lesson-raw/4N22GSJLY1U697PV69R2/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/4N22GSJLY1U697PV69R2/ECOLOGY__7_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "8. ECOLOGY - 8",
+              "link": "https://uamedia.uacdn.net/lesson-raw/AFZCDHZGJGX7ZOPTFOF0/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/AFZCDHZGJGX7ZOPTFOF0/ECOLOGY__8_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "9. ECOLOGY - 9",
+              "link": "https://uamedia.uacdn.net/lesson-raw/25F30IHA499ZG7JEKFSC/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/25F30IHA499ZG7JEKFSC/ECOLOGY__9_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "10. ECOLOGY - 10",
+              "link": "https://uamedia.uacdn.net/lesson-raw/6178U3CKBBDQGRRKDV7O/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/6178U3CKBBDQGRRKDV7O/ECOLOGY__10_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "11. ECOLOGY - 11",
+              "link": "https://uamedia.uacdn.net/lesson-raw/GJ74XE2HTT7W1YPAE1O0/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/GJ74XE2HTT7W1YPAE1O0/ECOLOGY__11_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "12. ECOLOGY - 12",
+              "link": "https://uamedia.uacdn.net/lesson-raw/2T5B2RRWXP62C9F9NVMH/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/2T5B2RRWXP62C9F9NVMH/ECOLOGY__12_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "13. ECOLOGY - 13",
+              "link": "https://uamedia.uacdn.net/lesson-raw/IDR1D693FBV0E3QWOV66/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/IDR1D693FBV0E3QWOV66/ECOLOGY__13_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "14. ECOLOGY - 14 (B)",
+              "link": "https://uamedia.uacdn.net/lesson-raw/845IESJ4K55ST6K1Y181/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/845IESJ4K55ST6K1Y181/ECOLOGY__14_B_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "15. ECOLOGY - 14",
+              "link": "https://uamedia.uacdn.net/lesson-raw/RL9UWZJF6VGIADGKMMG0/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/RL9UWZJF6VGIADGKMMG0/ECOLOGY__14_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "16. ECOLOGY - 15",
+              "link": "https://uamedia.uacdn.net/lesson-raw/C4B1SUI6EYFJA841Z4ZX/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/C4B1SUI6EYFJA841Z4ZX/ECOLOGY__15_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "17. ECOLOGY - 16",
+              "link": "https://uamedia.uacdn.net/lesson-raw/F3V6AXAS4EVBTLDQNZZ5/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/F3V6AXAS4EVBTLDQNZZ5/ECOLOGY__16_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "18. ECOLOGY - 17 (B)",
+              "link": "https://uamedia.uacdn.net/lesson-raw/75YNTYTAE2MCCIH0A0JS/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/75YNTYTAE2MCCIH0A0JS/ECOLOGY__17_B_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "19. ECOLOGY - 17",
+              "link": "https://uamedia.uacdn.net/lesson-raw/5AZ5NC2IP4LFKNMEASH6/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/5AZ5NC2IP4LFKNMEASH6/ECOLOGY__17_with_anno.pdf",
+              "dpp": ""
+            }
+          ]
+        },
+        {
+          "chapter": "🌱 PLANT DIVERSITY (DREAM 2024)",
+          "lectures": [
+            {
+              "name": "20. PLANT DIVERSITY - 1",
+              "link": "https://uamedia.uacdn.net/lesson-raw/G603VMFBJIIX3TIX4IDI/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/G603VMFBJIIX3TIX4IDI/PLANT_DIVERSITY__1_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "21. PLANT DIVERSITY - 2",
+              "link": "https://uamedia.uacdn.net/lesson-raw/TUJMHNVXHKKUQDUZB6FU/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/TUJMHNVXHKKUQDUZB6FU/PLANT_DIVERSITY__2_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "22. PLANT DIVERSITY - 3",
+              "link": "https://uamedia.uacdn.net/lesson-raw/ZZUF7S3IP0RPKQNS7Y39/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/ZZUF7S3IP0RPKQNS7Y39/PLANT_DIVERSITY__3_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "23. PLANT DIVERSITY - 4",
+              "link": "https://uamedia.uacdn.net/lesson-raw/22BMFCLD98WVUY97Z5QV/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/22BMFCLD98WVUY97Z5QV/PLANT_DIVERSITY__4_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "24. PLANT DIVERSITY - 5",
+              "link": "https://uamedia.uacdn.net/lesson-raw/WK7EAHM0FSBDJO79I4U1/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/WK7EAHM0FSBDJO79I4U1/PLANT_DIVERSITY__5_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "25. PLANT DIVERSITY - 6",
+              "link": "https://uamedia.uacdn.net/lesson-raw/QZTV9JBD9UN81O9H99MN/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/QZTV9JBD9UN81O9H99MN/PLANT_DIVERSITY__6_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "26. PLANT DIVERSITY - 7",
+              "link": "https://uamedia.uacdn.net/lesson-raw/ILX0DWH6TY0SQ9D4AU4Y/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/ILX0DWH6TY0SQ9D4AU4Y/PLANT_DIVERSITY__7_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "27. PLANT DIVERSITY - 8",
+              "link": "https://uamedia.uacdn.net/lesson-raw/8GTRB9VQ5TN138RKDIG4/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/8GTRB9VQ5TN138RKDIG4/PLANT_DIVERSITY__8_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "28. PLANT DIVERSITY - 9",
+              "link": "https://uamedia.uacdn.net/lesson-raw/9267FN999EY575O7B6GI/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/9267FN999EY575O7B6GI/PLANT_DIVERSITY__9_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "29. PLANT DIVERSITY - 10",
+              "link": "https://uamedia.uacdn.net/lesson-raw/E8IIWRAV8WM8V6II64PP/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/E8IIWRAV8WM8V6II64PP/PLANT_DIVERSITY__10_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "30. PLANT DIVERSITY - 11",
+              "link": "https://uamedia.uacdn.net/lesson-raw/B9Y19FYCCMC2D4PPZ5HZ/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/B9Y19FYCCMC2D4PPZ5HZ/PLANT_DIVERSITY__11_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "31. PLANT DIVERSITY - 12",
+              "link": "https://uamedia.uacdn.net/lesson-raw/IIJOEF6KG3QC9B4UKJK9/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/IIJOEF6KG3QC9B4UKJK9/PLANT_DIVERSITY__12_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "32. PLANT DIVERSITY - 13",
+              "link": "https://uamedia.uacdn.net/lesson-raw/Y2BPOWN7754KTDPVM8J8/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/Y2BPOWN7754KTDPVM8J8/PLANT_DIVERSITY__13_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "33. PLANT DIVERSITY - 14",
+              "link": "https://uamedia.uacdn.net/lesson-raw/6BHBZ7CVSAULDUNPOWAC/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/6BHBZ7CVSAULDUNPOWAC/PLANT_DIVERSITY__14_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "34. PLANT DIVERSITY - 15",
+              "link": "https://uamedia.uacdn.net/lesson-raw/0U2DXNPWROY60QRTW54L/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/0U2DXNPWROY60QRTW54L/PLANT_DIVERSITY__15_with_anno.pdf",
+              "dpp": ""
+            }
+          ]
+        },
+        {
+          "chapter": "🌿 ECOLOGY (mp3)",
+          "lectures": [
+            {
+              "name": "1. ECOLOGY - 1",
+              "link": "https://uamedia.uacdn.net/lesson-raw/DHEP4CXK7DLY169AXZ4V/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/DHEP4CXK7DLY169AXZ4V/ECOLOGY__1_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "2. ECOLOGY - 2",
+              "link": "https://uamedia.uacdn.net/lesson-raw/947VD9VC725QLZGCQR8R/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/947VD9VC725QLZGCQR8R/ECOLOGY__2_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "3. ECOLOGY - 3",
+              "link": "https://uamedia.uacdn.net/lesson-raw/KMMTKW434F6D8VWKOZZ8/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/KMMTKW434F6D8VWKOZZ8/ECOLOGY__3_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "4. ECOLOGY - 4",
+              "link": "https://uamedia.uacdn.net/lesson-raw/R254RQGYE2HSNB189TKP/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/R254RQGYE2HSNB189TKP/ECOLOGY__4_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "5. ECOLOGY - 5",
+              "link": "https://uamedia.uacdn.net/lesson-raw/2R4UO32WOM4E2NVCXM22/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/2R4UO32WOM4E2NVCXM22/ECOLOGY__5_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "6. ECOLOGY - 6",
+              "link": "https://uamedia.uacdn.net/lesson-raw/OMGAFQRRTLFEQOAO19HZ/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/OMGAFQRRTLFEQOAO19HZ/ECOLOGY__6_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "7. ECOLOGY - 7",
+              "link": "https://uamedia.uacdn.net/lesson-raw/XWVVSV6AGJNDVBYKNK3N/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/XWVVSV6AGJNDVBYKNK3N/ECOLOGY__7_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "8. ECOLOGY - 8",
+              "link": "https://uamedia.uacdn.net/lesson-raw/J5D081PT949PN62Y9D81/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/J5D081PT949PN62Y9D81/ECOLOGY__8_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "9. ECOLOGY - 9",
+              "link": "https://uamedia.uacdn.net/lesson-raw/0JMJ5PO75W1OW5SOOED3/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/0JMJ5PO75W1OW5SOOED3/ECOLOGY__9_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "10. ECOLOGY - 10",
+              "link": "https://uamedia.uacdn.net/lesson-raw/1UZGO49LNYRYVEIK5V2M/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/1UZGO49LNYRYVEIK5V2M/ECOLOGY__10_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "11. ECOLOGY - 11",
+              "link": "https://uamedia.uacdn.net/lesson-raw/D2HB4ED3OR0QM9X8SX8N/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/D2HB4ED3OR0QM9X8SX8N/ECOLOGY__11_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "12. ECOLOGY - 12",
+              "link": "https://uamedia.uacdn.net/lesson-raw/KP39I1EBKKDDQWWK07VV/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/KP39I1EBKKDDQWWK07VV/ECOLOGY__12_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "13. ECOLOGY - 13",
+              "link": "",
+              "notes": "",
+              "dpp": ""
+            }
+          ]
+        },
+        {
+          "chapter": "🔬 CELL: THE UNIT OF LIFE (ABHI9)",
+          "lectures": [
+            {
+              "name": "1. CELL-THE UNIT OF LIFE: 1",
+              "link": "https://uamedia.uacdn.net/lesson-raw/261T0KA9ZFSX2TPIUWDG/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/261T0KA9ZFSX2TPIUWDG/CELLTHE_UNIT_OF_LIFE_1_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "2. CELL-THE UNIT OF LIFE: 2",
+              "link": "https://uamedia.uacdn.net/lesson-raw/JVA0MH57YBNFBAUB4JJH/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/JVA0MH57YBNFBAUB4JJH/CELLTHE_UNIT_OF_LIFE_2_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "3. CELL-THE UNIT OF LIFE-3",
+              "link": "https://uamedia.uacdn.net/lesson-raw/POCTK97JEWI1PNH0NXE7/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/POCTK97JEWI1PNH0NXE7/CELLTHE_UNIT_OF_LIFE3_with_anno.pdf",
+              "dpp": ""
+            }
+          ]
+        },
+        {
+          "chapter": "🌿 ECOLOGY (ABHI9)",
+          "lectures": [
+            {
+              "name": "4. ECOLOGY-4",
+              "link": "https://uamedia.uacdn.net/lesson-raw/WMRUVWMFIJIOHJ0FAIX1/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/WMRUVWMFIJIOHJ0FAIX1/ECOLOGY4_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "5. ECOLOGY-5",
+              "link": "https://uamedia.uacdn.net/lesson-raw/SERYX8F83935KA5B5IIL/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/SERYX8F83935KA5B5IIL/ECOLOGY5_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "6. ECOLOGY-6",
+              "link": "https://uamedia.uacdn.net/lesson-raw/II17JDKHZQGTCXY08GOY/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/II17JDKHZQGTCXY08GOY/ECOLOGY6_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "7. ECOLOGY-7",
+              "link": "https://uamedia.uacdn.net/lesson-raw/4DYK2OF9KUD6F9OT6WFB/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/4DYK2OF9KUD6F9OT6WFB/ECOLOGY7_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "8. ECOLOGY-8",
+              "link": "https://uamedia.uacdn.net/lesson-raw/QOELL08QO1CSM274Q8TF/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/QOELL08QO1CSM274Q8TF/ECOLOGY8_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "9. ECOLOGY-9",
+              "link": "https://uamedia.uacdn.net/lesson-raw/C550X3MMWEANP0FJ09H9/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/C550X3MMWEANP0FJ09H9/ECOLOGY9_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "10. ECOLOGY-10",
+              "link": "https://uamedia.uacdn.net/lesson-raw/B0D4EGPZVQST4R3GWOZM/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/B0D4EGPZVQST4R3GWOZM/ECOLOGY10_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "11. ECOLOGY-11",
+              "link": "https://uamedia.uacdn.net/lesson-raw/SQ6VZ8U3FB7ZNJM61N64/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/SQ6VZ8U3FB7ZNJM61N64/ECOLOGY11_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "12. ECOLOGY-12",
+              "link": "https://uamedia.uacdn.net/lesson-raw/ECECW1X6TK20Q29DLXG9/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/ECECW1X6TK20Q29DLXG9/ECOLOGY12_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "13. ECOLOGY-13",
+              "link": "https://uamedia.uacdn.net/lesson-raw/KW3QLE9SNNMADJMTTTH0/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/KW3QLE9SNNMADJMTTTH0/ECOLOGY13_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "14. ECOLOGY-14",
+              "link": "https://uamedia.uacdn.net/lesson-raw/PBHDO3DCV412A3ECL4Z2/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/PBHDO3DCV412A3ECL4Z2/ECOLOGY14_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "15. ECOLOGY-15",
+              "link": "https://uamedia.uacdn.net/lesson-raw/J77KBQZWETX6HZ5G5G2G/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/J77KBQZWETX6HZ5G5G2G/ECOLOGY15_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "16. ECOLOGY-16",
+              "link": "https://uamedia.uacdn.net/lesson-raw/FTNIWHYEL0V85OM3MFN2/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/FTNIWHYEL0V85OM3MFN2/ECOLOGY16_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "17. ECOLOGY-17",
+              "link": "https://uamedia.uacdn.net/lesson-raw/62F923W7H0Y0CQEKYM6B/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/62F923W7H0Y0CQEKYM6B/ECOLOGY17_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "18. ECOLOGY-18",
+              "link": "https://uamedia.uacdn.net/lesson-raw/72DLAO6LNI1GUL63AL15/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/72DLAO6LNI1GUL63AL15/ECOLOGY18_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "19. ECOLOGY-19",
+              "link": "https://uamedia.uacdn.net/lesson-raw/W9MCW6AIUJAR9JCYH1ZA/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/W9MCW6AIUJAR9JCYH1ZA/ECOLOGY19_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "20. ECOLOGY-20",
+              "link": "https://uamedia.uacdn.net/lesson-raw/FW9MR1UFEB3JEO6OEDIR/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/FW9MR1UFEB3JEO6OEDIR/ECOLOGY20_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "21. ECOLOGY-21",
+              "link": "https://uamedia.uacdn.net/lesson-raw/TKOWJRU1B3E5BOBZWV8L/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/TKOWJRU1B3E5BOBZWV8L/ECOLOGY21_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "22. ECOLOGY-22",
+              "link": "https://uamedia.uacdn.net/lesson-raw/D5JCHAASGYW114Q4BGVS/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/D5JCHAASGYW114Q4BGVS/ECOLOGY22_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "23. ECOLOGY-23",
+              "link": "https://uamedia.uacdn.net/lesson-raw/CS3I44XR58T3ZGRG7TLR/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/CS3I44XR58T3ZGRG7TLR/ECOLOGY23_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "24. ECOLOGY-24",
+              "link": "https://uamedia.uacdn.net/lesson-raw/M6U30C7AM7UEX8J6HTTZ/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/M6U30C7AM7UEX8J6HTTZ/ECOLOGY24_with_anno.pdf",
+              "dpp": ""
+            }
+          ]
+        },
+        {
+          "chapter": "🌱 PLANT DIVERSITY (ABHI9)",
+          "lectures": [
+            {
+              "name": "25. PLANT DIVERSITY - 2",
+              "link": "https://uamedia.uacdn.net/lesson-raw/MFXJECVJLTUJ0PFLZLQG/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/MFXJECVJLTUJ0PFLZLQG/PLANT_DIVERSITY__2_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "26. PLANT DIVERSITY - 3",
+              "link": "https://uamedia.uacdn.net/lesson-raw/TVE4KPNMHKM595TOBN3U/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/TVE4KPNMHKM595TOBN3U/PLANT_DIVERSITY__3_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "27. PLANT DIVERSITY - 4",
+              "link": "https://uamedia.uacdn.net/lesson-raw/8WI8PPDYL4UVBGO4K0BT/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/8WI8PPDYL4UVBGO4K0BT/PLANT_DIVERSITY__4_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "28. PLANT DIVERSITY - 5",
+              "link": "https://uamedia.uacdn.net/lesson-raw/0PX05FFW7J73QVN3G3W6/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/0PX05FFW7J73QVN3G3W6/PLANT_DIVERSITY__5_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "29. PLANT DIVERSITY - 5 (B)",
+              "link": "https://uamedia.uacdn.net/lesson-raw/IF0YWL592WJUL1GJRBMW/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/IF0YWL592WJUL1GJRBMW/PLANT_DIVERSITY__5_B_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "30. PLANT DIVERSITY - 5",
+              "link": "https://uamedia.uacdn.net/lesson-raw/5O6QAELJ7PXDL1EF9DQ6/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/5O6QAELJ7PXDL1EF9DQ6/PLANT_DIVERSITY__5_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "31. PLANT DIVERSITY - 6",
+              "link": "https://uamedia.uacdn.net/lesson-raw/L6U2PKZFHT3ZKSE2IMEV/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/L6U2PKZFHT3ZKSE2IMEV/PLANT_DIVERSITY__6_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "32. PLANT DIVERSITY - 7",
+              "link": "https://uamedia.uacdn.net/lesson-raw/KZDBZ9KSSBZOMOX4O752/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/KZDBZ9KSSBZOMOX4O752/PLANT_DIVERSITY__7_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "33. PLANT DIVERSITY - 8",
+              "link": "https://uamedia.uacdn.net/lesson-raw/FA6XS3834939N47DE3RL/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/FA6XS3834939N47DE3RL/PLANT_DIVERSITY__8_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "34. PLANT DIVERSITY - 9 (A)",
+              "link": "https://uamedia.uacdn.net/lesson-raw/DRHIKV6ENYN4GLSPVKSC/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/DRHIKV6ENYN4GLSPVKSC/PLANT_DIVERSITY__9_A_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "35. PLANT DIVERSITY - 9 (B)",
+              "link": "https://uamedia.uacdn.net/lesson-raw/K12Q23FZZSDU1MRML2JU/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/K12Q23FZZSDU1MRML2JU/PLANT_DIVERSITY__9_B_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "36. PLANT DIVERSITY - 10",
+              "link": "https://uamedia.uacdn.net/lesson-raw/1TOBTQQT7EQU4M5T3WTT/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/1TOBTQQT7EQU4M5T3WTT/PLANT_DIVERSITY__10_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "37. PLANT DIVERSITY - 11 (a)",
+              "link": "https://uamedia.uacdn.net/lesson-raw/6U1SO8ATE7BBCQPTR9S2/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/6U1SO8ATE7BBCQPTR9S2/PLANT_DIVERSITY__11_a_with_anno.pdf",
+              "dpp": ""
+            }
+          ]
+        },
+        {
+          "chapter": "🌿 ECOLOGY (PRIXA Batch)",
+          "lectures": [
+            {
+              "name": "1. ECOLOGY - 1",
+              "link": "https://uamedia.uacdn.net/lesson-raw/NH4TEKESADU4QI62NRTJ/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/NH4TEKESADU4QI62NRTJ/ECOLOGY__1_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "2. ECOLOGY - 2",
+              "link": "https://uamedia.uacdn.net/lesson-raw/RYKSAPSSWVWXC6LRT8MS/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/RYKSAPSSWVWXC6LRT8MS/ECOLOGY__2_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "3. ECOLOGY - 3",
+              "link": "https://uamedia.uacdn.net/lesson-raw/WVGVTO8HST2MJT27E1VO/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/WVGVTO8HST2MJT27E1VO/ECOLOGY__3_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "4. ECOLOGY - 4",
+              "link": "https://uamedia.uacdn.net/lesson-raw/DQZLVBN7424MS68RWI0W/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/DQZLVBN7424MS68RWI0W/ECOLOGY__4_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "5. ECOLOGY - 5",
+              "link": "https://uamedia.uacdn.net/lesson-raw/MYWE5CF424320GKJZZEQ/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/MYWE5CF424320GKJZZEQ/ECOLOGY__5_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "6. ECOLOGY - 6",
+              "link": "https://uamedia.uacdn.net/lesson-raw/ZH5FKYLE6DHCLMMMFGN5/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/ZH5FKYLE6DHCLMMMFGN5/ECOLOGY__6_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "7. ECOLOGY - 7",
+              "link": "https://uamedia.uacdn.net/lesson-raw/XO7VKQRJY5Y6W2C5CAOI/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/XO7VKQRJY5Y6W2C5CAOI/ECOLOGY__7_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "8. ECOLOGY - 8",
+              "link": "https://uamedia.uacdn.net/lesson-raw/RBBS6QM7N3MQ49VL64U7/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/RBBS6QM7N3MQ49VL64U7/ECOLOGY__8_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "9. ECOLOGY - 9",
+              "link": "https://uamedia.uacdn.net/lesson-raw/JMSBQC9T1RVCXFAV8QIY/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/JMSBQC9T1RVCXFAV8QIY/ECOLOGY__9_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "10. ECOLOGY - 10",
+              "link": "https://uamedia.uacdn.net/lesson-raw/QTE3Y9TBGV5U7H1XW69R/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/QTE3Y9TBGV5U7H1XW69R/ECOLOGY__10_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "11. ECOLOGY - 11",
+              "link": "https://uamedia.uacdn.net/lesson-raw/LHD6KE3FS0ONMRXH8T2Z/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/LHD6KE3FS0ONMRXH8T2Z/ECOLOGY__11_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "12. ECOLOGY - 12",
+              "link": "https://uamedia.uacdn.net/lesson-raw/CIOZCE550O8RBOPPGSNB/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/CIOZCE550O8RBOPPGSNB/ECOLOGY__12_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "13. ECOLOGY - 13",
+              "link": "https://uamedia.uacdn.net/lesson-raw/4CL9E5GV36XGQU3EZKC7/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/4CL9E5GV36XGQU3EZKC7/ECOLOGY__13_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "14. ECOLOGY - 14",
+              "link": "https://uamedia.uacdn.net/lesson-raw/QYJ149EQ0F3ZBTTOHW1O/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/QYJ149EQ0F3ZBTTOHW1O/ECOLOGY__14_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "15. ECOLOGY - 15",
+              "link": "https://uamedia.uacdn.net/lesson-raw/SQ159PY6745JIW58NLYR/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/SQ159PY6745JIW58NLYR/ECOLOGY__15_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "16. ECOLOGY - 16",
+              "link": "https://uamedia.uacdn.net/lesson-raw/0XCKQY1D0ZXSTGAKAJEK/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/0XCKQY1D0ZXSTGAKAJEK/ECOLOGY__16_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "17. ECOLOGY - 17",
+              "link": "https://uamedia.uacdn.net/lesson-raw/P7BFWW5HMZAHM3FLDBXN/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/P7BFWW5HMZAHM3FLDBXN/ECOLOGY__17_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "18. ECOLOGY - 18",
+              "link": "https://uamedia.uacdn.net/lesson-raw/XNGMSM4UL0KO2P0V7FHV/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/XNGMSM4UL0KO2P0V7FHV/ECOLOGY__18_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "19. ECOLOGY - 19",
+              "link": "https://uamedia.uacdn.net/lesson-raw/IVCCD5CFBWYU33C260EC/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/IVCCD5CFBWYU33C260EC/ECOLOGY__19_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "20. ECOLOGY - 20",
+              "link": "https://uamedia.uacdn.net/lesson-raw/GIEMDVTU81E8NR0ON0KQ/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/GIEMDVTU81E8NR0ON0KQ/ECOLOGY__20_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "21. ECOLOGY - 21",
+              "link": "https://uamedia.uacdn.net/lesson-raw/1MWBFRB3A6Z376ROZEPC/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/1MWBFRB3A6Z376ROZEPC/ECOLOGY__21_with_anno.pdf",
+              "dpp": ""
+            }
+          ]
+        },
+        {
+          "chapter": "🌿 ECOLOGY (PHL BATCH)",
+          "lectures": [
+            {
+              "name": "1. ECOLOGY - 1",
+              "link": "https://uamedia.uacdn.net/lesson-raw/LB9FO5Y6CKG0S76D2560/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/LB9FO5Y6CKG0S76D2560/ECOLOGY__1_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "2. ECOLOGY - 2",
+              "link": "https://uamedia.uacdn.net/lesson-raw/QWB9VK9L2BMKBDQGGCSP/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/QWB9VK9L2BMKBDQGGCSP/ECOLOGY__2_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "3. ECOLOGY - 3",
+              "link": "https://uamedia.uacdn.net/lesson-raw/OVYMLY5O3NDHP4S3UUHQ/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/OVYMLY5O3NDHP4S3UUHQ/ECOLOGY__3_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "4. ECOLOGY - 4",
+              "link": "https://uamedia.uacdn.net/lesson-raw/L0FDRJN936DYYT6VBFJG/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/L0FDRJN936DYYT6VBFJG/ECOLOGY__4_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "5. ECOLOGY - 5",
+              "link": "https://uamedia.uacdn.net/lesson-raw/2EWMDG5PGM4TL9T5PC1Y/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/2EWMDG5PGM4TL9T5PC1Y/ECOLOGY__5_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "6. ECOLOGY - 6",
+              "link": "https://uamedia.uacdn.net/lesson-raw/VQXVQ7NK5FH300PKWWN3/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/VQXVQ7NK5FH300PKWWN3/ECOLOGY__6_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "7. ECOLOGY - 7",
+              "link": "https://uamedia.uacdn.net/lesson-raw/3QVCXLO18JXVVEV1RMKT/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/3QVCXLO18JXVVEV1RMKT/ECOLOGY__7_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "8. ECOLOGY - 8",
+              "link": "https://uamedia.uacdn.net/lesson-raw/0LEC7BAZP3PO106MP3AG/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/0LEC7BAZP3PO106MP3AG/ECOLOGY__8_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "9. ECOLOGY - 9",
+              "link": "https://uamedia.uacdn.net/lesson-raw/B7UFACJ0MNXXN2L502FE/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/B7UFACJ0MNXXN2L502FE/ECOLOGY__9_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "10. ECOLOGY - 10",
+              "link": "https://uamedia.uacdn.net/lesson-raw/DVBYGWZE2KURWISDKGXV/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/DVBYGWZE2KURWISDKGXV/ECOLOGY__10_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "11. ECOLOGY - 11",
+              "link": "https://uamedia.uacdn.net/lesson-raw/4JO3SXMRPIDX0MWGR8GV/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/4JO3SXMRPIDX0MWGR8GV/ECOLOGY__11_with_anno.pdf",
+              "dpp": ""
+            }
+          ]
+        },
+        {
+          "chapter": "🌿 ECOLOGY (APEX 2026)",
+          "lectures": [
+            {
+              "name": "1. ECOLOGY-1",
+              "link": "https://uamedia.uacdn.net/lesson-raw/16WR132XOC8LJQ07HYQN/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/16WR132XOC8LJQ07HYQN/ECOLOGY1_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "2. ECOLOGY-2",
+              "link": "https://uamedia.uacdn.net/lesson-raw/G7VK16MSY4XA4RMSZY2V/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/G7VK16MSY4XA4RMSZY2V/ECOLOGY2_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "3. ECOLOGY-3",
+              "link": "https://uamedia.uacdn.net/lesson-raw/GXJC2TZH1OS4WMI5CGT3/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/GXJC2TZH1OS4WMI5CGT3/ECOLOGY3_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "4. ECOLOGY-4",
+              "link": "https://uamedia.uacdn.net/lesson-raw/T42094I4Z9REERP9SCO7/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/T42094I4Z9REERP9SCO7/ECOLOGY4_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "5. ECOLOGY-5",
+              "link": "https://uamedia.uacdn.net/lesson-raw/6JRS4TMN30PLWWJI51FG/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/6JRS4TMN30PLWWJI51FG/ECOLOGY5_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "6. ECOLOGY-6 (Part 1)",
+              "link": "https://uamedia.uacdn.net/lesson-raw/JW45SU4EVYJDMKBUEZ76/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/JW45SU4EVYJDMKBUEZ76/ECOLOGY1_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "7. ECOLOGY-7",
+              "link": "https://uamedia.uacdn.net/lesson-raw/KZ7LHJ5FGKI9IFX81Y8S/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/KZ7LHJ5FGKI9IFX81Y8S/ECOLOGY7_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "8. ECOLOGY-8",
+              "link": "https://uamedia.uacdn.net/lesson-raw/MXPZAASG1FK5X55RIZSR/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/MXPZAASG1FK5X55RIZSR/ECOLOGY8_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "9. ECOLOGY-9",
+              "link": "https://uamedia.uacdn.net/lesson-raw/E6KSUC6BQFJ7UU90NB9Q/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/E6KSUC6BQFJ7UU90NB9Q/ECOLOGY9_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "10. ECOLOGY-10",
+              "link": "https://uamedia.uacdn.net/lesson-raw/32RYJGSZSMRUCMBNVO8Z/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/32RYJGSZSMRUCMBNVO8Z/ECOLOGY10_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "11. ECOLOGY-11",
+              "link": "https://uamedia.uacdn.net/lesson-raw/JVBJUOQXET2VNBP4B9MC/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/JVBJUOQXET2VNBP4B9MC/ECOLOGY11_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "12. ECOLOGY-12",
+              "link": "https://uamedia.uacdn.net/lesson-raw/K7RLIHDABDRRCI78TRNG/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/K7RLIHDABDRRCI78TRNG/ECOLOGY12_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "13. ECOLOGY-13",
+              "link": "https://uamedia.uacdn.net/lesson-raw/L2K1VBRJ2JGGSAPA1JF3/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/L2K1VBRJ2JGGSAPA1JF3/ECOLOGY13_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "14. ECOLOGY-14",
+              "link": "https://uamedia.uacdn.net/lesson-raw/XA663IKPCL87BZ2F482Y/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/XA663IKPCL87BZ2F482Y/ECOLOGY14_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "15. ECOLOGY-15",
+              "link": "https://uamedia.uacdn.net/lesson-raw/M8ERTGXL5GN4DJPYQ2CT/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/M8ERTGXL5GN4DJPYQ2CT/ECOLOGY15_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "16. ECOLOGY-16",
+              "link": "https://uamedia.uacdn.net/lesson-raw/KZ3CHJULWEEX1RZULW1F/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/KZ3CHJULWEEX1RZULW1F/ECOLOGY16_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "17. ECOLOGY-17",
+              "link": "https://uamedia.uacdn.net/lesson-raw/2DTVBRQLG4BKT4FR6UWC/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/2DTVBRQLG4BKT4FR6UWC/ECOLOGY17_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "18. ECOLOGY-18",
+              "link": "https://uamedia.uacdn.net/lesson-raw/0CIMDVD3XPMES1T1DEI4/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/0CIMDVD3XPMES1T1DEI4/ECOLOGY18_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "19. ECOLOGY-19",
+              "link": "https://uamedia.uacdn.net/lesson-raw/GR575UDR9Q5NM7R5ZDQG/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/GR575UDR9Q5NM7R5ZDQG/ECOLOGY19_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "20. ECOLOGY-20",
+              "link": "https://uamedia.uacdn.net/lesson-raw/UDREEDZ5D5BTE9XP8VGV/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/UDREEDZ5D5BTE9XP8VGV/ECOLOGY20_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "21. ECOLOGY-21",
+              "link": "https://uamedia.uacdn.net/lesson-raw/6NA93OT94A9TP8IT6T8Q/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/6NA93OT94A9TP8IT6T8Q/ECOLOGY21_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "22. ECOLOGY-22",
+              "link": "https://uamedia.uacdn.net/lesson-raw/IBSMVCIBAAMUB5BHA5ZO/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/IBSMVCIBAAMUB5BHA5ZO/ECOLOGY22_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "23. ECOLOGY-23",
+              "link": "https://uamedia.uacdn.net/lesson-raw/ADR7V2C8EXHG38ZS7OQZ/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/ADR7V2C8EXHG38ZS7OQZ/ECOLOGY23_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "24. ECOLOGY-24",
+              "link": "https://uamedia.uacdn.net/lesson-raw/URXXA3BNQB44U5EBDG1M/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/URXXA3BNQB44U5EBDG1M/ECOLOGY24_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "25. ECOLOGY-25",
+              "link": "https://uamedia.uacdn.net/lesson-raw/VXN8DZ6X7RTJSHGWFFQE/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/VXN8DZ6X7RTJSHGWFFQE/ECOLOGY25_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "26. ECOLOGY-26",
+              "link": "https://uamedia.uacdn.net/lesson-raw/HORBOYHNWGXGSMO15BSD/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/HORBOYHNWGXGSMO15BSD/ECOLOGY26_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "27. ECOLOGY-27",
+              "link": "https://uamedia.uacdn.net/lesson-raw/9X3SHNO7EEP9TS8RNY6G/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/9X3SHNO7EEP9TS8RNY6G/ECOLOGY27_with_anno.pdf",
+              "dpp": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

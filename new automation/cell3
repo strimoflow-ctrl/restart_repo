@@ -1,0 +1,28 @@
+# Cell 3: Configurations for Stateful Automation Cloner
+
+# Telegram API credentials (Get from my.telegram.org)
+API_ID = 34282077
+API_HASH = "2320fbf5e38ce482aab355538555cc9c"
+
+# Telethon String Session (User account for group creation, topic creation, and uploading files)
+SESSION_STRING = "1BVtsOIMBu0SkxJtylTkI4JtVMov0TqOsrL7ncuwfLcb9bztb7g7R39O-KCKycjZcdPtpHGOhOe0blAm45Tl1lIRXuIDjtKIWvtQQlcafZpyH1rs-b1IQaqjKxpuUlxThVxb1pSpPwTU9tTDrNi0CB9KAqnzse7W5VfnNCy8fsE9gQIOPN2E_0gis5RDd8NiK_7JWdaxvojHZUMyQIf9vtN0axRze9-Vk4wTvahib2fxDC7KMF3jji8lW0_YFHLPmhwWWSaNhnxzOPv5frKaQXCC4LEwiJqR6UfXHGTBwlfrCUHLv-TCLmj2vU8_3d_bL3QL2c1Qjwf9KxwqUhKGTZd3OFfJpfuU="
+
+# Telegram Bot Token (Used for sending real-time dashboards to your private chat)
+BOT_TOKEN = "8707533366:AAEqqSJM7PioLgJ1y73r6b5GXhWMPaV-9rA"
+
+# Owner Telegram Account Chat ID (Status update dashboard message will be sent here)
+OWNER_CHAT_ID = 8442548404
+
+# Active Course Key to Clone
+# Choose a single key: ag-class11, ag-class12, tnm-physical, ysy-organic, kk-11+12, as-11+12, piyush-11+12, drrakesh-11_12, pradeepzoo-11+12, ia-bonaty
+# OR set to "all" to process all courses sequentially in a loop!
+ACTIVE_COURSE_KEY = "all"
+
+# Firebase Config (Used for fetching catalog & storing stateful mappings/done stats)
+FIREBASE_DB_URL = "https://secret-gpt-default-rtdb.asia-southeast1.firebasedatabase.app"
+FIREBASE_FOLDER = "new_automation_courses"
+
+# Fallback default values
+EXTRACTED_BY = "@cryvex4"
+
+print(f"✅ Configurations loaded! Selected Course Option: '{ACTIVE_COURSE_KEY}'")

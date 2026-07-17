@@ -1,0 +1,692 @@
+{
+  "subjects": [
+    {
+      "name": "Course Lectures",
+      "icon": "📚",
+      "chapters": [
+        {
+          "chapter": "🧪 MOLE CONCEPT",
+          "lectures": [
+            {
+              "name": "1. Mole Concept-1",
+              "link": "https://uamedia.uacdn.net/lesson-raw/4CGH67Z0H5J1YMPKHE0M/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/4CGH67Z0H5J1YMPKHE0M/Mole_Concept1_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "2. Mole Concept-2",
+              "link": "https://uamedia.uacdn.net/lesson-raw/LTQ8EFA6794TDBRMQGM1/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/LTQ8EFA6794TDBRMQGM1/Mole_Concept2_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "3. Mole Concept-3",
+              "link": "https://uamedia.uacdn.net/lesson-raw/VEJ5XJ6HDVGR5IW71590/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/VEJ5XJ6HDVGR5IW71590/Mole_Concept3_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "4. Mole Concept-4",
+              "link": "https://uamedia.uacdn.net/lesson-raw/ZQKF2S669CS5Q5K9QZQS/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/ZQKF2S669CS5Q5K9QZQS/Mole_Concept4_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "5. Mole Concept-5",
+              "link": "https://uamedia.uacdn.net/lesson-raw/PNAHR02JGKWH5WAGK6DF/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/PNAHR02JGKWH5WAGK6DF/Mole_Concept5_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "6. Mole Concept-6",
+              "link": "https://uamedia.uacdn.net/lesson-raw/SKB4X8M3QTOH2CA9LLTZ/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/SKB4X8M3QTOH2CA9LLTZ/Mole_Concept6_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "7. Mole Concept-7",
+              "link": "",
+              "notes": "",
+              "dpp": ""
+            },
+            {
+              "name": "8. Mole Concept-8",
+              "link": "https://uamedia.uacdn.net/lesson-raw/3SORBYUOXFAD1321QZ1C/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/3SORBYUOXFAD1321QZ1C/Mole_Concept8_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "9. Mole Concept-9",
+              "link": "",
+              "notes": "",
+              "dpp": ""
+            },
+            {
+              "name": "10. Mole Concept-10",
+              "link": "https://uamedia.uacdn.net/lesson-raw/5GXSP5LGL239WF17SVUA/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/5GXSP5LGL239WF17SVUA/Mole_Concept10_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "11. Mole Concept-11",
+              "link": "",
+              "notes": "",
+              "dpp": ""
+            },
+            {
+              "name": "12. Mole Concept-12",
+              "link": "https://uamedia.uacdn.net/lesson-raw/5PQOB01BWJUBQ5ARV7CN/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/5PQOB01BWJUBQ5ARV7CN/Mole_Concept12_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "13. Mole Concept-13",
+              "link": "https://uamedia.uacdn.net/lesson-raw/8NG01NOLOE1TA51R77IH/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/8NG01NOLOE1TA51R77IH/Mole_Concept13_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "14. Mole Concept-14",
+              "link": "https://uamedia.uacdn.net/lesson-raw/0O0Q1VHTOTERAD8CRJ0G/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/0O0Q1VHTOTERAD8CRJ0G/Mole_Concept14_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "15. Mole Concept-15",
+              "link": "https://uamedia.uacdn.net/lesson-raw/W7LFFSXBCGNIZAZGGP1T/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/W7LFFSXBCGNIZAZGGP1T/Mole_Concept15_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "16. Mole Concept-16",
+              "link": "https://uamedia.uacdn.net/lesson-raw/3F2W9COC3A139YOTCCF8/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/3F2W9COC3A139YOTCCF8/Mole_Concept16_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "17. Mole Concept-17",
+              "link": "https://uamedia.uacdn.net/lesson-raw/SWBQGXHYOY49P15HJGAK/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/SWBQGXHYOY49P15HJGAK/Mole_Concept17_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "18. Mole Concept-18",
+              "link": "https://uamedia.uacdn.net/lesson-raw/MR0FFNEZ47P1UK4VWNIM/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/MR0FFNEZ47P1UK4VWNIM/Mole_Concept18_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "19. Mole Concept-19",
+              "link": "https://uamedia.uacdn.net/lesson-raw/28JG8UAETZZUY45FTV9G/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/28JG8UAETZZUY45FTV9G/Mole_Concept19_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "20. Mole Concept-20",
+              "link": "https://uamedia.uacdn.net/lesson-raw/ETU1QQP7YIQJBC7N4WRD/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/ETU1QQP7YIQJBC7N4WRD/Mole_Concept20_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "21. Mole Concept-21",
+              "link": "https://uamedia.uacdn.net/lesson-raw/0M3S55SZXE1BV4JGSVQS/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/0M3S55SZXE1BV4JGSVQS/Mole_Concept21_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "22. Mole Concept-22",
+              "link": "https://uamedia.uacdn.net/lesson-raw/QWN38ZG1VEN3YY4Q2RSG/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/QWN38ZG1VEN3YY4Q2RSG/Mole_Concept22_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "23. Mole Concept-23",
+              "link": "https://uamedia.uacdn.net/lesson-raw/Z5PYCLLOV5PW4Y39LYHY/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/Z5PYCLLOV5PW4Y39LYHY/Mole_Concept23_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "24. Mole Concept-24",
+              "link": "https://uamedia.uacdn.net/lesson-raw/4V4HVRZ37BZ6BW35OTGI/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/4V4HVRZ37BZ6BW35OTGI/Mole_Concept24_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "25. Mole Concept-25",
+              "link": "https://uamedia.uacdn.net/lesson-raw/2IKUHKRDQ46CUFY9YJF3/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/2IKUHKRDQ46CUFY9YJF3/Mole_Concept25_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "26. Mole Concept-26",
+              "link": "https://uamedia.uacdn.net/lesson-raw/EELZ6PRB5ZT44YCXRJUH/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/EELZ6PRB5ZT44YCXRJUH/Mole_Concept26_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "27. Mole Concept-27",
+              "link": "https://uamedia.uacdn.net/lesson-raw/TFBVPKLSQUSTVEACFCG3/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/TFBVPKLSQUSTVEACFCG3/Mole_Concept27_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "28. Mole Concept-28",
+              "link": "https://uamedia.uacdn.net/lesson-raw/8KP4Z7AMJ1RTMT4I4LBC/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/8KP4Z7AMJ1RTMT4I4LBC/Mole_Concept28_with_anno.pdf",
+              "dpp": ""
+            }
+          ]
+        },
+        {
+          "chapter": "🔋 REDOX",
+          "lectures": [
+            {
+              "name": "29. Redox - 1",
+              "link": "https://uamedia.uacdn.net/lesson-raw/8VLYVBUK2BQB7NIW3W7E/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/8VLYVBUK2BQB7NIW3W7E/Redox__1_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "30. Redox - 2",
+              "link": "",
+              "notes": "",
+              "dpp": ""
+            },
+            {
+              "name": "31. Redox - 3",
+              "link": "https://uamedia.uacdn.net/lesson-raw/VXWHSK1DKZQRFT0D80GV/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/VXWHSK1DKZQRFT0D80GV/Redox__3_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "32. Redox - 4",
+              "link": "https://uamedia.uacdn.net/lesson-raw/33CU91REH88OSW250B03/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/33CU91REH88OSW250B03/Redox__4_with_anno.pdf",
+              "dpp": ""
+            }
+          ]
+        },
+        {
+          "chapter": "🌡️ THERMODYNAMICS",
+          "lectures": [
+            {
+              "name": "33. Thermodynamics - 1",
+              "link": "https://uamedia.uacdn.net/lesson-raw/SPGL2WZSYGYRSASRTN53/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/SPGL2WZSYGYRSASRTN53/Thermodynamics__1_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "34. Thermodynamics - 2",
+              "link": "https://uamedia.uacdn.net/lesson-raw/5C6CISWOEFNAHOFZGSG0/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/5C6CISWOEFNAHOFZGSG0/Thermodynamics__2_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "35. Thermodynamics - 3",
+              "link": "https://uamedia.uacdn.net/lesson-raw/5H90057HLW2GFE6M08IY/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/5H90057HLW2GFE6M08IY/Thermodynamics__3_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "36. Thermodynamics - 4",
+              "link": "https://uamedia.uacdn.net/lesson-raw/QI5W1C109AOM6X4BT6WI/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/QI5W1C109AOM6X4BT6WI/Thermodynamics__4_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "37. Thermodynamics - 5",
+              "link": "https://uamedia.uacdn.net/lesson-raw/G3Q0UBF8LHYF93K4AD24/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/G3Q0UBF8LHYF93K4AD24/Thermodynamics__5_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "38. Thermodynamics - 6",
+              "link": "",
+              "notes": "",
+              "dpp": ""
+            },
+            {
+              "name": "39. Thermodynamics - 7",
+              "link": "https://uamedia.uacdn.net/lesson-raw/2GLLVFQ3SU8JYBJ2BUHZ/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/2GLLVFQ3SU8JYBJ2BUHZ/Thermodynamics__7_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "40. Thermodynamics - 8",
+              "link": "",
+              "notes": "",
+              "dpp": ""
+            },
+            {
+              "name": "41. Thermodynamics - 9",
+              "link": "https://uamedia.uacdn.net/lesson-raw/PKBEZCN5AMOE590JR3TL/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/PKBEZCN5AMOE590JR3TL/Thermodynamics__9_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "42. Thermodynamics - 10",
+              "link": "https://uamedia.uacdn.net/lesson-raw/MITT9DN1PLZYDEA4FBUK/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/MITT9DN1PLZYDEA4FBUK/Thermodynamics__10_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "43. Thermodynamics - 11",
+              "link": "https://uamedia.uacdn.net/lesson-raw/DU66A6IZ9SO9CI2FX94X/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/DU66A6IZ9SO9CI2FX94X/Thermodynamics__11_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "44. Thermodynamics - 12",
+              "link": "https://uamedia.uacdn.net/lesson-raw/6KRVWGLM7HWDET1ZSR3Z/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/6KRVWGLM7HWDET1ZSR3Z/Thermodynamics__12_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "45. Thermodynamics - 13",
+              "link": "https://uamedia.uacdn.net/lesson-raw/SXXTZ6XJPD7H7EA78Z0Y/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/SXXTZ6XJPD7H7EA78Z0Y/Thermodynamics__13_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "46. Thermodynamics - 14",
+              "link": "https://uamedia.uacdn.net/lesson-raw/NY3QZOGMVHDCV1KHMK2I/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/NY3QZOGMVHDCV1KHMK2I/Thermodynamics__14_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "47. Thermodynamics - 15",
+              "link": "https://uamedia.uacdn.net/lesson-raw/T3Z9CLP3KIB4SKEQ7V4Q/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/T3Z9CLP3KIB4SKEQ7V4Q/Thermodynamics__15_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "48. Thermodynamics - 16",
+              "link": "https://uamedia.uacdn.net/lesson-raw/YR1Z09GO2NJEIN3BWWAM/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/YR1Z09GO2NJEIN3BWWAM/Thermodynamics__16_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "49. Thermodynamics - 17",
+              "link": "https://uamedia.uacdn.net/lesson-raw/YIW5SRRHO3X7OXSX8IZR/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/YIW5SRRHO3X7OXSX8IZR/Thermodynamics__17_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "50. Thermodynamics - 18",
+              "link": "",
+              "notes": "",
+              "dpp": ""
+            },
+            {
+              "name": "51. Thermodynamics - 19",
+              "link": "https://uamedia.uacdn.net/lesson-raw/8IPF2TR45X4BNCUZ4HOG/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/8IPF2TR45X4BNCUZ4HOG/Thermodynamics__19_with_anno.pdf",
+              "dpp": ""
+            }
+          ]
+        },
+        {
+          "chapter": "⚖️ CHEMICAL EQUILIBRIUM",
+          "lectures": [
+            {
+              "name": "52. Chemical Equilibrium - 1",
+              "link": "https://uamedia.uacdn.net/lesson-raw/KEWDX4PCF10DGCTZ32QJ/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/KEWDX4PCF10DGCTZ32QJ/Chemical_Equilibrium__1_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "53. Chemical Equilibrium - 2",
+              "link": "https://uamedia.uacdn.net/lesson-raw/Q9L1DQBN3OQMR5L3SKE6/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/Q9L1DQBN3OQMR5L3SKE6/Chemical_Equilibrium__2_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "54. Chemical Equilibrium - 3",
+              "link": "https://uamedia.uacdn.net/lesson-raw/C8Z6GB7JC6Y066LP73ET/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/C8Z6GB7JC6Y066LP73ET/Chemical_Equilibrium__3_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "55. Chemical Equilibrium - 4",
+              "link": "https://uamedia.uacdn.net/lesson-raw/KBCY6BWR3FU7VP5UZ1M8/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/KBCY6BWR3FU7VP5UZ1M8/Chemical_Equilibrium__4_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "56. Chemical Equilibrium - 5",
+              "link": "https://uamedia.uacdn.net/lesson-raw/W6JK3JX6NO1ITUWU9VTM/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/W6JK3JX6NO1ITUWU9VTM/Chemical_Equilibrium__5_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "57. Chemical Equilibrium - 5",
+              "link": "https://uamedia.uacdn.net/lesson-raw/PKLU1WRAC75849SZZDO7/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/PKLU1WRAC75849SZZDO7/Chemical_Equilibrium__5_with_anno.pdf",
+              "dpp": ""
+            }
+          ]
+        },
+        {
+          "chapter": "⚖️ IONIC EQUILIBRIUM",
+          "lectures": [
+            {
+              "name": "58. Ionic Equilibrium - 1",
+              "link": "https://uamedia.uacdn.net/lesson-raw/07YX84NK2Y7HZIZNS6Y7/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/07YX84NK2Y7HZIZNS6Y7/Ionic_Equilibrium__1_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "59. Ionic Equilibrium - 2",
+              "link": "https://uamedia.uacdn.net/lesson-raw/YL8XHCTUXV1YGTWXX67G/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/YL8XHCTUXV1YGTWXX67G/Ionic_Equilibrium__2_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "60. Ionic Equilibrium - 3",
+              "link": "https://uamedia.uacdn.net/lesson-raw/2PRP0L5SI4UVQ1KIKCF5/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/2PRP0L5SI4UVQ1KIKCF5/Ionic_Equilibrium__3_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "61. Ionic Equilibrium - 4",
+              "link": "https://uamedia.uacdn.net/lesson-raw/79ZAPDXNM9X0QLGT7VAQ/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/79ZAPDXNM9X0QLGT7VAQ/Ionic_Equilibrium__4_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "62. Ionic Equilibrium - 5",
+              "link": "https://uamedia.uacdn.net/lesson-raw/2DZ28AWPAKIZJ8V5UXR6/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/2DZ28AWPAKIZJ8V5UXR6/Ionic_Equilibrium__5_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "63. Ionic Equilibrium - 6",
+              "link": "",
+              "notes": "",
+              "dpp": ""
+            },
+            {
+              "name": "64. Ionic Equilibrium - 7",
+              "link": "https://uamedia.uacdn.net/lesson-raw/4SK2S1CB8GWBDSBLW3XZ/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/4SK2S1CB8GWBDSBLW3XZ/Ionic_Equilibrium__7_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "65. Ionic Equilibrium - 8",
+              "link": "https://uamedia.uacdn.net/lesson-raw/K8J6QYXX67F4YAU76WGF/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/K8J6QYXX67F4YAU76WGF/Ionic_Equilibrium__8_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "66. Ionic Equilibrium - 9",
+              "link": "https://uamedia.uacdn.net/lesson-raw/PCZWQ8EIVP7TIV5BCAVD/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/PCZWQ8EIVP7TIV5BCAVD/Ionic_Equilibrium__9_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "67. Ionic Equilibrium - 10",
+              "link": "https://uamedia.uacdn.net/lesson-raw/F3VMEOC686HQFIKKWEYR/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/F3VMEOC686HQFIKKWEYR/Ionic_Equilibrium__10_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "68. Ionic Equilibrium - 11",
+              "link": "https://uamedia.uacdn.net/lesson-raw/UTMRPONUT21JUJ507W1O/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/UTMRPONUT21JUJ507W1O/Ionic_Equilibrium__11_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "69. Ionic Equilibrium - 12",
+              "link": "https://uamedia.uacdn.net/lesson-raw/EU038S0LOC9POFETNDR6/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/EU038S0LOC9POFETNDR6/Ionic_Equilibrium__12_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "70. Ionic Equilibrium - 13",
+              "link": "https://uamedia.uacdn.net/lesson-raw/E02IWX5V9VGKY1VZK1E5/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/E02IWX5V9VGKY1VZK1E5/Ionic_Equilibrium__13_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "71. Ionic Equilibrium - 14",
+              "link": "https://uamedia.uacdn.net/lesson-raw/FEU8CT8SOL31O12PMZNZ/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/FEU8CT8SOL31O12PMZNZ/Ionic_Equilibrium__14_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "72. Ionic Equilibrium - 15",
+              "link": "https://uamedia.uacdn.net/lesson-raw/QX9OKA2T6CDW9TSQPN3F/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/QX9OKA2T6CDW9TSQPN3F/Ionic_Equilibrium__15_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "73. Ionic Equilibrium - 16",
+              "link": "https://uamedia.uacdn.net/lesson-raw/DMWG47B73YXQ5V3342R5/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/DMWG47B73YXQ5V3342R5/Ionic_Equilibrium__16_with_anno.pdf",
+              "dpp": ""
+            }
+          ]
+        },
+        {
+          "chapter": "💧 SOLUTION",
+          "lectures": [
+            {
+              "name": "74. Solution - 1",
+              "link": "https://uamedia.uacdn.net/lesson-raw/0EA9ABJLWJQG9U7EDET0/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/0EA9ABJLWJQG9U7EDET0/Solution__1_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "75. Solution - 2",
+              "link": "https://uamedia.uacdn.net/lesson-raw/LAA81ZSGE9KJXC1DJX6Q/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/LAA81ZSGE9KJXC1DJX6Q/Solution__2_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "76. Solution - 3",
+              "link": "https://uamedia.uacdn.net/lesson-raw/BQQIG0XW5JZJP0GP359B/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/BQQIG0XW5JZJP0GP359B/Solution__3_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "77. Solution - 4",
+              "link": "https://uamedia.uacdn.net/lesson-raw/T7424RHOHUBQH6P639JM/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/T7424RHOHUBQH6P639JM/Solution__4_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "78. Solution - 5",
+              "link": "https://uamedia.uacdn.net/lesson-raw/GUUWE5WB22ULPO2YGM1H/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/GUUWE5WB22ULPO2YGM1H/Solution__5_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "79. Solution - 6",
+              "link": "https://uamedia.uacdn.net/lesson-raw/ENM9JOKEBDWDRFW20IUH/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/ENM9JOKEBDWDRFW20IUH/Solution__6_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "80. Solution - 7",
+              "link": "https://uamedia.uacdn.net/lesson-raw/HU3279E3CDNODCPUT5EH/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/HU3279E3CDNODCPUT5EH/Solution__7_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "81. Solution - 8",
+              "link": "https://uamedia.uacdn.net/lesson-raw/WK7IE0LMWZ9MVQTRVKAE/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/WK7IE0LMWZ9MVQTRVKAE/Solution__8_with_anno.pdf",
+              "dpp": ""
+            }
+          ]
+        },
+        {
+          "chapter": "⚗️ CHEMICAL KINETICS",
+          "lectures": [
+            {
+              "name": "82. Chemical Kinetics - 1",
+              "link": "https://uamedia.uacdn.net/lesson-raw/9ZB9XXT7JSO5HSJBYZEB/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/9ZB9XXT7JSO5HSJBYZEB/Chemical_Kinetics__1_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "83. Chemical Kinetics - 2",
+              "link": "https://uamedia.uacdn.net/lesson-raw/CX7YNZUOGKU1F43Y0NH3/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/CX7YNZUOGKU1F43Y0NH3/Chemical_Kinetics__2_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "84. Chemical Kinetics - 3",
+              "link": "https://uamedia.uacdn.net/lesson-raw/ZGJZG8KR4IW8I4JITNQL/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/ZGJZG8KR4IW8I4JITNQL/Chemical_Kinetics__3_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "85. Chemical Kinetics - 4",
+              "link": "https://uamedia.uacdn.net/lesson-raw/DMSU9VLNEWDL4H4X3Z3W/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/DMSU9VLNEWDL4H4X3Z3W/Chemical_Kinetics__4_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "86. Chemical Kinetics - 5",
+              "link": "https://uamedia.uacdn.net/lesson-raw/LWQ7Y5NEN5ILVY3MAJEA/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/LWQ7Y5NEN5ILVY3MAJEA/Chemical_Kinetics__5_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "87. Chemical Kinetics - 6",
+              "link": "https://uamedia.uacdn.net/lesson-raw/I0HB7QWUSPD1WTAQNVZZ/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/I0HB7QWUSPD1WTAQNVZZ/Chemical_Kinetics__6_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "88. Chemical Kinetics - 7",
+              "link": "https://uamedia.uacdn.net/lesson-raw/EZM2O70XT75E5A52CGGS/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/EZM2O70XT75E5A52CGGS/Chemical_Kinetics__7_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "89. Chemical Kinetics - 8",
+              "link": "https://uamedia.uacdn.net/lesson-raw/XJ28G0VTL5WM4IANNIJ5/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/XJ28G0VTL5WM4IANNIJ5/Chemical_Kinetics__8_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "90. Chemical Kinetics - 9",
+              "link": "https://uamedia.uacdn.net/lesson-raw/CYAS3THB30LBUGFPEKYM/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/CYAS3THB30LBUGFPEKYM/Chemical_Kinetics__9_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "91. Chemical Kinetics - 10",
+              "link": "https://uamedia.uacdn.net/lesson-raw/R3US24GJ6QJQXCK6XKK9/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/R3US24GJ6QJQXCK6XKK9/Chemical_Kinetics__10_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "92. Chemical Kinetics - 11",
+              "link": "https://uamedia.uacdn.net/lesson-raw/DWFNSJVJQOGJ26RYCM1D/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/DWFNSJVJQOGJ26RYCM1D/Chemical_Kinetics__11_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "93. Chemical Kinetics - 12",
+              "link": "https://uamedia.uacdn.net/lesson-raw/79GCER4A2PUU4UZT0ZIO/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/79GCER4A2PUU4UZT0ZIO/Chemical_Kinetics__12_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "94. Chemical Kinetics - 13",
+              "link": "https://uamedia.uacdn.net/lesson-raw/SAYAJQ5T2VIDX16RQ14Z/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/SAYAJQ5T2VIDX16RQ14Z/Chemical_Kinetics__13_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "95. Chemical Kinetics - 14",
+              "link": "https://uamedia.uacdn.net/lesson-raw/10ABIX7EXNB6KIALT0K1/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/10ABIX7EXNB6KIALT0K1/Chemical_Kinetics__14_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "96. Chemical Kinetics - 15",
+              "link": "https://uamedia.uacdn.net/lesson-raw/HKQC5CMHOB7RE0OUHK8W/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/HKQC5CMHOB7RE0OUHK8W/Chemical_Kinetics__15_with_anno.pdf",
+              "dpp": ""
+            }
+          ]
+        },
+        {
+          "chapter": "⚡ ELECTROCHEMISTRY",
+          "lectures": [
+            {
+              "name": "97. Electrochemistry - 1",
+              "link": "https://uamedia.uacdn.net/lesson-raw/LN8GXR5NEP3AU7BIO4XX/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/LN8GXR5NEP3AU7BIO4XX/Electrochemistry__1_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "98. Electrochemistry - 2",
+              "link": "https://uamedia.uacdn.net/lesson-raw/06FAR8L56UF1GQLOWS0I/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/06FAR8L56UF1GQLOWS0I/Electrochemistry__2_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "99. Electrochemistry - 3",
+              "link": "https://uamedia.uacdn.net/lesson-raw/I9L8J3I0NBSWQ5BAWLN1/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/I9L8J3I0NBSWQ5BAWLN1/Electrochemistry__3_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "100. Electrochemistry - 4",
+              "link": "https://uamedia.uacdn.net/lesson-raw/DZQD47CKQFIBYANZ6J2M/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/DZQD47CKQFIBYANZ6J2M/Electrochemistry__4_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "101. Electrochemistry - 5",
+              "link": "https://uamedia.uacdn.net/lesson-raw/FW7LUS0CLSI2LQACCND0/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/FW7LUS0CLSI2LQACCND0/Electrochemistry__5_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "102. Electrochemistry - 6",
+              "link": "",
+              "notes": "",
+              "dpp": ""
+            },
+            {
+              "name": "103. Electrochemistry - 7",
+              "link": "https://uamedia.uacdn.net/lesson-raw/MIFXNMSCT912DXEXZYO0/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/MIFXNMSCT912DXEXZYO0/Electrochemistry__7_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "104. Electrochemistry - 8",
+              "link": "https://uamedia.uacdn.net/lesson-raw/TQ8ZYTPXOW2FYF4HVTHL/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/TQ8ZYTPXOW2FYF4HVTHL/Electrochemistry__8_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "105. Electrochemistry - 9",
+              "link": "https://uamedia.uacdn.net/lesson-raw/YYJUB5QU6I14EZR800O4/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/YYJUB5QU6I14EZR800O4/Electrochemistry__9_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "106. Electrochemistry - 10",
+              "link": "https://uamedia.uacdn.net/lesson-raw/V7CS1VVFTRAAZY2R8BP1/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/V7CS1VVFTRAAZY2R8BP1/Electrochemistry__10_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "107. Electrochemistry - 11",
+              "link": "https://uamedia.uacdn.net/lesson-raw/H3QXPNYT9SGQC3DFFC1G/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/H3QXPNYT9SGQC3DFFC1G/Electrochemistry__11_with_anno.pdf",
+              "dpp": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

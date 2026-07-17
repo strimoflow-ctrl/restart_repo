@@ -1,0 +1,1898 @@
+{
+  "subjects": [
+    {
+      "name": "Course Lectures",
+      "icon": "📚",
+      "chapters": [
+        {
+          "chapter": "🔭 RAY OPTICS (2025)",
+          "lectures": [
+            {
+              "name": "Lecture 01",
+              "link": "https://uamedia.uacdn.net/lesson-raw/OJXNBKS23QHLLY627SNC/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/OJXNBKS23QHLLY627SNC/OPTICS__1_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 02",
+              "link": "https://uamedia.uacdn.net/lesson-raw/PDKHXCTIG8249X54YV4N/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/PDKHXCTIG8249X54YV4N/OPTICS__2_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 03",
+              "link": "https://uamedia.uacdn.net/lesson-raw/89G4GFY2KF9X6E17GH87/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/89G4GFY2KF9X6E17GH87/OPTICS__3_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 04",
+              "link": "",
+              "notes": "",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 05",
+              "link": "https://uamedia.uacdn.net/lesson-raw/DBP7L7JGQMI2AYR7FBCB/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/DBP7L7JGQMI2AYR7FBCB/OPTICS__5_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 06",
+              "link": "https://uamedia.uacdn.net/lesson-raw/JS7YLCGCR2V37AAXFATB/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/JS7YLCGCR2V37AAXFATB/OPTICS__6_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 07",
+              "link": "https://uamedia.uacdn.net/lesson-raw/4X10TZ23KA3JR3QB1DKQ/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/4X10TZ23KA3JR3QB1DKQ/OPTICS__7_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 08",
+              "link": "https://uamedia.uacdn.net/lesson-raw/IU6T8OWGIJIZ8AYA4PSA/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/IU6T8OWGIJIZ8AYA4PSA/OPTICS__8_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 09",
+              "link": "https://uamedia.uacdn.net/lesson-raw/HXSX37ODN3W44HO7OJ4W/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/HXSX37ODN3W44HO7OJ4W/OPTICS__9_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 10",
+              "link": "https://uamedia.uacdn.net/lesson-raw/0QFA2P8PDHMED0SCKN2W/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/0QFA2P8PDHMED0SCKN2W/OPTICS__10_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 11",
+              "link": "https://uamedia.uacdn.net/lesson-raw/W1PX4TXG6HFC4DPMZGIM/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/W1PX4TXG6HFC4DPMZGIM/OPTICS__11_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 12",
+              "link": "https://uamedia.uacdn.net/lesson-raw/H4287QXYSKKSJES65NXL/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/H4287QXYSKKSJES65NXL/OPTICS__12_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 13",
+              "link": "https://uamedia.uacdn.net/lesson-raw/X2M9YLXFS1ACN9AH3H7F/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/X2M9YLXFS1ACN9AH3H7F/OPTICS__13_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 14",
+              "link": "https://uamedia.uacdn.net/lesson-raw/DJPHUGT3LG0KSV1LHYMD/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/DJPHUGT3LG0KSV1LHYMD/OPTICS__14_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 15",
+              "link": "",
+              "notes": "",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 16",
+              "link": "https://uamedia.uacdn.net/lesson-raw/ZYVLA2R6X1CKD3LNV3XM/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/ZYVLA2R6X1CKD3LNV3XM/OPTICS__16_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 17",
+              "link": "https://uamedia.uacdn.net/lesson-raw/IYJMBUDA8X0O5VUUGCIG/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/IYJMBUDA8X0O5VUUGCIG/OPTICS__17_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 18",
+              "link": "https://uamedia.uacdn.net/lesson-raw/RKU7DI5NG2IBR1RI3WDL/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/RKU7DI5NG2IBR1RI3WDL/OPTICS__18_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 19",
+              "link": "https://uamedia.uacdn.net/lesson-raw/35CJDU9JPH8VT1SDYMH1/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/35CJDU9JPH8VT1SDYMH1/OPTICS__19_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 20",
+              "link": "https://uamedia.uacdn.net/lesson-raw/TULEBPXH79MP3UVVIDF6/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/TULEBPXH79MP3UVVIDF6/OPTICS__20_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 21",
+              "link": "https://uamedia.uacdn.net/lesson-raw/1KHRCLCEIWH0DPHCVDFN/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/1KHRCLCEIWH0DPHCVDFN/OPTICS__21_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 22",
+              "link": "",
+              "notes": "",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 23",
+              "link": "https://uamedia.uacdn.net/lesson-raw/M2HUVUKLSGF2A5FGSXWT/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/M2HUVUKLSGF2A5FGSXWT/OPTICS__23_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 24",
+              "link": "https://uamedia.uacdn.net/lesson-raw/WI64XRXYJN7KP73VSXX0/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/WI64XRXYJN7KP73VSXX0/OPTICS__24_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 25",
+              "link": "https://uamedia.uacdn.net/lesson-raw/IMAIHX2MDGTX0KD2HBOL/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/IMAIHX2MDGTX0KD2HBOL/Optical_instrument_A_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 26",
+              "link": "https://uamedia.uacdn.net/lesson-raw/C78HJ1RBK1QN0HBU98B7/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/C78HJ1RBK1QN0HBU98B7/Optical_instrument_B_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 27",
+              "link": "https://uamedia.uacdn.net/lesson-raw/86DIYEOB04GNZK3X3O0X/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/86DIYEOB04GNZK3X3O0X/OPTICS__25_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 28",
+              "link": "https://uamedia.uacdn.net/lesson-raw/6FWQFXZY7AS0F9FEYNRE/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/6FWQFXZY7AS0F9FEYNRE/OPTICS__26_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 29",
+              "link": "https://uamedia.uacdn.net/lesson-raw/ZZWHDM864AHOHPC7KGSO/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/ZZWHDM864AHOHPC7KGSO/OPTICS__27_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 30",
+              "link": "https://uamedia.uacdn.net/lesson-raw/47CO1Q6CM611H7LXCADV/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/47CO1Q6CM611H7LXCADV/OPTICS__28_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 31",
+              "link": "https://uamedia.uacdn.net/lesson-raw/3AYEQOGEJSHXMHVN8SW5/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/3AYEQOGEJSHXMHVN8SW5/OPTICS__29_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 32",
+              "link": "https://uamedia.uacdn.net/lesson-raw/JHMQO7CZCVNIFAL9AE62/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/JHMQO7CZCVNIFAL9AE62/OPTICS__30_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 33",
+              "link": "https://uamedia.uacdn.net/lesson-raw/4ZARGPWP3ZS9GWZ5OOW8/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/4ZARGPWP3ZS9GWZ5OOW8/OPTICS__31_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 34",
+              "link": "https://uamedia.uacdn.net/lesson-raw/QVLE3UXTDFOIXFZIPZ97/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/QVLE3UXTDFOIXFZIPZ97/OPTICS__32_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 35",
+              "link": "https://uamedia.uacdn.net/lesson-raw/U4HWZLXFMXT6BZT457MH/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/U4HWZLXFMXT6BZT457MH/OPTICS__33_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 36",
+              "link": "https://uamedia.uacdn.net/lesson-raw/IIY8YMSGS81CSPCFI496/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/IIY8YMSGS81CSPCFI496/OPTICS__34_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 37",
+              "link": "https://uamedia.uacdn.net/lesson-raw/UEKMMOUOBJU8B15N3DBZ/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/UEKMMOUOBJU8B15N3DBZ/OPTICS__35_with_anno.pdf",
+              "dpp": ""
+            }
+          ]
+        },
+        {
+          "chapter": "⚡ ELECTROSTATICS (NEET UG 2024)",
+          "lectures": [
+            {
+              "name": "Lecture 01",
+              "link": "https://uamedia.uacdn.net/lesson-raw/5BO22S05BE5VUN8KWL8N/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/5BO22S05BE5VUN8KWL8N/ELECTROSTATICS_1_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 02",
+              "link": "https://uamedia.uacdn.net/lesson-raw/ZVV49IXV1BRXLR8ZNVNJ/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/ZVV49IXV1BRXLR8ZNVNJ/ELECTROSTATICS2_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 03",
+              "link": "https://uamedia.uacdn.net/lesson-raw/4DMEAUZ8TKF9UXCMYPKB/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/4DMEAUZ8TKF9UXCMYPKB/ELECTROSTATICS3_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 04",
+              "link": "https://uamedia.uacdn.net/lesson-raw/MFUIZCICY5NC6K0XORQJ/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/MFUIZCICY5NC6K0XORQJ/ELECTROSTATICS4_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 05",
+              "link": "https://uamedia.uacdn.net/lesson-raw/K66L0Z4QNQKVN4NYWEKI/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/K66L0Z4QNQKVN4NYWEKI/ELECTROSTATICS5_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 06",
+              "link": "https://uamedia.uacdn.net/lesson-raw/H4DORY6JXOJRMLX3FS2K/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/H4DORY6JXOJRMLX3FS2K/ELECTROSTATICS6_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 07",
+              "link": "https://uamedia.uacdn.net/lesson-raw/ETD53IFMLYWNRPYFAASS/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/ETD53IFMLYWNRPYFAASS/ELECTROSTATICS7_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 08",
+              "link": "https://uamedia.uacdn.net/lesson-raw/J2MVPW3EKILTZO3FCT9X/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/J2MVPW3EKILTZO3FCT9X/ELECTROSTATICS8_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 09",
+              "link": "https://uamedia.uacdn.net/lesson-raw/MOO93XKMOZBGQLYGMQ2L/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/MOO93XKMOZBGQLYGMQ2L/ELECTROSTATICS9_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 10",
+              "link": "https://uamedia.uacdn.net/lesson-raw/F7KXYYAMDDOUMPFXTYAY/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/F7KXYYAMDDOUMPFXTYAY/ELECTROSTATICS10_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 11",
+              "link": "https://uamedia.uacdn.net/lesson-raw/0FHFLS4GWRQHT1MEZAJQ/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/0FHFLS4GWRQHT1MEZAJQ/ELECTROSTATICS11_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 12",
+              "link": "https://uamedia.uacdn.net/lesson-raw/SM6N7J24ZWBHAP6181J0/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/SM6N7J24ZWBHAP6181J0/ELECTROSTATICS12_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 13",
+              "link": "https://uamedia.uacdn.net/lesson-raw/FENKKIKUCQJNFBOPNUD7/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/FENKKIKUCQJNFBOPNUD7/ELECTROSTATICS13_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 14",
+              "link": "https://uamedia.uacdn.net/lesson-raw/7O8M6N0X4QBTVVZUR0IL/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/7O8M6N0X4QBTVVZUR0IL/ELECTROSTATICS14_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 15",
+              "link": "https://uamedia.uacdn.net/lesson-raw/4AD6NEX8BG0JQB0HQDNI/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/4AD6NEX8BG0JQB0HQDNI/ELECTROSTATICS15_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 16",
+              "link": "https://uamedia.uacdn.net/lesson-raw/A2JT07TOJVM8TWB3CJSS/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/A2JT07TOJVM8TWB3CJSS/ELECTROSTATICS16_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 17",
+              "link": "https://uamedia.uacdn.net/lesson-raw/H7YBAEO5GWVV1M03OBMI/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/H7YBAEO5GWVV1M03OBMI/ELECTROSTATICS17_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 18",
+              "link": "https://uamedia.uacdn.net/lesson-raw/TFLJX35D3YZ8ZFNLBT2A/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/TFLJX35D3YZ8ZFNLBT2A/ELECTROSTATICS18_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 19",
+              "link": "https://uamedia.uacdn.net/lesson-raw/HE591EQQD2HYG08VS9O1/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/HE591EQQD2HYG08VS9O1/ELECTROSTATICS19_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 20",
+              "link": "https://uamedia.uacdn.net/lesson-raw/OOZ1MLO1C1KNB9AT6U54/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/OOZ1MLO1C1KNB9AT6U54/ELECTROSTATICS20_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 21",
+              "link": "https://uamedia.uacdn.net/lesson-raw/NUCA0VVDA195S7AO0909/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/NUCA0VVDA195S7AO0909/ELECTROSTATICS21_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 22",
+              "link": "https://uamedia.uacdn.net/lesson-raw/MNUTBAD7B5NOJUHV86FH/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/MNUTBAD7B5NOJUHV86FH/ELECTROSTATICS22_with_anno.pdf",
+              "dpp": ""
+            }
+          ]
+        },
+        {
+          "chapter": "🧲 MEC - MAGNETIC EFFECTS",
+          "lectures": [
+            {
+              "name": "Lecture 01",
+              "link": "https://uamedia.uacdn.net/lesson-raw/R1O2YM13A4CWY8OB86RI/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/R1O2YM13A4CWY8OB86RI/MEC1_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 02",
+              "link": "https://uamedia.uacdn.net/lesson-raw/PGLJRPWXTEYTH72GZYF0/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/PGLJRPWXTEYTH72GZYF0/MEC2_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 03",
+              "link": "https://uamedia.uacdn.net/lesson-raw/646SFUNVDWVGM978DEZO/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/646SFUNVDWVGM978DEZO/MEC3_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 04",
+              "link": "https://uamedia.uacdn.net/lesson-raw/88QVIQJ855COFUNBHLL9/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/88QVIQJ855COFUNBHLL9/MEC4_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 05",
+              "link": "https://uamedia.uacdn.net/lesson-raw/DK7E69LN0F0QYZ6RJSMZ/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/DK7E69LN0F0QYZ6RJSMZ/MEC5_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 06",
+              "link": "https://uamedia.uacdn.net/lesson-raw/PPRCY7UY4ZJ9LQF2Q9E2/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/PPRCY7UY4ZJ9LQF2Q9E2/MEC6_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 07",
+              "link": "https://uamedia.uacdn.net/lesson-raw/FEHOR95R177PK3BQFY2H/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/FEHOR95R177PK3BQFY2H/MEC7_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 08",
+              "link": "https://uamedia.uacdn.net/lesson-raw/2FDBSV7ZIKI3FZUU4E0T/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/2FDBSV7ZIKI3FZUU4E0T/MEC8_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 09",
+              "link": "https://uamedia.uacdn.net/lesson-raw/HXEPNUELYC6BZ2BC8ZUL/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/HXEPNUELYC6BZ2BC8ZUL/MEC9_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 10",
+              "link": "https://uamedia.uacdn.net/lesson-raw/J653VRTDV0FX6OPB79XX/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/J653VRTDV0FX6OPB79XX/MEC10_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 11",
+              "link": "https://uamedia.uacdn.net/lesson-raw/6235OD7YLHXCU4MS8N76/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/6235OD7YLHXCU4MS8N76/MEC11_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 12",
+              "link": "https://uamedia.uacdn.net/lesson-raw/L1VPI2DZMV4PRK1O98HL/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/L1VPI2DZMV4PRK1O98HL/MEC12_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 13",
+              "link": "https://uamedia.uacdn.net/lesson-raw/X3G5IUSCL13EFAQERAIL/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/X3G5IUSCL13EFAQERAIL/MEC13_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 14",
+              "link": "https://uamedia.uacdn.net/lesson-raw/163OSV3PXT6VW7T2SIKR/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/163OSV3PXT6VW7T2SIKR/MEC14_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 15",
+              "link": "https://uamedia.uacdn.net/lesson-raw/VM2LN893SCYW93QS1OQ3/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/VM2LN893SCYW93QS1OQ3/MEC15_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 16",
+              "link": "https://uamedia.uacdn.net/lesson-raw/98UZ7QF0D45SEB5RIMKM/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/98UZ7QF0D45SEB5RIMKM/MEC16_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 17",
+              "link": "https://uamedia.uacdn.net/lesson-raw/RAICLU6XGGHWJUE17E8T/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/RAICLU6XGGHWJUE17E8T/MEC17_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 18",
+              "link": "https://uamedia.uacdn.net/lesson-raw/1M9GTFNNY1UTLH61V4AJ/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/1M9GTFNNY1UTLH61V4AJ/MEC18_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 19",
+              "link": "https://uamedia.uacdn.net/lesson-raw/FEJYO875RYI7K208LOFB/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/FEJYO875RYI7K208LOFB/MEC19_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 20",
+              "link": "https://uamedia.uacdn.net/lesson-raw/Y91LP85BO9U4T2GRD4CM/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/Y91LP85BO9U4T2GRD4CM/MEC20_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 21",
+              "link": "https://uamedia.uacdn.net/lesson-raw/FVMOHWSXLQMWJDN9BPIH/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/FVMOHWSXLQMWJDN9BPIH/MEC21_with_anno.pdf",
+              "dpp": ""
+            }
+          ]
+        },
+        {
+          "chapter": "🌀 EMI - ELECTROMAGNETIC INDUCTION",
+          "lectures": [
+            {
+              "name": "Lecture 01",
+              "link": "https://uamedia.uacdn.net/lesson-raw/2NK5MUEJYJJ2QW4BHWJD/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/2NK5MUEJYJJ2QW4BHWJD/EMI__1_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 02",
+              "link": "https://uamedia.uacdn.net/lesson-raw/OVQ4N215LCLWLTTMK77M/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/OVQ4N215LCLWLTTMK77M/EMI_2_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 03",
+              "link": "https://uamedia.uacdn.net/lesson-raw/LSHNX8UFDZE9YFZGFEZU/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/LSHNX8UFDZE9YFZGFEZU/EMI_3_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 04",
+              "link": "https://uamedia.uacdn.net/lesson-raw/U9KZ0BWDSBOH05OIY05O/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/U9KZ0BWDSBOH05OIY05O/EMI_4_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 05",
+              "link": "https://uamedia.uacdn.net/lesson-raw/E09MFG9TJIUOD06QHGT0/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/E09MFG9TJIUOD06QHGT0/EMI_5_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 06",
+              "link": "https://uamedia.uacdn.net/lesson-raw/XGLTY35XF6QW7PJB8RC5/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/XGLTY35XF6QW7PJB8RC5/EMI_6_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 07",
+              "link": "https://uamedia.uacdn.net/lesson-raw/45TWBLHNAIL79H7DAWPD/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/45TWBLHNAIL79H7DAWPD/EMI_7_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 08",
+              "link": "https://uamedia.uacdn.net/lesson-raw/X950GIXHKBUR6C5PP7B3/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/X950GIXHKBUR6C5PP7B3/EMI_8_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 09",
+              "link": "https://uamedia.uacdn.net/lesson-raw/QU4DW6189VAAPQ6TRP48/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/QU4DW6189VAAPQ6TRP48/EMI_8_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 10",
+              "link": "https://uamedia.uacdn.net/lesson-raw/U8DG7JRA1GIQTQKVR440/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/U8DG7JRA1GIQTQKVR440/EMI_9_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 11",
+              "link": "https://uamedia.uacdn.net/lesson-raw/0AW4T8YLLMGTK1BUK0SM/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/0AW4T8YLLMGTK1BUK0SM/EMI_10_with_anno.pdf",
+              "dpp": ""
+            }
+          ]
+        },
+        {
+          "chapter": "🔌 ALTERNATING CURRENT",
+          "lectures": [
+            {
+              "name": "Lecture 01",
+              "link": "https://uamedia.uacdn.net/lesson-raw/3RS7FOTDUWSD9BS63UY5/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/3RS7FOTDUWSD9BS63UY5/ALTERNATING_CURRENT__1_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 02",
+              "link": "https://uamedia.uacdn.net/lesson-raw/FRFZVNZ5ZTCE4DPP4PLJ/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/FRFZVNZ5ZTCE4DPP4PLJ/ALTERNATING_CURRENT__2_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 03",
+              "link": "https://uamedia.uacdn.net/lesson-raw/ROA17JRMUTINEA354FQP/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/ROA17JRMUTINEA354FQP/ALTERNATING_CURRENT__3_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 04",
+              "link": "https://uamedia.uacdn.net/lesson-raw/EM8JT3QC5ABINY61LOHT/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/EM8JT3QC5ABINY61LOHT/ALTERNATING_CURRENT__4_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 05",
+              "link": "https://uamedia.uacdn.net/lesson-raw/ZTUAVX74OV8B2L1LE3ZS/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/ZTUAVX74OV8B2L1LE3ZS/ALTERNATING_CURRENT__5_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 06",
+              "link": "https://uamedia.uacdn.net/lesson-raw/254TTRI50EF75YUSO5ST/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/254TTRI50EF75YUSO5ST/ALTERNATING_CURRENT__6_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 07",
+              "link": "https://uamedia.uacdn.net/lesson-raw/Q8T5WWYN9ZC9KF4K6LGS/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/Q8T5WWYN9ZC9KF4K6LGS/ALTERNATING_CURRENT__7_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 08",
+              "link": "https://uamedia.uacdn.net/lesson-raw/YUWXC0594GKVFL3UH075/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/YUWXC0594GKVFL3UH075/ALTERNATING_CURRENT__8_with_anno.pdf",
+              "dpp": ""
+            }
+          ]
+        },
+        {
+          "chapter": "🔭 OPTICS 2",
+          "lectures": [
+            {
+              "name": "Lecture 01",
+              "link": "https://uamedia.uacdn.net/lesson-raw/NTUDMUL6URUD7I2ARSPS/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/NTUDMUL6URUD7I2ARSPS/Optics_1_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 02",
+              "link": "https://uamedia.uacdn.net/lesson-raw/SLRZ9G22O6D7NM8EJXBK/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/SLRZ9G22O6D7NM8EJXBK/Optics_2_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 03",
+              "link": "https://uamedia.uacdn.net/lesson-raw/SCG7867P110PG8HBIWIL/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/SCG7867P110PG8HBIWIL/Optics_3_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 04",
+              "link": "https://uamedia.uacdn.net/lesson-raw/WPIFAQPBKFLEPDV2DS77/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/WPIFAQPBKFLEPDV2DS77/Optics_4_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 05",
+              "link": "https://uamedia.uacdn.net/lesson-raw/C3JAZHE67005JGNIDC30/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/C3JAZHE67005JGNIDC30/Optics_5_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 06",
+              "link": "https://uamedia.uacdn.net/lesson-raw/BKUKOE7IK77DKNMVOFSH/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/BKUKOE7IK77DKNMVOFSH/Optics_6_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 07",
+              "link": "https://uamedia.uacdn.net/lesson-raw/FJ0TTVYO8JH8HC5GP3JM/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/FJ0TTVYO8JH8HC5GP3JM/Optics_7_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 08",
+              "link": "https://uamedia.uacdn.net/lesson-raw/VEL6C9HOJQ0NP1341ERN/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/VEL6C9HOJQ0NP1341ERN/Optics_8_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 09",
+              "link": "https://uamedia.uacdn.net/lesson-raw/53XLSPB11DNMEYTO44P3/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/53XLSPB11DNMEYTO44P3/Optics_9_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 10",
+              "link": "https://uamedia.uacdn.net/lesson-raw/X2WIIO0UHP2RMMWVGP8T/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/X2WIIO0UHP2RMMWVGP8T/Optics_10_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 11",
+              "link": "https://uamedia.uacdn.net/lesson-raw/MEE8CKKMN1BXNGG1TCAN/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/MEE8CKKMN1BXNGG1TCAN/Optics_11_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 12",
+              "link": "https://uamedia.uacdn.net/lesson-raw/85ZH6SYRK7R32V8YRFW7/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/85ZH6SYRK7R32V8YRFW7/Optics_12_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 13",
+              "link": "https://uamedia.uacdn.net/lesson-raw/KMIIP54AG2NE12VCDKSH/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/KMIIP54AG2NE12VCDKSH/Optics_13_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 14",
+              "link": "https://uamedia.uacdn.net/lesson-raw/FCXDW484BTME6MR7SYXQ/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/FCXDW484BTME6MR7SYXQ/Optics_14_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 15",
+              "link": "https://uamedia.uacdn.net/lesson-raw/R7DKVMT2N60R6D03MY0Z/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/R7DKVMT2N60R6D03MY0Z/Optics_15_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 16",
+              "link": "https://uamedia.uacdn.net/lesson-raw/0UJOJ6HCK5KC9BCPMK8S/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/0UJOJ6HCK5KC9BCPMK8S/Optics_16_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 17",
+              "link": "https://uamedia.uacdn.net/lesson-raw/KZ0KKQ3ZE2U977S50632/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/KZ0KKQ3ZE2U977S50632/Optics_17_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 18",
+              "link": "https://uamedia.uacdn.net/lesson-raw/758LHQ08XYLIFH39OUN9/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/758LHQ08XYLIFH39OUN9/Optics_18_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 19",
+              "link": "https://uamedia.uacdn.net/lesson-raw/SVZ4SIC0RKEXX7W1QP3T/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/SVZ4SIC0RKEXX7W1QP3T/Optics_19_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 20",
+              "link": "https://uamedia.uacdn.net/lesson-raw/WFC15FL0W9N2WRSQ0I2G/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/WFC15FL0W9N2WRSQ0I2G/Optics_20_b_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 21",
+              "link": "https://uamedia.uacdn.net/lesson-raw/EG7ENI7WO1XZTFLNGRVT/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/EG7ENI7WO1XZTFLNGRVT/Optics_20_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 22",
+              "link": "https://uamedia.uacdn.net/lesson-raw/IE3LNELLG4R5UW4OL29B/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/IE3LNELLG4R5UW4OL29B/Optics_21_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 23",
+              "link": "https://uamedia.uacdn.net/lesson-raw/EX162JQ7OS8BD8MVD2L9/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/EX162JQ7OS8BD8MVD2L9/Optics_22_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 24",
+              "link": "https://uamedia.uacdn.net/lesson-raw/QNW1SJKIY2KYU934QAJV/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/QNW1SJKIY2KYU934QAJV/Optics_23_with_anno.pdf",
+              "dpp": ""
+            }
+          ]
+        },
+        {
+          "chapter": "🔋 CURRENT AND CAPACITOR",
+          "lectures": [
+            {
+              "name": "Lecture 01",
+              "link": "https://uamedia.uacdn.net/lesson-raw/G6HHQEZKBJFGEREBJQFS/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/G6HHQEZKBJFGEREBJQFS/Current_and_Capacitor__1_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 02",
+              "link": "https://uamedia.uacdn.net/lesson-raw/KYJ27A27GNPAWNLN33E8/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/KYJ27A27GNPAWNLN33E8/Current_and_Capacitor__2_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 03",
+              "link": "https://uamedia.uacdn.net/lesson-raw/BOGHDZ215IJUYOH38AH0/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/BOGHDZ215IJUYOH38AH0/Current_and_Capacitor__3_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 04",
+              "link": "https://uamedia.uacdn.net/lesson-raw/XH42M16PSYBPZZ6UDEOE/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/XH42M16PSYBPZZ6UDEOE/Current_and_Capacitor__4_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 05",
+              "link": "https://uamedia.uacdn.net/lesson-raw/0VTDGF1UDMVJUIJTBQ5M/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/0VTDGF1UDMVJUIJTBQ5M/Current_and_Capacitor__5_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 06",
+              "link": "https://uamedia.uacdn.net/lesson-raw/O0VJJO9RIWDZBMGU2G13/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/O0VJJO9RIWDZBMGU2G13/Current_and_Capacitor__6_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 07",
+              "link": "https://uamedia.uacdn.net/lesson-raw/4GSJDJZOW6X1SVX0W2JY/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/4GSJDJZOW6X1SVX0W2JY/Current_and_Capacitor__7_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 08",
+              "link": "https://uamedia.uacdn.net/lesson-raw/7EB2QGTK6WOW6O0JWAAL/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/7EB2QGTK6WOW6O0JWAAL/Current_and_Capacitor__8_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 09",
+              "link": "https://uamedia.uacdn.net/lesson-raw/MSU9J5M1YTE6GIDH3BJ8/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/MSU9J5M1YTE6GIDH3BJ8/Current_and_Capacitor__9_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 10",
+              "link": "https://uamedia.uacdn.net/lesson-raw/LDE5J7XTHB6LM7MNMTIL/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/LDE5J7XTHB6LM7MNMTIL/Current_and_Capacitor__10_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 11",
+              "link": "https://uamedia.uacdn.net/lesson-raw/INZUQHI3KRAG21JM46S9/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/INZUQHI3KRAG21JM46S9/Current_and_Capacitor__11_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 12",
+              "link": "https://uamedia.uacdn.net/lesson-raw/WNVMM09C7NL9YENS8QJB/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/WNVMM09C7NL9YENS8QJB/Current_and_Capacitor__12_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 13",
+              "link": "https://uamedia.uacdn.net/lesson-raw/HG326TM9E5WWL7F1XF7B/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/HG326TM9E5WWL7F1XF7B/Current_and_Capacitor__13_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 14",
+              "link": "https://uamedia.uacdn.net/lesson-raw/08SRMKXYS0MBC4LAMLRH/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/08SRMKXYS0MBC4LAMLRH/Current_and_Capacitor__14_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 15",
+              "link": "https://uamedia.uacdn.net/lesson-raw/EXNQDAQA9ULTL8K5WSCF/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/EXNQDAQA9ULTL8K5WSCF/Current_and_Capacitor__15_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 16",
+              "link": "https://uamedia.uacdn.net/lesson-raw/ILPVM8Z7JTPTBG7W3WL3/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/ILPVM8Z7JTPTBG7W3WL3/Current_and_Capacitor__16_with_anno.pdf",
+              "dpp": ""
+            }
+          ]
+        },
+        {
+          "chapter": "📡 EMW - ELECTROMAGNETIC WAVES",
+          "lectures": [
+            {
+              "name": "Lecture 01",
+              "link": "https://uamedia.uacdn.net/lesson-raw/HYGYTSZ3VB1LUZJYDL9C/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/HYGYTSZ3VB1LUZJYDL9C/EMW__1_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 02",
+              "link": "https://uamedia.uacdn.net/lesson-raw/KOQRQLSYEU93SPJH157L/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/KOQRQLSYEU93SPJH157L/EMW__2_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 03",
+              "link": "https://uamedia.uacdn.net/lesson-raw/ZZNVX0FWTDTW6AA3Y6XT/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/ZZNVX0FWTDTW6AA3Y6XT/EMW__3_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 04",
+              "link": "https://uamedia.uacdn.net/lesson-raw/TIOVTMPJ3CCQ1E48YOQT/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/TIOVTMPJ3CCQ1E48YOQT/EMW__4_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 05",
+              "link": "https://uamedia.uacdn.net/lesson-raw/SUYMLTGVSHHSZPEUPE81/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/SUYMLTGVSHHSZPEUPE81/EMW__5_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 06",
+              "link": "https://uamedia.uacdn.net/lesson-raw/PVOASNKNBDTJGZPV843L/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/PVOASNKNBDTJGZPV843L/EMW__6_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 07",
+              "link": "https://uamedia.uacdn.net/lesson-raw/RU7I985RKP89C59VQJ9Y/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/RU7I985RKP89C59VQJ9Y/EMW__7_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 08",
+              "link": "https://uamedia.uacdn.net/lesson-raw/K4THER8035RQQCUQ3S4B/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/K4THER8035RQQCUQ3S4B/EMW__8_with_anno.pdf",
+              "dpp": ""
+            }
+          ]
+        },
+        {
+          "chapter": "⚛️ MODERN PHYSICS",
+          "lectures": [
+            {
+              "name": "Lecture 01",
+              "link": "https://uamedia.uacdn.net/lesson-raw/J5U1IZ8YQGFQ55MXERMF/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/J5U1IZ8YQGFQ55MXERMF/EMW__MODERN_PHYSICS__9_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 02",
+              "link": "https://uamedia.uacdn.net/lesson-raw/4HQ8F7EPVY86T9KA3V77/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/4HQ8F7EPVY86T9KA3V77/EMWMODERN_PHYSICS__10_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 03",
+              "link": "https://uamedia.uacdn.net/lesson-raw/1RLJXL4HK6MXIP6QXT6J/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/1RLJXL4HK6MXIP6QXT6J/EMWMODERN_PHYSICS__11_with_anno.pdf",
+              "dpp": ""
+            }
+          ]
+        },
+        {
+          "chapter": "🔌 SEMICONDUCTOR",
+          "lectures": [
+            {
+              "name": "Lecture 01",
+              "link": "http://filestreambot-1-jx2x.onrender.com/dl/698735f14265ffb2fe12c24f",
+              "notes": "",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 02",
+              "link": "http://filestreambot-1-jx2x.onrender.com/dl/698735f14265ffb2fe12c24e",
+              "notes": "",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 03",
+              "link": "http://filestreambot-1-jx2x.onrender.com/dl/698735f14265ffb2fe12c251",
+              "notes": "",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 04",
+              "link": "http://filestreambot-1-jx2x.onrender.com/dl/698735f14265ffb2fe12c252",
+              "notes": "",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 05",
+              "link": "http://filestreambot-1-jx2x.onrender.com/dl/698735f14265ffb2fe12c250",
+              "notes": "",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 06",
+              "link": "http://filestreambot-1-jx2x.onrender.com/dl/698735f14265ffb2fe12c24d",
+              "notes": "",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 07",
+              "link": "http://filestreambot-1-jx2x.onrender.com/dl/698735fa4265ffb2fe12c253",
+              "notes": "",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 08",
+              "link": "http://filestreambot-1-jx2x.onrender.com/dl/698735fa4265ffb2fe12c254",
+              "notes": "",
+              "dpp": ""
+            },
+            {
+              "name": "X RAY 09",
+              "link": "http://filestreambot-1-jx2x.onrender.com/dl/698735fa4265ffb2fe12c255",
+              "notes": "",
+              "dpp": ""
+            }
+          ]
+        },
+        {
+          "chapter": "⚡ ELECTRODYNAMICS (NEET 2025)",
+          "lectures": [
+            {
+              "name": "Lecture 01",
+              "link": "https://uamedia.uacdn.net/lesson-raw/JHH2TUU4Y2GH1ZGV20JI/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/JHH2TUU4Y2GH1ZGV20JI/ELECTRODYNAMICS__1_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 02",
+              "link": "https://uamedia.uacdn.net/lesson-raw/R6KPKL4K07W6BHOPG31E/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/R6KPKL4K07W6BHOPG31E/ELECTRODYNAMICS__2_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 03",
+              "link": "https://uamedia.uacdn.net/lesson-raw/0QD6FF8NDAL7VICYTKUU/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/0QD6FF8NDAL7VICYTKUU/ELECTRODYNAMICS__3_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 04",
+              "link": "https://uamedia.uacdn.net/lesson-raw/XJBRF6KNBCR9UJBSTDIO/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/XJBRF6KNBCR9UJBSTDIO/ELECTRODYNAMICS__4_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 05",
+              "link": "https://uamedia.uacdn.net/lesson-raw/BBOEY6975SF27TU9N80L/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/BBOEY6975SF27TU9N80L/ELECTRODYNAMICS__5_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 06",
+              "link": "https://uamedia.uacdn.net/lesson-raw/X2B965HIYQK0Y3EAUCL2/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/X2B965HIYQK0Y3EAUCL2/ELECTRODYNAMICS__6_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 07",
+              "link": "https://uamedia.uacdn.net/lesson-raw/1PZ6ZMO3L2GQAPSFSDQO/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/1PZ6ZMO3L2GQAPSFSDQO/ELECTRODYNAMICS__7_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 08",
+              "link": "https://uamedia.uacdn.net/lesson-raw/M0ZSJ4WI4IH0NL9OTSMV/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/M0ZSJ4WI4IH0NL9OTSMV/ELECTRODYNAMICS__8_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 09",
+              "link": "https://uamedia.uacdn.net/lesson-raw/0VN5YZYRV07RMAWEZI3O/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/0VN5YZYRV07RMAWEZI3O/ELECTRODYNAMICS__9_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 10",
+              "link": "https://uamedia.uacdn.net/lesson-raw/VEVLB0Y99ATTKUXUL97H/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/VEVLB0Y99ATTKUXUL97H/ELECTRODYNAMICS__10_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 11",
+              "link": "https://uamedia.uacdn.net/lesson-raw/ZNCNP37288QN9HMRWOGL/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/ZNCNP37288QN9HMRWOGL/ELECTRODYNAMICS__11_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 12",
+              "link": "https://uamedia.uacdn.net/lesson-raw/9R5LRX0OG7MH6A79NOKY/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/9R5LRX0OG7MH6A79NOKY/ELECTRODYNAMICS__12_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 13",
+              "link": "https://uamedia.uacdn.net/lesson-raw/RXNFB7HEWQD4WAK6UTTP/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/RXNFB7HEWQD4WAK6UTTP/ELECTRODYNAMICS__13_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 14",
+              "link": "https://uamedia.uacdn.net/lesson-raw/1TUC8ZPH0D4P6WJJ7TWH/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/1TUC8ZPH0D4P6WJJ7TWH/ELECTRODYNAMICS__14_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 15",
+              "link": "https://uamedia.uacdn.net/lesson-raw/OEKJAT9OKT3QVIBJCWC3/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/OEKJAT9OKT3QVIBJCWC3/ELECTRODYNAMICS__15_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 16",
+              "link": "https://uamedia.uacdn.net/lesson-raw/9UCDMWVR9QSGD4NX6L0V/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/9UCDMWVR9QSGD4NX6L0V/ELECTRODYNAMICS__16_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 17",
+              "link": "https://uamedia.uacdn.net/lesson-raw/RS2DNQ8762TA9QHZ4C91/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/RS2DNQ8762TA9QHZ4C91/ELECTRODYNAMICS__17_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 18",
+              "link": "https://uamedia.uacdn.net/lesson-raw/MZ64SN645HSK0ZCHSLPO/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/MZ64SN645HSK0ZCHSLPO/ELECTRODYNAMICS__18_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 19",
+              "link": "https://uamedia.uacdn.net/lesson-raw/7PUCCMAA7N8D9THITCUK/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/7PUCCMAA7N8D9THITCUK/ELECTRODYNAMICS__19_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 20",
+              "link": "https://uamedia.uacdn.net/lesson-raw/7IHQ1PZ66X5AGFOGJ0HZ/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/7IHQ1PZ66X5AGFOGJ0HZ/ELECTRODYNAMICS__20_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 21",
+              "link": "https://uamedia.uacdn.net/lesson-raw/8OBUD1LQKROM1EH8L56J/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/8OBUD1LQKROM1EH8L56J/ELECTRODYNAMICS__21_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 22",
+              "link": "https://uamedia.uacdn.net/lesson-raw/AFARFPCDSFY03GE9PVWR/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/AFARFPCDSFY03GE9PVWR/ELECTRODYNAMICS__22_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 23",
+              "link": "https://uamedia.uacdn.net/lesson-raw/95LGUVXXV3XECK742NPH/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/95LGUVXXV3XECK742NPH/ELECTRODYNAMICS__23_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 24",
+              "link": "https://uamedia.uacdn.net/lesson-raw/GYI543B85FLU2D98XRSZ/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/GYI543B85FLU2D98XRSZ/ELECTRODYNAMICS__24_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 25",
+              "link": "https://uamedia.uacdn.net/lesson-raw/20TIGG2BE6QPO5SDHVA9/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/20TIGG2BE6QPO5SDHVA9/ELECTRODYNAMICS__25_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 26",
+              "link": "https://uamedia.uacdn.net/lesson-raw/C6ZX3AUBWR7TH5A3CYRE/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/C6ZX3AUBWR7TH5A3CYRE/ELECTRODYNAMICS__26_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 27",
+              "link": "https://uamedia.uacdn.net/lesson-raw/KNTKAMNK2PTDG5A648VS/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/KNTKAMNK2PTDG5A648VS/ELECTRODYNAMICS__27_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 28",
+              "link": "https://uamedia.uacdn.net/lesson-raw/ZQMK5GII8YLO65VPYPGQ/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/ZQMK5GII8YLO65VPYPGQ/ELECTRODYNAMICS__28_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 29",
+              "link": "https://uamedia.uacdn.net/lesson-raw/9KBBGRHAOEOJ56RMW7YS/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/9KBBGRHAOEOJ56RMW7YS/ELECTRODYNAMICS__29_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 30",
+              "link": "https://uamedia.uacdn.net/lesson-raw/0OOG1MY2GEYS2J0Z051F/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/0OOG1MY2GEYS2J0Z051F/ELECTRODYNAMICS__30_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 31",
+              "link": "https://uamedia.uacdn.net/lesson-raw/FORRK2WVU2FCKQ5WHJBK/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/FORRK2WVU2FCKQ5WHJBK/ELECTRODYNAMICS__31_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 32",
+              "link": "https://uamedia.uacdn.net/lesson-raw/00S4KHH131UOEUD66CS7/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/00S4KHH131UOEUD66CS7/ELECTRODYNAMICS__32_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 33",
+              "link": "https://uamedia.uacdn.net/lesson-raw/O3C27WJO1BOUE67JTAMG/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/O3C27WJO1BOUE67JTAMG/ELECTRODYNAMICS__33_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 34",
+              "link": "https://uamedia.uacdn.net/lesson-raw/4XZYJFHIXHKXF8KZCG6G/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/4XZYJFHIXHKXF8KZCG6G/ELECTRODYNAMICS__34_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 35",
+              "link": "https://uamedia.uacdn.net/lesson-raw/KNOFZZF977HCP7P4BOI4/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/KNOFZZF977HCP7P4BOI4/ELECTRODYNAMICS__35_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 36",
+              "link": "https://uamedia.uacdn.net/lesson-raw/SXNLUWIZ50IGYXZGZSN0/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/SXNLUWIZ50IGYXZGZSN0/ELECTRODYNAMICS__36_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 37",
+              "link": "https://uamedia.uacdn.net/lesson-raw/4396C1ONORXG7QCQXV8V/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/4396C1ONORXG7QCQXV8V/ELECTRODYNAMICS__37_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 38",
+              "link": "https://uamedia.uacdn.net/lesson-raw/WVHBIYX69E0TU6813A7P/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/WVHBIYX69E0TU6813A7P/ELECTRODYNAMICS__38_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 39",
+              "link": "https://uamedia.uacdn.net/lesson-raw/HLEBACCSY6I2OT9MVH0A/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/HLEBACCSY6I2OT9MVH0A/ELECTRODYNAMICS__39_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 40",
+              "link": "https://uamedia.uacdn.net/lesson-raw/XPNOR5ZGUSI8IE4RX9KX/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/XPNOR5ZGUSI8IE4RX9KX/ELECTRODYNAMICS__40_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 41",
+              "link": "https://uamedia.uacdn.net/lesson-raw/3PCGEUEJJUPOJZ6QEJMS/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/3PCGEUEJJUPOJZ6QEJMS/ELECTRODYNAMICS__41_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 42",
+              "link": "https://uamedia.uacdn.net/lesson-raw/W67NRCUTIWQS151VSGNC/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/W67NRCUTIWQS151VSGNC/ELECTRODYNAMICS__42_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 43",
+              "link": "https://uamedia.uacdn.net/lesson-raw/5ML0ZLM1CREOGA9VP2QN/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/5ML0ZLM1CREOGA9VP2QN/ELECTRODYNAMICS__43_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 44",
+              "link": "https://uamedia.uacdn.net/lesson-raw/WCU24DKK1MB9U3SQ4EA3/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/WCU24DKK1MB9U3SQ4EA3/ELECTRODYNAMICS__44_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 45",
+              "link": "https://uamedia.uacdn.net/lesson-raw/MDWM9XQWUTV6OK01N6MF/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/MDWM9XQWUTV6OK01N6MF/ELECTRODYNAMICS__45_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 46",
+              "link": "https://uamedia.uacdn.net/lesson-raw/Z1KVNU5KLSAFSRNC2U5R/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/Z1KVNU5KLSAFSRNC2U5R/ELECTRODYNAMICS__46_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 47",
+              "link": "https://uamedia.uacdn.net/lesson-raw/Q7VIV557027QA32DLHKC/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/Q7VIV557027QA32DLHKC/ELECTRODYNAMICS__47_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 48",
+              "link": "https://uamedia.uacdn.net/lesson-raw/ZRAPEAMKLAWIWZ351NGW/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/ZRAPEAMKLAWIWZ351NGW/ELECTRODYNAMICS__48_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 49",
+              "link": "https://uamedia.uacdn.net/lesson-raw/X614590AO94GI0LQS9M8/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/X614590AO94GI0LQS9M8/ELECTRODYNAMICS__49_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 50",
+              "link": "https://uamedia.uacdn.net/lesson-raw/JTS1AYR2P5DDY53J0Z0N/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/JTS1AYR2P5DDY53J0Z0N/ELECTRODYNAMICS__50_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 51",
+              "link": "https://uamedia.uacdn.net/lesson-raw/6VZW420KRRUUOT2H0P6E/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/6VZW420KRRUUOT2H0P6E/ELECTRODYNAMICS__51_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 52",
+              "link": "https://uamedia.uacdn.net/lesson-raw/D2PXJVTSTZKPN0KZV8O8/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/D2PXJVTSTZKPN0KZV8O8/ELECTRODYNAMICS__52_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 53",
+              "link": "https://uamedia.uacdn.net/lesson-raw/ELMCO3BRVP43KKEL15R2/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/ELMCO3BRVP43KKEL15R2/ELECTRODYNAMICS__53_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 54",
+              "link": "https://uamedia.uacdn.net/lesson-raw/RUTO24VCT4LV3MRULBW2/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/RUTO24VCT4LV3MRULBW2/ELECTRODYNAMICS__54_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 55",
+              "link": "https://uamedia.uacdn.net/lesson-raw/XYOCLNOJGEVVKPDXU24D/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/XYOCLNOJGEVVKPDXU24D/ELECTRODYNAMICS__55_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 56",
+              "link": "https://uamedia.uacdn.net/lesson-raw/E3EC3HVA1MXGOZ5VIZXN/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/E3EC3HVA1MXGOZ5VIZXN/ELECTRODYNAMICS__56_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 57",
+              "link": "https://uamedia.uacdn.net/lesson-raw/YW3M73CHIM83MVTMPL1H/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/YW3M73CHIM83MVTMPL1H/ELECTRODYNAMICS__57_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 58",
+              "link": "https://uamedia.uacdn.net/lesson-raw/DBKORD9I8M1UQ9IUWFAT/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/DBKORD9I8M1UQ9IUWFAT/ELECTRODYNAMICS__58_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 59",
+              "link": "https://uamedia.uacdn.net/lesson-raw/2O5NN1UOOUOGZM1CDIW2/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/2O5NN1UOOUOGZM1CDIW2/ELECTRODYNAMICS__59_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 60",
+              "link": "https://uamedia.uacdn.net/lesson-raw/DW24VQAY8JEN29680C8R/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/DW24VQAY8JEN29680C8R/ELECTRODYNAMICS__60_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 61",
+              "link": "https://uamedia.uacdn.net/lesson-raw/4XC6B8LOUUBJFC4YTWOA/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/4XC6B8LOUUBJFC4YTWOA/ELECTRODYNAMICS__61_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 62",
+              "link": "https://uamedia.uacdn.net/lesson-raw/5A5FQXN6EH6MRVZI8W1A/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/5A5FQXN6EH6MRVZI8W1A/ELECTRODYNAMICS__62_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 63",
+              "link": "https://uamedia.uacdn.net/lesson-raw/8FB94IJBO99CWY56MYZS/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/8FB94IJBO99CWY56MYZS/ELECTRODYNAMICS__63_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 64",
+              "link": "https://uamedia.uacdn.net/lesson-raw/4SBMJ2F90K51Q6LHKKUK/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/4SBMJ2F90K51Q6LHKKUK/ELECTRODYNAMICS__64_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 65",
+              "link": "https://uamedia.uacdn.net/lesson-raw/9GGQFFJ1QPXRX44D9I8N/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/9GGQFFJ1QPXRX44D9I8N/ELECTRODYNAMICS__65_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 66",
+              "link": "https://uamedia.uacdn.net/lesson-raw/BS4O2FNY4CP3BIKA2KNJ/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/BS4O2FNY4CP3BIKA2KNJ/ELECTRODYNAMICS__66_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 67",
+              "link": "https://uamedia.uacdn.net/lesson-raw/JIZ45P6FK4I65Y1U8C92/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/JIZ45P6FK4I65Y1U8C92/ELECTRODYNAMICS__67_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 68",
+              "link": "https://uamedia.uacdn.net/lesson-raw/PR6MLFXZC630ZTS7QVAF/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/PR6MLFXZC630ZTS7QVAF/ELECTRODYNAMICS__68_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 69",
+              "link": "https://uamedia.uacdn.net/lesson-raw/PNWF18IMMMMO2SCMQ6AL/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/PNWF18IMMMMO2SCMQ6AL/ELECTRODYNAMICS__69_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 70",
+              "link": "https://uamedia.uacdn.net/lesson-raw/DYZGO5RZAZY4GHVMBFIO/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/DYZGO5RZAZY4GHVMBFIO/ELECTRODYNAMICS__70_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 71",
+              "link": "https://uamedia.uacdn.net/lesson-raw/XZKLIA15SDFJWYYK972T/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/XZKLIA15SDFJWYYK972T/ELECTRODYNAMICS__71_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 72",
+              "link": "https://uamedia.uacdn.net/lesson-raw/BARHNWEKQFRTXV2RE56G/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/BARHNWEKQFRTXV2RE56G/ELECTRODYNAMICS__72_with_anno.pdf",
+              "dpp": ""
+            }
+          ]
+        },
+        {
+          "chapter": "⚡ ELECTRODYNAMICS (2025)",
+          "lectures": [
+            {
+              "name": "Lecture 01",
+              "link": "https://uamedia.uacdn.net/lesson-raw/E0ADVUGPLQGAKYNEQBW9/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/E0ADVUGPLQGAKYNEQBW9/ELECTRODYNAMICS__1_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 02",
+              "link": "https://uamedia.uacdn.net/lesson-raw/BUSONJ8SWK2OAYMRO6IF/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/BUSONJ8SWK2OAYMRO6IF/ELECTRODYNAMICS__2_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 03",
+              "link": "https://uamedia.uacdn.net/lesson-raw/DBQ6VOKUEBLC4VZNAF78/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/DBQ6VOKUEBLC4VZNAF78/ELECTRODYNAMICS__3_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 04",
+              "link": "https://uamedia.uacdn.net/lesson-raw/JP78G7OWTFQWMR9VCDUP/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/JP78G7OWTFQWMR9VCDUP/ELECTRODYNAMICS__4_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 05",
+              "link": "https://uamedia.uacdn.net/lesson-raw/F6RNLVH6F1HIARVO7T0V/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/F6RNLVH6F1HIARVO7T0V/ELECTRODYNAMICS__5_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 06",
+              "link": "https://uamedia.uacdn.net/lesson-raw/2S8ESOG6RZRVMHX1K1CQ/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/2S8ESOG6RZRVMHX1K1CQ/ELECTRODYNAMICS__6_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 07",
+              "link": "https://uamedia.uacdn.net/lesson-raw/4JJCVKJ6APCE3PPCTH2U/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/4JJCVKJ6APCE3PPCTH2U/ELECTRODYNAMICS__07_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 08",
+              "link": "https://uamedia.uacdn.net/lesson-raw/MPZ9K1W1ZQX166G3KONX/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/MPZ9K1W1ZQX166G3KONX/ELECTRODYNAMICS__08_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 09",
+              "link": "https://uamedia.uacdn.net/lesson-raw/CYXMJK8YAMP9UIXPABIF/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/CYXMJK8YAMP9UIXPABIF/ELECTRODYNAMICS__09_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 10",
+              "link": "https://uamedia.uacdn.net/lesson-raw/4E7MVFXQ7E75AGR281P8/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/4E7MVFXQ7E75AGR281P8/ELECTRODYNAMICS__10_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 11",
+              "link": "https://uamedia.uacdn.net/lesson-raw/Q4P315FNBE1OL9BJTXR6/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/Q4P315FNBE1OL9BJTXR6/ELECTRODYNAMICS__11_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 12",
+              "link": "https://uamedia.uacdn.net/lesson-raw/3B3HRD8IT6RZHEBUIJS5/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/3B3HRD8IT6RZHEBUIJS5/ELECTRODYNAMICS__12_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 13",
+              "link": "https://uamedia.uacdn.net/lesson-raw/YW9BENRTPYVQACP40IB3/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/YW9BENRTPYVQACP40IB3/ELECTRODYNAMICS__13_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 14",
+              "link": "https://uamedia.uacdn.net/lesson-raw/RV6MVV0EL6N3DNPY2SA0/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/RV6MVV0EL6N3DNPY2SA0/ELECTRODYNAMICS__14_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 15",
+              "link": "https://uamedia.uacdn.net/lesson-raw/BHHWSUXZXJW1JZG33X0K/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/BHHWSUXZXJW1JZG33X0K/ELECTRODYNAMICS__15_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 16",
+              "link": "https://uamedia.uacdn.net/lesson-raw/3MIDOBE3LSO4KP6DJQY3/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/3MIDOBE3LSO4KP6DJQY3/ELECTRODYNAMICS__15_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 17",
+              "link": "https://uamedia.uacdn.net/lesson-raw/WB3TDFQLUTYCHPWSMLXQ/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/WB3TDFQLUTYCHPWSMLXQ/ELECTRODYNAMICS__16_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 18",
+              "link": "https://uamedia.uacdn.net/lesson-raw/HMVROY790CJ3NIZYL3S3/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/HMVROY790CJ3NIZYL3S3/ELECTRODYNAMICS__17_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 19",
+              "link": "https://uamedia.uacdn.net/lesson-raw/CY7T4SKIDA9JNVT357SR/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/CY7T4SKIDA9JNVT357SR/ELECTRODYNAMICS__19_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 20",
+              "link": "https://uamedia.uacdn.net/lesson-raw/WU3ZP82CV0BKQ8DZSQII/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/WU3ZP82CV0BKQ8DZSQII/ELECTRODYNAMICS__20_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 21",
+              "link": "https://uamedia.uacdn.net/lesson-raw/KCKIUA6XJFG01OPSRBDP/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/KCKIUA6XJFG01OPSRBDP/ELECTRODYNAMICS__21_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 22",
+              "link": "https://uamedia.uacdn.net/lesson-raw/WK74EQU6QQDPX6PVDCUN/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/WK74EQU6QQDPX6PVDCUN/ELECTRODYNAMICS__22_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 23",
+              "link": "https://uamedia.uacdn.net/lesson-raw/WAM8IPL2DSGDYZX9QY47/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/WAM8IPL2DSGDYZX9QY47/ELECTRODYNAMICS__23_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 24",
+              "link": "https://uamedia.uacdn.net/lesson-raw/3DE4MNU6EDTM1N3AXJEQ/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/3DE4MNU6EDTM1N3AXJEQ/ELECTRODYNAMICS__24_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 25",
+              "link": "https://uamedia.uacdn.net/lesson-raw/5HSK3UONTNS298CW2M7O/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/5HSK3UONTNS298CW2M7O/ELECTRODYNAMICS__25_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 26",
+              "link": "https://uamedia.uacdn.net/lesson-raw/VPZCFKN4ANIM3ERIBEUB/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/VPZCFKN4ANIM3ERIBEUB/ELECTRODYNAMICS__26_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 27",
+              "link": "https://uamedia.uacdn.net/lesson-raw/PUNTOZCWOBYXZETBX2UR/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/PUNTOZCWOBYXZETBX2UR/ELECTRODYNAMICS__27_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 28",
+              "link": "https://uamedia.uacdn.net/lesson-raw/4OPZB13G65F4TU5XTUOD/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/4OPZB13G65F4TU5XTUOD/ELECTRODYNAMICS__28_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 29",
+              "link": "https://uamedia.uacdn.net/lesson-raw/O45DKD90A51O0U4G1CV5/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/O45DKD90A51O0U4G1CV5/ELECTRODYNAMICS__29_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 30",
+              "link": "https://uamedia.uacdn.net/lesson-raw/F13SEU7JN9644SIIRWSY/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/F13SEU7JN9644SIIRWSY/ELECTRODYNAMICS__30_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 31",
+              "link": "https://uamedia.uacdn.net/lesson-raw/J5YECZLXD9DH06YRTDWR/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/J5YECZLXD9DH06YRTDWR/ELECTRODYNAMICS__31_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 32",
+              "link": "https://uamedia.uacdn.net/lesson-raw/G23P5Q2ZU7KO9GMN0NJQ/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/G23P5Q2ZU7KO9GMN0NJQ/ELECTRODYNAMICS__32_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 33",
+              "link": "https://uamedia.uacdn.net/lesson-raw/4R486J8BVAFDPTJYW0FE/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/4R486J8BVAFDPTJYW0FE/ELECTRODYNAMICS__33_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 34",
+              "link": "https://uamedia.uacdn.net/lesson-raw/LDEN5YS6VA2E4YO35BI2/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/LDEN5YS6VA2E4YO35BI2/ELECTRODYNAMICS__34_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 35",
+              "link": "https://uamedia.uacdn.net/lesson-raw/LNQVHSOKRY654BAAOMCX/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/LNQVHSOKRY654BAAOMCX/ELECTRODYNAMICS__35_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 36",
+              "link": "https://uamedia.uacdn.net/lesson-raw/Y89PYT1DMFZ52W36CYS2/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/Y89PYT1DMFZ52W36CYS2/ELECTRODYNAMICS__36_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 37",
+              "link": "https://uamedia.uacdn.net/lesson-raw/8VCK875P0411RA9SFRZM/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/8VCK875P0411RA9SFRZM/ELECTRODYNAMICS__37_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 38",
+              "link": "https://uamedia.uacdn.net/lesson-raw/XY70350O05RTIUCXK1GK/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/XY70350O05RTIUCXK1GK/ELECTRODYNAMICS__38_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 39",
+              "link": "https://uamedia.uacdn.net/lesson-raw/4ZEH3E50Q0CS9T14WIIZ/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/4ZEH3E50Q0CS9T14WIIZ/ELECTRODYNAMICS__39_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 40",
+              "link": "https://uamedia.uacdn.net/lesson-raw/V8RU6E3GWK72X22W5NGY/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/V8RU6E3GWK72X22W5NGY/ELECTRODYNAMICS__40_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 41",
+              "link": "https://uamedia.uacdn.net/lesson-raw/QOGP2L2MCA1NRC0JP4KO/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/QOGP2L2MCA1NRC0JP4KO/ELECTRODYNAMICS__41_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 42",
+              "link": "https://uamedia.uacdn.net/lesson-raw/BWW3YGLDJCTWLKIFA8BK/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/BWW3YGLDJCTWLKIFA8BK/ELECTRODYNAMICS__42_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 43",
+              "link": "https://uamedia.uacdn.net/lesson-raw/7WKU62U7SHZJQJRE2URD/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/7WKU62U7SHZJQJRE2URD/ELECTRODYNAMICS__43_with_anno.pdf",
+              "dpp": ""
+            }
+          ]
+        },
+        {
+          "chapter": "🌀 EMI (2025)",
+          "lectures": [
+            {
+              "name": "Lecture 01",
+              "link": "https://uamedia.uacdn.net/lesson-raw/MQ5CC4K1D3LB04WZEV91/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/MQ5CC4K1D3LB04WZEV91/EMI__01_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 02",
+              "link": "https://uamedia.uacdn.net/lesson-raw/E841XYE31ANBDJQ2V52L/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/E841XYE31ANBDJQ2V52L/EMI_02_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 03",
+              "link": "https://uamedia.uacdn.net/lesson-raw/D176BB6OSB9Q9VBUQUC1/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/D176BB6OSB9Q9VBUQUC1/EMI_03_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 04",
+              "link": "https://uamedia.uacdn.net/lesson-raw/UFPTTKAJK6IRLAFLVAY9/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/UFPTTKAJK6IRLAFLVAY9/EMI_04_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 05",
+              "link": "https://uamedia.uacdn.net/lesson-raw/AQEES58LW3HYRHKPFPTL/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/AQEES58LW3HYRHKPFPTL/EMI_05_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 06",
+              "link": "https://uamedia.uacdn.net/lesson-raw/TES419HKDPGDBC8A6Z4M/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/TES419HKDPGDBC8A6Z4M/EMI_06_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 07",
+              "link": "https://uamedia.uacdn.net/lesson-raw/Q1XRPHEL2SAGKX1ZO12N/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/Q1XRPHEL2SAGKX1ZO12N/EMI_07_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 08",
+              "link": "https://uamedia.uacdn.net/lesson-raw/OWHBWMITFEPTLN26GHXV/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/OWHBWMITFEPTLN26GHXV/EMI_08_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 09",
+              "link": "https://uamedia.uacdn.net/lesson-raw/ER9L00O0A6Y2TYF2YC7Z/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/ER9L00O0A6Y2TYF2YC7Z/EMI_10_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 10",
+              "link": "https://uamedia.uacdn.net/lesson-raw/TXMDNV2MPQMYF31ZLYJ5/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/TXMDNV2MPQMYF31ZLYJ5/EMI_10_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 11",
+              "link": "https://uamedia.uacdn.net/lesson-raw/CKQ66XRTW4WXMASA00U8/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/CKQ66XRTW4WXMASA00U8/EMI_11_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 12",
+              "link": "https://uamedia.uacdn.net/lesson-raw/1XCVMRN5BQH00KKDQ8WT/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/1XCVMRN5BQH00KKDQ8WT/EMI_12_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 13",
+              "link": "https://uamedia.uacdn.net/lesson-raw/JLYS8UY4OHD8WC8XGNHE/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/JLYS8UY4OHD8WC8XGNHE/EMI_13_with_anno.pdf",
+              "dpp": ""
+            }
+          ]
+        },
+        {
+          "chapter": "⚛️ MODERN PHYSICS (2025)",
+          "lectures": [
+            {
+              "name": "Lecture 01",
+              "link": "https://uamedia.uacdn.net/lesson-raw/2COQZJ416AV61HY4QKJC/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/2COQZJ416AV61HY4QKJC/BASIC_MATHS__13_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 02",
+              "link": "https://uamedia.uacdn.net/lesson-raw/NATYRN9E258SXVSCD6SK/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/NATYRN9E258SXVSCD6SK/MODERN_PHYSICS__2_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 03",
+              "link": "https://uamedia.uacdn.net/lesson-raw/1Q0KTMR388ZTHY44PPFW/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/1Q0KTMR388ZTHY44PPFW/MODERN_PHYSICS__3_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 04",
+              "link": "https://uamedia.uacdn.net/lesson-raw/B3AX6QSAWGQBZ43SCOU5/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/B3AX6QSAWGQBZ43SCOU5/MODERN_PHYSICS__4_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 05",
+              "link": "https://uamedia.uacdn.net/lesson-raw/IPR5AM6EMFIWR6MF0O6Q/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/IPR5AM6EMFIWR6MF0O6Q/MODERN_PHYSICS__5_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 06",
+              "link": "https://uamedia.uacdn.net/lesson-raw/2DLILVFBW81SC4E6W9E2/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/2DLILVFBW81SC4E6W9E2/MODERN_PHYSICS__6_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 07",
+              "link": "https://uamedia.uacdn.net/lesson-raw/PTG5X66J6BFZ54PNXYVI/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/PTG5X66J6BFZ54PNXYVI/MODERN_PHYSICS__7_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 08",
+              "link": "https://uamedia.uacdn.net/lesson-raw/51M5SJ73YESSVP7GEFHH/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/51M5SJ73YESSVP7GEFHH/MODERN_PHYSICS__8_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 09",
+              "link": "https://uamedia.uacdn.net/lesson-raw/SUEY41PT07ZGA7B6RAID/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/SUEY41PT07ZGA7B6RAID/MODERN_PHYSICS__9_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 10",
+              "link": "https://uamedia.uacdn.net/lesson-raw/NEJLUZEX9VFSIQBJISZQ/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/NEJLUZEX9VFSIQBJISZQ/MODERN_PHYSICS__10_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 11",
+              "link": "https://uamedia.uacdn.net/lesson-raw/CO3XA94EMPQUX63KWNTV/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/CO3XA94EMPQUX63KWNTV/MODERN_PHYSICS__11_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 12",
+              "link": "https://uamedia.uacdn.net/lesson-raw/48YYVNY192HQ01AVJAJO/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/48YYVNY192HQ01AVJAJO/MODERN_PHYSICS__12_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 13",
+              "link": "https://uamedia.uacdn.net/lesson-raw/B9ZDHG7OHBOGRG3O3IMF/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/B9ZDHG7OHBOGRG3O3IMF/MODERN_PHYSICS__13_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 14",
+              "link": "https://uamedia.uacdn.net/lesson-raw/JWNQB2B721984Y3EFJIQ/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/JWNQB2B721984Y3EFJIQ/MODERN_PHYSICS__14_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 15",
+              "link": "https://uamedia.uacdn.net/lesson-raw/VGA0AC913S5AW1CV9AF1/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/VGA0AC913S5AW1CV9AF1/MODERN_PHYSICS__15_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "Lecture 16",
+              "link": "https://uamedia.uacdn.net/lesson-raw/SF06ER6K4GQOB3BJPA2C/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/SF06ER6K4GQOB3BJPA2C/MODERN_PHYSICS__16_with_anno.pdf",
+              "dpp": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
