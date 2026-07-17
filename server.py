@@ -133,11 +133,22 @@ def push_notebook_to_kaggle(username, key, title, slug, db_root=None):
 
 
 def compile_automation_notebook_json():
-    """Reads cell1, cell3, cell4 in 'new automation/' and compiles them into a Jupyter notebook JSON string."""
+    """Reads cell1, cell3, cell4 in 'automation_cloner/' and compiles them, injecting Firebase configs dynamically."""
     cells = []
     base_dir = os.path.dirname(os.path.abspath(__file__))
     automation_dir = os.path.join(base_dir, "automation_cloner")
     
+    # Fetch credentials from Firebase config securely
+    db_url = FIREBASE_CONFIG["databaseURL"].rstrip('/')
+    config_data = {}
+    try:
+        config_url = f"{db_url}/new_automation_courses/config.json"
+        res = requests.get(config_url, timeout=10)
+        if res.status_code == 200:
+            config_data = res.json() or {}
+    except Exception as e:
+        print(f"[Warning] Failed to fetch Firebase config for cell3 injection: {e}")
+        
     for num in [1, 3, 4]:
         cell_path = os.path.join(automation_dir, f"cell{num}")
         if not os.path.exists(cell_path):
@@ -146,6 +157,32 @@ def compile_automation_notebook_json():
         with open(cell_path, 'r', encoding='utf-8') as f:
             content = f.read()
             
+        # Inject configurations dynamically into cell3 to protect GitHub templates
+        if num == 3 and config_data:
+            import re
+            api_id = config_data.get("api_id")
+            api_hash = config_data.get("api_hash")
+            session_str = config_data.get("session_string")
+            bot_token = config_data.get("bot_token")
+            owner_id = config_data.get("owner_chat_id")
+            active_key = config_data.get("active_course_key")
+            extracted_by = config_data.get("extracted_by")
+
+            if api_id is not None:
+                content = re.sub(r'API_ID\s*=\s*.*', f'API_ID = {api_id}', content)
+            if api_hash is not None:
+                content = re.sub(r'API_HASH\s*=\s*.*', f'API_HASH = "{api_hash}"', content)
+            if session_str is not None:
+                content = re.sub(r'SESSION_STRING\s*=\s*.*', f'SESSION_STRING = "{session_str}"', content)
+            if bot_token is not None:
+                content = re.sub(r'BOT_TOKEN\s*=\s*.*', f'BOT_TOKEN = "{bot_token}"', content)
+            if owner_id is not None:
+                content = re.sub(r'OWNER_CHAT_ID\s*=\s*.*', f'OWNER_CHAT_ID = {owner_id}', content)
+            if active_key is not None:
+                content = re.sub(r'ACTIVE_COURSE_KEY\s*=\s*.*', f'ACTIVE_COURSE_KEY = "{active_key}"', content)
+            if extracted_by is not None:
+                content = re.sub(r'EXTRACTED_BY\s*=\s*.*', f'EXTRACTED_BY = "{extracted_by}"', content)
+                
         lines = content.splitlines(keepends=True)
         cells.append({
             "cell_type": "code",

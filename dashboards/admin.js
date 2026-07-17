@@ -3,7 +3,7 @@ let database = null;
 let dbRoot = "cloner_v5_mapping";
 let isBotActive = false;
 const localServerUrl = window.location.origin.includes("localhost") || window.location.protocol === "file:"
-    ? "http://localhost:8000"
+    ? "https://restartrepo-production.up.railway.app"
     : window.location.origin;
 
 // Bot instances storage

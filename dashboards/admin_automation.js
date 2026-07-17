@@ -3,6 +3,10 @@
 let db = null;
 let currentConfig = {};
 
+const localServerUrl = window.location.protocol === "file:"
+    ? "https://restartrepo-production.up.railway.app"
+    : window.location.origin;
+
 // 1. Initialize Firebase connection
 function initFirebase(dbUrl) {
     if (!dbUrl) return;
@@ -170,7 +174,7 @@ document.getElementById("btn-save-config").addEventListener("click", () => {
         session_string: currentConfig.session_string || "" // Keep existing session if not re-generated
     };
     
-    db.ref("new_automation_courses/config").put(configPayload, (err) => {
+    db.ref("new_automation_courses/config").set(configPayload, (err) => {
         if (err) {
             alert("Failed to save configuration: " + err);
         } else {
@@ -195,7 +199,7 @@ document.getElementById("btn-send-otp").addEventListener("click", () => {
     btn.disabled = true;
     btn.textContent = "Sending...";
     
-    fetch("/api/telegram/send_code", {
+    fetch(localServerUrl + "/api/telegram/send_code", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ phone, api_id: apiId, api_hash: apiHash })
@@ -239,7 +243,7 @@ document.getElementById("btn-verify-otp").addEventListener("click", () => {
     btn.disabled = true;
     btn.textContent = "Verifying...";
     
-    fetch("/api/telegram/verify_code", {
+    fetch(localServerUrl + "/api/telegram/verify_code", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ code, password })
@@ -304,7 +308,7 @@ document.getElementById("btn-trigger-cloner").addEventListener("click", () => {
     btn.disabled = true;
     btn.textContent = "Launching Bot...";
     
-    fetch("/api/kaggle/run", {
+    fetch(localServerUrl + "/api/kaggle/run", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
