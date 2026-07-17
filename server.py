@@ -19,9 +19,9 @@ import builtins
 orig_print = builtins.print
 builtins.print = lambda *args, **kwargs: None
 
-# Add current folder to sys.path to resolve cells.cell2 imports safely
+# Add current folder to sys.path to resolve group_cloner.cell2 imports safely
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
-from cells.cell2 import FIREBASE_CONFIG, DB_ROOT
+from group_cloner.cell2 import FIREBASE_CONFIG, DB_ROOT
 
 # Restore original print
 builtins.print = orig_print
