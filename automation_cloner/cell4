@@ -230,9 +230,9 @@ async def update_status_dashboard(bot_client, course_key, force=False):
         pass
 
 def check_auto_restart():
-    # Kaggle time limit is 12 hours. We trigger restart at 11.5 hours (41400 seconds)
-    if time.time() - START_TIME > 11.5 * 3600:
-        print("⏰ 11.5 Hours Reached! Triggering Auto-Restart via Railway Server...")
+    # Kaggle time limit is 12 hours. We trigger restart at 11 hours 50 minutes
+    if time.time() - START_TIME > (11 * 3600 + 50 * 60):
+        print("⏰ 11 Hours 50 Mins Reached! Triggering Auto-Restart via Railway Server...")
         if FIREBASE_DB_URL and FIREBASE_FOLDER:
             try:
                 db_url = FIREBASE_DB_URL.rstrip('/')
