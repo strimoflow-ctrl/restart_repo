@@ -283,46 +283,49 @@ def start_firebase_polling():
                             requests.put(trigger_url, json=False, timeout=5)
                             print(f"[*] Reset trigger_restart to False for '{root_key}'")
                             
-                            # Wait 10 minutes for safe shutdown as requested
-                            print(f"[*] Waiting 10 minutes (600s) for VM '{root_key}' to shut down safely...")
-                            time.sleep(600)
-                            print(f"[*] Waiting complete. Pushing updated code to Kaggle for '{root_key}'...")
-                            
-                            # Fetch Kaggle config depending on bot type
-                            if root_key == "new_automation_courses":
-                                config_url = f"{db_url}/{root_key}/config.json"
-                            else:
-                                config_url = f"{db_url}/{root_key}/config/kaggle.json"
+                            # Wait 10 minutes for safe shutdown as requested without blocking polling loop
+                            def delayed_restart(r_key, db_url_str):
+                                print(f"[*] Waiting 10 minutes (600s) for VM '{r_key}' to shut down safely...")
+                                time.sleep(600)
+                                print(f"[*] Waiting complete. Pushing updated code to Kaggle for '{r_key}'...")
                                 
-                            config_resp = requests.get(config_url, timeout=5)
-                            
-                            # Hardcoded fallback credentials (user's private repo defaults)
-                            username = "pankajmourrya"
-                            key = "581360a6a230292364e96a0ec8db406c"
-                            title = f"Cloner {root_key.replace('_', ' ').title()}"
-                            slug = root_key.replace("_", "-")
-                            
-                            if config_resp.status_code == 200:
-                                kgl = config_resp.json() or {}
-                                if root_key == "new_automation_courses":
-                                    username = kgl.get("kaggle_username") or username
-                                    key = kgl.get("kaggle_key") or key
-                                    title = "Multi-Teacher Forum Cloner Automation"
-                                    slug = kgl.get("kaggle_slug") or slug
+                                # Fetch Kaggle config depending on bot type
+                                if r_key == "new_automation_courses":
+                                    config_url = f"{db_url_str}/{r_key}/config.json"
                                 else:
-                                    username = kgl.get("username") or username
-                                    key = kgl.get("key") or key
-                                    title = kgl.get("title") or title
-                                    slug = kgl.get("slug") or slug
+                                    config_url = f"{db_url_str}/{r_key}/config/kaggle.json"
+                                    
+                                config_resp = requests.get(config_url, timeout=5)
                                 
-                            try:
-                                if root_key == "new_automation_courses":
-                                    status_code, resp_text = push_automation_notebook_to_kaggle(username, key, title, slug)
-                                else:
-                                    status_code, resp_text = push_notebook_to_kaggle(username, key, title, slug, root_key)
-                                print(f"[+] Push auto-restart for '{root_key}' triggered with status: {status_code}")
-                            except Exception as e:
-                                print(f"[!] Push auto-restart for '{root_key}' failed: {e}")
+                                # Hardcoded fallback credentials
+                                username = "pankajmourrya"
+                                key = "581360a6a230292364e96a0ec8db406c"
+                                title = f"Cloner {r_key.replace('_', ' ').title()}"
+                                slug = r_key.replace("_", "-")
+                                
+                                if config_resp.status_code == 200:
+                                    kgl = config_resp.json() or {}
+                                    if r_key == "new_automation_courses":
+                                        username = kgl.get("kaggle_username") or username
+                                        key = kgl.get("kaggle_key") or key
+                                        title = "Multi-Teacher Forum Cloner Automation"
+                                        slug = kgl.get("kaggle_slug") or slug
+                                    else:
+                                        username = kgl.get("username") or username
+                                        key = kgl.get("key") or key
+                                        title = kgl.get("title") or title
+                                        slug = kgl.get("slug") or slug
+                                    
+                                try:
+                                    if r_key == "new_automation_courses":
+                                        status_code, resp_text = push_automation_notebook_to_kaggle(username, key, title, slug)
+                                    else:
+                                        status_code, resp_text = push_notebook_to_kaggle(username, key, title, slug, r_key)
+                                    print(f"[+] Push auto-restart for '{r_key}' triggered with status: {status_code}")
+                                except Exception as e:
+                                    print(f"[!] Push auto-restart for '{r_key}' failed: {e}")
+                                    
+                            threading.Thread(target=delayed_restart, args=(root_key, db_url), daemon=True).start()
                 except Exception as e:
                     pass
         except Exception as e:
@@ -336,6 +339,12 @@ threading.Thread(target=start_firebase_polling, daemon=True).start()
 
 
 class DashboardHTTPHandler(BaseHTTPRequestHandler):
+    def log_message(self, format, *args):
+        # Suppress /api/health logs to prevent terminal spam
+        if len(args) > 0 and '/api/health' in args[0]:
+            return
+        super().log_message(format, *args)
+
     def end_headers(self):
         # Enable CORS for local cross-origin API calls if needed
         self.send_header('Access-Control-Allow-Origin', '*')
