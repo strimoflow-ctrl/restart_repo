@@ -1079,4 +1079,46 @@ if (elSaveQueueBtn) {
     });
 }
 
+// Force Push/Restart Button Listener
+const elBtnControlReboot = document.getElementById("btn-control-reboot");
+if (elBtnControlReboot) {
+    elBtnControlReboot.addEventListener("click", () => {
+        if (!confirm("Are you sure you want to FORCE RESTART the Kaggle engine? This will immediately push the new code and interrupt any running cloning process!")) return;
+        
+        const username = elKaggleUser.value.trim();
+        const key = elKaggleKey.value.trim();
+        const title = document.getElementById("kaggle-title") ? document.getElementById("kaggle-title").value.trim() : "";
+        const slug = elKaggleSlug.value.trim();
+        const root = dbRoot;
+        
+        if (!username || !key || !slug) {
+            alert("Kaggle credentials (Username, Key, Slug) are missing from the configuration panel!");
+            return;
+        }
+        
+        logToConsole(`Triggering Force Restart for ${root}...`, "warn");
+        
+        fetch(`${localServerUrl}/api/kaggle/run`, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+                username: username,
+                key: key,
+                title: title,
+                slug: slug,
+                db_root: root
+            })
+        })
+        .then(res => res.json())
+        .then(data => {
+            if (data.success) {
+                logToConsole("✅ Kaggle Push & Restart Successful! The new engine will boot up in a few seconds.", "success");
+            } else {
+                logToConsole(`❌ Kaggle Restart Failed: ${data.error}`, "error");
+            }
+        })
+        .catch(err => logToConsole(`❌ Kaggle Restart Failed: ${err.message}`, "error"));
+    });
+}
+
 
