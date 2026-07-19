@@ -48,6 +48,10 @@ async def check_control_state(stats):
             log_to_firebase("🛑 Stop signal received. Terminating process...")
             stats['user_stopped'] = True
             raise asyncio.CancelledError("Stopped by user")
+        elif cached_command == "restart":
+            log_to_firebase("🔄 Restart signal received! Exiting gracefully...")
+            import os
+            os._exit(0)
         else:
             break
 
@@ -696,6 +700,10 @@ async def main():
         while True:
             if cached_command == "start":
                 break
+            elif cached_command == "restart":
+                log_to_firebase("🔄 Restart signal received! Exiting gracefully...")
+                import os
+                os._exit(0)
             await asyncio.sleep(5)
 
         log_to_firebase("🚀 Start command received! Running queue...")
