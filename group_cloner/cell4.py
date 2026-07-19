@@ -134,7 +134,7 @@ def make_progress_cb(stats: dict, action: str, slot_idx: int = 0):
     return cb
 
 # ── Fast Upload ───────────────────────────────────────────────────────────────
-async def fast_upload(client, file_path, progress_callback=None, workers=4):
+async def fast_upload(client, file_path, progress_callback=None, workers=3):
     file_size  = os.path.getsize(file_path)
     file_name  = os.path.basename(file_path)
     part_size  = 512 * 1024
@@ -170,18 +170,8 @@ async def fast_upload(client, file_path, progress_callback=None, workers=4):
                                 file_id=file_id, file_part=part_idx, bytes=chunk))
                         break
                     except Exception as e:
-                        wait_time = getattr(e, 'seconds', None)
-                        if wait_time is None and "wait of" in str(e).lower():
-                            import re
-                            match = re.search(r'wait of (\d+)', str(e).lower())
-                            wait_time = int(match.group(1)) if match else 15
-                        
-                        if wait_time:
-                            await asyncio.sleep(wait_time + 2)
-                        else:
-                            await asyncio.sleep(2)
-                            
                         if attempt == 9: raise e
+                        await asyncio.sleep(3)
                 
                 uploaded_bytes += len(chunk)
                 if progress_callback:
@@ -199,89 +189,24 @@ async def fast_upload(client, file_path, progress_callback=None, workers=4):
     else:
         return InputFile(id=file_id, parts=part_count, name=file_name, md5_checksum="")
 
-from telethon.tl.functions.upload import GetFileRequest
-from telethon.tl.types import InputDocumentFileLocation
-import math
-
-# ── Fast Download (Cross-DC Parallel Chunk Fetcher) ───────────────────────────
-async def fast_download(client, msg, file_path, progress_callback=None, workers=4):
+# ── Fast Download ─────────────────────────────────────────────────────────────
+async def fast_download(client, msg, file_path, progress_callback=None, workers=3):
     if not msg.document:
         return await client.download_media(msg, file_path, progress_callback=progress_callback)
         
-    file_size = msg.document.size
+    file_size        = msg.document.size
     downloaded_bytes = 0
-    part_size = 1024 * 1024  # 1MB chunk size
-    part_count = math.ceil(file_size / part_size)
     
-    # Check which Data Center holds the file
-    dc_id = getattr(msg.document, 'dc_id', client.session.dc_id)
-    
-    # Pre-allocate the entire file instantly
     with open(file_path, "wb") as f:
-        f.seek(file_size - 1)
-        f.write(b'\0')
-        
-    queue = asyncio.Queue()
-    for i in range(part_count):
-        queue.put_nowait(i)
-        
-    location = InputDocumentFileLocation(
-        id=msg.document.id,
-        access_hash=msg.document.access_hash,
-        file_reference=msg.document.file_reference,
-        thumb_size=""
-    )
-    
-    async def download_worker():
-        nonlocal downloaded_bytes
-        # Dynamically borrow a network sender for the exact DC required
-        sender = await client._borrow_exported_sender(dc_id)
-        try:
-            while True:
-                try:
-                    part_idx = queue.get_nowait()
-                except asyncio.QueueEmpty:
-                    break
+        async for chunk in client.iter_download(msg.document, request_size=1024 * 1024):
+            f.write(chunk)
+            downloaded_bytes += len(chunk)
+            if progress_callback:
+                if asyncio.iscoroutinefunction(progress_callback):
+                    await progress_callback(downloaded_bytes, file_size)
+                else:
+                    progress_callback(downloaded_bytes, file_size)
                     
-                offset = part_idx * part_size
-                for attempt in range(10):
-                    try:
-                        result = await sender.send(GetFileRequest(
-                            location=location,
-                            offset=offset,
-                            limit=part_size
-                        ))
-                        with open(file_path, "r+b") as f:
-                            f.seek(offset)
-                            f.write(result.bytes)
-                        
-                        downloaded_bytes += len(result.bytes)
-                        if progress_callback:
-                            if asyncio.iscoroutinefunction(progress_callback):
-                                await progress_callback(downloaded_bytes, file_size)
-                            else:
-                                progress_callback(downloaded_bytes, file_size)
-                        break
-                    except Exception as e:
-                        wait_time = getattr(e, 'seconds', None)
-                        if wait_time is None and "wait of" in str(e).lower():
-                            import re
-                            match = re.search(r'wait of (\d+)', str(e).lower())
-                            wait_time = int(match.group(1)) if match else 15
-                            
-                        if wait_time:
-                            await asyncio.sleep(wait_time + 2)
-                        else:
-                            await asyncio.sleep(2)
-                            
-                        if attempt == 9: raise e
-                queue.task_done()
-        finally:
-            # Release sender back to client pool
-            await client._return_exported_sender(sender)
-            
-    tasks = [asyncio.create_task(download_worker()) for _ in range(workers)]
-    await asyncio.gather(*tasks)
     return file_path
 
 # Auto-restart triggered externally via Firebase control flag
