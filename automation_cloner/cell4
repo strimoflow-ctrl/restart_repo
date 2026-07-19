@@ -673,7 +673,7 @@ async def start_automation():
                 continue
                 
             for chapter in sub["chapters"]:
-                chapter_name = chapter["chapter"]
+                chapter_name = chapter.get("chapter") or chapter.get("name") or chapter.get("title") or chapter.get("chapterName") or "Unnamed Chapter"
                 chapter_hash = get_md5_hash(chapter_name)
                 
                 # Check or create topic thread ID
