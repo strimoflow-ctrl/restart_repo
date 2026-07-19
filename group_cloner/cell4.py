@@ -134,7 +134,7 @@ def make_progress_cb(stats: dict, action: str, slot_idx: int = 0):
     return cb
 
 # ── Fast Upload ───────────────────────────────────────────────────────────────
-async def fast_upload(client, file_path, progress_callback=None, workers=10):
+async def fast_upload(client, file_path, progress_callback=None, workers=4):
     file_size  = os.path.getsize(file_path)
     file_name  = os.path.basename(file_path)
     part_size  = 512 * 1024
@@ -170,8 +170,18 @@ async def fast_upload(client, file_path, progress_callback=None, workers=10):
                                 file_id=file_id, file_part=part_idx, bytes=chunk))
                         break
                     except Exception as e:
+                        wait_time = getattr(e, 'seconds', None)
+                        if wait_time is None and "wait of" in str(e).lower():
+                            import re
+                            match = re.search(r'wait of (\d+)', str(e).lower())
+                            wait_time = int(match.group(1)) if match else 15
+                        
+                        if wait_time:
+                            await asyncio.sleep(wait_time + 2)
+                        else:
+                            await asyncio.sleep(2)
+                            
                         if attempt == 9: raise e
-                        await asyncio.sleep(2)
                 
                 uploaded_bytes += len(chunk)
                 if progress_callback:
@@ -194,7 +204,7 @@ from telethon.tl.types import InputDocumentFileLocation
 import math
 
 # ── Fast Download (Cross-DC Parallel Chunk Fetcher) ───────────────────────────
-async def fast_download(client, msg, file_path, progress_callback=None, workers=10):
+async def fast_download(client, msg, file_path, progress_callback=None, workers=4):
     if not msg.document:
         return await client.download_media(msg, file_path, progress_callback=progress_callback)
         
@@ -252,11 +262,19 @@ async def fast_download(client, msg, file_path, progress_callback=None, workers=
                             else:
                                 progress_callback(downloaded_bytes, file_size)
                         break
-                    except FloodWaitError as e:
-                        await asyncio.sleep(e.seconds + 2)
                     except Exception as e:
+                        wait_time = getattr(e, 'seconds', None)
+                        if wait_time is None and "wait of" in str(e).lower():
+                            import re
+                            match = re.search(r'wait of (\d+)', str(e).lower())
+                            wait_time = int(match.group(1)) if match else 15
+                            
+                        if wait_time:
+                            await asyncio.sleep(wait_time + 2)
+                        else:
+                            await asyncio.sleep(2)
+                            
                         if attempt == 9: raise e
-                        await asyncio.sleep(2)
                 queue.task_done()
         finally:
             # Release sender back to client pool
