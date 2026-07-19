@@ -190,70 +190,23 @@ async def fast_upload(client, file_path, progress_callback=None, workers=10):
         return InputFile(id=file_id, parts=part_count, name=file_name, md5_checksum="")
 
 # ── Fast Download ─────────────────────────────────────────────────────────────
-from telethon.tl.functions.upload import GetFileRequest
-from telethon.tl.types import InputDocumentFileLocation
-
 async def fast_download(client, msg, file_path, progress_callback=None, workers=10):
     if not msg.document:
         return await client.download_media(msg, file_path, progress_callback=progress_callback)
         
-    file_size = msg.document.size
-    part_size = 512 * 1024  # 512 KB chunks for Telegram API
-    part_count = math.ceil(file_size / part_size)
-    
-    # Pre-allocate file space
-    with open(file_path, "wb") as f:
-        f.seek(file_size - 1)
-        f.write(b'\0')
-        
+    file_size        = msg.document.size
     downloaded_bytes = 0
-    queue = asyncio.Queue()
-    for i in range(part_count):
-        queue.put_nowait(i)
-        
-    location = InputDocumentFileLocation(
-        id=msg.document.id,
-        access_hash=msg.document.access_hash,
-        file_reference=msg.document.file_reference,
-        thumb_size=""
-    )
     
-    async def download_worker():
-        nonlocal downloaded_bytes
-        while True:
-            try:
-                part_idx = queue.get_nowait()
-            except asyncio.QueueEmpty:
-                break
-                
-            offset = part_idx * part_size
-            for attempt in range(10):
-                try:
-                    result = await client(GetFileRequest(
-                        location=location,
-                        offset=offset,
-                        limit=part_size
-                    ))
-                    with open(file_path, "r+b") as f:
-                        f.seek(offset)
-                        f.write(result.bytes)
-                    break
-                except FloodWaitError as e:
-                    await asyncio.sleep(e.seconds)
-                except Exception as e:
-                    if attempt == 9: raise e
-                    await asyncio.sleep(2)
-                    
-            downloaded_bytes += len(result.bytes)
+    with open(file_path, "wb") as f:
+        async for chunk in client.iter_download(msg.document, request_size=1024 * 1024):
+            f.write(chunk)
+            downloaded_bytes += len(chunk)
             if progress_callback:
                 if asyncio.iscoroutinefunction(progress_callback):
                     await progress_callback(downloaded_bytes, file_size)
                 else:
                     progress_callback(downloaded_bytes, file_size)
-            queue.task_done()
-            
-    tasks = [asyncio.create_task(download_worker()) for _ in range(workers)]
-    await asyncio.gather(*tasks)
+                    
     return file_path
 
 # Auto-restart triggered externally via Firebase control flag
