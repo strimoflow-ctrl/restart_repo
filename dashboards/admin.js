@@ -1096,28 +1096,40 @@ if (elBtnControlReboot) {
             return;
         }
         
-        logToConsole(`Triggering Force Restart for ${root}...`, "warn");
+        logToConsole(`Triggering Force Restart for ${root}... Sending kill signal to active bots...`, "warn");
         
-        fetch(`${localServerUrl}/api/kaggle/run`, {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({
-                username: username,
-                key: key,
-                title: title,
-                slug: slug,
-                db_root: root
+        // 1. Send "restart" command to kill any running python instances
+        if (database) {
+            database.ref(`${root}/control/command`).set("restart");
+        }
+        
+        // 2. Wait 3 seconds for active bots to exit, then push new code
+        setTimeout(() => {
+            fetch(`${localServerUrl}/api/kaggle/run`, {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                    username: username,
+                    key: key,
+                    title: title,
+                    slug: slug,
+                    db_root: root
+                })
             })
-        })
-        .then(res => res.json())
-        .then(data => {
-            if (data.success) {
-                logToConsole("✅ Kaggle Push & Restart Successful! The new engine will boot up in a few seconds.", "success");
-            } else {
-                logToConsole(`❌ Kaggle Restart Failed: ${data.error}`, "error");
-            }
-        })
-        .catch(err => logToConsole(`❌ Kaggle Restart Failed: ${err.message}`, "error"));
+            .then(res => res.json())
+            .then(data => {
+                if (data.success) {
+                    logToConsole("✅ Kaggle Push Successful! The new engine will boot up in a few seconds.", "success");
+                    // 3. Reset command to start so the new engine starts cloning immediately upon boot
+                    if (database) {
+                        database.ref(`${root}/control/command`).set("start");
+                    }
+                } else {
+                    logToConsole(`❌ Kaggle Restart Failed: ${data.error}`, "error");
+                }
+            })
+            .catch(err => logToConsole(`❌ Kaggle Restart Failed: ${err.message}`, "error"));
+        }, 3000);
     });
 }
 
