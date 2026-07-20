@@ -315,7 +315,8 @@ async def run_remote_scan(user):
 
     db.child(DB_ROOT).child("source_topics").set(source_topics)
     db.child(DB_ROOT).child("queue").set(list(source_topics.keys()))
-    log_to_firebase(f"✅ Scanning Complete. Found {len(source_topics)} folders.")
+    db.child(DB_ROOT).child("finished_topics").remove()
+    log_to_firebase(f"✅ Scanning Complete. Found {len(source_topics)} folders. Finished topics cleared for rescan.")
 
 # Helper: Run remote topic mapping/creation
 async def run_remote_mapping(user):
@@ -700,35 +701,56 @@ async def main():
         asyncio.create_task(auto_restart_timer(user, bot, stats, all_tasks_ref))
         asyncio.create_task(triggers_listener_loop(user, bot))
 
-        # Initialize sync state from Firebase
-        done_data       = db.child(DB_ROOT).child("done_ids").get().val() or {}
-        done_ids        = set(str(k) for k in done_data.keys())
-        finish_data     = db.child(DB_ROOT).child("finished_topics").get().val() or {}
-        finished_topics = set(str(k) for k in finish_data.keys())
-        
-        stats['global_videos_done']  = len(done_ids)
-        stats['global_topics_done']  = len(finished_topics)
-
-        # ── Listening to Start Command ──
-        log_to_firebase("💤 Idle. Awaiting Start command from Admin Dashboard...")
-        stats['current_action'] = '💤 Awaiting Start command'
-        
-        # Wait until command is "start"
         while True:
-            if cached_command == "start":
+            # Initialize sync state from Firebase
+            done_data       = db.child(DB_ROOT).child("done_ids").get().val() or {}
+            done_ids        = set(str(k) for k in done_data.keys())
+            finish_data     = db.child(DB_ROOT).child("finished_topics").get().val() or {}
+            finished_topics = set(str(k) for k in finish_data.keys())
+            
+            stats['global_videos_done']  = len(done_ids)
+            stats['global_topics_done']  = len(finished_topics)
+
+            # ── Listening to Start Command ──
+            log_to_firebase("💤 Idle. Awaiting Start command from Admin Dashboard...")
+            stats['current_action'] = '💤 Awaiting Start command'
+            
+            # Wait until command is "start"
+            while True:
+                if cached_command == "start":
+                    break
+                elif cached_command == "restart":
+                    log_to_firebase("🔄 Restart signal received! Exiting gracefully...")
+                    import os
+                    os._exit(0)
+                await asyncio.sleep(5)
+
+            log_to_firebase("🚀 Start command received! Running queue...")
+
+            stats['all_done'] = False
+            stats['user_stopped'] = False
+            
+            try:
+                await run_queue_engine(user, bot, stats, all_tasks_ref, done_ids, finished_topics)
+            except asyncio.CancelledError:
+                log_to_firebase("⏸ Processing cancelled (User stopped).")
+
+            if stats.get('restarting'):
                 break
-            elif cached_command == "restart":
-                log_to_firebase("🔄 Restart signal received! Exiting gracefully...")
-                import os
-                os._exit(0)
-            await asyncio.sleep(5)
 
-        log_to_firebase("🚀 Start command received! Running queue...")
-
-        await run_queue_engine(user, bot, stats, all_tasks_ref, done_ids, finished_topics)
+            if stats.get('user_stopped'):
+                log_to_firebase("⏸ Process paused by user. Returning to idle...")
+            else:
+                db.child(DB_ROOT).child("status").child("current_action").set("🏆 ALL DONE!")
+                log_to_firebase("\n🏆 SUCCESS: All files in the queue have been successfully cloned! Returning to idle...")
+                
+            db.child(DB_ROOT).child("control").child("command").set("stop")
+            global cached_command
+            cached_command = "stop"
+            await asyncio.sleep(2)
 
     except asyncio.CancelledError:
-        log_to_firebase("⏸ Main engine loop cancelled (User stop / Auto-restart).")
+        pass
     finally:
         if stats and stats.get('restarting'):
             log_to_firebase("🔄 Auto-restart request submitted to Firebase. Awaiting cloud orchestrator...")
@@ -736,30 +758,15 @@ async def main():
                 db.child(DB_ROOT).child("control").child("trigger_restart").set(True)
             except Exception as e:
                 print(f"Error setting trigger_restart: {e}")
-                
-            try:
-                if user: await user.disconnect()
-            except: pass
-            try:
-                if bot: await bot.disconnect()
-            except: pass
-            await asyncio.sleep(5)
         else:
-            # Normal shutdown
-            if stats and stats.get('all_done') and not stats.get('user_stopped'):
-                db.child(DB_ROOT).child("status").child("current_action").set("🏆 ALL DONE!")
-                log_to_firebase("\n🏆 SUCCESS: All files in the queue have been successfully cloned!")
-            else:
-                if stats:
-                    db.child(DB_ROOT).child("status").child("current_action").set("⏸ Stopped")
-                log_to_firebase("\n🏁 Main engine stopped.")
-                
-            try:
-                if user: await user.disconnect()
-            except: pass
-            try:
-                if bot: await bot.disconnect()
-            except: pass
+            log_to_firebase("\n🏁 Main engine stopped permanently.")
+            
+        try:
+            if user: await user.disconnect()
+        except: pass
+        try:
+            if bot: await bot.disconnect()
+        except: pass
 
 # Run Engine Setup
 print("✅ Core Engine logic loaded.")
