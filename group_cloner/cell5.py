@@ -649,6 +649,8 @@ async def run_queue_engine(user, bot, stats, all_tasks_ref, done_ids, finished_t
 
 # ── Main Cloning Loop ─────────────────────────────────────────────────────────
 async def main():
+    global cached_command
+    """Main Orchestrator Loop"""
     try:
         db.child(DB_ROOT).child("logs").remove()
     except:
@@ -745,7 +747,6 @@ async def main():
                 log_to_firebase("\n🏆 SUCCESS: All files in the queue have been successfully cloned! Returning to idle...")
                 
             db.child(DB_ROOT).child("control").child("command").set("stop")
-            global cached_command
             cached_command = "stop"
             await asyncio.sleep(2)
 
