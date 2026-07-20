@@ -178,6 +178,23 @@ async def process_file(user, msg, target_topic_id, sem, stats, bot):
 
             except Exception as e:
                 err = str(e)[:60]
+                wait_time = getattr(e, 'seconds', None)
+                if wait_time is None and "wait of" in str(e).lower():
+                    import re
+                    match = re.search(r'wait of (\d+)', str(e).lower())
+                    if match: wait_time = int(match.group(1))
+                
+                if wait_time:
+                    wait = wait_time + 5
+                    if 'slots' in stats and slot_idx < len(stats['slots']):
+                        stats['slots'][slot_idx]['current_action'] = f'⏳ FloodWait {wait}s'
+                    stats['current_action'] = f'⏳ FloodWait {wait}s'
+                    log_to_firebase(f"⚠️ Telegram FloodWait: Waiting {wait}s...")
+                    if os.path.exists(path): os.remove(path)
+                    if thumb_path and os.path.exists(thumb_path): os.remove(thumb_path)
+                    await asyncio.sleep(wait)
+                    continue
+                
                 if os.path.exists(path): os.remove(path)
                 if thumb_path and os.path.exists(thumb_path): os.remove(thumb_path)
                 

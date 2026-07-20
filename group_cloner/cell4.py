@@ -170,8 +170,18 @@ async def fast_upload(client, file_path, progress_callback=None, workers=3):
                                 file_id=file_id, file_part=part_idx, bytes=chunk))
                         break
                     except Exception as e:
+                        wait_time = getattr(e, 'seconds', None)
+                        if wait_time is None and "wait of" in str(e).lower():
+                            import re
+                            match = re.search(r'wait of (\d+)', str(e).lower())
+                            wait_time = int(match.group(1)) if match else 15
+                        
+                        if wait_time:
+                            await asyncio.sleep(wait_time + 2)
+                        else:
+                            await asyncio.sleep(3)
+                            
                         if attempt == 9: raise e
-                        await asyncio.sleep(3)
                 
                 uploaded_bytes += len(chunk)
                 if progress_callback:
