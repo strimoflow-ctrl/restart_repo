@@ -755,29 +755,53 @@ function setupDragAndDrop() {
         });
     });
 
+    let lastDragY = 0;
+    let dragTicking = false;
+
     elQueueContainer.addEventListener("dragover", e => {
         e.preventDefault();
-        const dragging = elQueueContainer.querySelector(".dragging");
-        if (!dragging) return;
+        
+        // Throttle and debounce to prevent massive lag
+        if (Math.abs(e.clientY - lastDragY) < 3) return;
+        lastDragY = e.clientY;
 
-        // Find element we are dragging after using cached positions
-        const afterElement = getCachedDragAfterElement(e.clientY);
-
-        if (afterElement) {
-            const isAfterElementLocked = cachedLockedElements.includes(afterElement);
-            if (isAfterElementLocked) {
-                // Prevent dropping above locked items; place it right after the last locked element
-                if (cachedLastLocked && cachedLastLocked.nextSibling) {
-                    elQueueContainer.insertBefore(dragging, cachedLastLocked.nextSibling);
-                } else {
-                    elQueueContainer.appendChild(dragging);
+        if (!dragTicking) {
+            window.requestAnimationFrame(() => {
+                const dragging = elQueueContainer.querySelector(".dragging");
+                if (!dragging) {
+                    dragTicking = false;
+                    return;
                 }
-            } else {
-                // Normal insert before a pending item
-                elQueueContainer.insertBefore(dragging, afterElement);
-            }
-        } else {
-            elQueueContainer.appendChild(dragging);
+
+                // Find element we are dragging after using cached positions
+                const afterElement = getCachedDragAfterElement(lastDragY);
+
+                if (afterElement) {
+                    const isAfterElementLocked = cachedLockedElements.includes(afterElement);
+                    if (isAfterElementLocked) {
+                        // Prevent dropping above locked items; place it right after the last locked element
+                        const targetNext = cachedLastLocked && cachedLastLocked.nextSibling ? cachedLastLocked.nextSibling : null;
+                        if (dragging.nextSibling !== targetNext) {
+                            if (targetNext) {
+                                elQueueContainer.insertBefore(dragging, targetNext);
+                            } else {
+                                elQueueContainer.appendChild(dragging);
+                            }
+                        }
+                    } else {
+                        // Normal insert before a pending item
+                        if (dragging.nextSibling !== afterElement) {
+                            elQueueContainer.insertBefore(dragging, afterElement);
+                        }
+                    }
+                } else {
+                    if (dragging.nextSibling !== null) {
+                        elQueueContainer.appendChild(dragging);
+                    }
+                }
+                dragTicking = false;
+            });
+            dragTicking = true;
         }
     });
 }
@@ -785,7 +809,7 @@ function setupDragAndDrop() {
 function getCachedDragAfterElement(y) {
     return cachedDraggables.reduce((closest, child) => {
         const box = child.getBoundingClientRect();
-        const offset = y - box.top - box.height / 2;
+        const offset = y - box.top - (box.height / 2);
         if (offset < 0 && offset > closest.offset) {
             return { offset: offset, element: child };
         } else {
