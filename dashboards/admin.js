@@ -3,7 +3,7 @@ let database = null;
 let dbRoot = "cloner_v5_mapping";
 let isBotActive = false;
 const localServerUrl = window.location.origin.includes("localhost") || window.location.protocol === "file:"
-    ? "https://restartrepo-production.up.railway.app"
+    ? "https://restartrepo-production-f0ae.up.railway.app"
     : window.location.origin;
 
 // Bot instances storage
@@ -91,14 +91,14 @@ function loadBotInstances() {
     const saved = localStorage.getItem("bot_instances");
     if (saved) {
         botInstances = JSON.parse(saved);
-        
+
         // Clean out default dummy placeholders from localStorage
         const dummyRoots = ["cloner_v5_mapping", "cloner_v7_mapping", "cloner_v8_mapping"];
         const dummyNames = ["Bot Instance 1 (v5)", "Bot Instance 2 (v6)", "Bot Instance 3 (v7)", "Bot Instance 4 (v8)", "Custom (0)"];
         botInstances = botInstances.filter(bot => {
             return !dummyNames.includes(bot.name) && !dummyRoots.includes(bot.root) && bot.root !== "cloner_v6_mapping" || bot.name === "AL!EN 2.0🖤HIMANSHU 🖤";
         });
-        
+
         // If filtered list is empty, initialize with current active custom bot
         if (botInstances.length === 0) {
             const activeUrl = localStorage.getItem("fb_url") || elFbUrl.value.trim() || "https://secret-gpt-default-rtdb.asia-southeast1.firebasedatabase.app";
@@ -129,7 +129,7 @@ function renderInstanceSelector() {
         opt.innerText = bot.name;
         elSelectInstance.appendChild(opt);
     });
-    
+
     // Select the option matching current active dbRoot
     const activeIndex = botInstances.findIndex(bot => bot.root === dbRoot);
     if (activeIndex > -1) {
@@ -153,7 +153,7 @@ function loadLocalConfig() {
 function initFirebase(url, root) {
     try {
         const newRoot = root || "cloner_v5_mapping";
-        
+
         // Turn off listeners on previous root before we switch dbRoot string!
         if (database && dbRoot && dbRoot !== newRoot) {
             try {
@@ -164,12 +164,12 @@ function initFirebase(url, root) {
                 database.ref(`${dbRoot}/source_topics`).off();
                 database.ref(`${dbRoot}/finished_topics`).off();
                 database.ref(`${dbRoot}/queue`).off();
-            } catch(e) {}
+            } catch (e) { }
         }
-        
+
         dbRoot = newRoot;
         const config = { databaseURL: url };
-        
+
         // Initialize or recover existing app
         if (firebase.apps.length === 0) {
             firebase.initializeApp(config);
@@ -179,11 +179,11 @@ function initFirebase(url, root) {
                 firebase.initializeApp(config);
             });
         }
-        
+
         database = firebase.database();
         localStorage.setItem("fb_url", url);
         localStorage.setItem("fb_root", dbRoot);
-        
+
         // Sync Dropdown options with the active dbRoot
         if (elSelectInstance && botInstances.length > 0) {
             let activeIndex = botInstances.findIndex(bot => bot.root === dbRoot);
@@ -199,7 +199,7 @@ function initFirebase(url, root) {
         }
 
         logToConsole("Firebase Connected Successfully!", "success");
-        
+
         setupFirebaseListeners();
     } catch (e) {
         logToConsole(`Firebase Connection Failed: ${e.message}`, "error");
@@ -211,7 +211,7 @@ loadLocalConfig();
 // Setup Firebase RTDB Event Listeners
 function setupFirebaseListeners() {
     if (!database) return;
-    
+
     // Reset console UI and render cache to display fresh info for the selected bot
     elConsole.innerHTML = "";
     logToConsole(`Active Firebase root node: ${dbRoot}`, "system");
@@ -219,12 +219,12 @@ function setupFirebaseListeners() {
     renderCache.finished_topics = {};
     renderCache.queue = [];
     renderCache.status = { topic_name: "" };
-    
+
     hasUnsavedQueueChanges = false;
     if (elSaveQueueBtn) {
         elSaveQueueBtn.style.display = "none";
     }
-    
+
     // Sync bot instances list from Firebase global admin config
     database.ref("admin_config/bots").on("value", (snapshot) => {
         const val = snapshot.val();
@@ -283,7 +283,7 @@ function setupFirebaseListeners() {
         const elMapBtn = document.getElementById("btn-create-topics");
         const elSaveBtn = document.getElementById("btn-save-telegram");
         const elSaveKaggleBtn = document.getElementById("btn-save-kaggle");
-        
+
         if (isBotActive) {
             if (elScanBtn) elScanBtn.disabled = true;
             if (elMapBtn) elMapBtn.disabled = true;
@@ -335,7 +335,7 @@ function setupFirebaseListeners() {
         elStatSpeed.innerHTML = `${(stats.speed_mbps || 0).toFixed(1)} <span>Mbps</span>`;
         elStatDisk.innerHTML = `${(stats.free_gb || 0).toFixed(1)} <span>GB</span>`;
         elStatVideos.innerText = stats.global_videos_done || 0;
-        
+
         // Render dynamic slots
         const slotsContainer = document.getElementById("slots-container");
         if (slotsContainer) {
@@ -344,18 +344,18 @@ function setupFirebaseListeners() {
             slots.forEach((slot, idx) => {
                 const card = document.createElement("div");
                 card.className = "active-status-card";
-                
+
                 const isIdle = (slot.current_action || "IDLE").toUpperCase() === "IDLE";
                 if (isIdle) {
                     card.style.opacity = "0.45";
                     card.style.border = "1px dashed rgba(255, 255, 255, 0.1)";
                     card.style.background = "rgba(255, 255, 255, 0.01)";
                 }
-                
+
                 card.innerHTML = `
                     <div class="status-header" style="display: flex; align-items: center; gap: 8px;">
                         <span class="badge" style="background: ${isIdle ? '#374151' : 'var(--primary)'}; font-size: 0.7rem; padding: 2px 6px; border-radius: 4px; color: #FFF; font-weight: 600;">${slot.current_action || 'IDLE'}</span>
-                        <span class="filename" style="font-weight: 500; font-size: 0.8rem; color: var(--text-primary); text-overflow: ellipsis; overflow: hidden; white-space: nowrap; flex: 1;">[Slot ${idx+1}] ${slot.current_file || 'Idle'}</span>
+                        <span class="filename" style="font-weight: 500; font-size: 0.8rem; color: var(--text-primary); text-overflow: ellipsis; overflow: hidden; white-space: nowrap; flex: 1;">[Slot ${idx + 1}] ${slot.current_file || 'Idle'}</span>
                     </div>
                     <div class="status-body" style="margin-top: 6px;">
                         <div class="progress-bar-container" style="background: rgba(255,255,255,0.05); height: 6px; border-radius: 3px; overflow: hidden; position: relative;">
@@ -380,7 +380,7 @@ function setupFirebaseListeners() {
         const doneTopics = stats.global_topics_done || 0;
         const totalTopics = stats.global_topics_total || 0;
         elStatDone.innerText = `${doneTopics} / ${totalTopics}`;
-        
+
         // Render orchestrator active agent status
         const elOrchestratorStatus = document.getElementById("orchestrator-status");
         if (elOrchestratorStatus) {
@@ -388,12 +388,12 @@ function setupFirebaseListeners() {
             if (orch && orch.last_check) {
                 const nowSec = Date.now() / 1000;
                 const diffSec = nowSec - orch.last_check;
-                
+
                 if (diffSec < 900) { // Active within 15 minutes
                     elOrchestratorStatus.style.background = "rgba(16, 185, 129, 0.15)";
                     elOrchestratorStatus.style.border = "1px solid rgba(16, 185, 129, 0.3)";
                     elOrchestratorStatus.style.color = "#34d399";
-                    
+
                     if (orch.type === "github_actions") {
                         const mins = Math.max(0, Math.round(diffSec / 60));
                         elOrchestratorStatus.innerText = `🛰 CLOUD ACTIONS (Checked ${mins}m ago)`;
@@ -418,7 +418,7 @@ function setupFirebaseListeners() {
                 elOrchestratorStatus.innerText = "❌ NOT ACTIVE";
             }
         }
-        
+
         // Sync status to renderCache and trigger queue render
         renderCache.status = stats;
         triggerCachedRender();
@@ -463,12 +463,12 @@ document.getElementById("btn-save-all-config").addEventListener("click", () => {
         alert("Please enter a Firebase Database URL!");
         return;
     }
-    
+
     const isNewConnection = !database || dbRoot !== root || localStorage.getItem("fb_url") !== url;
     if (isNewConnection) {
         initFirebase(url, root);
     }
-    
+
     // Wait for connection if new, otherwise execute immediately
     const delay = isNewConnection ? 1000 : 0;
     setTimeout(() => {
@@ -500,14 +500,14 @@ document.getElementById("btn-save-all-config").addEventListener("click", () => {
                 replacements: elWordReplacements.value
             }
         };
-        
+
         Promise.all([
             database.ref(`${dbRoot}/config/telegram`).set(config.telegram),
             database.ref(`${dbRoot}/config/groups`).set(config.groups),
             database.ref(`${dbRoot}/config/kaggle`).set(config.kaggle)
         ])
-        .then(() => logToConsole("All configuration parameters successfully saved to Firebase under active node!", "success"))
-        .catch(err => logToConsole(`Error saving configurations: ${err.message}`, "error"));
+            .then(() => logToConsole("All configuration parameters successfully saved to Firebase under active node!", "success"))
+            .catch(err => logToConsole(`Error saving configurations: ${err.message}`, "error"));
     }, delay);
 });
 
@@ -532,10 +532,10 @@ function renderQueue(rootData) {
     const finishedTopics = rootData.finished_topics || {};
     const queue = rootData.queue || [];
     const status = rootData.status || {};
-    
+
     // Clear container
     elQueueContainer.innerHTML = "";
-    
+
     // If empty
     if (Object.keys(sourceTopics).length === 0) {
         elQueueContainer.innerHTML = '<div class="placeholder-text">Scan source to discover topics / channels.</div>';
@@ -568,12 +568,12 @@ function renderQueue(rootData) {
         const isDoneB = finishedTopics[b] === true;
         if (isDoneA && !isDoneB) return -1;
         if (!isDoneA && isDoneB) return 1;
-        
+
         const isActiveA = !isDoneA && (sourceTopics[a] === currentTopicName || (sourceTopics[a] && typeof sourceTopics[a] === 'object' && sourceTopics[a].name === currentTopicName));
         const isActiveB = !isDoneB && (sourceTopics[b] === currentTopicName || (sourceTopics[b] && typeof sourceTopics[b] === 'object' && sourceTopics[b].name === currentTopicName));
         if (isActiveA && !isActiveB) return -1;
         if (!isActiveA && isActiveB) return 1;
-        
+
         return originalOrder[a] - originalOrder[b];
     });
 
@@ -594,7 +594,7 @@ function renderQueue(rootData) {
             videos = topic.videos || 0;
             pdfs = topic.pdfs || 0;
             const sizeMb = topic.size_mb || 0;
-            sizeText = sizeMb > 1024 ? `${(sizeMb/1024).toFixed(2)} GB` : `${sizeMb.toFixed(0)} MB`;
+            sizeText = sizeMb > 1024 ? `${(sizeMb / 1024).toFixed(2)} GB` : `${sizeMb.toFixed(0)} MB`;
         } else {
             name = topic; // old schema compatibility
         }
@@ -606,20 +606,20 @@ function renderQueue(rootData) {
             statusText = "Done";
         } else if (isActive) {
             statusClass = "active";
-            
+
             // Find active topic ID by matching name
             const activeTopicId = Object.keys(sourceTopics).find(key => {
                 const t = sourceTopics[key];
                 return t === currentTopicName || (t && typeof t === 'object' && t.name === currentTopicName);
             });
-            
+
             let totalVal = status.topic_total || 0;
-            
+
             // Fallback to total metadata files if topic_total is 0
             if (totalVal === 0 && activeTopicId && sourceTopics[activeTopicId] && typeof sourceTopics[activeTopicId] === 'object') {
                 totalVal = (sourceTopics[activeTopicId].videos || 0) + (sourceTopics[activeTopicId].pdfs || 0);
             }
-            
+
             let doneVal = 0;
             if (activeTopicId) {
                 // Sum files in all other completed topics
@@ -632,14 +632,14 @@ function renderQueue(rootData) {
                         }
                     }
                 });
-                
+
                 // Subtract other completed topics' files from global completed files
                 doneVal = Math.max(0, (status.global_videos_done || 0) - completedOtherSum);
                 if (totalVal > 0 && doneVal > totalVal) {
                     doneVal = totalVal;
                 }
             }
-            
+
             statusText = `Cloning (${doneVal} / ${totalVal})`;
         }
 
@@ -664,8 +664,8 @@ function renderQueue(rootData) {
             deleteBtn = `<button class="btn-delete" title="Remove from queue" onclick="deleteQueueItem('${id}')">✕</button>`;
         }
 
-        const dragHandleStyle = canDrag 
-            ? `cursor: grab; opacity: 0.75;` 
+        const dragHandleStyle = canDrag
+            ? `cursor: grab; opacity: 0.75;`
             : `cursor: not-allowed; opacity: 0.25;`;
 
         const itemHtml = `
@@ -694,7 +694,7 @@ function renderQueue(rootData) {
 }
 
 // Delete Item from Queue
-window.deleteQueueItem = function(id) {
+window.deleteQueueItem = function (id) {
     if (!database) return;
     database.ref(`${dbRoot}/queue`).get().then((snap) => {
         const currentQueue = snap.val() || [];
@@ -708,7 +708,7 @@ window.deleteQueueItem = function(id) {
 };
 
 // Reset Done Topic status to Pending
-window.resetTopicStatus = function(id) {
+window.resetTopicStatus = function (id) {
     if (!database) return;
     if (confirm("Are you sure you want to reset this topic to Pending? The bot will scan and clone any missing files on the next run.")) {
         database.ref(`${dbRoot}/finished_topics/${id}`).remove()
@@ -728,7 +728,7 @@ function setupDragAndDrop() {
     items.forEach(item => {
         item.addEventListener("dragstart", () => {
             item.classList.add("dragging");
-            
+
             // Cache locked elements on drag start (Done or Active status)
             const lockedItems = [...elQueueContainer.querySelectorAll(".queue-item")].filter(item => {
                 const badge = item.querySelector(".status-badge");
@@ -736,17 +736,17 @@ function setupDragAndDrop() {
             });
             cachedLockedElements = lockedItems;
             cachedLastLocked = lockedItems[lockedItems.length - 1];
-            
+
             // Cache other draggable items (excluding the dragging one)
             cachedDraggables = [...elQueueContainer.querySelectorAll(".queue-item:not(.dragging)")];
         });
-        
+
         item.addEventListener("dragend", () => {
             item.classList.remove("dragging");
             cachedLockedElements = [];
             cachedLastLocked = null;
             cachedDraggables = [];
-            
+
             // Instead of saving immediately, mark as unsaved and show the save order button
             hasUnsavedQueueChanges = true;
             if (elSaveQueueBtn) {
@@ -893,26 +893,26 @@ elBtnSendOtp.addEventListener("click", () => {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ phone, api_id: apiId, api_hash: apiHash })
     })
-    .then(res => res.json())
-    .then(data => {
-        if (data.success) {
-            logToConsole("OTP requested. Please check Telegram.", "info");
-            elOtpWrapper.classList.remove("hidden");
-            if (el2FaWrapper) {
-                el2FaWrapper.classList.add("hidden");
-                elLogin2Fa.value = "";
+        .then(res => res.json())
+        .then(data => {
+            if (data.success) {
+                logToConsole("OTP requested. Please check Telegram.", "info");
+                elOtpWrapper.classList.remove("hidden");
+                if (el2FaWrapper) {
+                    el2FaWrapper.classList.add("hidden");
+                    elLogin2Fa.value = "";
+                }
+            } else {
+                logToConsole(`OTP request failed: ${data.error}`, "error");
+                elBtnSendOtp.innerText = "Send OTP";
+                elBtnSendOtp.disabled = false;
             }
-        } else {
-            logToConsole(`OTP request failed: ${data.error}`, "error");
+        })
+        .catch(err => {
+            logToConsole(`Connection failed: ${err.message}`, "error");
             elBtnSendOtp.innerText = "Send OTP";
             elBtnSendOtp.disabled = false;
-        }
-    })
-    .catch(err => {
-        logToConsole(`Connection failed: ${err.message}`, "error");
-        elBtnSendOtp.innerText = "Send OTP";
-        elBtnSendOtp.disabled = false;
-    });
+        });
 });
 
 // Telegram Verify OTP
@@ -940,47 +940,47 @@ elBtnVerifyOtp.addEventListener("click", () => {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload)
     })
-    .then(res => res.json())
-    .then(data => {
-        if (data.success && data.session_string) {
-            logToConsole("Login Successful!", "success");
-            elSessionString.value = data.session_string;
-            elSessionDisplay.classList.remove("hidden");
-            
-            if (el2FaWrapper) {
-                el2FaWrapper.classList.add("hidden");
-                elLogin2Fa.value = "";
+        .then(res => res.json())
+        .then(data => {
+            if (data.success && data.session_string) {
+                logToConsole("Login Successful!", "success");
+                elSessionString.value = data.session_string;
+                elSessionDisplay.classList.remove("hidden");
+
+                if (el2FaWrapper) {
+                    el2FaWrapper.classList.add("hidden");
+                    elLogin2Fa.value = "";
+                }
+
+                // Reset buttons state
+                elBtnSendOtp.innerText = "Send OTP";
+                elBtnSendOtp.disabled = false;
+                elBtnVerifyOtp.innerText = "Verify & Login";
+                elBtnVerifyOtp.disabled = false;
+
+                // Automatically update config in Firebase with the new Session String
+                if (database) {
+                    database.ref(`${dbRoot}/config/telegram/session_string`).set(data.session_string)
+                        .then(() => logToConsole("Session string automatically updated in Firebase DB!", "success"));
+                }
+            } else if (data.requires_password) {
+                logToConsole("Two-step verification is enabled. Please enter your 2FA password and click Verify & Login again.", "warn");
+                if (el2FaWrapper) {
+                    el2FaWrapper.classList.remove("hidden");
+                }
+                elBtnVerifyOtp.innerText = "Verify & Login";
+                elBtnVerifyOtp.disabled = false;
+            } else {
+                logToConsole(`OTP Verification failed: ${data.error}`, "error");
+                elBtnVerifyOtp.innerText = "Verify & Login";
+                elBtnVerifyOtp.disabled = false;
             }
-            
-            // Reset buttons state
-            elBtnSendOtp.innerText = "Send OTP";
-            elBtnSendOtp.disabled = false;
+        })
+        .catch(err => {
+            logToConsole(`Connection failed: ${err.message}`, "error");
             elBtnVerifyOtp.innerText = "Verify & Login";
             elBtnVerifyOtp.disabled = false;
-            
-            // Automatically update config in Firebase with the new Session String
-            if (database) {
-                database.ref(`${dbRoot}/config/telegram/session_string`).set(data.session_string)
-                    .then(() => logToConsole("Session string automatically updated in Firebase DB!", "success"));
-            }
-        } else if (data.requires_password) {
-            logToConsole("Two-step verification is enabled. Please enter your 2FA password and click Verify & Login again.", "warn");
-            if (el2FaWrapper) {
-                el2FaWrapper.classList.remove("hidden");
-            }
-            elBtnVerifyOtp.innerText = "Verify & Login";
-            elBtnVerifyOtp.disabled = false;
-        } else {
-            logToConsole(`OTP Verification failed: ${data.error}`, "error");
-            elBtnVerifyOtp.innerText = "Verify & Login";
-            elBtnVerifyOtp.disabled = false;
-        }
-    })
-    .catch(err => {
-        logToConsole(`Connection failed: ${err.message}`, "error");
-        elBtnVerifyOtp.innerText = "Verify & Login";
-        elBtnVerifyOtp.disabled = false;
-    });
+        });
 });
 
 // Update slider text in UI
@@ -1013,15 +1013,15 @@ if (elBtnAddBot) {
         if (!root) return;
         const url = prompt("Enter Firebase Database URL:", elFbUrl.value.trim());
         if (!url) return;
-        
+
         const newBot = { name, url, root };
         if (!botInstances.some(b => b.root === root)) {
             botInstances.push(newBot);
         }
-        
+
         localStorage.setItem("fb_url", url);
         localStorage.setItem("fb_root", root);
-        
+
         if (database) {
             database.ref("admin_config/bots").set(botInstances)
                 .then(() => {
@@ -1049,11 +1049,11 @@ if (elBtnRemoveBot) {
         const bot = botInstances[activeIndex];
         if (confirm(`Are you sure you want to remove the bot instance '${bot.name}'?`)) {
             botInstances.splice(activeIndex, 1);
-            
+
             const firstBot = botInstances[0];
             localStorage.setItem("fb_url", firstBot.url);
             localStorage.setItem("fb_root", firstBot.root);
-            
+
             if (database) {
                 database.ref("admin_config/bots").set(botInstances)
                     .then(() => {
@@ -1084,25 +1084,25 @@ const elBtnControlReboot = document.getElementById("btn-control-reboot");
 if (elBtnControlReboot) {
     elBtnControlReboot.addEventListener("click", () => {
         if (!confirm("Are you sure you want to FORCE RESTART the Kaggle engine? This will immediately push the new code and interrupt any running cloning process!")) return;
-        
+
         const username = elKaggleUser.value.trim();
         const key = elKaggleKey.value.trim();
         const title = document.getElementById("kaggle-title") ? document.getElementById("kaggle-title").value.trim() : "";
         const slug = elKaggleSlug.value.trim();
         const root = dbRoot;
-        
+
         if (!username || !key || !slug) {
             alert("Kaggle credentials (Username, Key, Slug) are missing from the configuration panel!");
             return;
         }
-        
+
         logToConsole(`Triggering Force Restart for ${root}... Sending kill signal to active bots...`, "warn");
-        
+
         // 1. Send "restart" command to kill any running python instances
         if (database) {
             database.ref(`${root}/control/command`).set("restart");
         }
-        
+
         // 2. Wait 3 seconds for active bots to exit, then push new code
         setTimeout(() => {
             fetch(`${localServerUrl}/api/kaggle/run`, {
@@ -1116,19 +1116,19 @@ if (elBtnControlReboot) {
                     db_root: root
                 })
             })
-            .then(res => res.json())
-            .then(data => {
-                if (data.success) {
-                    logToConsole("✅ Kaggle Push Successful! The new engine will boot up in a few seconds.", "success");
-                    // 3. Reset command to start so the new engine starts cloning immediately upon boot
-                    if (database) {
-                        database.ref(`${root}/control/command`).set("start");
+                .then(res => res.json())
+                .then(data => {
+                    if (data.success) {
+                        logToConsole("✅ Kaggle Push Successful! The new engine will boot up in a few seconds.", "success");
+                        // 3. Reset command to start so the new engine starts cloning immediately upon boot
+                        if (database) {
+                            database.ref(`${root}/control/command`).set("start");
+                        }
+                    } else {
+                        logToConsole(`❌ Kaggle Restart Failed: ${data.error}`, "error");
                     }
-                } else {
-                    logToConsole(`❌ Kaggle Restart Failed: ${data.error}`, "error");
-                }
-            })
-            .catch(err => logToConsole(`❌ Kaggle Restart Failed: ${err.message}`, "error"));
+                })
+                .catch(err => logToConsole(`❌ Kaggle Restart Failed: ${err.message}`, "error"));
         }, 3000);
     });
 }
