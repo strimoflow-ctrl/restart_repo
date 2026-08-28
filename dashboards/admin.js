@@ -528,6 +528,11 @@ document.getElementById("kaggle-title").addEventListener("input", (e) => {
 // Queue Rendering & Management
 function renderQueue(rootData) {
     if (!rootData) return;
+    
+    // Prevent DOM overwrite while user is dragging or has unsaved changes!
+    const isDragging = elQueueContainer.querySelector(".dragging") !== null;
+    if (hasUnsavedQueueChanges || isDragging) return;
+
     const sourceTopics = rootData.source_topics || {};
     const finishedTopics = rootData.finished_topics || {};
     const queue = rootData.queue || [];
