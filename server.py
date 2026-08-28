@@ -245,7 +245,7 @@ def start_firebase_polling():
     while True:
         try:
             # 1. Fetch configured bots list from Firebase
-            url = f"{db_url}/admin_config/bots.json"
+            url = f"{db_url}/admin_config/bots_v2.json"
             resp = requests.get(url, timeout=10)
             bot_list = None
             if resp.status_code == 200:

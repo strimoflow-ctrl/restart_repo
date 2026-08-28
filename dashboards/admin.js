@@ -226,14 +226,14 @@ function setupFirebaseListeners() {
     }
 
     // Sync bot instances list from Firebase global admin config
-    database.ref("admin_config/bots").on("value", (snapshot) => {
+    database.ref("admin_config/bots_v2").on("value", (snapshot) => {
         const val = snapshot.val();
         if (val && Array.isArray(val) && val.length > 0) {
             botInstances = val;
             localStorage.setItem("bot_instances", JSON.stringify(botInstances));
             renderInstanceSelector();
         } else {
-            database.ref("admin_config/bots").set(botInstances);
+            database.ref("admin_config/bots_v2").set(botInstances);
         }
     });
 
@@ -1023,7 +1023,7 @@ if (elBtnAddBot) {
         localStorage.setItem("fb_root", root);
 
         if (database) {
-            database.ref("admin_config/bots").set(botInstances)
+            database.ref("admin_config/bots_v2").set(botInstances)
                 .then(() => {
                     initFirebase(url, root);
                     logToConsole(`Added new bot instance: ${name}`, "success");
@@ -1055,7 +1055,7 @@ if (elBtnRemoveBot) {
             localStorage.setItem("fb_root", firstBot.root);
 
             if (database) {
-                database.ref("admin_config/bots").set(botInstances)
+                database.ref("admin_config/bots_v2").set(botInstances)
                     .then(() => {
                         initFirebase(firstBot.url, firstBot.root);
                         logToConsole(`Deleted bot instance: ${bot.name}`, "warn");
