@@ -8,11 +8,13 @@ import subprocess, sys
 def install(pkg):
     subprocess.check_call([sys.executable, '-m', 'pip', 'install', '-q', pkg])
 
+# Kaggle backend break fix: Force downgrade to stable crypto versions
+subprocess.check_call([sys.executable, '-m', 'pip', 'install', '-q', '--force-reinstall', 'cryptography==41.0.7', 'pyOpenSSL==23.2.0'])
+
 install('telethon')
-install('pyOpenSSL==23.3.0') # Fix Kaggle OpenSSL GEN_EMAIL bug
 install('pyrebase4')
 install('cryptg')
 install('nest_asyncio')
-install('requests')   # Kaggle API ke liye (already available on Kaggle but safe to add)
+install('requests')
 
 print("✅ Sab libraries install ho gayi!")
