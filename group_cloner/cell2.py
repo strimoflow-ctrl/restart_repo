@@ -3,6 +3,11 @@
 # ║  Firebase aur Database configuration     ║
 # ╚══════════════════════════════════════════╝
 
+import sys
+import types
+sys.modules['oauth2client'] = types.ModuleType('oauth2client')
+sys.modules['oauth2client.service_account'] = types.ModuleType('oauth2client.service_account')
+sys.modules['oauth2client.service_account'].ServiceAccountCredentials = None
 import pyrebase
 
 # ── Firebase Setup ────────────────────────
