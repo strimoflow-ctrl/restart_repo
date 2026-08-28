@@ -726,12 +726,24 @@ window.resetTopicStatus = function (id) {
 let cachedLastLocked = null;
 let cachedLockedElements = [];
 let cachedDraggables = [];
+let isDragoverBound = false;
+let lastDragY = 0;
+let dragTicking = false;
 
 // Drag and Drop implementation
 function setupDragAndDrop() {
     const items = elQueueContainer.querySelectorAll(".queue-item");
     items.forEach(item => {
-        item.addEventListener("dragstart", () => {
+        // Prevent dragging if bot is active!
+        if (isBotActive) {
+            item.setAttribute("draggable", "false");
+        }
+
+        item.addEventListener("dragstart", (e) => {
+            if (isBotActive) {
+                e.preventDefault();
+                return;
+            }
             item.classList.add("dragging");
 
             // Cache locked elements on drag start (Done or Active status)
@@ -760,55 +772,55 @@ function setupDragAndDrop() {
         });
     });
 
-    let lastDragY = 0;
-    let dragTicking = false;
+    if (!isDragoverBound) {
+        isDragoverBound = true;
+        elQueueContainer.addEventListener("dragover", e => {
+            e.preventDefault();
+            
+            // Throttle and debounce to prevent massive lag
+            if (Math.abs(e.clientY - lastDragY) < 3) return;
+            lastDragY = e.clientY;
 
-    elQueueContainer.addEventListener("dragover", e => {
-        e.preventDefault();
-        
-        // Throttle and debounce to prevent massive lag
-        if (Math.abs(e.clientY - lastDragY) < 3) return;
-        lastDragY = e.clientY;
+            if (!dragTicking) {
+                window.requestAnimationFrame(() => {
+                    const dragging = elQueueContainer.querySelector(".dragging");
+                    if (!dragging) {
+                        dragTicking = false;
+                        return;
+                    }
 
-        if (!dragTicking) {
-            window.requestAnimationFrame(() => {
-                const dragging = elQueueContainer.querySelector(".dragging");
-                if (!dragging) {
-                    dragTicking = false;
-                    return;
-                }
+                    // Find element we are dragging after using cached positions
+                    const afterElement = getCachedDragAfterElement(lastDragY);
 
-                // Find element we are dragging after using cached positions
-                const afterElement = getCachedDragAfterElement(lastDragY);
-
-                if (afterElement) {
-                    const isAfterElementLocked = cachedLockedElements.includes(afterElement);
-                    if (isAfterElementLocked) {
-                        // Prevent dropping above locked items; place it right after the last locked element
-                        const targetNext = cachedLastLocked && cachedLastLocked.nextSibling ? cachedLastLocked.nextSibling : null;
-                        if (dragging.nextSibling !== targetNext) {
-                            if (targetNext) {
-                                elQueueContainer.insertBefore(dragging, targetNext);
-                            } else {
-                                elQueueContainer.appendChild(dragging);
+                    if (afterElement) {
+                        const isAfterElementLocked = cachedLockedElements.includes(afterElement);
+                        if (isAfterElementLocked) {
+                            // Prevent dropping above locked items; place it right after the last locked element
+                            const targetNext = cachedLastLocked && cachedLastLocked.nextSibling ? cachedLastLocked.nextSibling : null;
+                            if (dragging.nextSibling !== targetNext) {
+                                if (targetNext) {
+                                    elQueueContainer.insertBefore(dragging, targetNext);
+                                } else {
+                                    elQueueContainer.appendChild(dragging);
+                                }
+                            }
+                        } else {
+                            // Normal insert before a pending item
+                            if (dragging.nextSibling !== afterElement) {
+                                elQueueContainer.insertBefore(dragging, afterElement);
                             }
                         }
                     } else {
-                        // Normal insert before a pending item
-                        if (dragging.nextSibling !== afterElement) {
-                            elQueueContainer.insertBefore(dragging, afterElement);
+                        if (dragging.nextSibling !== null) {
+                            elQueueContainer.appendChild(dragging);
                         }
                     }
-                } else {
-                    if (dragging.nextSibling !== null) {
-                        elQueueContainer.appendChild(dragging);
-                    }
-                }
-                dragTicking = false;
-            });
-            dragTicking = true;
-        }
-    });
+                    dragTicking = false;
+                });
+                dragTicking = true;
+            }
+        });
+    }
 }
 
 function getCachedDragAfterElement(y) {
