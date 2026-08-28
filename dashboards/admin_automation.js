@@ -4,7 +4,7 @@ let db = null;
 let currentConfig = {};
 
 const localServerUrl = window.location.protocol === "file:"
-    ? "https://restartrepo-production.up.railway.app"
+    ? "https://restartrepo-production-3ae0.up.railway.app"
     : window.location.origin;
 
 // 1. Initialize Firebase connection
