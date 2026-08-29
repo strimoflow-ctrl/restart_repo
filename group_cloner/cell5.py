@@ -56,7 +56,7 @@ async def check_control_state(stats):
             break
 
 # ── Process Single File ───────────────────────────────────────────────────────
-async def process_file(user, msg, target_topic_id, sem, stats, bot):
+async def process_file(user, msg, target_topic_id, sem, stats, bot, msg_index, send_condition, next_send_index):
     await check_control_state(stats)
     
     file_gb  = get_file_size_gb(msg)
@@ -69,6 +69,8 @@ async def process_file(user, msg, target_topic_id, sem, stats, bot):
         await wait_for_disk_space(file_gb, stats)
         
 
+        
+        is_sent = False
         
         # 1. Acquire slot index
         slot_idx = -1
@@ -132,19 +134,33 @@ async def process_file(user, msg, target_topic_id, sem, stats, bot):
                 uploaded_file = await fast_upload(user, path,
                                                   progress_callback=make_progress_cb(stats, 'Upload', slot_idx))
                 
-                # ── Target Posting ──
-                # Send to topic ID if target group supports topics, otherwise send directly
+                # ── Target Posting (Strictly Sequential) ──
                 reply_param = target_topic_id if TARGET_TYPE == "group_topic" else None
                 
-                await user.send_file(
-                    TARGET_GROUP_ID,
-                    uploaded_file,
-                    caption=clean_caption(fresh_msg.message),
-                    reply_to=reply_param,
-                    supports_streaming=True,
-                    attributes=attributes,
-                    thumb=thumb_path if thumb_path and os.path.exists(thumb_path) else None
-                )
+                async with send_condition:
+                    while next_send_index[0] != msg_index:
+                        if 'slots' in stats and slot_idx < len(stats['slots']):
+                            stats['slots'][slot_idx]['current_action'] = '⏳ Syncing Order...'
+                        stats['current_action'] = '⏳ Syncing Order...'
+                        await send_condition.wait()
+                        
+                    if 'slots' in stats and slot_idx < len(stats['slots']):
+                        stats['slots'][slot_idx]['current_action'] = '📤 Posting...'
+                    stats['current_action'] = '📤 Posting...'
+
+                    await user.send_file(
+                        TARGET_GROUP_ID,
+                        uploaded_file,
+                        caption=clean_caption(fresh_msg.message),
+                        reply_to=reply_param,
+                        supports_streaming=True,
+                        attributes=attributes,
+                        thumb=thumb_path if thumb_path and os.path.exists(thumb_path) else None
+                    )
+                    
+                    is_sent = True
+                    next_send_index[0] += 1
+                    send_condition.notify_all()
 
                 # Save complete status in Firebase
                 db.child(DB_ROOT).child("done_ids").child(str(msg.id)).set(True)
@@ -211,6 +227,17 @@ async def process_file(user, msg, target_topic_id, sem, stats, bot):
                         stats['slots'][slot_idx]['current_action'] = f'Retry {attempt+1}/5 ({wait}s)'
                     stats['current_action']  = f'Retry {attempt+1}/5 ({wait}s)'
                     await asyncio.sleep(wait)
+                    
+        # Ensure sequence is unblocked if file failed completely
+        if not is_sent:
+            try:
+                async with send_condition:
+                    while next_send_index[0] != msg_index:
+                        await send_condition.wait()
+                    next_send_index[0] += 1
+                    send_condition.notify_all()
+            except Exception:
+                pass
         
         # 2. Release slot index when done or failed
         async with slot_lock:
@@ -610,9 +637,12 @@ async def run_queue_engine(user, bot, stats, all_tasks_ref, done_ids, finished_t
 
         log_to_firebase(f"   ↳ Files to clone: {len(msgs)} | Speed slots: {n_slots} workers")
 
+        send_condition = asyncio.Condition()
+        next_send_index = [0]
+
         tasks = [
-            asyncio.create_task(process_file(user, m, target_topic_id, sem, stats, bot))
-            for m in msgs
+            asyncio.create_task(process_file(user, m, target_topic_id, sem, stats, bot, i, send_condition, next_send_index))
+            for i, m in enumerate(msgs)
         ]
         all_tasks_ref['tasks'] = tasks
 
