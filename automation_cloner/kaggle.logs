@@ -1,0 +1,75 @@
+7.6s	1	0.00s - Debugger warning: It seems that frozen modules are being used, which may
+7.6s	2	0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+7.6s	3	0.00s - to python to disable frozen modules.
+7.6s	4	0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+8.3s	5	0.00s - Debugger warning: It seems that frozen modules are being used, which may
+8.3s	6	0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+8.3s	7	0.00s - to python to disable frozen modules.
+8.3s	8	0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+9.7s	9	⏳ Installing required libraries (Telethon, Hachoir, aiohttp, requests)...
+13.3s	10	   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 789.8/789.8 kB 22.0 MB/s eta 0:00:00
+13.3s	11	   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 650.4/650.4 kB 38.2 MB/s eta 0:00:00
+13.3s	12	   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 250.1/250.1 kB 18.9 MB/s eta 0:00:00
+13.5s	13	   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 789.8/789.8 kB 22.0 MB/s eta 0:00:00
+13.5s	14	   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 650.4/650.4 kB 38.2 MB/s eta 0:00:00
+13.5s	15	   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 250.1/250.1 kB 18.9 MB/s eta 0:00:00
+19.2s	16	✅ Installation complete! Please proceed directly to Cell 4 to execute.
+19.2s	17	✅ Configurations loaded! Selected Course Option: 'all'
+20.4s	18	⏳ Checking dynamic configurations from Firebase Realtime DB...
+21.0s	19	✅ Successfully synchronized credentials & settings from Firebase!
+21.0s	20	⏳ Fetching active course catalog...
+21.7s	21	✅ Found 10 target courses to process.
+21.7s	22	🚀 Starting User Session and Bot status client...
+25.9s	23	Attempt 1 at new auth_key failed: Step 3 invalid new nonce hash
+25.9s	24	
+25.9s	25	Attempt 1 at new auth_key failed: Step 3 invalid new nonce hash
+30.0s	26	✅ Authorized successfully!
+32.2s	27	
+32.2s	28	=============================================================
+32.2s	29	📂 Processing Course: 'NEET Physics Class 11 (AG Sir)'
+32.2s	30	=============================================================
+34.5s	31	⏳ Downloading thumbnail: https://i.ibb.co/Ds62tbM/e4bc685a4149.webp
+34.5s	32	✅ Cover thumbnail saved.
+36.1s	33	⏳ Group mapping not found. Creating private megagroup: '📚 Ag Sir Class 11 Physics - Cloner'...
+36.6s	34	✅ Megagroup created with ID: -1003960968356. Converting to Forum mode...
+36.6s	35	❌ Failed to create megagroup/forum: A wait of 449 seconds is required (caused by ToggleForumRequest)
+39.0s	36	
+39.0s	37	=============================================================
+39.0s	38	📂 Processing Course: 'NEET Physics Class 12 (AG Sir)'
+39.0s	39	=============================================================
+39.7s	40	⏳ Downloading thumbnail: https://i.ibb.co/RGV52ZZb/d0442b88f5f3.webp
+39.9s	41	✅ Cover thumbnail saved.
+41.4s	42	⏳ Group mapping not found. Creating private megagroup: '📚 Ag Sir Class 12 Physics - Cloner'...
+41.9s	43	✅ Megagroup created with ID: -1003914676770. Converting to Forum mode...
+41.9s	44	❌ Failed to create megagroup/forum: A wait of 444 seconds is required (caused by ToggleForumRequest)
+42.6s	45	
+42.6s	46	=============================================================
+42.6s	47	📂 Processing Course: 'Physical Chemistry (TNM Sir)'
+42.6s	48	=============================================================
+44.9s	49	⏳ Downloading thumbnail: https://i.ibb.co/VcjKmWJD/de46650b4adc.webp
+44.9s	50	✅ Cover thumbnail saved.
+46.7s	51	⏳ Group mapping not found. Creating private megagroup: '📚 Tnm Sir Class 11+12 Physical Chemistry - Cloner'...
+47.2s	52	✅ Megagroup created with ID: -1003965296935. Converting to Forum mode...
+47.2s	53	❌ Failed to create megagroup/forum: A wait of 439 seconds is required (caused by ToggleForumRequest)
+47.8s	54	
+47.8s	55	=============================================================
+47.8s	56	📂 Processing Course: 'Organic Chemistry 120+ Videos (YSY Sir)'
+47.8s	57	=============================================================
+48.5s	58	⏳ Downloading thumbnail: https://i.ibb.co/Fb5455Lj/45208e1dc2ee.webp
+49.8s	59	✅ Cover thumbnail saved.
+51.2s	60	⏳ Group mapping not found. Creating private megagroup: '📚 Ysy Sir Class 11+12 Organic Chemistry - Cloner'...
+54.8s	61	✅ Megagroup created with ID: -1004447453714. Converting to Forum mode...
+54.8s	62	❌ Failed to create megagroup/forum: A wait of 431 seconds is required (caused by ToggleForumRequest)
+55.5s	63	
+55.5s	64	=============================================================
+55.5s	65	📂 Processing Course: 'Complete Chemistry 11+12 By KK Pandey'
+55.5s	66	=============================================================
+56.1s	67	⏳ Downloading thumbnail: https://i.ibb.co/LhNZMmzk/8a8bfd839969.webp
+56.1s	68	✅ Cover thumbnail saved.
+59.2s	69	⏳ Group mapping not found. Creating private megagroup: '📚 Kk Pandya Sir Class 11+12 Chemistry - Cloner'...
+62.8s	70	✅ Megagroup created with ID: -1003942492846. Converting to Forum mode...
+62.8s	71	❌ Failed to create megagroup/forum: A wait of 423 seconds is required (caused by ToggleForumRequest)
+63.4s	72	
+63.4s	73	=============================================================
+63.4s	74	📂 Processing Course: 'Complete Inorganic Chemistry (11+12) By AS Sir'
+63.4s	75	=============================================================

@@ -1,0 +1,864 @@
+{
+  "subjects": [
+    {
+      "name": "Course Lectures",
+      "icon": "📚",
+      "chapters": [
+        {
+          "chapter": "🏥 HUMAN HEALTH AND DISEASES (mp1)",
+          "lectures": [
+            {
+              "name": "1. HUMAN HEALTH AND DISEASES - 1",
+              "link": "https://uamedia.uacdn.net/lesson-raw/F4RM44XD3Y84OVQR95GO/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/F4RM44XD3Y84OVQR95GO/HUMAN_HEALTH_AND_DISEASES__1_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "2. HUMAN HEALTH AND DISEASES - 2",
+              "link": "https://uamedia.uacdn.net/lesson-raw/H9JDDKFFHYQHKENHTQRF/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/H9JDDKFFHYQHKENHTQRF/HUMAN_HEALTH_AND_DISEASES__2_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "3. HUMAN HEALTH AND DISEASES - 3",
+              "link": "https://uamedia.uacdn.net/lesson-raw/H3WEU6PQS7U6H1HXLTB5/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/H3WEU6PQS7U6H1HXLTB5/HUMAN_HEALTH_AND_DISEASES__3_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "4. HUMAN HEALTH AND DISEASES - 4",
+              "link": "https://uamedia.uacdn.net/lesson-raw/RX3MDS92FWWJ4P7U4HVT/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/RX3MDS92FWWJ4P7U4HVT/HUMAN_HEALTH_AND_DISEASES__4_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "5. HUMAN HEALTH AND DISEASES - 5",
+              "link": "https://uamedia.uacdn.net/lesson-raw/KG5DG9L5DT3RZ2VR8E4Q/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/KG5DG9L5DT3RZ2VR8E4Q/HUMAN_HEALTH_AND_DISEASES__5_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "6. HUMAN HEALTH AND DISEASES - 6",
+              "link": "https://uamedia.uacdn.net/lesson-raw/THKJPJ5EW09IYTYWM25D/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/THKJPJ5EW09IYTYWM25D/HUMAN_HEALTH_AND_DISEASES__6_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "7. HUMAN HEALTH AND DISEASES - 7",
+              "link": "https://uamedia.uacdn.net/lesson-raw/AMW024W8VFSS6I4NIZBQ/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/AMW024W8VFSS6I4NIZBQ/HUMAN_HEALTH_AND_DISEASES__7_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "8. HUMAN HEALTH AND DISEASES - 8",
+              "link": "https://uamedia.uacdn.net/lesson-raw/EJFGLH6WWC33ZAFY5VD4/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/EJFGLH6WWC33ZAFY5VD4/HUMAN_HEALTH_AND_DISEASES__8_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "9. HUMAN HEALTH AND DISEASES - 9",
+              "link": "https://uamedia.uacdn.net/lesson-raw/KYH4WOH524IZISP39YXG/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/KYH4WOH524IZISP39YXG/HUMAN_HEALTH_AND_DISEASES__9_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "10. HUMAN HEALTH AND DISEASES - 10",
+              "link": "https://uamedia.uacdn.net/lesson-raw/MYRDOWSAX3GCKOUIIU43/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/MYRDOWSAX3GCKOUIIU43/HUMAN_HEALTH_AND_DISEASES__10_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "11. HUMAN HEALTH AND DISEASES - 11",
+              "link": "https://uamedia.uacdn.net/lesson-raw/UQXCRIGJKPS0GRX4GMDW/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/UQXCRIGJKPS0GRX4GMDW/HUMAN_HEALTH_AND_DISEASES__11_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "12. HUMAN HEALTH AND DISEASES - 12",
+              "link": "https://uamedia.uacdn.net/lesson-raw/0DQJYYC9BFWJ50DULCL9/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/0DQJYYC9BFWJ50DULCL9/HUMAN_HEALTH_AND_DISEASES__12_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "13. HUMAN HEALTH AND DISEASES - 13",
+              "link": "https://uamedia.uacdn.net/lesson-raw/CBR3D9SHIWWNQYXCO4LU/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/CBR3D9SHIWWNQYXCO4LU/HUMAN_HEALTH_AND_DISEASES__13_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "14. HUMAN HEALTH AND DISEASES - 14",
+              "link": "https://uamedia.uacdn.net/lesson-raw/RGMDXH8OU2C3Q7UZ0E29/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/RGMDXH8OU2C3Q7UZ0E29/HUMAN_HEALTH_AND_DISEASES__14_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "15. HUMAN HEALTH AND DISEASES - 15",
+              "link": "https://uamedia.uacdn.net/lesson-raw/LVXDUBFLPFT4G1J2OFX2/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/LVXDUBFLPFT4G1J2OFX2/HUMAN_HEALTH_AND_DISEASES__15_with_anno.pdf",
+              "dpp": ""
+            }
+          ]
+        },
+        {
+          "chapter": "🔬 CELL BIOLOGY (mp1)",
+          "lectures": [
+            {
+              "name": "16. CELL BIOLOGY - 1",
+              "link": "https://uamedia.uacdn.net/lesson-raw/6TBXZ411VQVG0XKZHRKG/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/6TBXZ411VQVG0XKZHRKG/CELL_BIOLOGY__1_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "17. CELL BIOLOGY - 2",
+              "link": "https://uamedia.uacdn.net/lesson-raw/BDNZZNAL9093NQ701V1G/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/BDNZZNAL9093NQ701V1G/CELL_BIOLOGY__2_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "18. CELL BIOLOGY - 3",
+              "link": "https://uamedia.uacdn.net/lesson-raw/QG3XD5OA20FOWP7NJY0T/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/QG3XD5OA20FOWP7NJY0T/CELL_BIOLOGY__3_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "19. CELL BIOLOGY - 4",
+              "link": "https://uamedia.uacdn.net/lesson-raw/FVDVIUO93V6257TJ4IKH/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/FVDVIUO93V6257TJ4IKH/CELL_BIOLOGY__4_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "20. CELL BIOLOGY - 5",
+              "link": "https://uamedia.uacdn.net/lesson-raw/ZNANX40NN08NIRT1P4PM/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/ZNANX40NN08NIRT1P4PM/CELL_BIOLOGY__5_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "21. CELL BIOLOGY - 6",
+              "link": "https://uamedia.uacdn.net/lesson-raw/81FSLSM464WMWFDQHTNF/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/81FSLSM464WMWFDQHTNF/CELL_BIOLOGY__6_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "22. CELL BIOLOGY - 7",
+              "link": "https://uamedia.uacdn.net/lesson-raw/1P08ZS1SNX4S19SXBBO8/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/1P08ZS1SNX4S19SXBBO8/CELL_BIOLOGY__7_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "23. CELL BIOLOGY - 8",
+              "link": "https://uamedia.uacdn.net/lesson-raw/DF38YTOTEB837JTTSAMN/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/DF38YTOTEB837JTTSAMN/CELL_BIOLOGY__8_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "24. CELL BIOLOGY - 9",
+              "link": "https://uamedia.uacdn.net/lesson-raw/48KFXZ6MIQDB14EBKUIB/output.webm",
+              "notes": "",
+              "dpp": ""
+            },
+            {
+              "name": "25. CELL BIOLOGY - 10",
+              "link": "https://uamedia.uacdn.net/lesson-raw/DMGFAXQIH56C3OD7RI39/output.webm",
+              "notes": "",
+              "dpp": ""
+            },
+            {
+              "name": "26. CELL BIOLOGY - 11",
+              "link": "https://uamedia.uacdn.net/lesson-raw/14MSDEISFQMPCABLUMUV/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/14MSDEISFQMPCABLUMUV/CELL_BIOLOGY__11_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "27. CELL BIOLOGY - 12",
+              "link": "https://uamedia.uacdn.net/lesson-raw/4ZV757FA7N3EMTWXL3IZ/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/4ZV757FA7N3EMTWXL3IZ/CELL_BIOLOGY__12_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "28. CELL BIOLOGY - 13",
+              "link": "https://uamedia.uacdn.net/lesson-raw/1EU5CALEHIUU2UD9UO4J/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/1EU5CALEHIUU2UD9UO4J/CELL_BIOLOGY__13_with_anno.pdf",
+              "dpp": ""
+            }
+          ]
+        },
+        {
+          "chapter": "🔬 CELL BIOLOGY (abhi9 batch)",
+          "lectures": [
+            {
+              "name": "1. CELL BIOLOGY - 1",
+              "link": "https://uamedia.uacdn.net/lesson-raw/Z9N1AUYF7P2SSK8BBSRM/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/Z9N1AUYF7P2SSK8BBSRM/CELL_BIOLOGY__1_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "2. Cell Biology - 2",
+              "link": "https://uamedia.uacdn.net/lesson-raw/NVJC5M8ENPFZQIA2DYYQ/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/NVJC5M8ENPFZQIA2DYYQ/Cell_Biology__2_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "3. Cell Biology - 3",
+              "link": "https://uamedia.uacdn.net/lesson-raw/0NA3S6D0PTFWJYCHI65G/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/0NA3S6D0PTFWJYCHI65G/Cell_Biology__3_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "4. Cell Biology - 4",
+              "link": "https://uamedia.uacdn.net/lesson-raw/ABC95M0G4178OCD93Y78/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/ABC95M0G4178OCD93Y78/Cell_Biology__4_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "5. Cell Biology - 5",
+              "link": "https://uamedia.uacdn.net/lesson-raw/SB8GOQ4WNUVK6FWQ7CD1/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/SB8GOQ4WNUVK6FWQ7CD1/Cell_Biology__5_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "6. Cell Biology - 6",
+              "link": "https://uamedia.uacdn.net/lesson-raw/5RTG0TGAFAA3PL572MBU/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/5RTG0TGAFAA3PL572MBU/Cell_Biology__6_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "7. Cell Biology - 7",
+              "link": "https://uamedia.uacdn.net/lesson-raw/HVGSZQ2B8V2CM6DVEC3A/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/HVGSZQ2B8V2CM6DVEC3A/Cell_Biology__7_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "8. Cell Biology - 8",
+              "link": "https://uamedia.uacdn.net/lesson-raw/Z3T5CS5RU21VPDMKTMUZ/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/Z3T5CS5RU21VPDMKTMUZ/Cell_Biology__8_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "9. Cell Biology - 9",
+              "link": "https://uamedia.uacdn.net/lesson-raw/5IACAW3L805KB3ZIOEIM/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/5IACAW3L805KB3ZIOEIM/Cell_Biology__9_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "10. Cell Biology - 10",
+              "link": "https://uamedia.uacdn.net/lesson-raw/VD0U6QCY8G4MFU1CSKFQ/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/VD0U6QCY8G4MFU1CSKFQ/Cell_Biology__10_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "11. Cell Biology - 11",
+              "link": "https://uamedia.uacdn.net/lesson-raw/MTQFGVDAND4F611UEXW2/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/MTQFGVDAND4F611UEXW2/Cell_Biology__11_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "12. Cell Biology - 12",
+              "link": "https://uamedia.uacdn.net/lesson-raw/Q7CKKXHV8N1UCEZ83VY0/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/Q7CKKXHV8N1UCEZ83VY0/Cell_Biology__12_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "13. Cell Biology - 13",
+              "link": "https://uamedia.uacdn.net/lesson-raw/8NR7M9PGGL6GE8YOHU4S/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/8NR7M9PGGL6GE8YOHU4S/Cell_Biology__13_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "14. Cell Biology - 14",
+              "link": "https://uamedia.uacdn.net/lesson-raw/O7APTTKM0V2QZRI2GRP7/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/O7APTTKM0V2QZRI2GRP7/Cell_Biology__14_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "15. Cell Biology - 15",
+              "link": "https://uamedia.uacdn.net/lesson-raw/AA0JLPKQ62ZV8D7CJ73Z/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/AA0JLPKQ62ZV8D7CJ73Z/Cell_Biology__15_with_anno.pdf",
+              "dpp": ""
+            }
+          ]
+        },
+        {
+          "chapter": "🏥 HUMAN HEALTH & DISEASE (abhi9 batch)",
+          "lectures": [
+            {
+              "name": "16. HUMAN HEALTH & DISEASE - 1",
+              "link": "https://uamedia.uacdn.net/lesson-raw/DQQKOI7KP5JAEQ5RHOJI/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/DQQKOI7KP5JAEQ5RHOJI/HUMAN_HEALTH__DISEASE__1_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "17. HUMAN HEALTH & DISEASE - 2",
+              "link": "https://uamedia.uacdn.net/lesson-raw/T2OE0NE7B0JIVKAQDO5L/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/T2OE0NE7B0JIVKAQDO5L/HUMAN_HEALTH__DISEASE__2_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "18. HUMAN HEALTH & DISEASE - 3",
+              "link": "https://uamedia.uacdn.net/lesson-raw/YOA27PGSTTIMMUS0GIYY/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/YOA27PGSTTIMMUS0GIYY/HUMAN_HEALTH__DISEASE__3_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "19. HUMAN HEALTH & DISEASE - 4",
+              "link": "https://uamedia.uacdn.net/lesson-raw/B8BCMBM5JJ61IGE2121S/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/B8BCMBM5JJ61IGE2121S/HUMAN_HEALTH__DISEASE__4_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "20. HUMAN HEALTH & DISEASE - 5",
+              "link": "https://uamedia.uacdn.net/lesson-raw/H29XO0WQD36E0C9VMRV3/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/H29XO0WQD36E0C9VMRV3/HUMAN_HEALTH__DISEASE__5_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "21. HUMAN HEALTH & DISEASE - 6",
+              "link": "https://uamedia.uacdn.net/lesson-raw/3PA1AUZJESVFS3BAO26C/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/3PA1AUZJESVFS3BAO26C/HUMAN_HEALTH__DISEASE__6_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "22. HUMAN HEALTH & DISEASE - 7",
+              "link": "https://uamedia.uacdn.net/lesson-raw/CPXPU0YQH2WLBUMLKM4C/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/CPXPU0YQH2WLBUMLKM4C/HUMAN_HEALTH__DISEASE__7_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "23. HUMAN HEALTH & DISEASE - 8",
+              "link": "https://uamedia.uacdn.net/lesson-raw/QXJE4Y68DYMYCCAI1ZO2/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/QXJE4Y68DYMYCCAI1ZO2/HUMAN_HEALTH__DISEASE__8_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "24. HUMAN HEALTH & DISEASE - 8 (Part 2)",
+              "link": "https://uamedia.uacdn.net/lesson-raw/5931DQ9FAGN5TP3SYX6R/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/5931DQ9FAGN5TP3SYX6R/HUMAN_HEALTH__DISEASE__8_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "25. HUMAN HEALTH & DISEASE - 9",
+              "link": "https://uamedia.uacdn.net/lesson-raw/K558JQYX4P8F8O7ON0SV/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/K558JQYX4P8F8O7ON0SV/HUMAN_HEALTH__DISEASE__9_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "26. HUMAN HEALTH & DISEASE - 10",
+              "link": "https://uamedia.uacdn.net/lesson-raw/0H0J7YAZGAZTHZX4JMBB/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/0H0J7YAZGAZTHZX4JMBB/HUMAN_HEALTH__DISEASE__10_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "27. HUMAN HEALTH & DISEASE - 11",
+              "link": "https://uamedia.uacdn.net/lesson-raw/S0IZEBFKG7W0U4YIO6XC/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/S0IZEBFKG7W0U4YIO6XC/HUMAN_HEALTH__DISEASE__11_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "28. HUMAN HEALTH & DISEASE - 12",
+              "link": "https://uamedia.uacdn.net/lesson-raw/7ZCMSIQ5XXW1TOLJR53Z/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/7ZCMSIQ5XXW1TOLJR53Z/HUMAN_HEALTH__DISEASE__12_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "29. HUMAN HEALTH & DISEASE - 13",
+              "link": "https://uamedia.uacdn.net/lesson-raw/I8RBWZ2TO4OU5PBJ6XMJ/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/I8RBWZ2TO4OU5PBJ6XMJ/HUMAN_HEALTH__DISEASE__13_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "30. HUMAN HEALTH & DISEASE - 14",
+              "link": "https://uamedia.uacdn.net/lesson-raw/XFTAWMWY1LSI7T89FD45/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/XFTAWMWY1LSI7T89FD45/HUMAN_HEALTH__DISEASE__14_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "31. HUMAN HEALTH & DISEASE - 15",
+              "link": "https://uamedia.uacdn.net/lesson-raw/1TXO61PJEZVMU6IJI0LK/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/1TXO61PJEZVMU6IJI0LK/HUMAN_HEALTH__DISEASE__15_with_anno.pdf",
+              "dpp": ""
+            }
+          ]
+        },
+        {
+          "chapter": "🏥 HUMAN HEALTH AND DISEASE (apex)",
+          "lectures": [
+            {
+              "name": "1. HUMAN HEALTH AND DISEASE - 1",
+              "link": "https://uamedia.uacdn.net/lesson-raw/WLN0QRE0INKWF4PTY8WX/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/WLN0QRE0INKWF4PTY8WX/HUMAN_HEALTH_AND_DISEASE__1_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "2. HUMAN HEALTH AND DISEASE - 2",
+              "link": "https://uamedia.uacdn.net/lesson-raw/J41AH4CLS0OMJJ58GPUW/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/J41AH4CLS0OMJJ58GPUW/HUMAN_HEALTH_AND_DISEASE__2_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "3. HUMAN HEALTH AND DISEASE - 3",
+              "link": "https://uamedia.uacdn.net/lesson-raw/DG2B023LYPSI1Y7C8UK6/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/DG2B023LYPSI1Y7C8UK6/HUMAN_HEALTH_AND_DISEASE__3_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "4. HUMAN HEALTH AND DISEASE - 4",
+              "link": "https://uamedia.uacdn.net/lesson-raw/7NPCYEP75CZ8DGENARPU/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/7NPCYEP75CZ8DGENARPU/HUMAN_HEALTH_AND_DISEASE__4_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "5. Human Health And Disease-5",
+              "link": "https://uamedia.uacdn.net/lesson-raw/OL53HINUU4XOFB8JVSTI/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/OL53HINUU4XOFB8JVSTI/Human_Health_And_Disease5_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "6. Human Health And Disease-6",
+              "link": "https://uamedia.uacdn.net/lesson-raw/T2WO1L1Z6WWPXRS4U8XZ/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/T2WO1L1Z6WWPXRS4U8XZ/Human_Health_And_Disease6_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "7. Human Health And Disease-7",
+              "link": "https://uamedia.uacdn.net/lesson-raw/G6PVEK7Z2WGJGEZ2AVIA/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/G6PVEK7Z2WGJGEZ2AVIA/Human_Health_And_Disease7_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "8. Human Health And Disease-8",
+              "link": "https://uamedia.uacdn.net/lesson-raw/PJZI8SXKK42B0RP5P9M5/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/PJZI8SXKK42B0RP5P9M5/Human_Health_And_Disease8_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "9. Human Health And Disease-9",
+              "link": "https://uamedia.uacdn.net/lesson-raw/XM00M840EDWKI3A9XNF3/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/XM00M840EDWKI3A9XNF3/Human_Health_And_Disease9_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "10. Human Health And Disease-10",
+              "link": "https://uamedia.uacdn.net/lesson-raw/5ZXM7IKJ7ZH2C1L74HSC/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/5ZXM7IKJ7ZH2C1L74HSC/Human_Health_And_Disease10_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "11. Human Health And Disease-11",
+              "link": "https://uamedia.uacdn.net/lesson-raw/90LXMZTGN7JMHCNG1SKG/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/90LXMZTGN7JMHCNG1SKG/Human_Health_And_Disease11_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "12. Human Health And Disease-12",
+              "link": "https://uamedia.uacdn.net/lesson-raw/OY8Q0PSFNT5EUY6LI25T/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/OY8Q0PSFNT5EUY6LI25T/Human_Health_And_Disease12_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "13. Human Health And Disease-13",
+              "link": "https://uamedia.uacdn.net/lesson-raw/DAZ78MIFC7ZRUD6W1PC2/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/DAZ78MIFC7ZRUD6W1PC2/Human_Health_And_Disease13_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "14. Human Health And Disease-14",
+              "link": "https://uamedia.uacdn.net/lesson-raw/DFM1H48F2ZGX4RSP4QUL/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/DFM1H48F2ZGX4RSP4QUL/Human_Health_And_Disease14_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "15. Human Health And Disease-16",
+              "link": "https://uamedia.uacdn.net/lesson-raw/O4UE2BCYUFU78FMAQ6EF/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/O4UE2BCYUFU78FMAQ6EF/Human_Health_And_Disease16_with_anno.pdf",
+              "dpp": ""
+            }
+          ]
+        },
+        {
+          "chapter": "🔬 CELL BIOLOGY (apex)",
+          "lectures": [
+            {
+              "name": "1. Cell Biology: 1",
+              "link": "https://uamedia.uacdn.net/lesson-raw/5PA0YWA4RZNZ8U3ZV1H9/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/5PA0YWA4RZNZ8U3ZV1H9/Cell_Biology_1_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "2. Cell Biology: 2",
+              "link": "https://uamedia.uacdn.net/lesson-raw/ESN3HSEDKL326V3FTJ0F/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/ESN3HSEDKL326V3FTJ0F/Cell_Biology_2_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "3. Cell Biology: 3",
+              "link": "https://uamedia.uacdn.net/lesson-raw/T901OSVINMY2DPAY7E8J/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/T901OSVINMY2DPAY7E8J/Cell_Biology_3_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "4. Cell Biology: 4",
+              "link": "https://uamedia.uacdn.net/lesson-raw/RN1AZYE0LLSN2U3U2FKN/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/RN1AZYE0LLSN2U3U2FKN/Cell_Biology_4_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "5. Cell Biology: 5",
+              "link": "https://uamedia.uacdn.net/lesson-raw/6KS54S1TGZM7JAJUUA2W/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/6KS54S1TGZM7JAJUUA2W/Cell_Biology_5_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "6. Cell Biology: 6",
+              "link": "https://uamedia.uacdn.net/lesson-raw/L1VCMXL63VRO8HJ1OW5I/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/L1VCMXL63VRO8HJ1OW5I/Cell_Biology_6_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "7. Cell Biology: 7",
+              "link": "https://uamedia.uacdn.net/lesson-raw/QDIT3GI6GYQ7T4G15CAK/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/QDIT3GI6GYQ7T4G15CAK/Cell_Biology_7_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "8. Cell Biology: 8",
+              "link": "https://uamedia.uacdn.net/lesson-raw/S20CY8XB3CTYUYU2O11Y/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/S20CY8XB3CTYUYU2O11Y/Cell_Biology_8_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "9. Cell Biology: 9",
+              "link": "https://uamedia.uacdn.net/lesson-raw/7FI4B2GAF1YZH38OFDJD/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/7FI4B2GAF1YZH38OFDJD/Cell_Biology_9_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "10. Cell Biology: 10",
+              "link": "https://uamedia.uacdn.net/lesson-raw/A0JM53V06VWA16ZZ77EN/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/A0JM53V06VWA16ZZ77EN/Cell_Biology_10_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "11. Cell Biology: 11",
+              "link": "https://uamedia.uacdn.net/lesson-raw/XJIL7VA0NTFCQ18ITNDI/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/XJIL7VA0NTFCQ18ITNDI/Cell_Biology_11_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "12. Cell Biology: 12",
+              "link": "https://uamedia.uacdn.net/lesson-raw/0R99KENAR0WXBUXF8477/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/0R99KENAR0WXBUXF8477/Cell_Biology_12_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "13. Cell Biology: 13",
+              "link": "https://uamedia.uacdn.net/lesson-raw/CNFFFGY07F1XX3IAS5Z2/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/CNFFFGY07F1XX3IAS5Z2/Cell_Biology_13_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "14. Cell Biology: 14",
+              "link": "https://uamedia.uacdn.net/lesson-raw/5A7HV6KSFMB50OPFYK65/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/5A7HV6KSFMB50OPFYK65/Cell_Biology_14_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "15. Cell Biology: 15",
+              "link": "https://uamedia.uacdn.net/lesson-raw/OJBLBP8GHKP1L7F8UIZB/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/OJBLBP8GHKP1L7F8UIZB/Cell_Biology_15_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "16. Cell Biology: 16",
+              "link": "https://uamedia.uacdn.net/lesson-raw/RI4IHYMP443JSDQU0SPO/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/RI4IHYMP443JSDQU0SPO/Cell_Biology_16_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "17. Cell Biology: 17",
+              "link": "https://uamedia.uacdn.net/lesson-raw/AAMI5QDNZH92KZBZ31M6/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/AAMI5QDNZH92KZBZ31M6/Cell_Biology_17_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "18. Cell Biology: 18",
+              "link": "https://uamedia.uacdn.net/lesson-raw/Y4EGY14G0RESSZ48GMAD/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/Y4EGY14G0RESSZ48GMAD/Cell_Biology_18_with_anno.pdf",
+              "dpp": ""
+            }
+          ]
+        },
+        {
+          "chapter": "🧬 ANIMAL TISSUE (apex)",
+          "lectures": [
+            {
+              "name": "36. ANIMAL TISSUE - 1",
+              "link": "https://uamedia.uacdn.net/lesson-raw/RXOBXPRTFUPJ7J2HFZ24/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/RXOBXPRTFUPJ7J2HFZ24/ANIMAL_TISSUE__1_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "37. Animal Tissue - 2",
+              "link": "https://uamedia.uacdn.net/lesson-raw/KDTSJ10X5GDKTKWRZU2P/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/KDTSJ10X5GDKTKWRZU2P/Animal_Tissue__2_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "38. Animal Tissue - 3",
+              "link": "https://uamedia.uacdn.net/lesson-raw/71YXPBAT9DEKPA22TEMM/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/71YXPBAT9DEKPA22TEMM/Animal_Tissue__3_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "39. Animal Tissue - 4",
+              "link": "https://uamedia.uacdn.net/lesson-raw/ZI0Q73BFSJFZQ3UY0UBY/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/ZI0Q73BFSJFZQ3UY0UBY/Animal_Tissue__4_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "40. Animal Tissue - 5",
+              "link": "https://uamedia.uacdn.net/lesson-raw/VZ6VCBXOPBZLPPXZ1YCS/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/VZ6VCBXOPBZLPPXZ1YCS/Animal_Tissue__5_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "41. Animal Tissue - 6",
+              "link": "https://uamedia.uacdn.net/lesson-raw/YPW7XOWPPSJS6JEITEZB/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/YPW7XOWPPSJS6JEITEZB/Animal_Tissue__6_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "42. Animal Tissue - 7",
+              "link": "https://uamedia.uacdn.net/lesson-raw/DTAUVQYEYW9KNG3Q3RT5/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/DTAUVQYEYW9KNG3Q3RT5/Animal_Tissue__7_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "43. Animal Tissue - 8",
+              "link": "https://uamedia.uacdn.net/lesson-raw/QM9G9X7MZGZAWK3V2U7J/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/QM9G9X7MZGZAWK3V2U7J/Animal_Tissue__8_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "44. Animal Tissue - 9",
+              "link": "https://uamedia.uacdn.net/lesson-raw/ZI44JO1RYT9NNASJQ1OK/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/ZI44JO1RYT9NNASJQ1OK/Animal_Tissue__9_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "45. Animal Tissue - 10",
+              "link": "https://uamedia.uacdn.net/lesson-raw/GZ6DWGTHQEEHFPHG66GO/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/GZ6DWGTHQEEHFPHG66GO/Animal_Tissue__10_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "46. Animal Tissue - 11",
+              "link": "https://uamedia.uacdn.net/lesson-raw/LS25CLENOBSA4LSNTLKH/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/LS25CLENOBSA4LSNTLKH/Animal_Tissue__11_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "47. Animal Tissue - 12",
+              "link": "https://uamedia.uacdn.net/lesson-raw/WUXABTK696N5D0RGTNSA/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/WUXABTK696N5D0RGTNSA/Animal_Tissue__12_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "48. Animal Tissue - 13",
+              "link": "https://uamedia.uacdn.net/lesson-raw/UHCM09X3TO7WVF0QWUU3/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/UHCM09X3TO7WVF0QWUU3/Animal_Tissue__13_with_anno.pdf",
+              "dpp": ""
+            }
+          ]
+        },
+        {
+          "chapter": "🫁 BREATHING & EXCHANGE OF GASES (apex)",
+          "lectures": [
+            {
+              "name": "49. BREATHING EXCHANGE OF GASES - 1",
+              "link": "https://uamedia.uacdn.net/lesson-raw/HIUP2AS7DAY3R2XA7ADQ/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/HIUP2AS7DAY3R2XA7ADQ/BREATHING_EXCHANGE_OF_GASES__1_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "50. BREATHING EXCHANGE OF GASES - 2",
+              "link": "https://uamedia.uacdn.net/lesson-raw/26EBMTGAPESOX6EPLZV1/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/26EBMTGAPESOX6EPLZV1/BREATHING_EXCHANGE_OF_GASES__2_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "51. BREATHING EXCHANGE OF GASES - 3",
+              "link": "https://uamedia.uacdn.net/lesson-raw/RTV0GRO0SILZMWFWQ96A/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/RTV0GRO0SILZMWFWQ96A/BREATHING_EXCHANGE_OF_GASES__3_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "52. BREATHING EXCHANGE OF GASES - 4",
+              "link": "https://uamedia.uacdn.net/lesson-raw/1LPXV4LI5UKYCGYLDF4B/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/1LPXV4LI5UKYCGYLDF4B/BREATHING_EXCHANGE_OF_GASES__4_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "53. BREATHING EXCHANGE OF GASES - 5",
+              "link": "https://uamedia.uacdn.net/lesson-raw/WK6OCPPN38MC7DEULSGA/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/WK6OCPPN38MC7DEULSGA/BREATHING_EXCHANGE_OF_GASES__5_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "54. BREATHING EXCHANGE OF GASES - 6",
+              "link": "https://uamedia.uacdn.net/lesson-raw/1BZM2M1825ODVFTNYDJM/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/1BZM2M1825ODVFTNYDJM/BREATHING_EXCHANGE_OF_GASES__6_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "55. BREATHING EXCHANGE OF GASES - 7",
+              "link": "https://uamedia.uacdn.net/lesson-raw/ABOB4B3FNJ59JKSS741S/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/ABOB4B3FNJ59JKSS741S/BREATHING_EXCHANGE_OF_GASES__7_with_anno.pdf",
+              "dpp": ""
+            }
+          ]
+        },
+        {
+          "chapter": "🫀 BODY FLUID & CIRCULATION (apex)",
+          "lectures": [
+            {
+              "name": "56. BODY FLUID & CIRCULATION - 1",
+              "link": "https://uamedia.uacdn.net/lesson-raw/0JT2ASOQ67NYVOUXLCB9/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/0JT2ASOQ67NYVOUXLCB9/BODY_FLUID__CIRCULATION__1_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "57. BODY FLUID & CIRCULATION - 2",
+              "link": "https://uamedia.uacdn.net/lesson-raw/QMW896WSIBF1UJYKY49L/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/QMW896WSIBF1UJYKY49L/BODY_FLUID__CIRCULATION__2_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "58. BODY FLUID & CIRCULATION - 3",
+              "link": "https://uamedia.uacdn.net/lesson-raw/GWMLQ68U9N68RNQM4AVN/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/GWMLQ68U9N68RNQM4AVN/BODY_FLUID__CIRCULATION__3_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "59. BODY FLUID & CIRCULATION - 4",
+              "link": "https://uamedia.uacdn.net/lesson-raw/J4N6U9J25RZDWUI6AH8I/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/J4N6U9J25RZDWUI6AH8I/BODY_FLUID__CIRCULATION__4_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "60. BODY FLUID & CIRCULATION - 5",
+              "link": "https://uamedia.uacdn.net/lesson-raw/NTB38IS656KRL6QVO0CX/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/NTB38IS656KRL6QVO0CX/BODY_FLUID__CIRCULATION__5_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "61. BODY FLUID & CIRCULATION - 6",
+              "link": "https://uamedia.uacdn.net/lesson-raw/PBP8H9L3QDT24YQVYK4W/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/PBP8H9L3QDT24YQVYK4W/BODY_FLUID__CIRCULATION__6_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "62. BODY FLUID & CIRCULATION - 7",
+              "link": "https://uamedia.uacdn.net/lesson-raw/WI9IK09U8JXKHBQ1JE1X/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/WI9IK09U8JXKHBQ1JE1X/BODY_FLUID__CIRCULATION__7_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "63. BODY FLUID & CIRCULATION - 8",
+              "link": "https://uamedia.uacdn.net/lesson-raw/P3ZGEWZ980JAUO6WBAZS/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/P3ZGEWZ980JAUO6WBAZS/BODY_FLUID__CIRCULATION__8_with_anno.pdf",
+              "dpp": ""
+            }
+          ]
+        },
+        {
+          "chapter": "🔬 CELL BIOLOGY (PHL BATCH)",
+          "lectures": [
+            {
+              "name": "1. Cell Biology - 2",
+              "link": "https://uamedia.uacdn.net/lesson-raw/0925FJKKTSB6W7GZOAQN/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/0925FJKKTSB6W7GZOAQN/Cell_Biology__2_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "2. Cell Biology - 2",
+              "link": "https://uamedia.uacdn.net/lesson-raw/LDTAQ83II5ZM5LG0POBG/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/LDTAQ83II5ZM5LG0POBG/Cell_Biology__2_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "3. Cell Biology - 4",
+              "link": "https://uamedia.uacdn.net/lesson-raw/W72XK7YKMA4SLSPFHWUE/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/W72XK7YKMA4SLSPFHWUE/Cell_Biology__4_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "4. Cell Biology - 5",
+              "link": "https://uamedia.uacdn.net/lesson-raw/QPCGZK8EAFJPXCDU2LQ8/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/QPCGZK8EAFJPXCDU2LQ8/Cell_Biology__5_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "5. Cell Biology - 6",
+              "link": "https://uamedia.uacdn.net/lesson-raw/VX8UV0K7JQURG2LP9FPJ/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/VX8UV0K7JQURG2LP9FPJ/Cell_Biology__6_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "6. Cell Biology - 7",
+              "link": "https://uamedia.uacdn.net/lesson-raw/NT91AKIO4MD00I3H2A83/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/NT91AKIO4MD00I3H2A83/Cell_Biology__7_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "7. Cell Biology - 8",
+              "link": "https://uamedia.uacdn.net/lesson-raw/JXISR8XEZ4SETACPL9HM/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/JXISR8XEZ4SETACPL9HM/Cell_Biology__8_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "8. Cell Biology - 9",
+              "link": "https://uamedia.uacdn.net/lesson-raw/D7LWT50TPP3K19EDP72I/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/D7LWT50TPP3K19EDP72I/Cell_Biology__9_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "9. Cell Biology - 10",
+              "link": "https://uamedia.uacdn.net/lesson-raw/CQXEA9DJMF7NP3XG0TEN/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/CQXEA9DJMF7NP3XG0TEN/Cell_Biology__10_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "10. Cell Biology - 11",
+              "link": "https://uamedia.uacdn.net/lesson-raw/3WV6NSB9D0MQ06LSLTDP/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/3WV6NSB9D0MQ06LSLTDP/Cell_Biology__11_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "11. Cell Biology - 12",
+              "link": "https://uamedia.uacdn.net/lesson-raw/0MV7MRKGQEMXZSFEE7LC/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/0MV7MRKGQEMXZSFEE7LC/Cell_Biology__12_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "12. Cell Biology - 12",
+              "link": "https://uamedia.uacdn.net/lesson-raw/VEPJCFD3TKPKIY74L7ZD/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/VEPJCFD3TKPKIY74L7ZD/Cell_Biology__12_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "13. Cell Biology - 14",
+              "link": "https://uamedia.uacdn.net/lesson-raw/AXOOD696G2S0HE5VDS8T/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/AXOOD696G2S0HE5VDS8T/Cell_Biology__14_with_anno.pdf",
+              "dpp": ""
+            },
+            {
+              "name": "14. Cell Biology - 15",
+              "link": "https://uamedia.uacdn.net/lesson-raw/YG5CNAK7CE02XD09KM5S/output.webm",
+              "notes": "https://player.uacdn.net/slides_pdf/YG5CNAK7CE02XD09KM5S/Cell_Biology__15_with_anno.pdf",
+              "dpp": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
