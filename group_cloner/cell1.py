@@ -14,8 +14,8 @@ install('cryptg')
 install('nest_asyncio')
 install('requests')
 
-# Kaggle backend break fix: Force downgrade to stable crypto versions at the VERY END
-# so pip dependency resolver doesn't accidentally upgrade it back while installing other packages!
-subprocess.check_call([sys.executable, '-m', 'pip', 'install', '-q', '--force-reinstall', '--no-deps', 'cryptography==41.0.7', 'pyOpenSSL==23.2.0'])
+# Kaggle backend break fix: Prevent pyrebase from crashing due to Kaggle's pre-loaded cryptography module
+# by tricking oauth2client into thinking OpenSSL is not installed.
+sys.modules['OpenSSL'] = None
 
 print("✅ Sab libraries install ho gayi!")

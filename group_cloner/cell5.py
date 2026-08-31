@@ -8,6 +8,10 @@ import nest_asyncio
 import json
 import os
 import time
+import sys
+
+# Prevent pyrebase from crashing due to Kaggle's pre-loaded cryptography module
+sys.modules['OpenSSL'] = None
 import pyrebase
 from telethon import TelegramClient, events, types
 from telethon.sessions import StringSession
