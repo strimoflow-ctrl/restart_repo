@@ -517,6 +517,13 @@ async def process_task_item(index, item_type, link, safe_lec_name, caption, thre
                     PROMO_COUNTER = 0
 
             except Exception as e:
+                err_msg = str(e).lower()
+                if any(x in err_msg for x in ["auth", "session", "key", "banned", "revoked", "unregistered"]):
+                    CURRENT_ACTION = f"CRITICAL SESSION ERROR: {e}"
+                    await update_status_dashboard(bot_client, course_key, force=True)
+                    print(f"❌ Critical Session Error encountered: {e}. Exiting immediately to prevent data corruption!")
+                    sys.exit(1)
+                    
                 FAIL_COUNT += 1
                 CURRENT_ACTION = f"Upload failed: {e}"
                 await update_status_dashboard(bot_client, course_key, force=True)
@@ -674,8 +681,11 @@ async def start_automation():
 
         try:
             target_group = await user_client.get_entity(group_id)
-        except Exception:
-            continue
+        except Exception as e:
+            print(f"❌ ERROR: Cannot access the existing Telegram Group (ID: {group_id}) for {course_key}.")
+            print(f"👉 If you changed the session string, please add the new Telegram account to the old group first!")
+            print(f"Exception details: {e}")
+            sys.exit(1)
 
         # 2. Iterate and append to tasks_list
         for sub in lectures_data["subjects"]:
