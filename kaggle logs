@@ -1,137 +1,137 @@
-8.8s	1	0.00s - Debugger warning: It seems that frozen modules are being used, which may
-8.8s	2	0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
-8.8s	3	0.00s - to python to disable frozen modules.
-8.8s	4	0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
-9.5s	5	0.00s - Debugger warning: It seems that frozen modules are being used, which may
-9.5s	6	0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
-9.5s	7	0.00s - to python to disable frozen modules.
-9.5s	8	0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
-14.8s	9	   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 789.8/789.8 kB 11.9 MB/s eta 0:00:00
-15.1s	10	   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 789.8/789.8 kB 11.9 MB/s eta 0:00:00
-21.6s	11	     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 50.1/50.1 kB 1.4 MB/s eta 0:00:00
-21.8s	12	     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 50.1/50.1 kB 1.4 MB/s eta 0:00:00
-22.7s	13	   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 144.2/144.2 kB 5.1 MB/s eta 0:00:00
-22.7s	14	   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 120.8/120.8 kB 6.7 MB/s eta 0:00:00
-22.8s	15	   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.7/4.7 MB 55.2 MB/s eta 0:00:00
-22.9s	16	   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 144.2/144.2 kB 5.1 MB/s eta 0:00:00
-22.9s	17	   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 120.8/120.8 kB 6.7 MB/s eta 0:00:00
-22.9s	18	   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.7/4.7 MB 55.2 MB/s eta 0:00:00
-26.2s	19	ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
-26.2s	20	google-adk 1.29.0 requires google-cloud-bigquery-storage>=2.0.0, which is not installed.
-26.2s	21	id 1.6.1 requires urllib3<3,>=2, but you have urllib3 1.26.20 which is incompatible.
-26.2s	22	sigstore 4.3.0 requires cryptography<49,>=42, but you have cryptography 50.0.1 which is incompatible.
-26.2s	23	pydrive2 1.21.3 requires cryptography<44, but you have cryptography 50.0.1 which is incompatible.
-26.2s	24	pyopenssl 24.2.1 requires cryptography<44,>=41.0.5, but you have cryptography 50.0.1 which is incompatible.
-26.2s	25	blobfile 3.2.0 requires urllib3>=2, but you have urllib3 1.26.20 which is incompatible.
-26.4s	26	ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
-26.4s	27	google-adk 1.29.0 requires google-cloud-bigquery-storage>=2.0.0, which is not installed.
-26.4s	28	id 1.6.1 requires urllib3<3,>=2, but you have urllib3 1.26.20 which is incompatible.
-26.4s	29	sigstore 4.3.0 requires cryptography<49,>=42, but you have cryptography 50.0.1 which is incompatible.
-26.4s	30	pydrive2 1.21.3 requires cryptography<44, but you have cryptography 50.0.1 which is incompatible.
-26.4s	31	pyopenssl 24.2.1 requires cryptography<44,>=41.0.5, but you have cryptography 50.0.1 which is incompatible.
-26.4s	32	blobfile 3.2.0 requires urllib3>=2, but you have urllib3 1.26.20 which is incompatible.
-26.4s	33	
-26.4s	34	ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
-26.4s	35	google-adk 1.29.0 requires google-cloud-bigquery-storage>=2.0.0, which is not installed.
-26.4s	36	id 1.6.1 requires urllib3<3,>=2, but you have urllib3 1.26.20 which is incompatible.
-26.4s	37	sigstore 4.3.0 requires cryptography<49,>=42, but you have cryptography 50.0.1 which is incompatible.
-26.4s	38	pydrive2 1.21.3 requires cryptography<44, but you have cryptography 50.0.1 which is incompatible.
-26.4s	39	pyopenssl 24.2.1 requires cryptography<44,>=41.0.5, but you have cryptography 50.0.1 which is incompatible.
-26.4s	40	blobfile 3.2.0 requires urllib3>=2, but you have urllib3 1.26.20 which is incompatible.
-27.9s	41	   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 250.1/250.1 kB 5.3 MB/s eta 0:00:00
-28.1s	42	   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 250.1/250.1 kB 5.3 MB/s eta 0:00:00
-37.4s	43	✅ Sab libraries install ho gayi!
-38.3s	44	Traceback (most recent call last):
-38.3s	45	  File "<string>", line 1, in <module>
-38.3s	46	  File "/usr/local/lib/python3.12/dist-packages/papermill/execute.py", line 131, in execute_notebook
-38.3s	47	    raise_for_execution_errors(nb, output_path)
-38.3s	48	  File "/usr/local/lib/python3.12/dist-packages/papermill/execute.py", line 251, in raise_for_execution_errors
-38.3s	49	    raise error
-38.3s	50	papermill.exceptions.PapermillExecutionError: 
-38.3s	51	---------------------------------------------------------------------------
-38.3s	52	Exception encountered at "In [2]":
-38.3s	53	---------------------------------------------------------------------------
-38.3s	54	AttributeError                            Traceback (most recent call last)
-38.3s	55	/tmp/ipykernel_16/2912578818.py in <cell line: 0>()
-38.3s	56	      4 # ╚══════════════════════════════════════════╝
-38.3s	57	      5 
-38.3s	58	----> 6 import pyrebase
-38.3s	59	      7 
-38.3s	60	      8 # ── Firebase Setup ────────────────────────
-38.3s	61	
-38.3s	62	/usr/local/lib/python3.12/dist-packages/pyrebase/__init__.py in <module>
-38.3s	63	----> 1 from .pyrebase import initialize_app
-38.3s	64	
-38.3s	65	/usr/local/lib/python3.12/dist-packages/pyrebase/pyrebase.py in <module>
-38.3s	66	     14 import threading
-38.3s	67	     15 import socket
-38.3s	68	---> 16 from oauth2client.service_account import ServiceAccountCredentials
-38.3s	69	     17 from google.cloud import storage
-38.3s	70	     18 from uuid import uuid4
-38.3s	71	
-38.3s	72	/usr/local/lib/python3.12/dist-packages/oauth2client/service_account.py in <module>
-38.3s	73	     23 import oauth2client
-38.3s	74	     24 from oauth2client import _helpers
-38.3s	75	---> 25 from oauth2client import client
-38.3s	76	     26 from oauth2client import crypt
-38.3s	77	     27 from oauth2client import transport
-38.3s	78	
-38.3s	79	/usr/local/lib/python3.12/dist-packages/oauth2client/client.py in <module>
-38.3s	80	     43 HAS_CRYPTO = False
-38.3s	81	     44 try:
-38.3s	82	---> 45     from oauth2client import crypt
-38.3s	83	     46     HAS_CRYPTO = True
-38.3s	84	     47     HAS_OPENSSL = crypt.OpenSSLVerifier is not None
-38.3s	85	
-38.3s	86	/usr/local/lib/python3.12/dist-packages/oauth2client/crypt.py in <module>
-38.3s	87	     43 
-38.3s	88	     44 try:
-38.3s	89	---> 45     from oauth2client import _openssl_crypt
-38.3s	90	     46     OpenSSLSigner = _openssl_crypt.OpenSSLSigner
-38.3s	91	     47     OpenSSLVerifier = _openssl_crypt.OpenSSLVerifier
-38.3s	92	
-38.3s	93	/usr/local/lib/python3.12/dist-packages/oauth2client/_openssl_crypt.py in <module>
-38.3s	94	     14 """OpenSSL Crypto-related routines for oauth2client."""
-38.3s	95	     15 
-38.3s	96	---> 16 from OpenSSL import crypto
-38.3s	97	     17 
-38.3s	98	     18 from oauth2client import _helpers
-38.3s	99	
-38.3s	100	/usr/local/lib/python3.12/dist-packages/OpenSSL/__init__.py in <module>
-38.3s	101	      6 """
-38.3s	102	      7 
-38.3s	103	----> 8 from OpenSSL import SSL, crypto
-38.3s	104	      9 from OpenSSL.version import (
-38.3s	105	     10     __author__,
-38.3s	106	
-38.3s	107	/usr/local/lib/python3.12/dist-packages/OpenSSL/SSL.py in <module>
-38.3s	108	     33     text_to_bytes_and_warn as _text_to_bytes_and_warn,
-38.3s	109	     34 )
-38.3s	110	---> 35 from OpenSSL.crypto import (
-38.3s	111	     36     FILETYPE_PEM,
-38.3s	112	     37     X509,
-38.3s	113	
-38.3s	114	/usr/local/lib/python3.12/dist-packages/OpenSSL/crypto.py in <module>
-38.3s	115	    793 
-38.3s	116	    794 
-38.3s	117	--> 795 class X509Extension:
-38.3s	118	    796     """
-38.3s	119	    797     An X.509 v3 certificate extension.
-38.3s	120	
-38.3s	121	/usr/local/lib/python3.12/dist-packages/OpenSSL/crypto.py in X509Extension()
-38.3s	122	    874 
-38.3s	123	    875     _prefixes: typing.ClassVar[typing.Dict[int, str]] = {
-38.3s	124	--> 876         _lib.GEN_EMAIL: "email",
-38.3s	125	    877         _lib.GEN_DNS: "DNS",
-38.3s	126	    878         _lib.GEN_URI: "URI",
-38.3s	127	
-38.3s	128	AttributeError: module 'lib' has no attribute 'GEN_EMAIL'
-38.3s	129	
-41.1s	130	/usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\|'
-41.1s	131	  cells[i][c] = re.sub('\\\\\|', '|', cell)
-41.3s	132	/usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\_'
-41.3s	133	  text = re.sub(r'_', '\_', text) # Escape underscores in display text
-42.1s	134	[NbConvertApp] Converting notebook __notebook__.ipynb to notebook
-42.5s	135	[NbConvertApp] Writing 79126 bytes to __notebook__.ipynb
-45.5s	136	[NbConvertApp] Converting notebook __notebook__.ipynb to html
-46.8s	137	[NbConvertApp] Writing 509937 bytes to __results__.html
+10.0s	1	0.00s - Debugger warning: It seems that frozen modules are being used, which may
+10.0s	2	0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+10.0s	3	0.00s - to python to disable frozen modules.
+10.0s	4	0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+10.8s	5	0.00s - Debugger warning: It seems that frozen modules are being used, which may
+10.8s	6	0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+10.8s	7	0.00s - to python to disable frozen modules.
+10.8s	8	0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+16.6s	9	   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 789.8/789.8 kB 22.4 MB/s eta 0:00:00
+16.8s	10	   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 789.8/789.8 kB 22.4 MB/s eta 0:00:00
+23.4s	11	     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 50.1/50.1 kB 2.6 MB/s eta 0:00:00
+23.6s	12	     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 50.1/50.1 kB 2.6 MB/s eta 0:00:00
+24.4s	13	   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 144.2/144.2 kB 7.9 MB/s eta 0:00:00
+24.5s	14	   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 121.2/121.2 kB 7.9 MB/s eta 0:00:00
+24.5s	15	   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.7/4.7 MB 89.1 MB/s eta 0:00:00
+24.6s	16	   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 144.2/144.2 kB 7.9 MB/s eta 0:00:00
+24.6s	17	   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 121.2/121.2 kB 7.9 MB/s eta 0:00:00
+24.6s	18	   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.7/4.7 MB 89.1 MB/s eta 0:00:00
+28.0s	19	ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
+28.0s	20	google-adk 1.29.0 requires google-cloud-bigquery-storage>=2.0.0, which is not installed.
+28.0s	21	id 1.6.1 requires urllib3<3,>=2, but you have urllib3 1.26.20 which is incompatible.
+28.0s	22	sigstore 4.3.0 requires cryptography<49,>=42, but you have cryptography 50.0.1 which is incompatible.
+28.0s	23	pydrive2 1.21.3 requires cryptography<44, but you have cryptography 50.0.1 which is incompatible.
+28.0s	24	pyopenssl 24.2.1 requires cryptography<44,>=41.0.5, but you have cryptography 50.0.1 which is incompatible.
+28.0s	25	blobfile 3.2.0 requires urllib3>=2, but you have urllib3 1.26.20 which is incompatible.
+28.2s	26	ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
+28.2s	27	google-adk 1.29.0 requires google-cloud-bigquery-storage>=2.0.0, which is not installed.
+28.2s	28	id 1.6.1 requires urllib3<3,>=2, but you have urllib3 1.26.20 which is incompatible.
+28.2s	29	sigstore 4.3.0 requires cryptography<49,>=42, but you have cryptography 50.0.1 which is incompatible.
+28.2s	30	pydrive2 1.21.3 requires cryptography<44, but you have cryptography 50.0.1 which is incompatible.
+28.2s	31	pyopenssl 24.2.1 requires cryptography<44,>=41.0.5, but you have cryptography 50.0.1 which is incompatible.
+28.2s	32	blobfile 3.2.0 requires urllib3>=2, but you have urllib3 1.26.20 which is incompatible.
+28.2s	33	
+28.2s	34	ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
+28.2s	35	google-adk 1.29.0 requires google-cloud-bigquery-storage>=2.0.0, which is not installed.
+28.2s	36	id 1.6.1 requires urllib3<3,>=2, but you have urllib3 1.26.20 which is incompatible.
+28.2s	37	sigstore 4.3.0 requires cryptography<49,>=42, but you have cryptography 50.0.1 which is incompatible.
+28.2s	38	pydrive2 1.21.3 requires cryptography<44, but you have cryptography 50.0.1 which is incompatible.
+28.2s	39	pyopenssl 24.2.1 requires cryptography<44,>=41.0.5, but you have cryptography 50.0.1 which is incompatible.
+28.2s	40	blobfile 3.2.0 requires urllib3>=2, but you have urllib3 1.26.20 which is incompatible.
+29.7s	41	   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 250.1/250.1 kB 11.4 MB/s eta 0:00:00
+29.9s	42	   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 250.1/250.1 kB 11.4 MB/s eta 0:00:00
+39.4s	43	✅ Sab libraries install ho gayi!
+40.3s	44	Traceback (most recent call last):
+40.3s	45	  File "<string>", line 1, in <module>
+40.3s	46	  File "/usr/local/lib/python3.12/dist-packages/papermill/execute.py", line 131, in execute_notebook
+40.3s	47	    raise_for_execution_errors(nb, output_path)
+40.3s	48	  File "/usr/local/lib/python3.12/dist-packages/papermill/execute.py", line 251, in raise_for_execution_errors
+40.3s	49	    raise error
+40.3s	50	papermill.exceptions.PapermillExecutionError: 
+40.3s	51	---------------------------------------------------------------------------
+40.3s	52	Exception encountered at "In [2]":
+40.3s	53	---------------------------------------------------------------------------
+40.3s	54	AttributeError                            Traceback (most recent call last)
+40.3s	55	/tmp/ipykernel_16/2912578818.py in <cell line: 0>()
+40.3s	56	      4 # ╚══════════════════════════════════════════╝
+40.3s	57	      5 
+40.3s	58	----> 6 import pyrebase
+40.3s	59	      7 
+40.3s	60	      8 # ── Firebase Setup ────────────────────────
+40.3s	61	
+40.3s	62	/usr/local/lib/python3.12/dist-packages/pyrebase/__init__.py in <module>
+40.3s	63	----> 1 from .pyrebase import initialize_app
+40.3s	64	
+40.3s	65	/usr/local/lib/python3.12/dist-packages/pyrebase/pyrebase.py in <module>
+40.3s	66	     14 import threading
+40.3s	67	     15 import socket
+40.3s	68	---> 16 from oauth2client.service_account import ServiceAccountCredentials
+40.3s	69	     17 from google.cloud import storage
+40.3s	70	     18 from uuid import uuid4
+40.3s	71	
+40.3s	72	/usr/local/lib/python3.12/dist-packages/oauth2client/service_account.py in <module>
+40.3s	73	     23 import oauth2client
+40.3s	74	     24 from oauth2client import _helpers
+40.3s	75	---> 25 from oauth2client import client
+40.3s	76	     26 from oauth2client import crypt
+40.3s	77	     27 from oauth2client import transport
+40.3s	78	
+40.3s	79	/usr/local/lib/python3.12/dist-packages/oauth2client/client.py in <module>
+40.3s	80	     43 HAS_CRYPTO = False
+40.3s	81	     44 try:
+40.3s	82	---> 45     from oauth2client import crypt
+40.3s	83	     46     HAS_CRYPTO = True
+40.3s	84	     47     HAS_OPENSSL = crypt.OpenSSLVerifier is not None
+40.3s	85	
+40.3s	86	/usr/local/lib/python3.12/dist-packages/oauth2client/crypt.py in <module>
+40.3s	87	     43 
+40.3s	88	     44 try:
+40.3s	89	---> 45     from oauth2client import _openssl_crypt
+40.3s	90	     46     OpenSSLSigner = _openssl_crypt.OpenSSLSigner
+40.3s	91	     47     OpenSSLVerifier = _openssl_crypt.OpenSSLVerifier
+40.3s	92	
+40.3s	93	/usr/local/lib/python3.12/dist-packages/oauth2client/_openssl_crypt.py in <module>
+40.3s	94	     14 """OpenSSL Crypto-related routines for oauth2client."""
+40.3s	95	     15 
+40.3s	96	---> 16 from OpenSSL import crypto
+40.3s	97	     17 
+40.3s	98	     18 from oauth2client import _helpers
+40.3s	99	
+40.3s	100	/usr/local/lib/python3.12/dist-packages/OpenSSL/__init__.py in <module>
+40.3s	101	      6 """
+40.3s	102	      7 
+40.3s	103	----> 8 from OpenSSL import SSL, crypto
+40.3s	104	      9 from OpenSSL.version import (
+40.3s	105	     10     __author__,
+40.3s	106	
+40.3s	107	/usr/local/lib/python3.12/dist-packages/OpenSSL/SSL.py in <module>
+40.3s	108	     33     text_to_bytes_and_warn as _text_to_bytes_and_warn,
+40.3s	109	     34 )
+40.3s	110	---> 35 from OpenSSL.crypto import (
+40.3s	111	     36     FILETYPE_PEM,
+40.3s	112	     37     X509,
+40.3s	113	
+40.3s	114	/usr/local/lib/python3.12/dist-packages/OpenSSL/crypto.py in <module>
+40.3s	115	    793 
+40.3s	116	    794 
+40.3s	117	--> 795 class X509Extension:
+40.3s	118	    796     """
+40.3s	119	    797     An X.509 v3 certificate extension.
+40.3s	120	
+40.3s	121	/usr/local/lib/python3.12/dist-packages/OpenSSL/crypto.py in X509Extension()
+40.3s	122	    874 
+40.3s	123	    875     _prefixes: typing.ClassVar[typing.Dict[int, str]] = {
+40.3s	124	--> 876         _lib.GEN_EMAIL: "email",
+40.3s	125	    877         _lib.GEN_DNS: "DNS",
+40.3s	126	    878         _lib.GEN_URI: "URI",
+40.3s	127	
+40.3s	128	AttributeError: module 'lib' has no attribute 'GEN_EMAIL'
+40.3s	129	
+43.2s	130	/usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\|'
+43.2s	131	  cells[i][c] = re.sub('\\\\\|', '|', cell)
+43.4s	132	/usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\_'
+43.4s	133	  text = re.sub(r'_', '\_', text) # Escape underscores in display text
+44.1s	134	[NbConvertApp] Converting notebook __notebook__.ipynb to notebook
+44.5s	135	[NbConvertApp] Writing 79127 bytes to __notebook__.ipynb
+47.5s	136	[NbConvertApp] Converting notebook __notebook__.ipynb to html
+48.8s	137	[NbConvertApp] Writing 509938 bytes to __results__.html
