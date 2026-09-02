@@ -285,7 +285,7 @@ def start_firebase_polling():
                             requests.put(trigger_url, json=execute_at, timeout=5)
                             print(f"[*] Set trigger_restart to timestamp {execute_at} (10 mins from now) for '{root_key}'")
                             
-                        elif isinstance(trigger_val, (int, float)):
+                        elif isinstance(trigger_val, (int, float)) and not isinstance(trigger_val, bool):
                             if time.time() >= trigger_val:
                                 print(f"[*] 10-minute wait complete for '{root_key}'. Pushing updated code to Kaggle...")
                                 requests.put(trigger_url, json=False, timeout=5)
