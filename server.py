@@ -276,56 +276,61 @@ def start_firebase_polling():
                         except:
                             pass
                             
-                        if trigger_resp.json() is True:
+                        trigger_val = trigger_resp.json()
+                        
+                        if trigger_val is True:
                             print(f"\n[!] Auto-restart requested for root node: '{root_key}'!")
+                            # Save timestamp in Firebase for persistent 10-min wait
+                            execute_at = time.time() + 600
+                            requests.put(trigger_url, json=execute_at, timeout=5)
+                            print(f"[*] Set trigger_restart to timestamp {execute_at} (10 mins from now) for '{root_key}'")
                             
-                            # Reset trigger in Firebase first to prevent double runs
-                            requests.put(trigger_url, json=False, timeout=5)
-                            print(f"[*] Reset trigger_restart to False for '{root_key}'")
-                            
-                            # Wait 10 minutes for safe shutdown as requested without blocking polling loop
-                            def delayed_restart(r_key, db_url_str):
-                                print(f"[*] Waiting 10 minutes (600s) for VM '{r_key}' to shut down safely...")
-                                time.sleep(600)
-                                print(f"[*] Waiting complete. Pushing updated code to Kaggle for '{r_key}'...")
+                        elif isinstance(trigger_val, (int, float)):
+                            if time.time() >= trigger_val:
+                                print(f"[*] 10-minute wait complete for '{root_key}'. Pushing updated code to Kaggle...")
+                                requests.put(trigger_url, json=False, timeout=5)
                                 
                                 # Fetch Kaggle config depending on bot type
-                                if r_key == "new_automation_courses":
-                                    config_url = f"{db_url_str}/{r_key}/config.json"
-                                else:
-                                    config_url = f"{db_url_str}/{r_key}/config/kaggle.json"
-                                    
-                                config_resp = requests.get(config_url, timeout=5)
-                                
-                                # Hardcoded fallback credentials
-                                username = "pankajmourrya"
-                                key = "581360a6a230292364e96a0ec8db406c"
-                                title = f"Cloner {r_key.replace('_', ' ').title()}"
-                                slug = r_key.replace("_", "-")
-                                
-                                if config_resp.status_code == 200:
-                                    kgl = config_resp.json() or {}
+                                def do_push(r_key, db_url_str):
                                     if r_key == "new_automation_courses":
-                                        username = kgl.get("kaggle_username") or username
-                                        key = kgl.get("kaggle_key") or key
-                                        title = "Multi-Teacher Forum Cloner Automation"
-                                        slug = kgl.get("kaggle_slug") or slug
+                                        config_url = f"{db_url_str}/{r_key}/config.json"
                                     else:
-                                        username = kgl.get("username") or username
-                                        key = kgl.get("key") or key
-                                        title = kgl.get("title") or title
-                                        slug = kgl.get("slug") or slug
+                                        config_url = f"{db_url_str}/{r_key}/config/kaggle.json"
+                                        
+                                    try:
+                                        config_resp = requests.get(config_url, timeout=5)
+                                    except:
+                                        return
+                                        
+                                    # Hardcoded fallback credentials
+                                    username = "pankajmourrya"
+                                    key = "581360a6a230292364e96a0ec8db406c"
+                                    title = f"Cloner {r_key.replace('_', ' ').title()}"
+                                    slug = r_key.replace("_", "-")
                                     
-                                try:
-                                    if r_key == "new_automation_courses":
-                                        status_code, resp_text = push_automation_notebook_to_kaggle(username, key, title, slug)
-                                    else:
-                                        status_code, resp_text = push_notebook_to_kaggle(username, key, title, slug, r_key)
-                                    print(f"[+] Push auto-restart for '{r_key}' triggered with status: {status_code}")
-                                except Exception as e:
-                                    print(f"[!] Push auto-restart for '{r_key}' failed: {e}")
-                                    
-                            threading.Thread(target=delayed_restart, args=(root_key, db_url), daemon=True).start()
+                                    if config_resp.status_code == 200:
+                                        kgl = config_resp.json() or {}
+                                        if r_key == "new_automation_courses":
+                                            username = kgl.get("kaggle_username") or username
+                                            key = kgl.get("kaggle_key") or key
+                                            title = "Multi-Teacher Forum Cloner Automation"
+                                            slug = kgl.get("kaggle_slug") or slug
+                                        else:
+                                            username = kgl.get("username") or username
+                                            key = kgl.get("key") or key
+                                            title = kgl.get("title") or title
+                                            slug = kgl.get("slug") or slug
+                                        
+                                    try:
+                                        if r_key == "new_automation_courses":
+                                            status_code, resp_text = push_automation_notebook_to_kaggle(username, key, title, slug)
+                                        else:
+                                            status_code, resp_text = push_notebook_to_kaggle(username, key, title, slug, r_key)
+                                        print(f"[+] Push auto-restart for '{r_key}' triggered with status: {status_code}")
+                                    except Exception as e:
+                                        print(f"[!] Push auto-restart for '{r_key}' failed: {e}")
+                                
+                                threading.Thread(target=do_push, args=(root_key, db_url), daemon=True).start()
                 except Exception as e:
                     pass
         except Exception as e:
