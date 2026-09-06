@@ -624,12 +624,38 @@ function renderQueue(rootData) {
                 totalVal = (sourceTopics[activeTopicId].videos || 0) + (sourceTopics[activeTopicId].pdfs || 0);
             }
             if (totalVal === 0) {
-                totalVal = status.topic_total || 0;
+                totalVal = Number(status.topic_total) || 0;
             }
 
+            // Track dynamic progress for active topic
             let doneVal = 0;
-            if (status.topic_done !== undefined && status.topic_done !== null) {
-                doneVal = Number(status.topic_done) || 0;
+            if (status.topic_done !== undefined && status.topic_done !== null && Number(status.topic_done) > 0) {
+                doneVal = Number(status.topic_done);
+            } else {
+                let tracker = null;
+                try {
+                    tracker = JSON.parse(localStorage.getItem('cloner_tracker_' + dbRoot) || 'null');
+                } catch (e) {}
+
+                const currentGlobal = Number(status.global_videos_done) || 0;
+                if (!tracker || tracker.topic_name !== currentTopicName) {
+                    const remainingInRun = Number(status.topic_total) || totalVal;
+                    let alreadyDone = 0;
+                    if (totalVal > 0 && remainingInRun > 0 && totalVal > remainingInRun) {
+                        alreadyDone = totalVal - remainingInRun;
+                    }
+                    tracker = {
+                        topic_name: currentTopicName,
+                        start_global: currentGlobal,
+                        already_done: alreadyDone
+                    };
+                    try {
+                        localStorage.setItem('cloner_tracker_' + dbRoot, JSON.stringify(tracker));
+                    } catch (e) {}
+                }
+
+                const clonedInTopic = Math.max(0, currentGlobal - (tracker.start_global || 0));
+                doneVal = (tracker.already_done || 0) + clonedInTopic;
             }
 
             // Guard: ensure doneVal doesn't exceed totalVal if totalVal is known
