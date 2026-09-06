@@ -170,6 +170,7 @@ async def process_file(user, msg, target_topic_id, sem, stats, bot, msg_index, s
                 db.child(DB_ROOT).child("done_ids").child(str(msg.id)).set(True)
                 stats['success']            += 1
                 stats['global_videos_done'] += 1
+                stats['topic_done']         += 1
                 
                 if 'slots' in stats and slot_idx < len(stats['slots']):
                     stats['slots'][slot_idx]['current_action'] = '✅ Done'
@@ -610,6 +611,8 @@ async def run_queue_engine(user, bot, stats, all_tasks_ref, done_ids, finished_t
 
         # ── Fetch messages from source ──
         msgs = []
+        total_topic_files = 0
+        already_done_files = 0
         try:
             # If source type is topics, get messages from specific topic, else scan whole feed
             reply_param = int(next_topic_id) if SOURCE_TYPE == "group_topic" else None
@@ -617,7 +620,9 @@ async def run_queue_engine(user, bot, stats, all_tasks_ref, done_ids, finished_t
             async for m in user.iter_messages(SOURCE_GROUP_ID, reply_to=reply_param, limit=None):
                 if not is_valid_media(m):
                     continue
+                total_topic_files += 1
                 if str(m.id) in done_ids:
+                    already_done_files += 1
                     continue
                 msgs.append(m)
         except Exception as e:
@@ -626,7 +631,11 @@ async def run_queue_engine(user, bot, stats, all_tasks_ref, done_ids, finished_t
             continue
 
         msgs.reverse()
-        stats['topic_total'] = len(msgs)
+        meta_count = 0
+        if isinstance(topic_data, dict):
+            meta_count = (topic_data.get("videos") or 0) + (topic_data.get("pdfs") or 0)
+        stats['topic_total'] = meta_count if meta_count > 0 else (total_topic_files if total_topic_files > 0 else len(msgs))
+        stats['topic_done'] = already_done_files
 
         if not msgs:
             log_to_firebase(f"✅ Topic '{title}' has no new files to clone. Marking done.")

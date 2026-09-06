@@ -3,7 +3,7 @@ let database = null;
 let dbRoot = "cloner_v5_mapping";
 let isBotActive = false;
 const localServerUrl = window.location.origin.includes("localhost") || window.location.protocol === "file:"
-    ? "https://restartrepo-production-3ae0.up.railway.app"
+    ? "https://restart-repo.onrender.com"
     : window.location.origin;
 
 // Bot instances storage
@@ -397,7 +397,7 @@ function setupFirebaseListeners() {
                     if (orch.type === "github_actions") {
                         const mins = Math.max(0, Math.round(diffSec / 60));
                         elOrchestratorStatus.innerText = `🛰 CLOUD ACTIONS (Checked ${mins}m ago)`;
-                    } else if (orch.type === "cloud_server" || orch.type === "railway") {
+                    } else if (orch.type === "cloud_server" || orch.type === "railway" || orch.type === "render") {
                         const secs = Math.max(0, Math.round(diffSec));
                         elOrchestratorStatus.innerText = `💻 CLOUD SERVER (Checked ${secs}s ago)`;
                     } else {
@@ -618,31 +618,23 @@ function renderQueue(rootData) {
                 return t === currentTopicName || (t && typeof t === 'object' && t.name === currentTopicName);
             });
 
-            let totalVal = status.topic_total || 0;
-
-            // Fallback to total metadata files if topic_total is 0
-            if (totalVal === 0 && activeTopicId && sourceTopics[activeTopicId] && typeof sourceTopics[activeTopicId] === 'object') {
+            // Calculate total files for this topic (prefer metadata scan if available)
+            let totalVal = 0;
+            if (activeTopicId && sourceTopics[activeTopicId] && typeof sourceTopics[activeTopicId] === 'object') {
                 totalVal = (sourceTopics[activeTopicId].videos || 0) + (sourceTopics[activeTopicId].pdfs || 0);
+            }
+            if (totalVal === 0) {
+                totalVal = status.topic_total || 0;
             }
 
             let doneVal = 0;
-            if (activeTopicId) {
-                // Sum files in all other completed topics
-                let completedOtherSum = 0;
-                Object.keys(finishedTopics).forEach(key => {
-                    if (finishedTopics[key] === true && key !== activeTopicId) {
-                        const t = sourceTopics[key];
-                        if (t && typeof t === 'object') {
-                            completedOtherSum += (t.videos || 0) + (t.pdfs || 0);
-                        }
-                    }
-                });
+            if (status.topic_done !== undefined && status.topic_done !== null) {
+                doneVal = Number(status.topic_done) || 0;
+            }
 
-                // Subtract other completed topics' files from global completed files
-                doneVal = Math.max(0, (status.global_videos_done || 0) - completedOtherSum);
-                if (totalVal > 0 && doneVal > totalVal) {
-                    doneVal = totalVal;
-                }
+            // Guard: ensure doneVal doesn't exceed totalVal if totalVal is known
+            if (totalVal > 0 && doneVal > totalVal) {
+                doneVal = totalVal;
             }
 
             statusText = `Cloning (${doneVal} / ${totalVal})`;

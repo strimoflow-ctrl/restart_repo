@@ -15,8 +15,8 @@ graph TD
     B -- Sync Dropdown --> A
 ```
 
-* **Dashboard (UI):** Link `https://restartrepo-production.up.railway.app` se aap pure system ko control karte hain (OTP login, group mapping, speed controllers, live timers).
-* **Railway Cloud (Brain):** 24/7 cloud par chal raha hai. Ye Firebase se bot configuration aur restart request read karta hai aur exactly 10-minute safe shutdown wait lekar Kaggle VM restart kar deta hai.
+* **Dashboard (UI):** Link `https://restart-repo.onrender.com` se aap pure system ko control karte hain (OTP login, group mapping, speed controllers, live timers).
+* **Render Cloud (Brain):** 24/7 cloud par chal raha hai. Ye Firebase se bot configuration aur restart request read karta hai aur exactly 10-minute safe shutdown wait lekar Kaggle VM restart kar deta hai.
 * **Kaggle VM (Worker):** 12-hour session limits ke sath Telegram files copy/clone karta hai. Band hone se pehle restart signal trigger kar deta hai.
 
 ---
@@ -30,7 +30,7 @@ Agar aapko **naya, 4th bot setup** karna hai, to bas ye simple steps follow kiji
 2. Us notebook ka **URL/Slug** copy kar lijiye (e.g., `alien-bot-3` ya `cloner-v7`).
 
 ### Step 2: Dashboard par Bot Register karein
-1. Railway Dashboard open kijiye.
+1. Render Dashboard open kijiye (`https://restart-repo.onrender.com`).
 2. Header me green color ke **`+ Add`** button par click kijiye.
 3. Form me ye details fill kijiye:
    * **Bot Label/Name:** Koi bhi pyara sa naam (e.g., `AL!EN 3.0 🪐`)
@@ -64,7 +64,7 @@ Agar aapko **naya, 4th bot setup** karna hai, to bas ye simple steps follow kiji
 
 > [!TIP]
 > **No Local Server Needed:**
-> Ek baar Telegram login aur configuration complete ho jaye, to aap **`server.py` ko local PC par band kar sakte hain aur PC shutdown kar sakte hain!** Railway cloud server pure auto-restart system ko akele handle karega.
+> Ek baar Telegram login aur configuration complete ho jaye, to aap **`server.py` ko local PC par band kar sakte hain aur PC shutdown kar sakte hain!** Render cloud server pure auto-restart system ko akele handle karega.
 
 > [!IMPORTANT]
 > **10-Minute Delay Rule:**
@@ -83,6 +83,6 @@ git add .
 # Changes commit karein
 git commit -m "Updated cloner cells logic"
 
-# Push to GitHub (Railway will automatically auto-deploy in 30s)
+# Push to GitHub (Render will automatically auto-deploy)
 git push
 ```

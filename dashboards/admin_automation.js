@@ -4,7 +4,7 @@ let db = null;
 let currentConfig = {};
 
 const localServerUrl = window.location.protocol === "file:"
-    ? "https://restartrepo-production-3ae0.up.railway.app"
+    ? "https://restart-repo.onrender.com"
     : window.location.origin;
 
 // 1. Initialize Firebase connection
@@ -172,7 +172,7 @@ document.getElementById("btn-save-config").addEventListener("click", () => {
         kaggle_slug: document.getElementById("kaggle-slug").value.trim(),
         active_course_key: document.getElementById("active-course-key").value,
         session_string: currentConfig.session_string || "", // Keep existing session if not re-generated
-        server_url: window.location.origin // Pass Railway server URL for Auto-Restart
+        server_url: window.location.origin // Pass Render server URL for Auto-Restart
     };
 
     db.ref("new_automation_courses/config").set(configPayload, (err) => {
