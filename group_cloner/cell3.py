@@ -5,6 +5,11 @@
 
 import asyncio
 import nest_asyncio
+import sys
+
+# Prevent pyrebase from crashing due to Kaggle's pre-loaded cryptography/OpenSSL mismatch
+sys.modules['OpenSSL'] = None
+
 from telethon import TelegramClient, types
 from telethon.sessions import StringSession
 from telethon.tl.functions.messages import GetForumTopicsRequest

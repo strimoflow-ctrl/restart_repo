@@ -2,6 +2,11 @@
 # ║  CELL 2 — Configuration                 ║
 # ║  Firebase aur Database configuration     ║
 # ╚══════════════════════════════════════════╝
+import sys
+import time
+
+# Prevent pyrebase from crashing due to Kaggle's pre-loaded cryptography/OpenSSL mismatch
+sys.modules['OpenSSL'] = None
 
 import pyrebase
 

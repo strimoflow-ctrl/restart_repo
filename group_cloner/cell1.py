@@ -5,17 +5,15 @@
 
 import subprocess, sys
 
-def install(pkg):
-    subprocess.check_call([sys.executable, '-m', 'pip', 'install', '-q', pkg])
+def install(*pkgs):
+    subprocess.check_call([sys.executable, '-m', 'pip', 'install', '-q', *pkgs])
 
-install('telethon')
-install('pyrebase4')
-install('cryptg')
-install('nest_asyncio')
-install('requests')
+install('telethon', 'pyrebase4', 'cryptg', 'nest_asyncio', 'requests')
 
-# Kaggle backend break fix: Downgrade cryptography to fix pyOpenSSL compatibility
-install('cryptography==41.0.7')
-install('pyOpenSSL==23.2.0')
+# Ensure pyOpenSSL is upgraded to match Kaggle's cryptography version
+try:
+    install('--upgrade', 'pyOpenSSL')
+except Exception:
+    pass
 
 print("✅ Sab libraries install ho gayi!")
