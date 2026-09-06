@@ -346,19 +346,31 @@ threading.Thread(target=start_firebase_polling, daemon=True).start()
 class DashboardHTTPHandler(BaseHTTPRequestHandler):
     def log_message(self, format, *args):
         # Suppress /api/health logs to prevent terminal spam
-        if len(args) > 0 and '/api/health' in args[0]:
-            return
-        super().log_message(format, *args)
+        try:
+            if len(args) > 0 and isinstance(args[0], str) and '/api/health' in args[0]:
+                return
+            super().log_message(format, *args)
+        except Exception:
+            pass
 
     def end_headers(self):
         # Enable CORS for local cross-origin API calls if needed
         self.send_header('Access-Control-Allow-Origin', '*')
-        self.send_header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS')
+        self.send_header('Access-Control-Allow-Methods', 'GET, POST, HEAD, OPTIONS')
         self.send_header('Access-Control-Allow-Headers', 'Content-Type')
         super().end_headers()
 
     def do_OPTIONS(self):
         self.send_response(200)
+        self.end_headers()
+
+    def do_HEAD(self):
+        # Respond 200 OK to Render's port detection & health checks
+        self.send_response(200)
+        if self.path == '/api/health':
+            self.send_header('Content-Type', 'application/json')
+        else:
+            self.send_header('Content-Type', 'text/html')
         self.end_headers()
 
     def do_GET(self):
@@ -534,9 +546,9 @@ class DashboardHTTPHandler(BaseHTTPRequestHandler):
 
 
 def run(port=8000):
-    server_address = ('', port)
+    server_address = ('0.0.0.0', port)
     httpd = HTTPServer(server_address, DashboardHTTPHandler)
-    print(f"[*] Cloner Ultra Server running on port {port}")
+    print(f"[*] Cloner Ultra Server running on port {port} (0.0.0.0)")
     try:
         httpd.serve_forever()
     except KeyboardInterrupt:
