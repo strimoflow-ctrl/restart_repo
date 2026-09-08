@@ -234,7 +234,8 @@ async def update_status_dashboard(bot_client, course_key, force=False):
             "fail_count": FAIL_COUNT,
             "disk_free": f"{free_disk:.1f} GB",
             "uptime": elapsed_time,
-            "active_key": course_key
+            "active_key": course_key,
+            "last_heartbeat": time.time()
         }, timeout=5)
     except Exception:
         pass
@@ -550,7 +551,7 @@ async def process_task_item(index, item_type, link, safe_lec_name, caption, thre
 async def start_automation():
     global TOTAL_FILES, DONE_COUNT, FAIL_COUNT, CURRENT_FILE_NAME, CURRENT_FILE_SIZE, CURRENT_ACTION, PROGRESS_PCT, CURRENT_SPEED, status_msg, PROMO_COUNTER, branding_text
     global API_ID, API_HASH, SESSION_STRING, BOT_TOKEN, OWNER_CHAT_ID
-    global KAGGLE_USERNAME, KAGGLE_KEY, KAGGLE_SLUG, SERVER_URL, current_upload_index
+    global KAGGLE_USERNAME, KAGGLE_KEY, KAGGLE_SLUG, SERVER_URL, current_upload_index, ACTIVE_COURSE_KEY
 
     # Start Control Command loop
     asyncio.create_task(check_command_loop())
@@ -568,6 +569,7 @@ async def start_automation():
             OWNER_CHAT_ID = config_data.get("owner_chat_id", "")
             branding_text = config_data.get("extracted_by", branding_text)
             SERVER_URL = config_data.get("server_url", "")
+            ACTIVE_COURSE_KEY = config_data.get("active_course_key", ACTIVE_COURSE_KEY)
     except Exception:
         pass
 

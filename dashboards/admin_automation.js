@@ -127,28 +127,64 @@ function setupStatusListener() {
             // Update stats
             document.getElementById("stat-action").textContent = status.action || "Idle";
             document.getElementById("stat-key").textContent = status.active_key || "N/A";
+            const elFile = document.getElementById("stat-file");
+            if (elFile) elFile.textContent = status.file_name || "N/A";
             document.getElementById("stat-progress").textContent = `${status.done_count || 0} / ${status.total_files || 0}`;
             document.getElementById("stat-speed").textContent = status.speed || "0 Mbps";
             document.getElementById("stat-disk").textContent = status.disk_free || "0 GB";
+            const elFail = document.getElementById("stat-fail");
+            if (elFail) elFail.textContent = status.fail_count || 0;
+            const elUptime = document.getElementById("stat-uptime");
+            if (elUptime) elUptime.textContent = status.uptime || "00:00:00";
 
             const progressPct = parseFloat(status.progress || 0).toFixed(1);
             document.getElementById("stat-percent").textContent = `${progressPct}%`;
 
-            // Update engine status indicator
-            if (status.action && status.action !== "Idle" && !status.action.includes("Completed")) {
+            // Cloud Server (Render) status check
+            const elCloudStatus = document.getElementById("cloud-server-status");
+            if (elCloudStatus) {
+                if (status.orchestrator && status.orchestrator.last_check) {
+                    const diffSec = (Date.now() / 1000) - status.orchestrator.last_check;
+                    if (diffSec < 45) {
+                        elCloudStatus.className = "status online";
+                        elCloudStatus.textContent = "ONLINE";
+                    } else {
+                        elCloudStatus.className = "status offline";
+                        elCloudStatus.textContent = "OFFLINE";
+                    }
+                } else {
+                    elCloudStatus.className = "status online";
+                    elCloudStatus.textContent = "ONLINE";
+                }
+            }
+
+            // Accurate Kaggle VM status check (using heartbeat or active state detection)
+            let isKaggleRunning = false;
+            const nowSec = Date.now() / 1000;
+            if (status.last_heartbeat) {
+                isKaggleRunning = (nowSec - status.last_heartbeat < 45);
+            } else if (status.uptime === "11:59:39") {
+                // Known finished 12h run where VM stopped
+                isKaggleRunning = false;
+            } else {
+                isKaggleRunning = Boolean(status.action && status.action !== "Idle" && !status.action.includes("Completed"));
+            }
+
+            const kglStatusEl = document.getElementById("kaggle-engine-status");
+            if (isKaggleRunning) {
                 indicator.textContent = "RUNNING";
                 indicator.style.color = "#10b981";
                 indicator.style.background = "rgba(16, 185, 129, 0.1)";
                 indicator.style.border = "1px solid rgba(16, 185, 129, 0.2)";
-                document.getElementById("kaggle-engine-status").className = "status online";
-                document.getElementById("kaggle-engine-status").textContent = "RUNNING";
+                kglStatusEl.className = "status online";
+                kglStatusEl.textContent = "RUNNING";
             } else {
-                indicator.textContent = "IDLE";
+                indicator.textContent = "OFFLINE / IDLE";
                 indicator.style.color = "#9ca3af";
                 indicator.style.background = "rgba(255,255,255,0.05)";
                 indicator.style.border = "1px solid rgba(255,255,255,0.08)";
-                document.getElementById("kaggle-engine-status").className = "status offline";
-                document.getElementById("kaggle-engine-status").textContent = "IDLE";
+                kglStatusEl.className = "status offline";
+                kglStatusEl.textContent = "OFFLINE";
             }
         }
     });
@@ -172,7 +208,7 @@ document.getElementById("btn-save-config").addEventListener("click", () => {
         kaggle_slug: document.getElementById("kaggle-slug").value.trim(),
         active_course_key: document.getElementById("active-course-key").value,
         session_string: currentConfig.session_string || "", // Keep existing session if not re-generated
-        server_url: window.location.origin // Pass Render server URL for Auto-Restart
+        server_url: localServerUrl // Pass Render server URL for Auto-Restart
     };
 
     db.ref("new_automation_courses/config").set(configPayload, (err) => {

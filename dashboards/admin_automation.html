@@ -22,6 +22,10 @@
             
             <div class="status-bar" style="display: flex; align-items: center; gap: 15px;">
                 <div class="status-item" style="display: flex; align-items: center; gap: 8px;">
+                    <span class="label" style="font-size: 0.8rem; color: var(--text-secondary);">Cloud Server (Render):</span>
+                    <span id="cloud-server-status" class="status online">ONLINE</span>
+                </div>
+                <div class="status-item" style="display: flex; align-items: center; gap: 8px;">
                     <span class="label" style="font-size: 0.8rem; color: var(--text-secondary);">Kaggle Engine:</span>
                     <span id="kaggle-engine-status" class="status offline">OFFLINE</span>
                 </div>
@@ -149,7 +153,7 @@
                     </div>
                     <div class="card-content" style="flex-grow: 1; display: grid; grid-template-columns: 1fr 1fr; gap: 15px; align-items: center;">
                         <!-- Stats Grid -->
-                        <div class="stats-grid" style="display: grid; grid-template-rows: repeat(5, 1fr); gap: 6px; font-size: 0.8rem;">
+                        <div class="stats-grid" style="display: grid; grid-template-rows: repeat(7, 1fr); gap: 6px; font-size: 0.8rem;">
                             <div style="display: flex; justify-content: space-between; border-bottom: 1px solid rgba(255,255,255,0.03); padding-bottom: 2px;">
                                 <span style="color: var(--text-secondary);">Current Action:</span>
                                 <span id="stat-action" style="font-weight: 600; color: var(--accent);">Idle</span>
@@ -158,17 +162,25 @@
                                 <span style="color: var(--text-secondary);">Cloning Key:</span>
                                 <span id="stat-key" style="font-weight: 600; color: #fff;">N/A</span>
                             </div>
+                            <div style="display: flex; justify-content: space-between; border-bottom: 1px solid rgba(255,255,255,0.03); padding-bottom: 2px; overflow: hidden;">
+                                <span style="color: var(--text-secondary); flex-shrink: 0;">File:</span>
+                                <span id="stat-file" style="font-weight: 600; color: #fff; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; max-width: 170px;">N/A</span>
+                            </div>
                             <div style="display: flex; justify-content: space-between; border-bottom: 1px solid rgba(255,255,255,0.03); padding-bottom: 2px;">
                                 <span style="color: var(--text-secondary);">Progress:</span>
                                 <span id="stat-progress" style="font-weight: 600; color: #fff;">0 / 0</span>
                             </div>
                             <div style="display: flex; justify-content: space-between; border-bottom: 1px solid rgba(255,255,255,0.03); padding-bottom: 2px;">
-                                <span style="color: var(--text-secondary);">Upload Speed:</span>
-                                <span id="stat-speed" style="font-weight: 600; color: var(--success);">0 Mbps</span>
+                                <span style="color: var(--text-secondary);">Speed / Disk:</span>
+                                <span id="stat-speed-disk" style="font-weight: 600; color: var(--success);"><span id="stat-speed">0 Mbps</span> / <span id="stat-disk" style="color:#fff;">0 GB</span></span>
+                            </div>
+                            <div style="display: flex; justify-content: space-between; border-bottom: 1px solid rgba(255,255,255,0.03); padding-bottom: 2px;">
+                                <span style="color: var(--text-secondary);">Failures:</span>
+                                <span id="stat-fail" style="font-weight: 600; color: var(--error);">0</span>
                             </div>
                             <div style="display: flex; justify-content: space-between; padding-bottom: 2px;">
-                                <span style="color: var(--text-secondary);">Disk Space:</span>
-                                <span id="stat-disk" style="font-weight: 600; color: #fff;">0 GB</span>
+                                <span style="color: var(--text-secondary);">VM Uptime:</span>
+                                <span id="stat-uptime" style="font-weight: 600; color: var(--warn);">00:00:00</span>
                             </div>
                         </div>
 
