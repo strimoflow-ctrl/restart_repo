@@ -34,6 +34,42 @@ def log_to_firebase(message):
     except:
         pass
 
+# ── Helper: Parse Firebase List vs Dict Representations ───────────────────────
+def parse_firebase_set(val):
+    if not val:
+        return set()
+    if isinstance(val, dict):
+        return set(str(k) for k in val.keys())
+    if isinstance(val, list):
+        keys = set()
+        for idx, item in enumerate(val):
+            if item is True:
+                keys.add(str(idx))
+            elif isinstance(item, (int, str)):
+                keys.add(str(item))
+            elif item is not None and item is not False:
+                keys.add(str(idx))
+        return keys
+    return set()
+
+def parse_firebase_dict(val):
+    if not val:
+        return {}
+    if isinstance(val, dict):
+        return val
+    if isinstance(val, list):
+        return {str(idx): item for idx, item in enumerate(val) if item is not None}
+    return {}
+
+def parse_firebase_list(val):
+    if not val:
+        return []
+    if isinstance(val, list):
+        return [x for x in val if x is not None]
+    if isinstance(val, dict):
+        return list(val.values())
+    return [val]
+
 # ── Dynamic Control Command Checks ────────────────────────────────────────────
 cached_command = "start"
 
@@ -352,8 +388,8 @@ async def run_remote_scan(user):
 
 # Helper: Run remote topic mapping/creation
 async def run_remote_mapping(user):
-    source_topics = db.child(DB_ROOT).child("source_topics").get().val() or {}
-    mapped_topics = db.child(DB_ROOT).child("mapped_topics").get().val() or {}
+    source_topics = parse_firebase_dict(db.child(DB_ROOT).child("source_topics").get().val())
+    mapped_topics = parse_firebase_dict(db.child(DB_ROOT).child("mapped_topics").get().val())
     
     if TARGET_TYPE != "group_topic":
         log_to_firebase("ℹ️ Target is a channel/normal group. Topic creation skipped.")
@@ -543,13 +579,13 @@ async def run_queue_engine(user, bot, stats, all_tasks_ref, done_ids, finished_t
         await check_control_state(stats)
 
         # Dynamic reload of queue and topics
-        queue = db.child(DB_ROOT).child("queue").get().val() or []
-        source_topics = db.child(DB_ROOT).child("source_topics").get().val() or {}
-        mapped_topics = db.child(DB_ROOT).child("mapped_topics").get().val() or {}
+        queue = parse_firebase_list(db.child(DB_ROOT).child("queue").get().val())
+        source_topics = parse_firebase_dict(db.child(DB_ROOT).child("source_topics").get().val())
+        mapped_topics = parse_firebase_dict(db.child(DB_ROOT).child("mapped_topics").get().val())
         
         # Reload finished topics
         finish_data     = db.child(DB_ROOT).child("finished_topics").get().val() or {}
-        finished_topics = set(str(k) for k in finish_data.keys())
+        finished_topics = parse_firebase_set(finish_data)
         
         stats['global_topics_total'] = len(queue)
         stats['global_topics_done'] = len(finished_topics)
@@ -749,9 +785,9 @@ async def main():
         while True:
             # Initialize sync state from Firebase
             done_data       = db.child(DB_ROOT).child("done_ids").get().val() or {}
-            done_ids        = set(str(k) for k in done_data.keys())
+            done_ids        = parse_firebase_set(done_data)
             finish_data     = db.child(DB_ROOT).child("finished_topics").get().val() or {}
-            finished_topics = set(str(k) for k in finish_data.keys())
+            finished_topics = parse_firebase_set(finish_data)
             
             stats['global_videos_done']  = len(done_ids)
             stats['global_topics_done']  = len(finished_topics)
