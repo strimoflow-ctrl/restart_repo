@@ -235,16 +235,6 @@ async def process_file(user, msg, target_topic_id, sem, stats, bot, msg_index, s
 
             except Exception as e:
                 err = str(e)[:60]
-                
-                # Check for Telegram disconnection and trigger immediate auto-reconnect
-                if "disconnected" in str(e).lower() or not user.is_connected():
-                    try:
-                        log_to_firebase("🔄 Telegram client disconnected! Attempting auto-reconnect...")
-                        await user.connect()
-                        log_to_firebase("✅ Reconnected to Telegram successfully!")
-                    except Exception as conn_err:
-                        log_to_firebase(f"⚠️ Reconnect attempt error: {conn_err}")
-                
                 wait_time = getattr(e, 'seconds', None)
                 if wait_time is None and "wait of" in str(e).lower():
                     import re
@@ -300,7 +290,6 @@ async def process_file(user, msg, target_topic_id, sem, stats, bot, msg_index, s
                     "file_progress": 0,
                     "current_action": "IDLE"
                 }
-        return is_sent
 
 # ── Auto-Restart Handler ──────────────────────────────────────────────────────
 async def auto_restart_timer(user, bot, stats, all_tasks_ref):
@@ -661,6 +650,11 @@ async def run_queue_engine(user, bot, stats, all_tasks_ref, done_ids, finished_t
         total_topic_files = 0
         already_done_files = 0
         try:
+            # Ensure client is actively connected
+            if not user.is_connected():
+                log_to_firebase("🔄 Reconnecting Telegram User Client...")
+                await user.connect()
+                
             # If source type is topics, get messages from specific topic, else scan whole feed
             reply_param = int(next_topic_id) if SOURCE_TYPE == "group_topic" else None
             
@@ -712,12 +706,12 @@ async def run_queue_engine(user, bot, stats, all_tasks_ref, done_ids, finished_t
             any_failed = False
             
             for m, r in zip(msgs, results):
-                if r is True:
+                if isinstance(r, Exception):
+                    any_failed = True
+                    log_to_firebase(f"❌ File '{m.id}' failed inside topic '{title}': {r}")
+                else:
                     done_ids.add(str(m.id))
                     topic_success_count += 1
-                else:
-                    any_failed = True
-                    log_to_firebase(f"❌ File '{m.id}' failed inside topic '{title}'")
             
             stats['topic_done'] = topic_success_count
             
@@ -731,14 +725,9 @@ async def run_queue_engine(user, bot, stats, all_tasks_ref, done_ids, finished_t
 
         if any_failed:
             failed_in_current_run.add(next_topic_id)
-            # Ensure topic is NOT marked finished so it can be resumed
-            try:
-                db.child(DB_ROOT).child("finished_topics").child(next_topic_id).remove()
-            except Exception:
-                pass
             log_to_firebase(f"⚠️ Topic '{title}' had failures. It will be retried in the next pass.")
         else:
-            # Mark this topic completed ONLY if all files succeeded!
+            # Mark this topic completed ONLY if no files failed!
             db.child(DB_ROOT).child("finished_topics").child(next_topic_id).set(True)
             log_to_firebase(f"✅ Completed processing topic: '{title}'")
 
@@ -790,6 +779,11 @@ async def main():
         user = TelegramClient(StringSession(SESSION_STRING), API_ID, API_HASH)
         bot  = TelegramClient(StringSession(''), API_ID, API_HASH)
         await user.start()
+        if not await user.is_user_authorized():
+            log_to_firebase("❌ CRITICAL ERROR: Telegram User Session has EXPIRED or been LOGGED OUT!")
+            log_to_firebase("👉 Please open the Admin Dashboard and log in again to generate a fresh session string.")
+            db.child(DB_ROOT).child("control").child("command").set("stop")
+            return
         await bot.start(bot_token=BOT_TOKEN)
         log_to_firebase("✅ Connection to Telegram API established!")
 
