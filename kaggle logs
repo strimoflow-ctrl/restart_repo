@@ -1,275 +1,135 @@
-7.6s	0	0.00s - Debugger warning: It seems that frozen modules are being used, which may
-7.6s	1	0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
-7.6s	2	0.00s - to python to disable frozen modules.
-7.6s	3	0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
-8.4s	4	0.00s - Debugger warning: It seems that frozen modules are being used, which may
-8.4s	5	0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
-8.4s	6	0.00s - to python to disable frozen modules.
-8.4s	7	0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
-21.2s	8	ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
-21.2s	9	google-adk 1.29.0 requires google-cloud-bigquery-storage>=2.0.0, which is not installed.
-21.2s	10	id 1.6.1 requires urllib3<3,>=2, but you have urllib3 1.26.20 which is incompatible.
-21.2s	11	sigstore 4.3.0 requires cryptography<49,>=42, but you have cryptography 50.0.1 which is incompatible.
-21.2s	12	pydrive2 1.21.3 requires cryptography<44, but you have cryptography 50.0.1 which is incompatible.
-21.2s	13	pyopenssl 24.2.1 requires cryptography<44,>=41.0.5, but you have cryptography 50.0.1 which is incompatible.
-21.2s	14	blobfile 3.2.0 requires urllib3>=2, but you have urllib3 1.26.20 which is incompatible.
-21.4s	15	ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
-21.4s	16	google-adk 1.29.0 requires google-cloud-bigquery-storage>=2.0.0, which is not installed.
-21.4s	17	id 1.6.1 requires urllib3<3,>=2, but you have urllib3 1.26.20 which is incompatible.
-21.4s	18	sigstore 4.3.0 requires cryptography<49,>=42, but you have cryptography 50.0.1 which is incompatible.
-21.4s	19	pydrive2 1.21.3 requires cryptography<44, but you have cryptography 50.0.1 which is incompatible.
-21.4s	20	pyopenssl 24.2.1 requires cryptography<44,>=41.0.5, but you have cryptography 50.0.1 which is incompatible.
-21.4s	21	blobfile 3.2.0 requires urllib3>=2, but you have urllib3 1.26.20 which is incompatible.
-21.4s	22	
-21.4s	23	ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
-21.4s	24	google-adk 1.29.0 requires google-cloud-bigquery-storage>=2.0.0, which is not installed.
-21.4s	25	id 1.6.1 requires urllib3<3,>=2, but you have urllib3 1.26.20 which is incompatible.
-21.4s	26	sigstore 4.3.0 requires cryptography<49,>=42, but you have cryptography 50.0.1 which is incompatible.
-21.4s	27	pydrive2 1.21.3 requires cryptography<44, but you have cryptography 50.0.1 which is incompatible.
-21.4s	28	pyopenssl 24.2.1 requires cryptography<44,>=41.0.5, but you have cryptography 50.0.1 which is incompatible.
-21.4s	29	blobfile 3.2.0 requires urllib3>=2, but you have urllib3 1.26.20 which is incompatible.
-25.6s	30	ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
-25.6s	31	sigstore 4.3.0 requires cryptography<49,>=42, but you have cryptography 50.0.1 which is incompatible.
-25.6s	32	pydrive2 1.21.3 requires cryptography<44, but you have cryptography 50.0.1 which is incompatible.
-25.6s	33	pydrive2 1.21.3 requires pyOpenSSL<=24.2.1,>=19.1.0, but you have pyopenssl 26.4.0 which is incompatible.
-25.7s	34	ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
-25.7s	35	sigstore 4.3.0 requires cryptography<49,>=42, but you have cryptography 50.0.1 which is incompatible.
-25.7s	36	pydrive2 1.21.3 requires cryptography<44, but you have cryptography 50.0.1 which is incompatible.
-25.7s	37	pydrive2 1.21.3 requires pyOpenSSL<=24.2.1,>=19.1.0, but you have pyopenssl 26.4.0 which is incompatible.
-25.7s	38	
-25.7s	39	ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
-25.7s	40	sigstore 4.3.0 requires cryptography<49,>=42, but you have cryptography 50.0.1 which is incompatible.
-25.7s	41	pydrive2 1.21.3 requires cryptography<44, but you have cryptography 50.0.1 which is incompatible.
-25.7s	42	pydrive2 1.21.3 requires pyOpenSSL<=24.2.1,>=19.1.0, but you have pyopenssl 26.4.0 which is incompatible.
-13.5s	43	     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 50.1/50.1 kB 3.1 MB/s eta 0:00:00
-13.7s	44	     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 50.1/50.1 kB 3.1 MB/s eta 0:00:00
-14.4s	45	   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 804.1/804.1 kB 31.6 MB/s eta 0:00:00
-14.5s	46	   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 250.1/250.1 kB 16.4 MB/s eta 0:00:00
-14.5s	47	   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 144.2/144.2 kB 9.2 MB/s eta 0:00:00
-14.5s	48	   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 121.3/121.3 kB 8.2 MB/s eta 0:00:00
-14.6s	49	   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.7/4.7 MB 94.8 MB/s eta 0:00:00
-14.6s	50	   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 804.1/804.1 kB 31.6 MB/s eta 0:00:00
-14.6s	51	   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 250.1/250.1 kB 16.4 MB/s eta 0:00:00
-14.6s	52	   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 144.2/144.2 kB 9.2 MB/s eta 0:00:00
-14.6s	53	   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 121.3/121.3 kB 8.2 MB/s eta 0:00:00
-14.6s	54	   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.7/4.7 MB 94.8 MB/s eta 0:00:00
-22.8s	55	   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 56.0/56.0 kB 3.8 MB/s eta 0:00:00
-23.0s	56	   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 56.0/56.0 kB 3.8 MB/s eta 0:00:00
-25.7s	57	✅ Sab libraries install ho gayi!
-43.7s	58	🔥 Connecting to Firebase Realtime Database...
-43.7s	59	⏳ Waiting for configuration under root node 'INVISIBLE_DIAMOND'...
-44.0s	60	✅ Found dynamic configuration in Firebase. Overriding fallbacks...
-44.0s	61	
-44.0s	62	⚙️ CURRENT CONFIGURATION:
-44.0s	63	   Source: -1003081925329 (Type: group_topic)
-44.0s	64	   Target: -1003956245133 (Type: group_topic)
-44.0s	65	   Auto-restart: 11.5 hours
-44.0s	66	   Firebase DB: https://secret-gpt-default-rtdb.asia-southeast1.firebasedatabase.app
-44.6s	67	✅ Source topics already exist in Firebase. Skipping automatic startup scan to preserve custom queue/deletions.
-44.7s	68	✅ Helper functions ready!
-44.7s	69	   Disk free: 19.5 GB
-44.8s	70	✅ Firebase connected in Core Engine!
-44.8s	71	✅ Core Engine logic loaded.
-45.5s	72	🚀 Initializing Cloner Ultra Core Engine...
-53.6s	73	✅ Connection to Telegram API established!
-55.2s	74	💤 Idle. Awaiting Start command from Admin Dashboard...
-55.4s	75	🚀 Start command received! Running queue...
-56.6s	76	
-56.6s	77	📂 Processing Queue Item: 'KOTA ALLEN ENTHUSE MEO 25-26' (ID: 14580)
-60.3s	78	⚠️ Failed reading messages from topic 'KOTA ALLEN ENTHUSE MEO 25-26': Cannot send requests while disconnected
-61.5s	79	
-61.5s	80	📂 Processing Queue Item: 'POWER PLUS NOTES' (ID: 16015)
-61.7s	81	⚠️ Failed reading messages from topic 'POWER PLUS NOTES': Cannot send requests while disconnected
-62.9s	82	
-62.9s	83	📂 Processing Queue Item: 'KOTA BEWISE 2026' (ID: 17103)
-63.1s	84	⚠️ Failed reading messages from topic 'KOTA BEWISE 2026': Cannot send requests while disconnected
-64.3s	85	
-64.3s	86	📂 Processing Queue Item: 'BIOMENTOR 2026' (ID: 17105)
-64.5s	87	⚠️ Failed reading messages from topic 'BIOMENTOR 2026': Cannot send requests while disconnected
-65.6s	88	
-65.6s	89	📂 Processing Queue Item: 'RISHABH SIR BIOLOGY' (ID: 17107)
-66.3s	90	⚠️ Failed reading messages from topic 'RISHABH SIR BIOLOGY': Cannot send requests while disconnected
-67.5s	91	
-67.5s	92	📂 Processing Queue Item: 'ASHISH BAJPAI SARVAM ZOOLOGY' (ID: 17113)
-67.7s	93	⚠️ Failed reading messages from topic 'ASHISH BAJPAI SARVAM ZOOLOGY': Cannot send requests while disconnected
-68.9s	94	
-68.9s	95	📂 Processing Queue Item: 'SARVAM CRASH COURSE 2026' (ID: 17115)
-69.1s	96	⚠️ Failed reading messages from topic 'SARVAM CRASH COURSE 2026': Cannot send requests while disconnected
-70.3s	97	
-70.3s	98	📂 Processing Queue Item: 'JC SIR OFFLINE' (ID: 17553)
-71.2s	99	⚠️ Failed reading messages from topic 'JC SIR OFFLINE': Cannot send requests while disconnected
-72.4s	100	
-72.4s	101	📂 Processing Queue Item: 'KALPIT. AGRWAL MACHANICS' (ID: 17649)
-72.6s	102	⚠️ Failed reading messages from topic 'KALPIT. AGRWAL MACHANICS': Cannot send requests while disconnected
-73.8s	103	
-73.8s	104	📂 Processing Queue Item: 'UNACADEMY MASTER PRO 1 COMPLETE ENGLISH' (ID: 18675)
-74.0s	105	⚠️ Failed reading messages from topic 'UNACADEMY MASTER PRO 1 COMPLETE ENGLISH': Cannot send requests while disconnected
-75.2s	106	
-75.2s	107	📂 Processing Queue Item: '2027 MODULE ALLEN' (ID: 20546)
-75.9s	108	⚠️ Failed reading messages from topic '2027 MODULE ALLEN': Cannot send requests while disconnected
-77.0s	109	
-77.0s	110	📂 Processing Queue Item: 'RBC CRASH COURSE' (ID: 20553)
-77.3s	111	⚠️ Failed reading messages from topic 'RBC CRASH COURSE': Cannot send requests while disconnected
-78.4s	112	
-78.4s	113	📂 Processing Queue Item: 'NCERT BEWISE 2026' (ID: 20554)
-78.7s	114	⚠️ Failed reading messages from topic 'NCERT BEWISE 2026': Cannot send requests while disconnected
-79.8s	115	
-79.8s	116	📂 Processing Queue Item: 'SARVAM ENTHUSE 2027 ENGLISH' (ID: 21118)
-80.1s	117	⚠️ Failed reading messages from topic 'SARVAM ENTHUSE 2027 ENGLISH': Cannot send requests while disconnected
-81.2s	118	
-81.2s	119	📂 Processing Queue Item: 'KOTA SARVAM ENGLISH ONLINE 2026' (ID: 21121)
-81.4s	120	⚠️ Failed reading messages from topic 'KOTA SARVAM ENGLISH ONLINE 2026': Cannot send requests while disconnected
-82.6s	121	
-82.6s	122	📂 Processing Queue Item: 'KOTA SARVAM HINDI ONLINE 2026' (ID: 21123)
-82.8s	123	⚠️ Failed reading messages from topic 'KOTA SARVAM HINDI ONLINE 2026': Cannot send requests while disconnected
-84.0s	124	
-84.0s	125	📂 Processing Queue Item: 'KOTA ALLEN NEET 12 Enthusiast Online Course Target 2026 Live' (ID: 23221)
-85.4s	126	⚠️ Failed reading messages from topic 'KOTA ALLEN NEET 12 Enthusiast Online Course Target 2026 Live': Cannot send requests while disconnected
-86.6s	127	
-86.6s	128	📂 Processing Queue Item: 'KOTA ALLEN NEET Achiever Online Course Target 2026' (ID: 23223)
-86.8s	129	⚠️ Failed reading messages from topic 'KOTA ALLEN NEET Achiever Online Course Target 2026': Cannot send requests while disconnected
-87.9s	130	
-88.0s	131	📂 Processing Queue Item: '180 PHYSICS NEET 2026' (ID: 23961)
-88.2s	132	⚠️ Failed reading messages from topic '180 PHYSICS NEET 2026': Cannot send requests while disconnected
-89.3s	133	
-89.3s	134	📂 Processing Queue Item: 'RITU RATTEWAL 2026' (ID: 23965)
-89.6s	135	⚠️ Failed reading messages from topic 'RITU RATTEWAL 2026': Cannot send requests while disconnected
-90.9s	136	
-90.9s	137	📂 Processing Queue Item: 'VAIBHAV SIR BIOLOGY 2026' (ID: 24219)
-91.1s	138	⚠️ Failed reading messages from topic 'VAIBHAV SIR BIOLOGY 2026': Cannot send requests while disconnected
-92.3s	139	
-92.3s	140	📂 Processing Queue Item: 'KOTA UNACADEMY MASTER PRO 1 ENGLISH 2027' (ID: 26369)
-92.5s	141	⚠️ Failed reading messages from topic 'KOTA UNACADEMY MASTER PRO 1 ENGLISH 2027': Cannot send requests while disconnected
-93.7s	142	
-93.7s	143	📂 Processing Queue Item: 'GANGWAR BIOLOGY' (ID: 26766)
-94.4s	144	⚠️ Failed reading messages from topic 'GANGWAR BIOLOGY': Cannot send requests while disconnected
-95.5s	145	
-95.5s	146	📂 Processing Queue Item: 'SARVAM LEADER OFFLINE HINDI 2027' (ID: 28198)
-95.7s	147	⚠️ Failed reading messages from topic 'SARVAM LEADER OFFLINE HINDI 2027': Cannot send requests while disconnected
-96.9s	148	
-96.9s	149	📂 Processing Queue Item: '2027 KOTA UNACADEMY MASTER PRO 2 ENGLISH' (ID: 28408)
-97.1s	150	⚠️ Failed reading messages from topic '2027 KOTA UNACADEMY MASTER PRO 2 ENGLISH': Cannot send requests while disconnected
-98.3s	151	
-98.3s	152	📂 Processing Queue Item: 'SARVAM NURTURE 2027' (ID: 29003)
-99.2s	153	⚠️ Failed reading messages from topic 'SARVAM NURTURE 2027': Cannot send requests while disconnected
-101.0s	154	
-101.0s	155	📂 Processing Queue Item: '2027 UNACADEMY MASTER PRO 2 HINDI' (ID: 29411)
-101.2s	156	⚠️ Failed reading messages from topic '2027 UNACADEMY MASTER PRO 2 HINDI': Cannot send requests while disconnected
-102.3s	157	
-102.3s	158	📂 Processing Queue Item: '🎯Target Batch : ACHIEVER 1.0 ONLINE 2026' (ID: 29859)
-102.6s	159	⚠️ Failed reading messages from topic '🎯Target Batch : ACHIEVER 1.0 ONLINE 2026': Cannot send requests while disconnected
-103.7s	160	
-103.7s	161	📂 Processing Queue Item: 'NOMESH SIR BIOLOGY 2026' (ID: 31480)
-104.4s	162	⚠️ Failed reading messages from topic 'NOMESH SIR BIOLOGY 2026': Cannot send requests while disconnected
-105.5s	163	
-105.5s	164	📂 Processing Queue Item: 'NOMESH SIR BIOLOGY 2027 LEC' (ID: 32154)
-105.8s	165	⚠️ Failed reading messages from topic 'NOMESH SIR BIOLOGY 2027 LEC': Cannot send requests while disconnected
-106.9s	166	
-106.9s	167	📂 Processing Queue Item: 'ASHISH GUPTA SIR 2027 ENGLISH CLASS 12' (ID: 32239)
-107.1s	168	⚠️ Failed reading messages from topic 'ASHISH GUPTA SIR 2027 ENGLISH CLASS 12': Cannot send requests while disconnected
-108.3s	169	
-108.3s	170	📂 Processing Queue Item: 'QUALITY SPEAK KOTA 2026' (ID: 35045)
-108.5s	171	⚠️ Failed reading messages from topic 'QUALITY SPEAK KOTA 2026': Cannot send requests while disconnected
-109.7s	172	
-109.7s	173	📂 Processing Queue Item: 'DP SIR 2027' (ID: 36052)
-109.9s	174	⚠️ Failed reading messages from topic 'DP SIR 2027': Cannot send requests while disconnected
-111.0s	175	🔄 Retrying topics that had file failures in this pass...
-122.2s	176	
-122.2s	177	📂 Processing Queue Item: 'KOTA ALLEN ENTHUSE MEO 25-26' (ID: 14580)
-122.6s	178	⚠️ Failed reading messages from topic 'KOTA ALLEN ENTHUSE MEO 25-26': Cannot send requests while disconnected
-123.7s	179	
-123.7s	180	📂 Processing Queue Item: 'POWER PLUS NOTES' (ID: 16015)
-123.9s	181	⚠️ Failed reading messages from topic 'POWER PLUS NOTES': Cannot send requests while disconnected
-125.1s	182	
-125.1s	183	📂 Processing Queue Item: 'KOTA BEWISE 2026' (ID: 17103)
-126.1s	184	⚠️ Failed reading messages from topic 'KOTA BEWISE 2026': Cannot send requests while disconnected
-127.3s	185	
-127.3s	186	📂 Processing Queue Item: 'BIOMENTOR 2026' (ID: 17105)
-127.9s	187	⚠️ Failed reading messages from topic 'BIOMENTOR 2026': Cannot send requests while disconnected
-129.1s	188	
-129.1s	189	📂 Processing Queue Item: 'RISHABH SIR BIOLOGY' (ID: 17107)
-129.3s	190	⚠️ Failed reading messages from topic 'RISHABH SIR BIOLOGY': Cannot send requests while disconnected
-130.5s	191	
-130.5s	192	📂 Processing Queue Item: 'ASHISH BAJPAI SARVAM ZOOLOGY' (ID: 17113)
-130.7s	193	⚠️ Failed reading messages from topic 'ASHISH BAJPAI SARVAM ZOOLOGY': Cannot send requests while disconnected
-131.8s	194	
-131.8s	195	📂 Processing Queue Item: 'SARVAM CRASH COURSE 2026' (ID: 17115)
-132.1s	196	⚠️ Failed reading messages from topic 'SARVAM CRASH COURSE 2026': Cannot send requests while disconnected
-133.2s	197	
-133.2s	198	📂 Processing Queue Item: 'JC SIR OFFLINE' (ID: 17553)
-133.4s	199	⚠️ Failed reading messages from topic 'JC SIR OFFLINE': Cannot send requests while disconnected
-134.6s	200	
-134.6s	201	📂 Processing Queue Item: 'KALPIT. AGRWAL MACHANICS' (ID: 17649)
-134.8s	202	⚠️ Failed reading messages from topic 'KALPIT. AGRWAL MACHANICS': Cannot send requests while disconnected
-136.0s	203	
-136.0s	204	📂 Processing Queue Item: 'UNACADEMY MASTER PRO 1 COMPLETE ENGLISH' (ID: 18675)
-136.6s	205	⚠️ Failed reading messages from topic 'UNACADEMY MASTER PRO 1 COMPLETE ENGLISH': Cannot send requests while disconnected
-137.8s	206	
-137.8s	207	📂 Processing Queue Item: '2027 MODULE ALLEN' (ID: 20546)
-138.0s	208	⚠️ Failed reading messages from topic '2027 MODULE ALLEN': Cannot send requests while disconnected
-139.1s	209	
-139.1s	210	📂 Processing Queue Item: 'RBC CRASH COURSE' (ID: 20553)
-140.0s	211	⚠️ Failed reading messages from topic 'RBC CRASH COURSE': Cannot send requests while disconnected
-141.1s	212	
-141.1s	213	📂 Processing Queue Item: 'NCERT BEWISE 2026' (ID: 20554)
-141.4s	214	⚠️ Failed reading messages from topic 'NCERT BEWISE 2026': Cannot send requests while disconnected
-142.5s	215	
-142.5s	216	📂 Processing Queue Item: 'SARVAM ENTHUSE 2027 ENGLISH' (ID: 21118)
-142.7s	217	⚠️ Failed reading messages from topic 'SARVAM ENTHUSE 2027 ENGLISH': Cannot send requests while disconnected
-143.8s	218	
-143.8s	219	📂 Processing Queue Item: 'KOTA SARVAM ENGLISH ONLINE 2026' (ID: 21121)
-144.1s	220	⚠️ Failed reading messages from topic 'KOTA SARVAM ENGLISH ONLINE 2026': Cannot send requests while disconnected
-145.2s	221	
-145.2s	222	📂 Processing Queue Item: 'KOTA SARVAM HINDI ONLINE 2026' (ID: 21123)
-145.9s	223	⚠️ Failed reading messages from topic 'KOTA SARVAM HINDI ONLINE 2026': Cannot send requests while disconnected
-147.1s	224	
-147.1s	225	📂 Processing Queue Item: 'KOTA ALLEN NEET 12 Enthusiast Online Course Target 2026 Live' (ID: 23221)
-147.3s	226	⚠️ Failed reading messages from topic 'KOTA ALLEN NEET 12 Enthusiast Online Course Target 2026 Live': Cannot send requests while disconnected
-148.4s	227	
-148.4s	228	📂 Processing Queue Item: 'KOTA ALLEN NEET Achiever Online Course Target 2026' (ID: 23223)
-148.6s	229	⚠️ Failed reading messages from topic 'KOTA ALLEN NEET Achiever Online Course Target 2026': Cannot send requests while disconnected
-149.8s	230	
-149.8s	231	📂 Processing Queue Item: '180 PHYSICS NEET 2026' (ID: 23961)
-150.0s	232	⚠️ Failed reading messages from topic '180 PHYSICS NEET 2026': Cannot send requests while disconnected
-151.3s	233	
-151.3s	234	📂 Processing Queue Item: 'RITU RATTEWAL 2026' (ID: 23965)
-151.5s	235	⚠️ Failed reading messages from topic 'RITU RATTEWAL 2026': Cannot send requests while disconnected
-152.7s	236	
-152.7s	237	📂 Processing Queue Item: 'VAIBHAV SIR BIOLOGY 2026' (ID: 24219)
-152.9s	238	⚠️ Failed reading messages from topic 'VAIBHAV SIR BIOLOGY 2026': Cannot send requests while disconnected
-154.0s	239	
-154.0s	240	📂 Processing Queue Item: 'KOTA UNACADEMY MASTER PRO 1 ENGLISH 2027' (ID: 26369)
-155.4s	241	⚠️ Failed reading messages from topic 'KOTA UNACADEMY MASTER PRO 1 ENGLISH 2027': Cannot send requests while disconnected
-156.5s	242	
-156.5s	243	📂 Processing Queue Item: 'GANGWAR BIOLOGY' (ID: 26766)
-156.7s	244	⚠️ Failed reading messages from topic 'GANGWAR BIOLOGY': Cannot send requests while disconnected
-157.9s	245	
-157.9s	246	📂 Processing Queue Item: 'SARVAM LEADER OFFLINE HINDI 2027' (ID: 28198)
-158.1s	247	⚠️ Failed reading messages from topic 'SARVAM LEADER OFFLINE HINDI 2027': Cannot send requests while disconnected
-159.3s	248	
-159.3s	249	📂 Processing Queue Item: '2027 KOTA UNACADEMY MASTER PRO 2 ENGLISH' (ID: 28408)
-159.5s	250	⚠️ Failed reading messages from topic '2027 KOTA UNACADEMY MASTER PRO 2 ENGLISH': Cannot send requests while disconnected
-160.6s	251	
-160.6s	252	📂 Processing Queue Item: 'SARVAM NURTURE 2027' (ID: 29003)
-160.9s	253	⚠️ Failed reading messages from topic 'SARVAM NURTURE 2027': Cannot send requests while disconnected
-162.0s	254	
-162.0s	255	📂 Processing Queue Item: '2027 UNACADEMY MASTER PRO 2 HINDI' (ID: 29411)
-162.2s	256	⚠️ Failed reading messages from topic '2027 UNACADEMY MASTER PRO 2 HINDI': Cannot send requests while disconnected
-163.4s	257	
-163.4s	258	📂 Processing Queue Item: '🎯Target Batch : ACHIEVER 1.0 ONLINE 2026' (ID: 29859)
-164.1s	259	⚠️ Failed reading messages from topic '🎯Target Batch : ACHIEVER 1.0 ONLINE 2026': Cannot send requests while disconnected
-165.2s	260	
-165.2s	261	📂 Processing Queue Item: 'NOMESH SIR BIOLOGY 2026' (ID: 31480)
-165.4s	262	⚠️ Failed reading messages from topic 'NOMESH SIR BIOLOGY 2026': Cannot send requests while disconnected
-166.6s	263	
-166.6s	264	📂 Processing Queue Item: 'NOMESH SIR BIOLOGY 2027 LEC' (ID: 32154)
-166.8s	265	⚠️ Failed reading messages from topic 'NOMESH SIR BIOLOGY 2027 LEC': Cannot send requests while disconnected
-168.0s	266	
-168.0s	267	📂 Processing Queue Item: 'ASHISH GUPTA SIR 2027 ENGLISH CLASS 12' (ID: 32239)
-168.9s	268	⚠️ Failed reading messages from topic 'ASHISH GUPTA SIR 2027 ENGLISH CLASS 12': Cannot send requests while disconnected
-170.0s	269	
-170.0s	270	📂 Processing Queue Item: 'QUALITY SPEAK KOTA 2026' (ID: 35045)
-170.3s	271	⚠️ Failed reading messages from topic 'QUALITY SPEAK KOTA 2026': Cannot send requests while disconnected
-171.4s	272	
-171.4s	273	📂 Processing Queue Item: 'DP SIR 2027' (ID: 36052)
-171.6s	274	⚠️ Failed reading messages from topic 'DP SIR 2027': Cannot send requests while disconnected
+9.6s	1	0.00s - Debugger warning: It seems that frozen modules are being used, which may
+9.6s	2	0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+9.6s	3	0.00s - to python to disable frozen modules.
+9.6s	4	0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+10.4s	5	0.00s - Debugger warning: It seems that frozen modules are being used, which may
+10.4s	6	0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+10.4s	7	0.00s - to python to disable frozen modules.
+10.4s	8	0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+16.6s	9	     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 50.1/50.1 kB 1.3 MB/s eta 0:00:00
+16.8s	10	     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 50.1/50.1 kB 1.3 MB/s eta 0:00:00
+17.9s	11	   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 804.1/804.1 kB 14.6 MB/s eta 0:00:00
+17.9s	12	   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 250.1/250.1 kB 5.4 MB/s eta 0:00:00
+18.0s	13	   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 144.2/144.2 kB 3.7 MB/s eta 0:00:00
+18.1s	14	   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 804.1/804.1 kB 14.6 MB/s eta 0:00:00
+18.1s	15	   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 250.1/250.1 kB 5.4 MB/s eta 0:00:00
+18.1s	16	   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 144.2/144.2 kB 3.7 MB/s eta 0:00:00
+18.1s	17	   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 121.3/121.3 kB 3.7 MB/s eta 0:00:00
+18.2s	18	   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.8/4.8 MB 74.8 MB/s eta 0:00:00
+18.3s	19	   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 121.3/121.3 kB 3.7 MB/s eta 0:00:00
+18.3s	20	   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.8/4.8 MB 74.8 MB/s eta 0:00:00
+25.2s	21	ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
+25.2s	22	google-adk 1.29.0 requires google-cloud-bigquery-storage>=2.0.0, which is not installed.
+25.2s	23	id 1.6.1 requires urllib3<3,>=2, but you have urllib3 1.26.20 which is incompatible.
+25.2s	24	sigstore 4.3.0 requires cryptography<49,>=42, but you have cryptography 50.0.2 which is incompatible.
+25.2s	25	pydrive2 1.21.3 requires cryptography<44, but you have cryptography 50.0.2 which is incompatible.
+25.2s	26	pyopenssl 24.2.1 requires cryptography<44,>=41.0.5, but you have cryptography 50.0.2 which is incompatible.
+25.2s	27	blobfile 3.2.0 requires urllib3>=2, but you have urllib3 1.26.20 which is incompatible.
+25.4s	28	ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
+25.4s	29	google-adk 1.29.0 requires google-cloud-bigquery-storage>=2.0.0, which is not installed.
+25.4s	30	id 1.6.1 requires urllib3<3,>=2, but you have urllib3 1.26.20 which is incompatible.
+25.4s	31	sigstore 4.3.0 requires cryptography<49,>=42, but you have cryptography 50.0.2 which is incompatible.
+25.4s	32	pydrive2 1.21.3 requires cryptography<44, but you have cryptography 50.0.2 which is incompatible.
+25.4s	33	pyopenssl 24.2.1 requires cryptography<44,>=41.0.5, but you have cryptography 50.0.2 which is incompatible.
+25.4s	34	blobfile 3.2.0 requires urllib3>=2, but you have urllib3 1.26.20 which is incompatible.
+25.4s	35	
+25.4s	36	ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
+25.4s	37	google-adk 1.29.0 requires google-cloud-bigquery-storage>=2.0.0, which is not installed.
+25.4s	38	id 1.6.1 requires urllib3<3,>=2, but you have urllib3 1.26.20 which is incompatible.
+25.4s	39	sigstore 4.3.0 requires cryptography<49,>=42, but you have cryptography 50.0.2 which is incompatible.
+25.4s	40	pydrive2 1.21.3 requires cryptography<44, but you have cryptography 50.0.2 which is incompatible.
+25.4s	41	pyopenssl 24.2.1 requires cryptography<44,>=41.0.5, but you have cryptography 50.0.2 which is incompatible.
+25.4s	42	blobfile 3.2.0 requires urllib3>=2, but you have urllib3 1.26.20 which is incompatible.
+26.9s	43	   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 56.0/56.0 kB 1.7 MB/s eta 0:00:00
+27.1s	44	   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 56.0/56.0 kB 1.7 MB/s eta 0:00:00
+29.8s	45	ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
+29.8s	46	sigstore 4.3.0 requires cryptography<49,>=42, but you have cryptography 50.0.2 which is incompatible.
+29.8s	47	pydrive2 1.21.3 requires cryptography<44, but you have cryptography 50.0.2 which is incompatible.
+29.8s	48	pydrive2 1.21.3 requires pyOpenSSL<=24.2.1,>=19.1.0, but you have pyopenssl 26.4.0 which is incompatible.
+29.9s	49	✅ Sab libraries install ho gayi!
+29.9s	50	ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
+29.9s	51	sigstore 4.3.0 requires cryptography<49,>=42, but you have cryptography 50.0.2 which is incompatible.
+29.9s	52	pydrive2 1.21.3 requires cryptography<44, but you have cryptography 50.0.2 which is incompatible.
+29.9s	53	pydrive2 1.21.3 requires pyOpenSSL<=24.2.1,>=19.1.0, but you have pyopenssl 26.4.0 which is incompatible.
+29.9s	54	
+29.9s	55	ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
+29.9s	56	sigstore 4.3.0 requires cryptography<49,>=42, but you have cryptography 50.0.2 which is incompatible.
+29.9s	57	pydrive2 1.21.3 requires cryptography<44, but you have cryptography 50.0.2 which is incompatible.
+29.9s	58	pydrive2 1.21.3 requires pyOpenSSL<=24.2.1,>=19.1.0, but you have pyopenssl 26.4.0 which is incompatible.
+49.8s	59	🔥 Connecting to Firebase Realtime Database...
+49.8s	60	⏳ Waiting for configuration under root node 'SYMBOL LECTURES GROUP CW'...
+50.2s	61	✅ Found dynamic configuration in Firebase. Overriding fallbacks...
+50.2s	62	
+50.2s	63	⚙️ CURRENT CONFIGURATION:
+50.2s	64	   Source: -1002965470277 (Type: group_topic)
+50.2s	65	   Target: -1004420486502 (Type: group_topic)
+50.2s	66	   Auto-restart: 11.5 hours
+50.2s	67	   Firebase DB: https://secret-gpt-default-rtdb.asia-southeast1.firebasedatabase.app
+51.1s	68	✅ Source topics already exist in Firebase. Skipping automatic startup scan to preserve custom queue/deletions.
+51.1s	69	✅ Helper functions ready!
+51.1s	70	   Disk free: 19.5 GB
+51.2s	71	✅ Firebase connected in Core Engine!
+51.2s	72	✅ Core Engine logic loaded.
+52.1s	73	🚀 Initializing Cloner Ultra Core Engine...
+57.8s	74	✅ Connection to Telegram API established!
+58.7s	75	💤 Idle. Awaiting Start command from Admin Dashboard...
+59.0s	76	🚀 Start command received! Running queue...
+60.6s	77	
+60.6s	78	📂 Processing Queue Item: 'DN sir organic chemistry Old lecture' (ID: 6336)
+63.8s	79	   ↳ Files to clone: 94 | Speed slots: 3 workers
+64.1s	80	🔄 Restart signal received! Exiting gracefully...
+64.3s	81	Kernel died while waiting for execute reply.
+64.3s	82	Traceback (most recent call last):
+64.3s	83	  File "/usr/local/lib/python3.12/dist-packages/nbclient/client.py", line 949, in async_execute_cell
+64.3s	84	    exec_reply = await self.task_poll_for_reply
+64.3s	85	                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+64.3s	86	  File "/usr/local/lib/python3.12/dist-packages/nbclient/client.py", line 730, in _async_poll_for_reply
+64.3s	87	    msg = await ensure_async(self.kc.shell_channel.get_msg(timeout=new_timeout))
+64.3s	88	          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+64.3s	89	  File "/usr/local/lib/python3.12/dist-packages/nbclient/util.py", line 96, in ensure_async
+64.3s	90	    result = await obj
+64.3s	91	             ^^^^^^^^^
+64.3s	92	  File "/usr/local/lib/python3.12/dist-packages/jupyter_client/channels.py", line 224, in get_msg
+64.3s	93	    ready = await self.socket.poll(timeout)
+64.3s	94	            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+64.3s	95	asyncio.exceptions.CancelledError
+64.3s	96	
+64.3s	97	During handling of the above exception, another exception occurred:
+64.3s	98	
+64.3s	99	Traceback (most recent call last):
+64.3s	100	  File "<string>", line 1, in <module>
+64.3s	101	  File "/usr/local/lib/python3.12/dist-packages/papermill/execute.py", line 116, in execute_notebook
+64.3s	102	    nb = papermill_engines.execute_notebook_with_engine(
+64.3s	103	         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+64.3s	104	  File "/usr/local/lib/python3.12/dist-packages/papermill/engines.py", line 49, in execute_notebook_with_engine
+64.3s	105	    return self.get_engine(engine_name).execute_notebook(nb, kernel_name, **kwargs)
+64.3s	106	           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+64.3s	107	  File "/usr/local/lib/python3.12/dist-packages/papermill/engines.py", line 371, in execute_notebook
+64.3s	108	    cls.execute_managed_notebook(nb_man, kernel_name, log_output=log_output, **kwargs)
+64.3s	109	  File "/usr/local/lib/python3.12/dist-packages/papermill/engines.py", line 443, in execute_managed_notebook
+64.3s	110	    return PapermillNotebookClient(nb_man, **final_kwargs).execute()
+64.3s	111	           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+64.3s	112	  File "/usr/local/lib/python3.12/dist-packages/papermill/clientwrap.py", line 45, in execute
+64.3s	113	    self.papermill_execute_cells()
+64.3s	114	  File "/usr/local/lib/python3.12/dist-packages/papermill/clientwrap.py", line 72, in papermill_execute_cells
+64.3s	115	    self.execute_cell(cell, index)
+64.3s	116	  File "/usr/local/lib/python3.12/dist-packages/nbclient/util.py", line 84, in wrapped
+64.3s	117	    return just_run(coro(*args, **kwargs))
+64.3s	118	           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+64.3s	119	  File "/usr/local/lib/python3.12/dist-packages/nbclient/util.py", line 62, in just_run
+64.3s	120	    return loop.run_until_complete(coro)
+64.3s	121	           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+64.3s	122	  File "/usr/lib/python3.12/asyncio/base_events.py", line 691, in run_until_complete
+64.3s	123	    return future.result()
+64.3s	124	           ^^^^^^^^^^^^^^^
+64.3s	125	  File "/usr/local/lib/python3.12/dist-packages/nbclient/client.py", line 953, in async_execute_cell
+64.3s	126	    raise DeadKernelError("Kernel died")
+64.3s	127	nbclient.exceptions.DeadKernelError: Kernel died
+67.3s	128	/usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\|'
+67.3s	129	  cells[i][c] = re.sub('\\\\\|', '|', cell)
+67.5s	130	/usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\_'
+67.5s	131	  text = re.sub(r'_', '\_', text) # Escape underscores in display text
+68.3s	132	[NbConvertApp] Converting notebook __notebook__.ipynb to notebook
+68.7s	133	[NbConvertApp] Writing 77638 bytes to __notebook__.ipynb
+72.0s	134	[NbConvertApp] Converting notebook __notebook__.ipynb to html
+73.5s	135	[NbConvertApp] Writing 519410 bytes to __results__.html
