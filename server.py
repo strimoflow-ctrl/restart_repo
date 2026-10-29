@@ -237,19 +237,30 @@ def push_automation_notebook_to_kaggle(username, key, title, slug):
 
 
 def start_firebase_polling():
-    """Polls Firebase RTDB for auto-restart triggers across bot list stored in admin_config/bots."""
+    """Polls Firebase RTDB for auto-restart triggers across bot list stored in admin_config/bots (Bandwidth Optimized)."""
     import time
     db_url = FIREBASE_CONFIG["databaseURL"].rstrip('/')
-    print("[*] Cloud server listening to Firebase RTDB for auto-restart triggers from admin_config/bots...")
+    print("[*] Cloud server listening to Firebase RTDB for auto-restart triggers (Optimized Bandwidth Mode)...")
     
+    session = requests.Session()
+    bot_list = None
+    last_bot_list_fetch = 0
+    last_heartbeat_time = {}
+
     while True:
         try:
-            # 1. Fetch configured bots list from Firebase
-            url = f"{db_url}/admin_config/bots_v2.json"
-            resp = requests.get(url, timeout=10)
-            bot_list = None
-            if resp.status_code == 200:
-                bot_list = resp.json()
+            now = time.time()
+            
+            # 1. Fetch configured bots list from Firebase only once every 5 minutes (300s) to save bandwidth
+            if not bot_list or (now - last_bot_list_fetch > 300):
+                url = f"{db_url}/admin_config/bots_v2.json"
+                try:
+                    resp = session.get(url, timeout=10)
+                    if resp.status_code == 200:
+                        bot_list = resp.json()
+                        last_bot_list_fetch = now
+                except Exception:
+                    pass
                 
             # Fallback to default list if not configured in Firebase yet
             if not bot_list or not isinstance(bot_list, list):
@@ -267,14 +278,16 @@ def start_firebase_polling():
                     
                 trigger_url = f"{db_url}/{root_key}/control/trigger_restart.json"
                 try:
-                    trigger_resp = requests.get(trigger_url, timeout=5)
+                    trigger_resp = session.get(trigger_url, timeout=5)
                     if trigger_resp.status_code == 200 and trigger_resp.json() is not None:
-                        # Update check timestamp for this bot root (type: cloud_server)
-                        orchestrator_url = f"{db_url}/{root_key}/status/orchestrator.json"
-                        try:
-                            requests.patch(orchestrator_url, json={"last_check": time.time(), "type": "cloud_server"}, timeout=5)
-                        except:
-                            pass
+                        # Throttle orchestrator heartbeat to once every 5 minutes (300s) instead of every iteration
+                        if now - last_heartbeat_time.get(root_key, 0) >= 300:
+                            orchestrator_url = f"{db_url}/{root_key}/status/orchestrator.json"
+                            try:
+                                session.patch(orchestrator_url, json={"last_check": now, "type": "cloud_server"}, timeout=5)
+                                last_heartbeat_time[root_key] = now
+                            except Exception:
+                                pass
                             
                         trigger_val = trigger_resp.json()
                         
@@ -282,13 +295,13 @@ def start_firebase_polling():
                             print(f"\n[!] Auto-restart requested for root node: '{root_key}'!")
                             # Save timestamp in Firebase for persistent 10-min wait
                             execute_at = time.time() + 600
-                            requests.put(trigger_url, json=execute_at, timeout=5)
+                            session.put(trigger_url, json=execute_at, timeout=5)
                             print(f"[*] Set trigger_restart to timestamp {execute_at} (10 mins from now) for '{root_key}'")
                             
                         elif isinstance(trigger_val, (int, float)) and not isinstance(trigger_val, bool):
                             if time.time() >= trigger_val:
                                 print(f"[*] 10-minute wait complete for '{root_key}'. Pushing updated code to Kaggle...")
-                                requests.put(trigger_url, json=False, timeout=5)
+                                session.put(trigger_url, json=False, timeout=5)
                                 
                                 # Fetch Kaggle config depending on bot type
                                 def do_push(r_key, db_url_str):
@@ -298,7 +311,7 @@ def start_firebase_polling():
                                         config_url = f"{db_url_str}/{r_key}/config/kaggle.json"
                                         
                                     try:
-                                        config_resp = requests.get(config_url, timeout=5)
+                                        config_resp = session.get(config_url, timeout=5)
                                     except:
                                         return
                                         
@@ -336,7 +349,7 @@ def start_firebase_polling():
         except Exception as e:
             # Prevent console spam on connection errors
             pass
-        time.sleep(5)
+        time.sleep(45)
 
 
 # Start background listener thread

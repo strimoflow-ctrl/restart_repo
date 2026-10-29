@@ -449,14 +449,19 @@ async def run_remote_mapping(user):
                 # ── Dynamic ETA & Status Reporter ─────────────────────────────────────────────
 async def monitor_and_reporter(bot, stats):
     global cached_command, MAX_WORKERS, CAPTION_TEMPLATE, REPLACEMENTS, active_slots
+    last_cfg_fetch = 0
+    fb_config = {}
     while not stats.get('all_done') and not stats.get('restarting'):
         try:
-            # 1. Read command and configurations from Firebase individually to save bandwidth
+            now_time = time.time()
+            # 1. Read command from Firebase every loop
             control_data = db.child(DB_ROOT).child("control").get().val() or {}
-            fb_config = db.child(DB_ROOT).child("config").get().val() or {}
-            
-            # Update cached command
             cached_command = control_data.get("command", "start")
+            
+            # Read full configuration only once every 60 seconds to save Firebase bandwidth
+            if (now_time - last_cfg_fetch > 60) or not fb_config:
+                fb_config = db.child(DB_ROOT).child("config").get().val() or {}
+                last_cfg_fetch = now_time
             
             # Override Telegram config (for internal cell state)
             tg = fb_config.get("telegram", {})
@@ -569,19 +574,30 @@ async def monitor_and_reporter(bot, stats):
             
         except Exception as e:
             print(f"Stats reporter error: {e}")
-        await asyncio.sleep(10)
+        await asyncio.sleep(15)
 
 async def run_queue_engine(user, bot, stats, all_tasks_ref, done_ids, finished_topics):
     failed_in_current_run = set()
     warned_topics = set()
+    cached_source_topics = None
+    cached_mapped_topics = None
+    last_topics_sync = 0
 
     while not stats['all_done']:
         await check_control_state(stats)
 
-        # Dynamic reload of queue and topics
+        # Dynamic reload of queue and topics (Cached to reduce Firebase download bandwidth)
         queue = parse_firebase_list(db.child(DB_ROOT).child("queue").get().val())
-        source_topics = parse_firebase_dict(db.child(DB_ROOT).child("source_topics").get().val())
-        mapped_topics = parse_firebase_dict(db.child(DB_ROOT).child("mapped_topics").get().val())
+        now_sync = time.time()
+        if cached_source_topics is None or (now_sync - last_topics_sync > 300):
+            source_topics = parse_firebase_dict(db.child(DB_ROOT).child("source_topics").get().val())
+            mapped_topics = parse_firebase_dict(db.child(DB_ROOT).child("mapped_topics").get().val())
+            cached_source_topics = source_topics
+            cached_mapped_topics = mapped_topics
+            last_topics_sync = now_sync
+        else:
+            source_topics = cached_source_topics
+            mapped_topics = cached_mapped_topics
         
         # Reload finished topics
         finish_data     = db.child(DB_ROOT).child("finished_topics").get().val() or {}
@@ -621,6 +637,15 @@ async def run_queue_engine(user, bot, stats, all_tasks_ref, done_ids, finished_t
                 break
 
         topic_data = source_topics.get(next_topic_id)
+        if not topic_data:
+            # Refresh cache once in case topics were newly mapped/added
+            source_topics = parse_firebase_dict(db.child(DB_ROOT).child("source_topics").get().val())
+            mapped_topics = parse_firebase_dict(db.child(DB_ROOT).child("mapped_topics").get().val())
+            cached_source_topics = source_topics
+            cached_mapped_topics = mapped_topics
+            last_topics_sync = time.time()
+            topic_data = source_topics.get(next_topic_id)
+
         if not topic_data:
             # If topic ID in queue doesn't exist in metadata, mark it finished
             db.child(DB_ROOT).child("finished_topics").child(next_topic_id).set(True)
