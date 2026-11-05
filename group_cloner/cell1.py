@@ -8,7 +8,14 @@ import subprocess, sys
 def install(*pkgs):
     subprocess.check_call([sys.executable, '-m', 'pip', 'install', '-q', *pkgs])
 
-install('telethon', 'pyrebase4', 'cryptg', 'nest_asyncio', 'requests')
+# Main essential libraries (cryptg excluded because Python 3.13 lacks prebuilt wheels)
+install('telethon', 'pyrebase4', 'nest_asyncio', 'requests')
+
+# Optional cryptg accelerator (safely ignored if build fails on Python 3.13)
+try:
+    install('cryptg')
+except Exception:
+    pass
 
 # Ensure pyOpenSSL is upgraded to match Kaggle's cryptography version
 try:
